@@ -6,6 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Time Zone Converter — Convert Times Worldwide Instantly | Tools360Pro</title>
 <meta name="description" content="Convert a date and time between world time zones, see UTC offsets and time differences, and check live clocks for major cities. Free, no sign-up needed.">
+<link rel="canonical" href="https://tools360pro.com/tools/time-zone-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Time Zone Converter — Convert Times Worldwide Instantly | Tools360Pro">
+<meta property="og:description" content="Convert a date and time between world time zones, see UTC offsets and time differences, and check live clocks for major cities. Free, no sign-up needed.">
+<meta property="og:url" content="https://tools360pro.com/tools/time-zone-converter.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Time Zone Converter — Convert Times Worldwide Instantly | Tools360Pro">
+<meta name="twitter:description" content="Convert a date and time between world time zones, see UTC offsets and time differences, and check live clocks for major cities. Free, no sign-up needed.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/css/style.css">
 <style>
@@ -16,6 +25,95 @@
 .clock-card .cc-date{color:var(--muted);font-size:.8rem;font-weight:600}
 .clock-card .cc-off{color:var(--muted);font-size:.78rem}
 </style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Time Zone Converter",
+   "url": "https://tools360pro.com/tools/time-zone-converter.html",
+   "description": "Convert a date and time between world time zones, see UTC offsets and time differences, and check live clocks for major cities. Free, no sign-up needed.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://tools360pro.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Converters",
+     "item": "https://tools360pro.com/index.html#converters"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Time Zone Converter",
+     "item": "https://tools360pro.com/tools/time-zone-converter.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How are daylight saving changes handled?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The converter uses your browser’s built-in time zone database (the same IANA data used by operating systems), so daylight saving time is applied automatically for the exact date you enter. A city can be an hour further ahead or behind in summer than in winter."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does a UTC offset mean?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A UTC offset tells you how far a zone is from Coordinated Universal Time. UTC+05:00 means the local time is five hours ahead of UTC, while UTC−04:00 means it is four hours behind."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why can the same city have different offsets on different dates?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Many regions move their clocks forward in spring and back in autumn for daylight saving time. The offset shown here is calculated for the date and time you entered, not just for today."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is any of my data uploaded?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. All conversions and the world clock run locally in your browser using the Intl API. Nothing you enter is sent anywhere."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is “Local time” in the dropdown?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It is the time zone your device is currently set to, detected automatically by your browser. Its IANA name is used for the conversion, so it stays correct even if you travel."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body data-tool="time-zone-converter" data-category="converters">
 <div id="site-header"></div>

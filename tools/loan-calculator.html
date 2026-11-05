@@ -6,6 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Loan / EMI Calculator — Monthly Payments &amp; Amortisation | Tools360Pro</title>
 <meta name="description" content="Calculate your monthly loan payment (EMI), total interest and total cost, with a year-by-year summary and full monthly amortisation table. Free, no sign-up.">
+<link rel="canonical" href="https://tools360pro.com/tools/loan-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Loan / EMI Calculator — Monthly Payments &amp; Amortisation | Tools360Pro">
+<meta property="og:description" content="Calculate your monthly loan payment (EMI), total interest and total cost, with a year-by-year summary and full monthly amortisation table. Free, no sign-up.">
+<meta property="og:url" content="https://tools360pro.com/tools/loan-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Loan / EMI Calculator — Monthly Payments &amp; Amortisation | Tools360Pro">
+<meta name="twitter:description" content="Calculate your monthly loan payment (EMI), total interest and total cost, with a year-by-year summary and full monthly amortisation table. Free, no sign-up.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/css/style.css">
 <style>
@@ -17,6 +26,95 @@ table.loan-table th{color:var(--muted);font-size:.82rem;text-transform:uppercase
 details.monthly{margin-top:18px;border:1px solid var(--border);border-radius:13px;padding:14px 17px;background:var(--surface)}
 details.monthly summary{font-weight:700;cursor:pointer}
 </style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Loan / EMI Calculator",
+   "url": "https://tools360pro.com/tools/loan-calculator.html",
+   "description": "Calculate your monthly loan payment (EMI), total interest and total cost, with a year-by-year summary and full monthly amortisation table. Free, no sign-up.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://tools360pro.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Calculators",
+     "item": "https://tools360pro.com/index.html#calculators"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Loan / EMI Calculator",
+     "item": "https://tools360pro.com/tools/loan-calculator.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How is the monthly payment (EMI) calculated?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "With the standard amortisation formula: EMI = P × r × (1 + r)n ÷ ((1 + r)n − 1), where P is the loan amount, r is the monthly rate (annual rate ÷ 1200) and n is the number of monthly payments. If the rate is 0%, the payment is simply P ÷ n."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does this calculator include fees, taxes or insurance?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. It covers principal and interest only, assuming a fixed rate and equal monthly payments. Lender fees, processing charges, taxes and insurance would be on top of these figures."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why does the interest share fall over time?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Each payment first covers interest on the remaining balance, and the rest reduces the principal. As the balance falls, the interest part shrinks and more of each payment goes towards the principal."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I model a loan with a partial year?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Add the extra months in the “extra months” field — for example 2 years and 6 months gives a 30-month term."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are my figures uploaded or saved?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. All calculations run locally in your browser and nothing is sent or stored."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body data-tool="loan-calculator" data-category="calculators">
 <div id="site-header"></div>

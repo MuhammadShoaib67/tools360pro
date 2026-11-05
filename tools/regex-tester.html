@@ -6,6 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Regex Tester — Test regular expressions with highlighted matches | Tools360Pro</title>
 <meta name="description" content="Test regular expressions online for free. See highlighted matches, indexes and capture groups live as you type, entirely in your browser.">
+<link rel="canonical" href="https://tools360pro.com/tools/regex-tester.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Regex Tester — Test regular expressions with highlighted matches | Tools360Pro">
+<meta property="og:description" content="Test regular expressions online for free. See highlighted matches, indexes and capture groups live as you type, entirely in your browser.">
+<meta property="og:url" content="https://tools360pro.com/tools/regex-tester.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Regex Tester — Test regular expressions with highlighted matches | Tools360Pro">
+<meta name="twitter:description" content="Test regular expressions online for free. See highlighted matches, indexes and capture groups live as you type, entirely in your browser.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/css/style.css">
 <style>
@@ -17,6 +26,95 @@
 .flags-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .flags-row label{display:flex;align-items:center;gap:6px;font-weight:600;font-size:.93rem}
 </style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Regex Tester",
+   "url": "https://tools360pro.com/tools/regex-tester.html",
+   "description": "Test regular expressions online for free. See highlighted matches, indexes and capture groups live as you type, entirely in your browser.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://tools360pro.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Developer Tools",
+     "item": "https://tools360pro.com/index.html#developer"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Regex Tester",
+     "item": "https://tools360pro.com/tools/regex-tester.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is my text uploaded to a server?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Patterns are compiled and run entirely in your browser using JavaScript's RegExp. Your text is never uploaded, stored, or sent anywhere."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need to include slashes around the pattern?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Type the pattern only, without the /…/ slashes you would use in JavaScript code. Choose the flags using the checkboxes instead of letters after a closing slash."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why do I only see one match?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Without the g (global) flag, a search stops at the first match — that mirrors how RegExp behaves in JavaScript. Tick the g flag to find every match in the text."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What are capture groups?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Parts of the pattern wrapped in parentheses are capture groups. When a match has groups, this tool lists each group's captured text under the match so you can check exactly what was captured."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why is there a limit of 1,000 matches?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Patterns that can match empty strings or very short text could otherwise produce an unbounded number of matches and freeze the page. Matches are capped at 1,000, zero-width matches safely advance the search position, and the tool notes when the cap is reached."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body data-tool="regex-tester" data-category="developer">
 <div id="site-header"></div>

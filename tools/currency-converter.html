@@ -6,8 +6,106 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Currency Converter — Live Exchange Rates | Tools360Pro</title>
 <meta name="description" content="Convert between world currencies using exchange rates from ExchangeRate-API via open.er-api.com. Free online currency converter with USD to PKR and more.">
+<link rel="canonical" href="https://tools360pro.com/tools/currency-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Currency Converter — Live Exchange Rates | Tools360Pro">
+<meta property="og:description" content="Convert between world currencies using exchange rates from ExchangeRate-API via open.er-api.com. Free online currency converter with USD to PKR and more.">
+<meta property="og:url" content="https://tools360pro.com/tools/currency-converter.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Currency Converter — Live Exchange Rates | Tools360Pro">
+<meta name="twitter:description" content="Convert between world currencies using exchange rates from ExchangeRate-API via open.er-api.com. Free online currency converter with USD to PKR and more.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/css/style.css">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Currency Converter",
+   "url": "https://tools360pro.com/tools/currency-converter.html",
+   "description": "Convert between world currencies using exchange rates from ExchangeRate-API via open.er-api.com. Free online currency converter with USD to PKR and more.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://tools360pro.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Converters",
+     "item": "https://tools360pro.com/index.html#converters"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Currency Converter",
+     "item": "https://tools360pro.com/tools/currency-converter.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Where do the exchange rates come from?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Rates are fetched from open.er-api.com, the free endpoint provided by ExchangeRate-API, with US dollars as the base currency. The “last updated” time shown under the result is the time reported by that API itself."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why might the rate I get at a bank or money changer differ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "This converter uses mid-market style reference rates. Banks, card networks and money changers add their own margins and fees, so the amount you actually receive or pay will usually differ slightly."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What happens if I am offline?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The last successfully fetched rates are saved in your browser. If a new fetch fails and saved rates exist, the converter keeps working with those cached rates and tells you when they were saved."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How is a conversion between two non-USD currencies calculated?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Both rates are quoted against the US dollar, so the tool divides your amount by the “from” rate and multiplies by the “to” rate: amount ÷ rate(from) × rate(to)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is my amount uploaded or stored?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Your amount is never sent anywhere — it is only used in calculations on this page. Only the public exchange-rate data is downloaded, and a copy of the rates (not your inputs) is cached in your browser for offline use."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body data-tool="currency-converter" data-category="converters">
 <div id="site-header"></div>
