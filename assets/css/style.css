@@ -134,7 +134,7 @@ img,svg{display:block}
   padding:0 10px 0 20px;
 }
 .logo{display:flex;align-items:center;gap:11px;font-family:'Montserrat',var(--font);font-weight:800;font-size:1.32rem;letter-spacing:-.015em;flex:none;color:var(--text)}
-.logo-svg{width:55px;height:36px;flex:none}
+.logo-svg{width:63px;height:36px;flex:none}
 .logo .logo-num{background:linear-gradient(94deg,#2DAFF0 5%,#FA782D 52%,#FAC328 95%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 8px rgba(250,140,50,.28))}
 .main-nav{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
 .main-nav::-webkit-scrollbar{display:none}
@@ -569,7 +569,7 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 }
 @keyframes pal-in{from{opacity:0;transform:translateY(-8px) scale(.99)}to{opacity:1;transform:none}}
 .palette-brand{display:flex;align-items:center;gap:10px;padding:13px 18px 9px}
-.palette-brand .logo-svg{width:47px;height:31px}
+.palette-brand .logo-svg{width:52px;height:30px}
 .palette-brand-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.06rem;letter-spacing:-.015em}
 .palette-brand-name .logo-num{background:linear-gradient(94deg,#2DAFF0 5%,#FA782D 52%,#FAC328 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .palette input{
@@ -932,7 +932,7 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
   background:var(--surface);border:1px solid var(--border-strong);backdrop-filter:var(--glass-blur);
   box-shadow:var(--shadow-lg),0 0 64px -14px color-mix(in srgb,var(--violet) 55%,transparent);
 }
-.p7-core svg{width:80px;height:auto}
+.p7-core svg{width:88px;height:auto}
 .p7-core strong{font-size:.94rem;line-height:1.15}
 .p7-core span{color:var(--muted);font-size:.62rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
 .p7-orbit-toggle{
