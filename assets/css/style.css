@@ -134,7 +134,7 @@ img,svg{display:block}
   padding:0 10px 0 20px;
 }
 .logo{display:flex;align-items:center;gap:11px;font-family:'Montserrat',var(--font);font-weight:800;font-size:1.32rem;letter-spacing:-.015em;flex:none;color:var(--text)}
-.logo-svg{width:64px;height:31px;flex:none;filter:drop-shadow(0 3px 10px rgba(45,140,240,.35))}
+.logo-svg{width:58px;height:36px;flex:none;filter:drop-shadow(0 3px 10px rgba(45,140,240,.35))}
 .logo .logo-num{background:linear-gradient(94deg,#2DAFF0 5%,#FA782D 52%,#FAC328 95%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 8px rgba(250,140,50,.28))}
 .main-nav{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
 .main-nav::-webkit-scrollbar{display:none}
@@ -657,7 +657,7 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 }
 .h6-eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--brand-grad);box-shadow:0 0 12px 2px color-mix(in srgb,var(--mint) 65%,transparent);animation:pulse-dot 2.6s ease-in-out infinite}
 .h6-brand{font-size:clamp(3.4rem,6.4vw,4.9rem);font-weight:850;letter-spacing:-.04em;line-height:1;margin:20px 0 8px}
-.h6-brand .logo-num{background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.h6-brand .logo-num{background:linear-gradient(94deg,#2DAFF0 5%,#FA782D 52%,#FAC328 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .h6-headline{font-size:clamp(1.28rem,2.2vw,1.55rem);font-weight:650;margin:0 0 14px;letter-spacing:-.01em}
 .h6-desc{color:var(--muted);font-size:1.05rem;line-height:1.68;max-width:545px;margin:0 0 22px}
 .h6-desc strong{color:var(--text);font-weight:700}
@@ -874,7 +874,7 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 }
 .p7-eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--brand-grad);box-shadow:0 0 12px 2px rgba(217,70,239,.5);animation:pulse-dot 2.6s ease-in-out infinite}
 .p7-brand{font-size:clamp(3.4rem,6.4vw,4.9rem);font-weight:850;letter-spacing:-.04em;line-height:1;margin:20px 0 8px}
-.p7-brand .logo-num{background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p7-brand .logo-num{background:linear-gradient(94deg,#2DAFF0 5%,#FA782D 52%,#FAC328 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .p7-headline{font-size:clamp(1.3rem,2.2vw,1.6rem);font-weight:650;margin:0 0 14px;letter-spacing:-.01em}
 .p7-headline .hl{background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .p7-desc{color:var(--muted);font-size:1.05rem;line-height:1.68;max-width:545px;margin:0 0 22px}
