@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://tools360pro.com/</loc><lastmod>2026-11-06</lastmod><priority>1.0</priority></url>
+  <url><loc>https://tools360pro.com/about.html</loc><lastmod>2026-11-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://tools360pro.com/contact.html</loc><lastmod>2026-11-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://tools360pro.com/privacy-policy.html</loc><lastmod>2026-11-06</lastmod><priority>0.5</priority></url>
+  <url><loc>https://tools360pro.com/terms.html</loc><lastmod>2026-11-06</lastmod><priority>0.5</priority></url>
+  <url><loc>https://tools360pro.com/disclaimer.html</loc><lastmod>2026-11-06</lastmod><priority>0.5</priority></url>
   <url><loc>https://tools360pro.com/tools/age-calculator.html</loc><lastmod>2026-11-06</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/base64.html</loc><lastmod>2026-11-06</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/bmi-calculator.html</loc><lastmod>2026-11-06</lastmod><priority>0.8</priority></url>

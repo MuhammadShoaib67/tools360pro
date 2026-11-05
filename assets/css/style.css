@@ -548,6 +548,9 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 .footer-grid ul a{color:var(--muted);font-size:.9rem}
 .footer-grid ul a:hover{color:var(--acc)}
 .footer-brand p{color:var(--muted);font-size:.92rem;max-width:300px}
+.footer-links{display:flex;gap:9px 24px;flex-wrap:wrap;padding:0 0 17px}
+.footer-links a{color:var(--muted);font-size:.9rem;font-weight:600}
+.footer-links a:hover{color:var(--acc)}
 .footer-bottom{
   border-top:1px solid var(--border);padding:17px 0;color:var(--muted);font-size:.86rem;
   display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;

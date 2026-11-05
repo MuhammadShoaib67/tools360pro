@@ -247,6 +247,13 @@
               }).join("") + "</ul></div>" +
             "<div><h4>More tools</h4><ul>" + toolLinks(["text", "calculators", "developer", "generators"]) + "</ul></div>" +
           "</div>" +
+          '<nav class="footer-links" aria-label="About Tools360Pro">' +
+            '<a href="' + BASE + 'about.html">About Us</a>' +
+            '<a href="' + BASE + 'contact.html">Contact Us</a>' +
+            '<a href="' + BASE + 'privacy-policy.html">Privacy Policy</a>' +
+            '<a href="' + BASE + 'terms.html">Terms of Use</a>' +
+            '<a href="' + BASE + 'disclaimer.html">Disclaimer</a>' +
+          '</nav>' +
           '<div class="footer-bottom"><span>© ' + new Date().getFullYear() + ' Tools360Pro. Free tools that respect your privacy.</span><span>Runs 100% in your browser · No sign-up · No uploads</span></div>' +
         "</div>";
     }
