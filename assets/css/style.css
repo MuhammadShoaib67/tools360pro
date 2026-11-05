@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
 /* ============================================================
    Tools360Pro — design system
    Phase 7 palette: "Spectrum Worlds" — a bright, colourful,
@@ -132,9 +133,9 @@ img,svg{display:block}
   box-shadow:var(--shadow-lg),inset 0 1px 0 rgba(255,255,255,.08);
   padding:0 10px 0 20px;
 }
-.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.24rem;letter-spacing:-.02em;flex:none;color:var(--text)}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Montserrat',var(--font);font-weight:800;font-size:1.32rem;letter-spacing:-.015em;flex:none;color:var(--text)}
 .logo-svg{width:64px;height:31px;flex:none;filter:drop-shadow(0 3px 10px rgba(45,140,240,.35))}
-.logo .logo-num{background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo .logo-num{background:linear-gradient(94deg,#2DAFF0 5%,#FA782D 52%,#FAC328 95%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 8px rgba(250,140,50,.28))}
 .main-nav{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
 .main-nav::-webkit-scrollbar{display:none}
 .main-nav a{
