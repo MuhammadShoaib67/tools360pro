@@ -133,7 +133,7 @@ img,svg{display:block}
   padding:0 10px 0 20px;
 }
 .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.24rem;letter-spacing:-.02em;flex:none;color:var(--text)}
-.logo-svg{width:39px;height:39px;flex:none;filter:drop-shadow(0 4px 14px rgba(217,70,239,.4))}
+.logo-svg{width:64px;height:31px;flex:none;filter:drop-shadow(0 3px 10px rgba(45,140,240,.35))}
 .logo .logo-num{background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .main-nav{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
 .main-nav::-webkit-scrollbar{display:none}
