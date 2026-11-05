@@ -38,16 +38,15 @@
     var last = null;
 
     /* Radii scale down smoothly as the stage shrinks, so labelled chips
-       always fit inside the stage. Below 480px the orbit becomes a static,
-       perfectly staggered composition (inner nodes parked +30°) — no
-       collisions, labels upright, nothing clipped. */
+       always fit inside the stage. Rotation runs at every width —
+       desktop and mobile alike (owner's order, 2026-11-06). */
     var ringOuter = stage.querySelector(".p7-ring-outer");
     var ringInner = stage.querySelector(".p7-ring-inner");
     function metrics() {
       var w = stage.clientWidth || 560;
       var s = Math.max(0.8, Math.min(1, w / 560));
       var si = Math.max(0.78, Math.min(1, w / 560));
-      return { outer: 40 * s, inner: 27 * si, isStatic: w < 480 };
+      return { outer: 40 * s, inner: 27 * si, isStatic: false };
     }
     var M = metrics();
     function place() {
