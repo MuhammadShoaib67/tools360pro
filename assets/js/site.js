@@ -64,6 +64,7 @@
     "invoice-generator": ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><text x="9.2" y="17.5" font-size="10" font-weight="700" fill="currentColor" stroke="none" font-family="inherit">$</text>'),
     "screen-recorder":  ic('<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/>'),
     "mp4-to-mp3":       ic('<path d="M9 18V6l10-2v11"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="15" r="2.5"/>'),
+    "pdf-to-word":      ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><text x="8.4" y="17.5" font-size="9.5" font-weight="700" fill="currentColor" stroke="none" font-family="inherit">W</text>'),
     "soon":             ic('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),
     "popular":          ic('<path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1-5.4-3-5.4 3 1.1-6.1L3.2 9.4l6.1-.8z"/>')
   };
@@ -120,7 +121,8 @@
     { slug: "list-randomizer",  name: "List Randomizer",  cat: "generators", desc: "Shuffle lists and pick random winners." },
     { slug: "invoice-generator", name: "Invoice Generator", cat: "generators", desc: "Create professional PDF invoices with items, tax and totals." },
     { slug: "screen-recorder",  name: "Screen Recorder",  cat: "generators", desc: "Record your screen, window or tab and download the video." },
-    { slug: "mp4-to-mp3",       name: "MP4 to MP3 Converter", cat: "converters", desc: "Extract MP3 audio from MP4 and other video files." }
+    { slug: "mp4-to-mp3",       name: "MP4 to MP3 Converter", cat: "converters", desc: "Extract MP3 audio from MP4 and other video files." },
+    { slug: "pdf-to-word",      name: "PDF to Word Converter", cat: "pdf", desc: "Turn a text-based PDF into an editable Word document." }
   ];
   var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator"];
 
