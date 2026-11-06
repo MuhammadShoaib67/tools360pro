@@ -455,9 +455,9 @@
 
   /* ---------- Init ---------- */
   (function initTheme() {
-    /* Light "Spectrum Worlds" is the default theme; a saved choice always wins. */
+    /* Dark is the default theme; a saved choice always wins. */
     var saved = lsGet("t360:theme", null);
-    document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", saved === "light" ? "light" : "dark");
   })();
 
   injectChrome();
