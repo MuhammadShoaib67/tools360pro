@@ -63,7 +63,8 @@
     "list-randomizer":  ic('<path d="M3 7h4l10 10h4"/><path d="M19 14.5 21.5 17 19 19.5"/><path d="M3 17h4l2.6-2.6"/><path d="M13.4 9.4 17 7h4"/><path d="M19 4.5 21.5 7 19 9.5"/>'),
     "invoice-generator": ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><text x="9.2" y="17.5" font-size="10" font-weight="700" fill="currentColor" stroke="none" font-family="inherit">$</text>'),
     "screen-recorder":  ic('<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/>'),
-    "soon":             ic('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>')
+    "soon":             ic('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),
+    "popular":          ic('<path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1-5.4-3-5.4 3 1.1-6.1L3.2 9.4l6.1-.8z"/>')
   };
 
   var TOOLS = [
@@ -119,7 +120,7 @@
     { slug: "invoice-generator", name: "Invoice Generator", cat: "generators", desc: "Create professional PDF invoices with items, tax and totals." },
     { slug: "screen-recorder",  name: "Screen Recorder",  cat: "generators", desc: "Record your screen, window or tab and download the video." }
   ];
-  var POPULAR = ["merge-pdf", "compress-image", "qr-code-generator", "word-counter", "json-formatter", "images-to-pdf", "password-generator", "unit-converter", "resize-image", "bmi-calculator"];
+  var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator"];
 
   var bySlug = {}, catById = {};
   TOOLS.forEach(function (t) { bySlug[t.slug] = t; });
@@ -215,7 +216,7 @@
   function injectChrome() {
     var header = document.getElementById("site-header");
     if (header) {
-      var nav = CATEGORIES.map(function (c) {
+      var nav = '<a href="' + BASE + 'index.html#popular">Popular</a>' + CATEGORIES.map(function (c) {
         return '<a href="' + BASE + "index.html#" + c.id + '">' + c.name.replace(" Tools", "") + "</a>";
       }).join("");
       header.className = "site-header";

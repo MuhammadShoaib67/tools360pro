@@ -94,6 +94,7 @@
 [data-cat="calculators"]{--acc:var(--cat-calculators)}
 [data-cat="developer"]{--acc:var(--cat-developer)}
 [data-cat="generators"]{--acc:var(--cat-generators)}
+[data-cat="popular"]{--acc:var(--warn)}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
