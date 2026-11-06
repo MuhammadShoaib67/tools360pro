@@ -49,6 +49,7 @@
     "lorem-ipsum":      ic('<path d="M15 4v16"/><path d="M10 4v16"/><path d="M15 4h-4.5a3.5 3.5 0 1 0 0 7H15"/>'),
     "text-cleaner":     ic('<path d="M12 3l1.7 4.3L18 9l-4.3 1.7L12 15l-1.7-4.3L6 9l4.3-1.7z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>'),
     "image-to-text":    ic('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h6"/><path d="M7 12h10"/><path d="M7 16h8"/>'),
+    "citation-generator": ic('<path d="M5.5 5.5h5.5v6c0 3-1.4 4.8-3.8 5.8"/><path d="M13.5 5.5H19v6c0 3-1.4 4.8-3.8 5.8"/>'),
     "time-zone-converter": ic('<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15.2 15.2 0 0 1 0 18"/><path d="M12 3a15.2 15.2 0 0 0 0 18"/>'),
     "number-base-converter": ic('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8.5 16v-8"/><path d="M6.7 9.6 8.5 8l1.8 1.6"/><circle cx="15.5" cy="12" r="3.4"/>'),
     "currency-converter": ic('<path d="M12 2.5v19"/><path d="M16.8 6.4c-.9-1.1-2.6-1.7-4.8-1.7-2.9 0-4.7 1.4-4.7 3.4 0 4.7 9.6 2.5 9.6 7 0 2-2 3.3-4.9 3.3-2.3 0-4.1-.7-5-2"/>'),
@@ -61,6 +62,7 @@
     "color-palette":    ic('<path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-.9 2-1.9 0-1.2-1-1.7-1-2.9 0-1 .8-1.7 2-1.7h2.1A3.9 3.9 0 0 0 21 10.6C20.6 6.4 16.6 3 12 3z"/><circle cx="7.5" cy="10.5" r="1.2"/><circle cx="12" cy="7.5" r="1.2"/><circle cx="16.5" cy="10.5" r="1.2"/>'),
     "list-randomizer":  ic('<path d="M3 7h4l10 10h4"/><path d="M19 14.5 21.5 17 19 19.5"/><path d="M3 17h4l2.6-2.6"/><path d="M13.4 9.4 17 7h4"/><path d="M19 4.5 21.5 7 19 9.5"/>'),
     "invoice-generator": ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><text x="9.2" y="17.5" font-size="10" font-weight="700" fill="currentColor" stroke="none" font-family="inherit">$</text>'),
+    "screen-recorder":  ic('<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/>'),
     "soon":             ic('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>')
   };
 
@@ -89,6 +91,7 @@
     { slug: "lorem-ipsum",      name: "Lorem Ipsum Generator", cat: "text", desc: "Generate placeholder paragraphs, sentences or words." },
     { slug: "text-cleaner",     name: "Text Cleaner",     cat: "text", desc: "Clean up text: extra spaces, line breaks, duplicates and accents." },
     { slug: "image-to-text",    name: "Image to Text (OCR)", cat: "text", desc: "Extract text from images and scans with OCR, in your browser." },
+    { slug: "citation-generator", name: "Citation Generator (APA & MLA)", cat: "text", desc: "Format APA 7 and MLA 9 references and in-text citations." },
     /* Converters */
     { slug: "unit-converter",   name: "Unit Converter",   cat: "converters", desc: "Convert length, weight, temperature, area, speed and more." },
     { slug: "time-zone-converter", name: "Time Zone Converter", cat: "converters", desc: "Convert times between world time zones." },
@@ -113,7 +116,8 @@
     { slug: "password-generator", name: "Password Generator", cat: "generators", desc: "Generate strong random passwords with a strength meter." },
     { slug: "color-palette",    name: "Color Converter & Palette", cat: "generators", desc: "Convert HEX, RGB and HSL and build colour palettes." },
     { slug: "list-randomizer",  name: "List Randomizer",  cat: "generators", desc: "Shuffle lists and pick random winners." },
-    { slug: "invoice-generator", name: "Invoice Generator", cat: "generators", desc: "Create professional PDF invoices with items, tax and totals." }
+    { slug: "invoice-generator", name: "Invoice Generator", cat: "generators", desc: "Create professional PDF invoices with items, tax and totals." },
+    { slug: "screen-recorder",  name: "Screen Recorder",  cat: "generators", desc: "Record your screen, window or tab and download the video." }
   ];
   var POPULAR = ["merge-pdf", "compress-image", "qr-code-generator", "word-counter", "json-formatter", "images-to-pdf", "password-generator", "unit-converter", "resize-image", "bmi-calculator"];
 
