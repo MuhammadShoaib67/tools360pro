@@ -92,6 +92,22 @@
       "@type": "Answer",
       "text": "Only if you set a maximum dimension. Otherwise the pixel size stays exactly the same — only the file gets smaller."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "Why is my image too big for a form or website?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Modern phone photos are often 3–8 MB, while many forms accept only 1–2 MB. Compressing at around 80% quality usually brings a photo well under the limit with no visible difference."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I compress more than one image at a time?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "This tool works on one image at a time so you can judge the quality of each result. To convert several files at once, the Convert Image tool handles batches."
+     }
     }
    ]
   }
@@ -175,12 +191,19 @@
     </ol>
   </section>
 
+  <section class="tool-section">
+    <h2>Getting the balance between size and quality</h2>
+    <p>Most screens cannot show the difference between a photo saved at full quality and the same photo at 80% — but the file at 80% can be several times smaller. That is why 75–85% is the sweet spot for everyday photos: pages load faster, forms accept the upload, and the picture still looks sharp. Watch the live preview while you drag the slider and stop at the point where the image still looks clean.</p>
+    <p>Format matters as much as the slider. WebP usually beats JPG at the same quality, which is why it is the favourite for websites. PNG files with large flat areas, like screenshots and logos, often shrink best when converted to WebP or JPG — unless you need a transparent background, which only PNG and WebP can keep.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my image uploaded to a server?</summary><p>No. Compression happens in your browser on a canvas element. Your image never leaves your device.</p></details>
     <details><summary>Why did my PNG get bigger when saved as JPEG, or smaller as WebP?</summary><p>Formats compress differently. PNG is lossless and large for photos; JPEG and WebP discard some detail to save space. WebP typically produces the smallest files at the same visual quality. Flat graphics with few colours often compress best as PNG.</p></details>
     <details><summary>What quality setting should I use?</summary><p>For photographs, 75–85% is nearly indistinguishable from the original at a fraction of the size. For screenshots with crisp text, prefer PNG or a higher quality setting.</p></details>
     <details><summary>Does compressing change the image dimensions?</summary><p>Only if you set a maximum dimension. Otherwise the pixel size stays exactly the same — only the file gets smaller.</p></details>
+    <details><summary>Why is my image too big for a form or website?</summary><p>Modern phone photos are often 3–8 MB, while many forms accept only 1–2 MB. Compressing at around 80% quality usually brings a photo well under the limit with no visible difference.</p></details>
+    <details><summary>Can I compress more than one image at a time?</summary><p>This tool works on one image at a time so you can judge the quality of each result. To convert several files at once, the Convert Image tool handles batches.</p></details>
   </section>
 </main>
 <div id="site-footer"></div>
