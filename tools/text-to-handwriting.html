@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4544572079119949" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text to Handwriting Converter — Free Online | Tools360Pro</title>
+<meta name="description" content="Turn typed text into handwritten notebook pages with ruled lines and a choice of handwriting styles and ink colours. Download PNG pages or one PDF. Free, private.">
+<link rel="canonical" href="https://tools360pro.com/tools/text-to-handwriting.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Text to Handwriting Converter — Free Online | Tools360Pro">
+<meta property="og:description" content="Turn typed text into handwritten notebook pages with ruled lines and a choice of handwriting styles and ink colours. Download PNG pages or one PDF. Free, private.">
+<meta property="og:url" content="https://tools360pro.com/tools/text-to-handwriting.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Text to Handwriting Converter — Free Online | Tools360Pro">
+<meta name="twitter:description" content="Turn typed text into handwritten notebook pages with ruled lines and a choice of handwriting styles and ink colours. Download PNG pages or one PDF. Free, private.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=56.0">
+<style>
+  .hw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+  .hw-page { margin-top: 16px; }
+  .hw-page canvas { width: 100%; border: 1px solid var(--border, #e5e7eb); border-radius: 8px; box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+  .hw-page .options-bar { margin-top: 8px; }
+  .ink-dot { width: 26px; height: 26px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; padding: 0; }
+  .ink-dot.active { border-color: var(--text, #111); transform: scale(1.08); }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Text to Handwriting Converter",
+   "url": "https://tools360pro.com/tools/text-to-handwriting.html",
+   "description": "Turn typed text into handwritten notebook pages with ruled lines and a choice of handwriting styles and ink colours. Download PNG pages or one PDF. Free, private.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools360pro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Text Tools", "item": "https://tools360pro.com/index.html#text" },
+    { "@type": "ListItem", "position": 3, "name": "Text to Handwriting Converter", "item": "https://tools360pro.com/tools/text-to-handwriting.html" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    { "@type": "Question", "name": "Does it look like real handwriting?", "acceptedAnswer": { "@type": "Answer", "text": "It writes your words in real handwriting typefaces on lined notebook paper, which looks convincingly handwritten in a photo or printout. Under close inspection it is still a font — every letter 'a' is identical — so treat it as presentation, not forgery." } },
+    { "@type": "Question", "name": "Can I download all pages together?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Long text flows onto as many A4 pages as it needs; download each page as a PNG, or use 'Download all pages (PDF)' to get one print-ready PDF." } },
+    { "@type": "Question", "name": "Which languages are supported?", "acceptedAnswer": { "@type": "Answer", "text": "The two handwriting styles cover the Latin alphabet (English and most European languages). Right-to-left scripts and character sets like Urdu, Hindi or Chinese are not covered by these fonts." } },
+    { "@type": "Question", "name": "Is my text uploaded?", "acceptedAnswer": { "@type": "Answer", "text": "No. The pages are drawn in your browser tab and your text never leaves your device." } }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="text-to-handwriting" data-category="text">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#text">Text Tools</a> <span class="sep">›</span> <span aria-current="page">Text to Handwriting Converter</span></nav>
+  <h1>Text to Handwriting Converter</h1>
+  <p class="lede">Type it — get it back as handwritten notebook pages.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <div class="field"><label for="text-in">Your text</label><textarea class="textarea" id="text-in" rows="7" placeholder="Type or paste the text you want in handwriting…">The quick brown fox jumps over the lazy dog. Handwritten notes feel personal in a way typed pages never do, which is why this style has stayed popular with students everywhere.</textarea></div>
+    <div class="hw-grid" style="margin-top:12px">
+      <div class="field"><label>Handwriting style</label>
+        <span class="seg" id="style-seg">
+          <button type="button" class="active" data-style="caveat">Neat cursive</button>
+          <button type="button" data-style="shadows">Casual print</button>
+        </span>
+      </div>
+      <div class="field"><label>Ink colour</label>
+        <span style="display:flex;gap:8px;align-items:center;padding-top:4px">
+          <button type="button" class="ink-dot active" data-ink="#2244bb" style="background:#2244bb" aria-label="Blue ink"></button>
+          <button type="button" class="ink-dot" data-ink="#1c1c1e" style="background:#1c1c1e" aria-label="Black ink"></button>
+          <button type="button" class="ink-dot" data-ink="#b91c1c" style="background:#b91c1c" aria-label="Red ink"></button>
+          <button type="button" class="ink-dot" data-ink="#14532d" style="background:#14532d" aria-label="Green ink"></button>
+        </span>
+      </div>
+      <div class="field"><label for="font-size">Writing size: <span id="font-size-label">46</span></label><input type="range" id="font-size" min="36" max="58" value="46" style="width:100%"></div>
+      <div class="field"><label style="display:flex;gap:8px;align-items:center;padding-top:26px"><input type="checkbox" id="ruled" checked> Ruled notebook lines</label></div>
+    </div>
+    <div class="options-bar" style="margin-top:10px">
+      <button class="btn btn-primary btn-lg" id="render" type="button">Make handwritten pages</button>
+      <button class="btn btn-ghost hidden" id="pdf-all" type="button">Download all pages (PDF)</button>
+    </div>
+    <p class="error-text hidden" id="err"></p>
+    <div id="pages"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to convert text to handwriting</h2>
+    <ol class="steps">
+      <li>Type or paste your text (blank lines become paragraph gaps).</li>
+      <li>Pick a handwriting style, an ink colour and a writing size.</li>
+      <li>Press <b>Make handwritten pages</b>, then download each page as PNG or all pages as one PDF.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>Why handwritten pages refuse to go away</h2>
+    <p>Teachers ask for them, journals and letters feel wrong without them, and study notes somehow stick better when they look written rather than printed — so an entire genre of tools exists to turn typed text into notebook pages. Students use them to present typed drafts as handwritten assignments, creators use them for authentic-looking notes in videos and posts, and plenty of people simply like how a page of script looks next to cold type.</p>
+    <p>This converter keeps the honest essentials: two real handwriting typefaces, ballpoint-style ink colours, ruled A4 pages with a margin line, and text that flows across as many pages as it needs. Everything renders on your device, so the essay you paste is nobody's business but yours — and the downloaded PDF is ready to print exactly as it appears.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Does it look like real handwriting?</summary><p>It writes your words in real handwriting typefaces on lined notebook paper, which looks convincingly handwritten in a photo or printout. Under close inspection it is still a font — every letter "a" is identical — so treat it as presentation, not forgery.</p></details>
+    <details><summary>Can I download all pages together?</summary><p>Yes. Long text flows onto as many A4 pages as it needs; download each page as a PNG, or use "Download all pages (PDF)" to get one print-ready PDF.</p></details>
+    <details><summary>Which languages are supported?</summary><p>The two handwriting styles cover the Latin alphabet (English and most European languages). Right-to-left scripts and character sets like Urdu, Hindi or Chinese are not covered by these fonts.</p></details>
+    <details><summary>Is my text uploaded?</summary><p>No. The pages are drawn in your browser tab and your text never leaves your device.</p></details>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/site.js?v=56.0"></script>
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var err = $("err"), pagesEl = $("pages"), pdfAllBtn = $("pdf-all");
+  var style = "caveat", ink = "#2244bb", pageBlobs = [];
+  var FONT_DEFS = {
+    caveat: { face: "HW Caveat", file: "../assets/fonts/caveat.woff2", css: "'HW Caveat', cursive", baseline: 0.78 },
+    shadows: { face: "HW Shadows", file: "../assets/fonts/shadows.woff2", css: "'HW Shadows', cursive", baseline: 0.8 }
+  };
+  var loaded = {};
+  function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
+  function loadFont(key) {
+    if (loaded[key]) return loaded[key];
+    var def = FONT_DEFS[key];
+    var face = new FontFace(def.face, "url(" + def.file + ")");
+    loaded[key] = face.load().then(function (f) { document.fonts.add(f); return f; });
+    return loaded[key];
+  }
+  $("style-seg").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-style]"); if (!b) return;
+    this.querySelectorAll("button").forEach(function (x) { x.classList.remove("active"); });
+    b.classList.add("active");
+    style = b.getAttribute("data-style");
+  });
+  document.querySelectorAll(".ink-dot").forEach(function (d) {
+    d.addEventListener("click", function () {
+      document.querySelectorAll(".ink-dot").forEach(function (x) { x.classList.remove("active"); });
+      d.classList.add("active");
+      ink = d.getAttribute("data-ink");
+    });
+  });
+  $("font-size").addEventListener("input", function () { $("font-size-label").textContent = this.value; });
+  var W = 1240, H = 1754, MARGIN_X = 150, RIGHT = 70, TOP = 150, BOTTOM = 110;
+  function layout(ctx, text, fontPx) {
+    var maxW = W - MARGIN_X - RIGHT;
+    ctx.font = fontPx + "px " + FONT_DEFS[style].css;
+    var lines = [];
+    String(text || "").split(/\n/).forEach(function (para) {
+      if (!para.trim()) { lines.push(""); return; }
+      var words = para.split(/\s+/), cur = "";
+      words.forEach(function (w) {
+        var test = cur ? cur + " " + w : w;
+        if (ctx.measureText(test).width > maxW && cur) { lines.push(cur); cur = w; }
+        else cur = test;
+      });
+      if (cur) lines.push(cur);
+    });
+    return lines;
+  }
+  function drawPage(lines, pageNo, fontPx, lh) {
+    var c = document.createElement("canvas");
+    c.width = W; c.height = H;
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#fffef8";
+    ctx.fillRect(0, 0, W, H);
+    if ($("ruled").checked) {
+      ctx.strokeStyle = "#b9d2f0";
+      ctx.lineWidth = 1.6;
+      for (var y = TOP + lh; y < H - BOTTOM + lh; y += lh) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+      }
+      ctx.strokeStyle = "#f0a3a3";
+      ctx.lineWidth = 2.4;
+      ctx.beginPath(); ctx.moveTo(MARGIN_X - 36, 0); ctx.lineTo(MARGIN_X - 36, H); ctx.stroke();
+    }
+    ctx.font = fontPx + "px " + FONT_DEFS[style].css;
+    ctx.fillStyle = ink;
+    ctx.textBaseline = "alphabetic";
+    var baseOff = fontPx * FONT_DEFS[style].baseline;
+    lines.forEach(function (line, i) {
+      if (line) ctx.fillText(line, MARGIN_X, TOP + i * lh + baseOff);
+    });
+    ctx.fillStyle = "rgba(0,0,0,.35)";
+    ctx.font = "24px sans-serif";
+    ctx.fillText(String(pageNo), W / 2 - 8, H - 42);
+    return c;
+  }
+  $("render").addEventListener("click", async function () {
+    showErr("");
+    var text = $("text-in").value;
+    if (!text.trim()) { showErr("Type some text first."); return; }
+    var btn = $("render");
+    btn.disabled = true; btn.textContent = "Writing…";
+    try {
+      await loadFont(style);
+      await document.fonts.ready;
+      var fontPx = parseInt($("font-size").value, 10);
+      var lh = Math.round(fontPx * 1.42);
+      var probe = document.createElement("canvas").getContext("2d");
+      var lines = layout(probe, text, fontPx);
+      var perPage = Math.floor((H - TOP - BOTTOM) / lh);
+      pagesEl.innerHTML = "";
+      pageBlobs = [];
+      var total = Math.max(1, Math.ceil(lines.length / perPage));
+      for (var p = 0; p < total; p++) {
+        var slice = lines.slice(p * perPage, (p + 1) * perPage);
+        var c = drawPage(slice, p + 1, fontPx, lh);
+        var wrap = document.createElement("div");
+        wrap.className = "hw-page";
+        wrap.appendChild(c);
+        var bar = document.createElement("div");
+        bar.className = "options-bar";
+        var b = document.createElement("button");
+        b.className = "btn btn-primary";
+        b.type = "button";
+        b.textContent = "Download page " + (p + 1) + " (PNG)";
+        (function (canvasEl, n) {
+          b.addEventListener("click", function () {
+            canvasEl.toBlob(function (blob) { if (blob) T360.download(blob, "handwritten-page-" + n + ".png"); }, "image/png");
+          });
+        })(c, p + 1);
+        bar.appendChild(b);
+        wrap.appendChild(bar);
+        pagesEl.appendChild(wrap);
+        pageBlobs.push(c);
+      }
+      pdfAllBtn.classList.toggle("hidden", total === 0);
+      T360.toast(total + " page" + (total > 1 ? "s" : "") + " ready");
+    } catch (e) {
+      showErr("The handwriting style could not be loaded. Check your connection and try again.");
+    }
+    btn.disabled = false; btn.textContent = "Make handwritten pages";
+  });
+  pdfAllBtn.addEventListener("click", async function () {
+    if (!pageBlobs.length || !window.PDFLib) return;
+    try {
+      var doc = await PDFLib.PDFDocument.create();
+      for (var i = 0; i < pageBlobs.length; i++) {
+        var dataUrl = pageBlobs[i].toDataURL("image/png");
+        var png = await doc.embedPng(dataUrl);
+        var page = doc.addPage([595.28, 841.89]);
+        page.drawImage(png, { x: 0, y: 0, width: 595.28, height: 841.89 });
+      }
+      var bytes = await doc.save();
+      T360.download(new Blob([bytes], { type: "application/pdf" }), "handwritten-pages.pdf");
+    } catch (e) { showErr("The PDF could not be built — the PNG downloads still work."); }
+  });
+})();
+</script>
+</body>
+</html>

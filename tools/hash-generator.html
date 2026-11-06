@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4544572079119949" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hash Generator — MD5, SHA-256 & More, Free | Tools360Pro</title>
+<meta name="description" content="Calculate MD5, SHA-1, SHA-256 and SHA-512 hashes of any text or file, instantly in your browser. Verify downloads and checksums privately — nothing is uploaded.">
+<link rel="canonical" href="https://tools360pro.com/tools/hash-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Hash Generator — MD5, SHA-256 & More, Free | Tools360Pro">
+<meta property="og:description" content="Calculate MD5, SHA-1, SHA-256 and SHA-512 hashes of any text or file, instantly in your browser. Verify downloads and checksums privately — nothing is uploaded.">
+<meta property="og:url" content="https://tools360pro.com/tools/hash-generator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hash Generator — MD5, SHA-256 & More, Free | Tools360Pro">
+<meta name="twitter:description" content="Calculate MD5, SHA-1, SHA-256 and SHA-512 hashes of any text or file, instantly in your browser. Verify downloads and checksums privately — nothing is uploaded.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=56.0">
+<style>
+  .hash-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  .hash-table td { padding: 8px 10px; border-bottom: 1px solid var(--border, #e5e7eb); vertical-align: top; }
+  .hash-table td:first-child { font-weight: 700; white-space: nowrap; width: 92px; }
+  .hash-val { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85rem; word-break: break-all; }
+  .hash-copy { margin-left: 8px; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Hash Generator",
+   "url": "https://tools360pro.com/tools/hash-generator.html",
+   "description": "Calculate MD5, SHA-1, SHA-256 and SHA-512 hashes of any text or file, instantly in your browser. Verify downloads and checksums privately — nothing is uploaded.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools360pro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Developer Tools", "item": "https://tools360pro.com/index.html#developer" },
+    { "@type": "ListItem", "position": 3, "name": "Hash Generator", "item": "https://tools360pro.com/tools/hash-generator.html" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    { "@type": "Question", "name": "What is a hash used for?", "acceptedAnswer": { "@type": "Answer", "text": "A hash is a fingerprint of data. Websites publish the SHA-256 of a download so you can confirm the file you received is complete and untampered: if even one byte differs, the hash is completely different." } },
+    { "@type": "Question", "name": "Is MD5 safe?", "acceptedAnswer": { "@type": "Answer", "text": "MD5 is fine as a quick checksum to spot accidental corruption, but it is no longer collision-resistant, so do not rely on it to prove a file is authentic or to store passwords. Prefer SHA-256 or SHA-512 for anything security-related." } },
+    { "@type": "Question", "name": "Can a hash be reversed back to the original?", "acceptedAnswer": { "@type": "Answer", "text": "No. Hashing is one-way: the fingerprint cannot be turned back into the text or file. That is why hashes can be shared publicly when verifying downloads." } },
+    { "@type": "Question", "name": "Is my file uploaded for hashing?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your browser reads the file and computes the hashes on your device — handy for private or very large files that you would never send to a server." } }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="hash-generator" data-category="developer">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#developer">Developer Tools</a> <span class="sep">›</span> <span aria-current="page">Hash Generator</span></nav>
+  <h1>Hash Generator</h1>
+  <p class="lede">Fingerprint any text or file with MD5, SHA-1, SHA-256 and SHA-512.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <div class="field"><label for="text-in">Text to hash</label><textarea class="textarea" id="text-in" rows="4" placeholder="Type or paste text… hashes update as you type"></textarea></div>
+    <div class="dropzone" id="drop" style="margin-top:12px">
+      <input type="file" id="file-input" hidden>
+      <svg class="dz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+      <p><b>…or drop a file here</b> to hash the file instead (read locally, never uploaded).</p>
+    </div>
+    <p id="src-label" style="margin:12px 0 0;color:var(--muted)">Hashing: the text above</p>
+    <table class="hash-table" id="out"></table>
+  </section>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to use the Hash Generator</h2>
+    <ol class="steps">
+      <li>Type or paste text — its four hashes appear as you type.</li>
+      <li>Or drop a file to hash the file instead (for verifying a download, use its SHA-256).</li>
+      <li>Copy any hash with its Copy button and compare it against the published value.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>Checksums: how downloads prove they are genuine</h2>
+    <p>Every serious software download page shows a long string of hex characters next to the file — its SHA-256 hash. Feed the file you downloaded into a hash tool and compare: identical string, and the file is bit-for-bit the one the publisher released; a single changed byte anywhere produces a completely different hash. It is the simplest integrity check in computing, used for operating systems, installers, firmware and backups.</p>
+    <p>The four algorithms here cover the common cases: MD5 and SHA-1 still appear on older download pages (fine for spotting corruption, not for proving authenticity), while SHA-256 and SHA-512 are the modern standards. Everything runs in your browser using its built-in cryptography for the SHA family, so even a private file can be hashed safely — it never leaves your device.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is a hash used for?</summary><p>A hash is a fingerprint of data. Websites publish the SHA-256 of a download so you can confirm the file you received is complete and untampered: if even one byte differs, the hash is completely different.</p></details>
+    <details><summary>Is MD5 safe?</summary><p>MD5 is fine as a quick checksum to spot accidental corruption, but it is no longer collision-resistant, so do not rely on it to prove a file is authentic or to store passwords. Prefer SHA-256 or SHA-512 for anything security-related.</p></details>
+    <details><summary>Can a hash be reversed back to the original?</summary><p>No. Hashing is one-way: the fingerprint cannot be turned back into the text or file. That is why hashes can be shared publicly when verifying downloads.</p></details>
+    <details><summary>Is my file uploaded for hashing?</summary><p>No. Your browser reads the file and computes the hashes on your device — handy for private or very large files that you would never send to a server.</p></details>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/site.js?v=56.0"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var out = $("out"), srcLabel = $("src-label");
+  // --- compact MD5 (public-domain style implementation of RFC 1321) ---
+  function md5hex(bytes) {
+    function L(x, c) { return (x << c) | (x >>> (32 - c)); }
+    function A(x, y) { var l = (x & 0xffff) + (y & 0xffff); var m = (x >> 16) + (y >> 16) + (l >> 16); return (m << 16) | (l & 0xffff); }
+    var S1 = [7, 12, 17, 22], S2 = [5, 9, 14, 20], S3 = [4, 11, 16, 23], S4 = [6, 10, 15, 21];
+    var len = bytes.length, total = (((len + 8) >>> 6) + 1) << 6;
+    var buf = new Uint8Array(total); buf.set(bytes); buf[len] = 0x80;
+    var dv = new DataView(buf.buffer);
+    dv.setUint32(total - 8, (len * 8) >>> 0, true);
+    dv.setUint32(total - 4, Math.floor(len / 536870912), true);
+    var a0 = 0x67452301 | 0, b0 = 0xefcdab89 | 0, c0 = 0x98badcfe | 0, d0 = 0x10325476 | 0;
+    function FF(a, b, c, d, x, s, t) { return A(L(A(A(a, ((b & c) | (~b & d))), A(x, t)), s), b); }
+    function GG(a, b, c, d, x, s, t) { return A(L(A(A(a, ((b & d) | (c & ~d))), A(x, t)), s), b); }
+    function HH(a, b, c, d, x, s, t) { return A(L(A(A(a, b ^ c ^ d), A(x, t)), s), b); }
+    function II(a, b, c, d, x, s, t) { return A(L(A(A(a, c ^ (b | ~d)), A(x, t)), s), b); }
+    function K(i) { return Math.floor(Math.abs(Math.sin(i + 1)) * 4294967296) | 0; }
+    for (var blk = 0; blk < total; blk += 64) {
+      var M = []; for (var j = 0; j < 16; j++) M[j] = dv.getInt32(blk + j * 4, true);
+      var a = a0, b = b0, c = c0, d = d0, k, r;
+      for (k = 0; k < 16; k++) { r = k % 4; if (r === 0) a = FF(a, b, c, d, M[k], S1[0], K(k)); else if (r === 1) d = FF(d, a, b, c, M[k], S1[1], K(k)); else if (r === 2) c = FF(c, d, a, b, M[k], S1[2], K(k)); else b = FF(b, c, d, a, M[k], S1[3], K(k)); }
+      for (k = 16; k < 32; k++) { var g2 = (5 * k + 1) % 16; r = k % 4; if (r === 0) a = GG(a, b, c, d, M[g2], S2[0], K(k)); else if (r === 1) d = GG(d, a, b, c, M[g2], S2[1], K(k)); else if (r === 2) c = GG(c, d, a, b, M[g2], S2[2], K(k)); else b = GG(b, c, d, a, M[g2], S2[3], K(k)); }
+      for (k = 32; k < 48; k++) { var g3 = (3 * k + 5) % 16; r = k % 4; if (r === 0) a = HH(a, b, c, d, M[g3], S3[0], K(k)); else if (r === 1) d = HH(d, a, b, c, M[g3], S3[1], K(k)); else if (r === 2) c = HH(c, d, a, b, M[g3], S3[2], K(k)); else b = HH(b, c, d, a, M[g3], S3[3], K(k)); }
+      for (k = 48; k < 64; k++) { var g4 = (7 * k) % 16; r = k % 4; if (r === 0) a = II(a, b, c, d, M[g4], S4[0], K(k)); else if (r === 1) d = II(d, a, b, c, M[g4], S4[1], K(k)); else if (r === 2) c = II(c, d, a, b, M[g4], S4[2], K(k)); else b = II(b, c, d, a, M[g4], S4[3], K(k)); }
+      a0 = A(a0, a); b0 = A(b0, b); c0 = A(c0, c); d0 = A(d0, d);
+    }
+    function hexle(x) { var s = ""; for (var i = 0; i < 4; i++) { var byte = (x >>> (i * 8)) & 0xff; s += (byte < 16 ? "0" : "") + byte.toString(16); } return s; }
+    return hexle(a0) + hexle(b0) + hexle(c0) + hexle(d0);
+  }
+  function toHex(buf) {
+    return Array.prototype.map.call(new Uint8Array(buf), function (b) { return (b < 16 ? "0" : "") + b.toString(16); }).join("");
+  }
+  var currentBytes = new Uint8Array(0), runId = 0;
+  async function render() {
+    var id = ++runId;
+    var bytes = currentBytes;
+    var md5 = md5hex(bytes);
+    var names = ["SHA-1", "SHA-256", "SHA-512"], digests = {};
+    for (var i = 0; i < names.length; i++) {
+      try { digests[names[i]] = toHex(await crypto.subtle.digest(names[i], bytes)); } catch (e) { digests[names[i]] = "—"; }
+    }
+    if (id !== runId) return;
+    var rows = [["MD5", md5], ["SHA-1", digests["SHA-1"]], ["SHA-256", digests["SHA-256"]], ["SHA-512", digests["SHA-512"]]];
+    out.innerHTML = rows.map(function (r) {
+      return "<tr><td>" + r[0] + "</td><td class='hash-val'>" + r[1] + "<button class='btn btn-ghost hash-copy' type='button' data-hash='" + r[1] + "'>Copy</button></td></tr>";
+    }).join("");
+  }
+  out.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-hash]");
+    if (b) T360.copyText(b.getAttribute("data-hash"));
+  });
+  $("text-in").addEventListener("input", function () {
+    currentBytes = new TextEncoder().encode(this.value);
+    srcLabel.textContent = "Hashing: the text above";
+    render();
+  });
+  var drop = $("drop"), fileInput = $("file-input");
+  drop.addEventListener("click", function () { fileInput.click(); });
+  fileInput.addEventListener("change", async function () {
+    if (!fileInput.files.length) return;
+    var f = fileInput.files[0];
+    currentBytes = new Uint8Array(await f.arrayBuffer());
+    srcLabel.textContent = "Hashing: file “" + f.name + "” (" + T360.formatBytes(f.size) + ")";
+    render();
+    fileInput.value = "";
+  });
+  ["dragenter", "dragover"].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add("dragover"); }); });
+  ["dragleave", "drop"].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove("dragover"); }); });
+  drop.addEventListener("drop", async function (e) {
+    if (!e.dataTransfer.files.length) return;
+    var f = e.dataTransfer.files[0];
+    currentBytes = new Uint8Array(await f.arrayBuffer());
+    srcLabel.textContent = "Hashing: file “" + f.name + "” (" + T360.formatBytes(f.size) + ")";
+    render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>

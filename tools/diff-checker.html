@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4544572079119949" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diff Checker — Compare Two Texts Online Free | Tools360Pro</title>
+<meta name="description" content="Compare two texts line by line and highlight every addition and deletion. For essays, contracts, code and documents. Runs in your browser — nothing is uploaded.">
+<link rel="canonical" href="https://tools360pro.com/tools/diff-checker.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Diff Checker — Compare Two Texts Online Free | Tools360Pro">
+<meta property="og:description" content="Compare two texts line by line and highlight every addition and deletion. For essays, contracts, code and documents. Runs in your browser — nothing is uploaded.">
+<meta property="og:url" content="https://tools360pro.com/tools/diff-checker.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Diff Checker — Compare Two Texts Online Free | Tools360Pro">
+<meta name="twitter:description" content="Compare two texts line by line and highlight every addition and deletion. For essays, contracts, code and documents. Runs in your browser — nothing is uploaded.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=56.0">
+<style>
+  .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 720px) { .diff-grid { grid-template-columns: 1fr; } }
+  .diff-out { margin-top: 14px; border: 1px solid var(--border, #e5e7eb); border-radius: 10px; overflow: auto; max-height: 520px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .86rem; line-height: 1.5; }
+  .diff-out .row { display: flex; gap: 10px; padding: 2px 10px; white-space: pre-wrap; word-break: break-word; }
+  .diff-out .sign { flex: 0 0 14px; font-weight: 700; opacity: .75; }
+  .diff-out .add { background: rgba(34, 197, 94, .14); }
+  .diff-out .add .sign { color: #16a34a; }
+  .diff-out .del { background: rgba(239, 68, 68, .12); }
+  .diff-out .del .sign { color: #dc2626; }
+  .diff-out .same { opacity: .85; }
+  .diff-stats { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 12px; font-weight: 600; }
+  .diff-stats .a { color: #16a34a; } .diff-stats .d { color: #dc2626; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Diff Checker",
+   "url": "https://tools360pro.com/tools/diff-checker.html",
+   "description": "Compare two texts line by line and highlight every addition and deletion. For essays, contracts, code and documents. Runs in your browser — nothing is uploaded.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools360pro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Developer Tools", "item": "https://tools360pro.com/index.html#developer" },
+    { "@type": "ListItem", "position": 3, "name": "Diff Checker", "item": "https://tools360pro.com/tools/diff-checker.html" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    { "@type": "Question", "name": "How does the comparison work?", "acceptedAnswer": { "@type": "Answer", "text": "The two texts are compared line by line using the same longest-common-subsequence method programmers use for code. Lines only in the second text are marked as additions (+), lines only in the first as deletions (−)." } },
+    { "@type": "Question", "name": "Can I compare code with it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — it works for any plain text: source code, configuration files, essays, contracts, product descriptions or lists. Formatting and spacing within a line are treated exactly as typed." } },
+    { "@type": "Question", "name": "How much text can I compare?", "acceptedAnswer": { "@type": "Answer", "text": "Up to about 3,000 lines on each side — far more than most documents. Very large files are better compared in a desktop code editor." } },
+    { "@type": "Question", "name": "Is my text uploaded or stored?", "acceptedAnswer": { "@type": "Answer", "text": "No. The comparison runs entirely in your browser tab, so contracts, drafts and code stay on your device." } }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="diff-checker" data-category="developer">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#developer">Developer Tools</a> <span class="sep">›</span> <span aria-current="page">Diff Checker</span></nav>
+  <h1>Diff Checker</h1>
+  <p class="lede">Paste two versions of a text and see exactly what changed.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <div class="diff-grid">
+      <div class="field"><label for="text-a">Original text</label><textarea class="textarea mono" id="text-a" rows="9" placeholder="Paste the first version here…"></textarea></div>
+      <div class="field"><label for="text-b">Changed text</label><textarea class="textarea mono" id="text-b" rows="9" placeholder="Paste the second version here…"></textarea></div>
+    </div>
+    <div class="options-bar" style="margin-top:12px">
+      <button class="btn btn-primary btn-lg" id="compare" type="button">Compare</button>
+      <button class="btn btn-ghost" id="swap" type="button">Swap sides</button>
+      <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="changes-only"> Show changes only</label>
+    </div>
+    <p class="error-text hidden" id="err"></p>
+    <div class="diff-stats hidden" id="stats"></div>
+    <div class="diff-out hidden" id="out"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to use the Diff Checker</h2>
+    <ol class="steps">
+      <li>Paste the original text on the left and the new version on the right.</li>
+      <li>Press <b>Compare</b> — green lines were added, red lines were removed.</li>
+      <li>Tick "Show changes only" to hide the unchanged lines and read just the edits.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>Spot the edit in seconds, not by reading twice</h2>
+    <p>Someone sends back a "slightly updated" contract, a student revises an essay, a teammate tweaks a configuration file — and the real question is always the same: what actually changed? Reading both versions side by side and hoping to catch every edit is slow and unreliable; one altered number in a price clause is easy to stare straight past. A diff does the staring for you, lining the two texts up and flagging every line that was added, removed or moved.</p>
+    <p>This checker uses the same line-matching method (longest common subsequence) that powers the diff views in professional code tools, with a view anyone can read: plus for new, minus for gone. Because it runs in your browser, you can safely compare the documents you would never paste into a random server — drafts, agreements, unpublished writing and private code.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>How does the comparison work?</summary><p>The two texts are compared line by line using the same longest-common-subsequence method programmers use for code. Lines only in the second text are marked as additions (+), lines only in the first as deletions (−).</p></details>
+    <details><summary>Can I compare code with it?</summary><p>Yes — it works for any plain text: source code, configuration files, essays, contracts, product descriptions or lists. Formatting and spacing within a line are treated exactly as typed.</p></details>
+    <details><summary>How much text can I compare?</summary><p>Up to about 3,000 lines on each side — far more than most documents. Very large files are better compared in a desktop code editor.</p></details>
+    <details><summary>Is my text uploaded or stored?</summary><p>No. The comparison runs entirely in your browser tab, so contracts, drafts and code stay on your device.</p></details>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/site.js?v=56.0"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var err = $("err"), out = $("out"), stats = $("stats");
+  function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
+  function diffLines(a, b) {
+    var n = a.length, m = b.length, w = m + 1;
+    var dp = new Uint32Array((n + 1) * w);
+    for (var i = n - 1; i >= 0; i--) {
+      for (var j = m - 1; j >= 0; j--) {
+        dp[i * w + j] = a[i] === b[j] ? dp[(i + 1) * w + j + 1] + 1 : Math.max(dp[(i + 1) * w + j], dp[i * w + j + 1]);
+      }
+    }
+    var ops = [], x = 0, y = 0;
+    while (x < n && y < m) {
+      if (a[x] === b[y]) { ops.push({ t: "same", s: a[x] }); x++; y++; }
+      else if (dp[(x + 1) * w + y] >= dp[x * w + y + 1]) { ops.push({ t: "del", s: a[x] }); x++; }
+      else { ops.push({ t: "add", s: b[y] }); y++; }
+    }
+    while (x < n) { ops.push({ t: "del", s: a[x] }); x++; }
+    while (y < m) { ops.push({ t: "add", s: b[y] }); y++; }
+    return ops;
+  }
+  $("compare").addEventListener("click", function () {
+    showErr("");
+    var a = $("text-a").value.replace(/\r\n?/g, "\n").split("\n");
+    var b = $("text-b").value.replace(/\r\n?/g, "\n").split("\n");
+    if (a.length > 3000 || b.length > 3000) { showErr("Each side is limited to about 3,000 lines. Please trim the text and compare in parts."); return; }
+    var ops = diffLines(a, b);
+    var adds = 0, dels = 0, sames = 0;
+    var html = "";
+    var only = $("changes-only").checked;
+    ops.forEach(function (op) {
+      if (op.t === "add") adds++; else if (op.t === "del") dels++; else sames++;
+      if (only && op.t === "same") return;
+      var sign = op.t === "add" ? "+" : op.t === "del" ? "−" : " ";
+      var txt = op.s.replace(/&/g, "&amp;").replace(/</g, "&lt;") || " ";
+      html += "<div class='row " + op.t + "'><span class='sign'>" + sign + "</span><span>" + txt + "</span></div>";
+    });
+    stats.innerHTML = "<span class='a'>+ " + adds + " added</span><span class='d'>− " + dels + " removed</span><span>" + sames + " unchanged</span>" + (adds + dels === 0 ? "<span>— the two texts are identical</span>" : "");
+    stats.classList.remove("hidden");
+    out.innerHTML = html;
+    out.classList.remove("hidden");
+  });
+  $("swap").addEventListener("click", function () {
+    var t = $("text-a").value; $("text-a").value = $("text-b").value; $("text-b").value = t;
+  });
+})();
+</script>
+</body>
+</html>

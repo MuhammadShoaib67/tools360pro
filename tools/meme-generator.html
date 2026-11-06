@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4544572079119949" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meme Generator — Add Text to Images, Free | Tools360Pro</title>
+<meta name="description" content="Turn any photo into a meme: add classic top and bottom text with the bold outlined style and download the PNG. Free, in your browser, no watermark, no uploads.">
+<link rel="canonical" href="https://tools360pro.com/tools/meme-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Meme Generator — Add Text to Images, Free | Tools360Pro">
+<meta property="og:description" content="Turn any photo into a meme: add classic top and bottom text with the bold outlined style and download the PNG. Free, in your browser, no watermark, no uploads.">
+<meta property="og:url" content="https://tools360pro.com/tools/meme-generator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Meme Generator — Add Text to Images, Free | Tools360Pro">
+<meta name="twitter:description" content="Turn any photo into a meme: add classic top and bottom text with the bold outlined style and download the PNG. Free, in your browser, no watermark, no uploads.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=56.0">
+<style>
+  .meme-canvas { width: 100%; border-radius: 12px; background: #111; }
+  .meme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Meme Generator",
+   "url": "https://tools360pro.com/tools/meme-generator.html",
+   "description": "Turn any photo into a meme: add classic top and bottom text with the bold outlined style and download the PNG. Free, in your browser, no watermark, no uploads.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools360pro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Image Tools", "item": "https://tools360pro.com/index.html#image" },
+    { "@type": "ListItem", "position": 3, "name": "Meme Generator", "item": "https://tools360pro.com/tools/meme-generator.html" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    { "@type": "Question", "name": "Is there a watermark on the meme?", "acceptedAnswer": { "@type": "Answer", "text": "No. The PNG you download is exactly the picture you made — no watermark, no logo, no credit line." } },
+    { "@type": "Question", "name": "Which images can I use?", "acceptedAnswer": { "@type": "Answer", "text": "Any JPG, PNG or WebP from your device. Use photos you own or that you have the right to edit; the tool simply adds your text to your image." } },
+    { "@type": "Question", "name": "Why does the text look different from classic memes?", "acceptedAnswer": { "@type": "Answer", "text": "Classic memes use the Impact typeface. This generator uses the boldest font available on your device, which looks very close; the white fill with a thick black outline is the part that makes it read as a meme." } },
+    { "@type": "Question", "name": "Is my photo uploaded?", "acceptedAnswer": { "@type": "Answer", "text": "No. The image is drawn and captioned entirely in your browser tab and never leaves your device." } }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="meme-generator" data-category="image">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#image">Image Tools</a> <span class="sep">›</span> <span aria-current="page">Meme Generator</span></nav>
+  <h1>Meme Generator</h1>
+  <p class="lede">Add the classic top-and-bottom captions to any picture.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <div class="dropzone" id="drop">
+      <input type="file" id="file-input" accept="image/*" hidden>
+      <svg class="dz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 15h6"/></svg>
+      <p><b>Drop an image here</b> or click to choose one.</p>
+    </div>
+    <div class="meme-grid" style="margin-top:14px">
+      <div class="field"><label for="top-text">Top text</label><input class="input" id="top-text" placeholder="WHEN THE CODE WORKS"></div>
+      <div class="field"><label for="bottom-text">Bottom text</label><input class="input" id="bottom-text" placeholder="BUT YOU DON'T KNOW WHY"></div>
+      <div class="field"><label for="font-size">Text size: <span id="font-size-label">auto</span></label><input type="range" id="font-size" min="0" max="100" value="0" style="width:100%"></div>
+    </div>
+    <p class="error-text hidden" id="err"></p>
+    <div class="hidden" id="stage" style="margin-top:14px">
+      <canvas class="meme-canvas" id="canvas" width="800" height="600"></canvas>
+      <div class="options-bar" style="margin-top:12px">
+        <button class="btn btn-primary btn-lg" id="download" type="button">Download meme (PNG)</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to make a meme</h2>
+    <ol class="steps">
+      <li>Drop in the picture — your own photo, a screenshot, any image you may use.</li>
+      <li>Type the top and bottom captions; the preview updates as you type.</li>
+      <li>Adjust the text size if needed, then download the PNG and share it.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>The two-line joke format that never dies</h2>
+    <p>The top-and-bottom caption meme is nearly twenty years old and still the internet's default joke shape: setup on top, punchline at the bottom, white letters you can read from across the room. The format survives because it asks nothing of the reader — no context, no sound, no video — just a picture and two lines. Group chats, classroom slides, office presentations and social posts all still run on it.</p>
+    <p>Good memes are mostly restraint: keep each line under about six words, let the picture do half the work, and write the caption in the voice of the image rather than explaining it. This generator keeps the classic recipe — bold capitals, thick outline, text hugging the edges — and adds no watermark, so the joke you make is entirely yours.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Is there a watermark on the meme?</summary><p>No. The PNG you download is exactly the picture you made — no watermark, no logo, no credit line.</p></details>
+    <details><summary>Which images can I use?</summary><p>Any JPG, PNG or WebP from your device. Use photos you own or that you have the right to edit; the tool simply adds your text to your image.</p></details>
+    <details><summary>Why does the text look different from classic memes?</summary><p>Classic memes use the Impact typeface. This generator uses the boldest font available on your device, which looks very close; the white fill with a thick black outline is the part that makes it read as a meme.</p></details>
+    <details><summary>Is my photo uploaded?</summary><p>No. The image is drawn and captioned entirely in your browser tab and never leaves your device.</p></details>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/site.js?v=56.0"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var drop = $("drop"), fileInput = $("file-input"), err = $("err"), stage = $("stage"),
+      canvas = $("canvas"), ctx = canvas.getContext("2d");
+  var img = null;
+  function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
+  function wrapLines(text, maxWidth, font) {
+    ctx.font = font;
+    var words = String(text || "").toUpperCase().split(/\s+/).filter(Boolean);
+    var lines = [], cur = "";
+    words.forEach(function (w) {
+      var test = cur ? cur + " " + w : w;
+      if (ctx.measureText(test).width > maxWidth && cur) { lines.push(cur); cur = w; }
+      else cur = test;
+    });
+    if (cur) lines.push(cur);
+    return lines.slice(0, 3);
+  }
+  function draw() {
+    if (!img) return;
+    var maxW = 1080, scale = Math.min(1, maxW / img.naturalWidth);
+    canvas.width = Math.round(img.naturalWidth * scale);
+    canvas.height = Math.round(img.naturalHeight * scale);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    var slider = parseInt($("font-size").value, 10);
+    var size = slider > 0 ? Math.round(canvas.width * (0.04 + slider / 100 * 0.1)) : Math.round(canvas.width / 10);
+    size = Math.max(16, size);
+    $("font-size-label").textContent = slider > 0 ? size + " px" : "auto (" + size + " px)";
+    var font = "900 " + size + "px Impact, 'Arial Black', Arial, sans-serif";
+    ctx.font = font;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "top";
+    ctx.lineJoin = "round";
+    ctx.strokeStyle = "#000";
+    ctx.fillStyle = "#fff";
+    ctx.lineWidth = Math.max(2, size / 7);
+    var lh = size * 1.12, pad = canvas.width * 0.03, maxTextW = canvas.width * 0.94;
+    var top = wrapLines($("top-text").value, maxTextW, font);
+    top.forEach(function (line, i) {
+      var y = pad + i * lh;
+      ctx.strokeText(line, canvas.width / 2, y);
+      ctx.fillText(line, canvas.width / 2, y);
+    });
+    var bottom = wrapLines($("bottom-text").value, maxTextW, font);
+    bottom.forEach(function (line, i) {
+      var y = canvas.height - pad - (bottom.length - i) * lh;
+      ctx.strokeText(line, canvas.width / 2, y);
+      ctx.fillText(line, canvas.width / 2, y);
+    });
+  }
+  function setFile(f) {
+    showErr("");
+    if (!f) return;
+    var url = URL.createObjectURL(f);
+    var image = new Image();
+    image.onload = function () {
+      img = image;
+      stage.classList.remove("hidden");
+      draw();
+    };
+    image.onerror = function () { showErr("That file could not be read as an image."); };
+    image.src = url;
+  }
+  drop.addEventListener("click", function () { fileInput.click(); });
+  fileInput.addEventListener("change", function () { if (fileInput.files.length) setFile(fileInput.files[0]); fileInput.value = ""; });
+  ["dragenter", "dragover"].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add("dragover"); }); });
+  ["dragleave", "drop"].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove("dragover"); }); });
+  drop.addEventListener("drop", function (e) { if (e.dataTransfer.files.length) setFile(e.dataTransfer.files[0]); });
+  ["top-text", "bottom-text", "font-size"].forEach(function (id) { $(id).addEventListener("input", draw); });
+  $("download").addEventListener("click", function () {
+    canvas.toBlob(function (b) { if (b) T360.download(b, "meme.png"); }, "image/png");
+  });
+})();
+</script>
+</body>
+</html>

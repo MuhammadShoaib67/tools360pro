@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4544572079119949" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unix Timestamp Converter — Epoch to Date, Free | Tools360Pro</title>
+<meta name="description" content="Convert Unix timestamps to readable dates and back — seconds or milliseconds, UTC and your local time, with a live epoch clock. Free and instant.">
+<link rel="canonical" href="https://tools360pro.com/tools/timestamp-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Unix Timestamp Converter — Epoch to Date, Free | Tools360Pro">
+<meta property="og:description" content="Convert Unix timestamps to readable dates and back — seconds or milliseconds, UTC and your local time, with a live epoch clock. Free and instant.">
+<meta property="og:url" content="https://tools360pro.com/tools/timestamp-converter.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unix Timestamp Converter — Epoch to Date, Free | Tools360Pro">
+<meta name="twitter:description" content="Convert Unix timestamps to readable dates and back — seconds or milliseconds, UTC and your local time, with a live epoch clock. Free and instant.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=56.0">
+<style>
+  .ts-now { font-size: 1.5rem; font-weight: 800; }
+  .ts-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .ts-table td { padding: 7px 10px; border-bottom: 1px solid var(--border, #e5e7eb); vertical-align: top; }
+  .ts-table td:first-child { font-weight: 600; white-space: nowrap; width: 170px; }
+  .ts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; word-break: break-all; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Unix Timestamp Converter",
+   "url": "https://tools360pro.com/tools/timestamp-converter.html",
+   "description": "Convert Unix timestamps to readable dates and back — seconds or milliseconds, UTC and your local time, with a live epoch clock. Free and instant.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools360pro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Developer Tools", "item": "https://tools360pro.com/index.html#developer" },
+    { "@type": "ListItem", "position": 3, "name": "Unix Timestamp Converter", "item": "https://tools360pro.com/tools/timestamp-converter.html" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    { "@type": "Question", "name": "What is a Unix timestamp?", "acceptedAnswer": { "@type": "Answer", "text": "The number of seconds that have passed since midnight UTC on 1 January 1970 (the 'epoch'). Computers store times this way because one number is easy to save, sort and subtract — humans just cannot read it." } },
+    { "@type": "Question", "name": "Seconds or milliseconds — which is my number?", "acceptedAnswer": { "@type": "Answer", "text": "Count the digits: 10 digits is seconds, 13 digits is milliseconds. This converter detects it automatically — anything with 12 or more digits is treated as milliseconds." } },
+    { "@type": "Question", "name": "Why do UTC and my local time differ?", "acceptedAnswer": { "@type": "Answer", "text": "A timestamp is one fixed moment for the whole planet; the clock reading depends on where you stand. The converter shows both the UTC reading and your device's local reading of the same moment." } },
+    { "@type": "Question", "name": "What dates are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Any date your browser can represent — far past and far future. Negative timestamps (before 1970) also work." } }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="timestamp-converter" data-category="developer">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#developer">Developer Tools</a> <span class="sep">›</span> <span aria-current="page">Unix Timestamp Converter</span></nav>
+  <h1>Unix Timestamp Converter</h1>
+  <p class="lede">Turn epoch numbers into dates you can read — and dates back into timestamps.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <p style="margin:0">The current Unix timestamp is</p>
+    <p class="ts-now mono" id="now-ts">—</p>
+    <p style="margin:0 0 6px;color:var(--muted)" id="now-date">—</p>
+    <hr style="border:none;border-top:1px solid var(--border,#e5e7eb);margin:16px 0">
+    <div class="ts-grid">
+      <div>
+        <div class="field"><label for="ts-in">Timestamp → date</label><input class="input mono" id="ts-in" inputmode="numeric" placeholder="e.g. 1762272000 or 1762272000000"></div>
+        <button class="btn btn-primary" id="ts-go" type="button">Convert to date</button>
+        <table class="ts-table hidden" id="ts-out"></table>
+      </div>
+      <div>
+        <div class="field"><label for="dt-in">Date → timestamp</label><input class="input" id="dt-in" type="datetime-local" step="1"></div>
+        <button class="btn btn-primary" id="dt-go" type="button">Convert to timestamp</button>
+        <table class="ts-table hidden" id="dt-out"></table>
+      </div>
+    </div>
+    <p class="error-text hidden" id="err"></p>
+  </section>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to use the Timestamp Converter</h2>
+    <ol class="steps">
+      <li>Paste a timestamp (seconds or milliseconds — it detects which) and press <b>Convert to date</b>.</li>
+      <li>Or pick a date and time and press <b>Convert to timestamp</b> to get both the seconds and milliseconds values.</li>
+      <li>The clock at the top always shows the current epoch second, ticking live.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>The number hiding inside every log file</h2>
+    <p>Open any server log, API response or database export and you will meet long numbers like 1762272000 where a date should be. That is Unix time: seconds counted from 1 January 1970, UTC. Software loves it because arithmetic is trivial — subtract two timestamps and you know exactly how far apart two events were, in any country, with no time-zone arguments. Humans, sensibly, do not read time that way, which is why this converter exists on every developer's bookmark bar.</p>
+    <p>The two traps are worth knowing. First, JavaScript and many APIs use <b>milliseconds</b> (13 digits) while Unix tradition uses <b>seconds</b> (10 digits) — mixing them up throws a date into 1970 or the year 56000. Second, a timestamp is not "in" a time zone; it is one instant, and only its display changes. This tool shows the UTC reading, your local reading, the ISO format and how long ago (or until) it is — the four things you actually need when debugging.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is a Unix timestamp?</summary><p>The number of seconds that have passed since midnight UTC on 1 January 1970 (the "epoch"). Computers store times this way because one number is easy to save, sort and subtract — humans just cannot read it.</p></details>
+    <details><summary>Seconds or milliseconds — which is my number?</summary><p>Count the digits: 10 digits is seconds, 13 digits is milliseconds. This converter detects it automatically — anything with 12 or more digits is treated as milliseconds.</p></details>
+    <details><summary>Why do UTC and my local time differ?</summary><p>A timestamp is one fixed moment for the whole planet; the clock reading depends on where you stand. The converter shows both the UTC reading and your device's local reading of the same moment.</p></details>
+    <details><summary>What dates are supported?</summary><p>Any date your browser can represent — far past and far future. Negative timestamps (before 1970) also work.</p></details>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/site.js?v=56.0"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var err = $("err");
+  function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
+  function ago(d) {
+    var diff = Date.now() - d.getTime(), future = diff < 0; diff = Math.abs(diff);
+    var units = [["year", 315576e5], ["month", 26298e5], ["day", 864e5], ["hour", 36e5], ["minute", 6e4], ["second", 1e3]];
+    for (var i = 0; i < units.length; i++) {
+      var v = Math.floor(diff / units[i][1]);
+      if (v >= 1) return future ? "in " + v + " " + units[i][0] + (v > 1 ? "s" : "") : v + " " + units[i][0] + (v > 1 ? "s" : "") + " ago";
+    }
+    return "just now";
+  }
+  function row(label, value) { return "<tr><td>" + label + "</td><td class='mono'>" + value + "</td></tr>"; }
+  function describe(ms, table) {
+    var d = new Date(ms);
+    if (isNaN(d.getTime())) { showErr("That does not resolve to a valid date."); return; }
+    table.innerHTML =
+      row("Local time", d.toLocaleString(undefined, { weekday: "short", year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" })) +
+      row("UTC time", d.toUTCString()) +
+      row("ISO 8601", d.toISOString()) +
+      row("Relative", ago(d)) +
+      row("Timestamp (sec)", Math.floor(ms / 1000)) +
+      row("Timestamp (ms)", ms);
+    table.classList.remove("hidden");
+  }
+  function tick() {
+    var now = new Date();
+    $("now-ts").textContent = Math.floor(now.getTime() / 1000);
+    $("now-date").textContent = now.toLocaleString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" }) + " (your local time)";
+  }
+  tick(); setInterval(tick, 1000);
+  $("ts-go").addEventListener("click", function () {
+    showErr("");
+    var raw = $("ts-in").value.trim().replace(/[^0-9-]/g, "");
+    if (!raw) { showErr("Paste a timestamp first."); return; }
+    var n = Number(raw);
+    if (!isFinite(n)) { showErr("That is not a number."); return; }
+    var ms = Math.abs(n) >= 1e12 ? n : n * 1000;
+    describe(ms, $("ts-out"));
+  });
+  $("dt-go").addEventListener("click", function () {
+    showErr("");
+    var v = $("dt-in").value;
+    if (!v) { showErr("Pick a date and time first."); return; }
+    var d = new Date(v);
+    if (isNaN(d.getTime())) { showErr("That date could not be read."); return; }
+    describe(d.getTime(), $("dt-out"));
+  });
+})();
+</script>
+</body>
+</html>

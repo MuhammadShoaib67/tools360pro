@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4544572079119949" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPA Calculator — Grades to GPA, Free Online | Tools360Pro</title>
+<meta name="description" content="Work out your GPA from your course grades and credit hours on the standard 4.0 scale. Add as many courses as you need — updates live as you type. Free.">
+<link rel="canonical" href="https://tools360pro.com/tools/gpa-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="GPA Calculator — Grades to GPA, Free Online | Tools360Pro">
+<meta property="og:description" content="Work out your GPA from your course grades and credit hours on the standard 4.0 scale. Add as many courses as you need — updates live as you type. Free.">
+<meta property="og:url" content="https://tools360pro.com/tools/gpa-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GPA Calculator — Grades to GPA, Free Online | Tools360Pro">
+<meta name="twitter:description" content="Work out your GPA from your course grades and credit hours on the standard 4.0 scale. Add as many courses as you need — updates live as you type. Free.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=56.0">
+<style>
+  .gpa-row { display: grid; grid-template-columns: 1fr 110px 90px 40px; gap: 8px; margin-bottom: 8px; align-items: center; }
+  @media (max-width: 560px) { .gpa-row { grid-template-columns: 1fr 86px 70px 36px; } }
+  .gpa-big { font-size: 2.2rem; font-weight: 800; }
+  .gpa-head { display: grid; grid-template-columns: 1fr 110px 90px 40px; gap: 8px; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+  @media (max-width: 560px) { .gpa-head { grid-template-columns: 1fr 86px 70px 36px; } }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "GPA Calculator",
+   "url": "https://tools360pro.com/tools/gpa-calculator.html",
+   "description": "Work out your GPA from your course grades and credit hours on the standard 4.0 scale. Add as many courses as you need — updates live as you type. Free.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools360pro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://tools360pro.com/index.html#calculators" },
+    { "@type": "ListItem", "position": 3, "name": "GPA Calculator", "item": "https://tools360pro.com/tools/gpa-calculator.html" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    { "@type": "Question", "name": "How is GPA calculated?", "acceptedAnswer": { "@type": "Answer", "text": "Each grade becomes grade points (A = 4.0, B = 3.0, and so on). Multiply each course's points by its credit hours, add them all up, and divide by the total credit hours — so a 4-credit course moves your GPA more than a 1-credit one." } },
+    { "@type": "Question", "name": "Which grade scale does this use?", "acceptedAnswer": { "@type": "Answer", "text": "The standard US 4.0 scale with plus/minus steps: A 4.0, A− 3.7, B+ 3.3, B 3.0, B− 2.7, C+ 2.3, C 2.0, C− 1.7, D+ 1.3, D 1.0, F 0.0. Some schools weight A+ as 4.0 too — here A+ counts 4.0." } },
+    { "@type": "Question", "name": "My school uses percentages. Can I still use it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — convert each percentage to the nearest letter first (roughly: 93–100 A, 90–92 A−, 87–89 B+, 83–86 B, 80–82 B−, 77–79 C+, 73–76 C, 70–72 C−, 67–69 D+, 65–66 D, below 65 F), or check your school's own table, which is the one that counts." } },
+    { "@type": "Question", "name": "Can I plan a target GPA with this?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — enter the courses you have finished, then add the remaining courses with the grades you hope to get. The live GPA shows exactly where that plan lands." } }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="gpa-calculator" data-category="calculators">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#calculators">Calculators</a> <span class="sep">›</span> <span aria-current="page">GPA Calculator</span></nav>
+  <h1>GPA Calculator</h1>
+  <p class="lede">Add your courses, pick the grades, get your GPA on the 4.0 scale.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <div class="gpa-head"><span>Course (optional)</span><span>Grade</span><span>Credits</span><span></span></div>
+    <div id="rows"></div>
+    <div class="options-bar" style="margin-top:6px">
+      <button class="btn btn-ghost" id="add" type="button">+ Add course</button>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--border,#e5e7eb);margin:16px 0">
+    <p style="margin:0;color:var(--muted)">Your GPA</p>
+    <p class="gpa-big" id="gpa">—</p>
+    <p style="margin:0;color:var(--muted)" id="detail"></p>
+  </section>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to use the GPA Calculator</h2>
+    <ol class="steps">
+      <li>Add a row for each course, choose its letter grade and credit hours.</li>
+      <li>The GPA updates live — try different future grades to plan a target.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>Why one heavy course outweighs two light ones</h2>
+    <p>GPA is a weighted average, and the weight is credit hours: an A in a 4-credit course lifts you four times as much as an A in a 1-credit lab, and a weak grade in a heavy course is equally hard to hide. That single fact drives most GPA strategy — protect the heavy courses first, because recovering from a bad one takes several perfect light ones.</p>
+    <p>This calculator uses the standard 4.0 scale found across US colleges and many international universities, with plus/minus steps. Use it two ways: backwards, to know exactly where you stand before results day panic sets in; and forwards, entering hoped-for grades on unfinished courses to see what a target GPA actually demands — often less perfection, applied in the right courses, than students fear.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>How is GPA calculated?</summary><p>Each grade becomes grade points (A = 4.0, B = 3.0, and so on). Multiply each course's points by its credit hours, add them all up, and divide by the total credit hours — so a 4-credit course moves your GPA more than a 1-credit one.</p></details>
+    <details><summary>Which grade scale does this use?</summary><p>The standard US 4.0 scale with plus/minus steps: A 4.0, A− 3.7, B+ 3.3, B 3.0, B− 2.7, C+ 2.3, C 2.0, C− 1.7, D+ 1.3, D 1.0, F 0.0. Some schools weight A+ as 4.0 too — here A+ counts 4.0.</p></details>
+    <details><summary>My school uses percentages. Can I still use it?</summary><p>Yes — convert each percentage to the nearest letter first (roughly: 93–100 A, 90–92 A−, 87–89 B+, 83–86 B, 80–82 B−, 77–79 C+, 73–76 C, 70–72 C−, 67–69 D+, 65–66 D, below 65 F), or check your school's own table, which is the one that counts.</p></details>
+    <details><summary>Can I plan a target GPA with this?</summary><p>Yes — enter the courses you have finished, then add the remaining courses with the grades you hope to get. The live GPA shows exactly where that plan lands.</p></details>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/site.js?v=56.0"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var rowsEl = $("rows");
+  var GRADES = [["A+", 4.0], ["A", 4.0], ["A-", 3.7], ["B+", 3.3], ["B", 3.0], ["B-", 2.7], ["C+", 2.3], ["C", 2.0], ["C-", 1.7], ["D+", 1.3], ["D", 1.0], ["F", 0.0]];
+  function gradeOptions() {
+    return GRADES.map(function (g) { return "<option value='" + g[1].toFixed(1) + "'>" + g[0] + " (" + g[1].toFixed(1) + ")</option>"; }).join("");
+  }
+  function addRow(name, gradeVal, credits) {
+    var row = document.createElement("div");
+    row.className = "gpa-row";
+    row.innerHTML = "<input class='input course-name' placeholder='e.g. Mathematics'><select class='select course-grade'>" + gradeOptions() + "</select><input class='input course-credits' type='number' min='0' step='0.5' value='3'><button class='btn btn-ghost remove' type='button' aria-label='Remove course'>✕</button>";
+    if (name) row.querySelector(".course-name").value = name;
+    if (gradeVal !== undefined) row.querySelector(".course-grade").value = gradeVal;
+    if (credits !== undefined) row.querySelector(".course-credits").value = credits;
+    row.querySelector(".remove").addEventListener("click", function () { row.remove(); calc(); });
+    row.addEventListener("input", calc);
+    row.addEventListener("change", calc);
+    rowsEl.appendChild(row);
+  }
+  function standing(g) {
+    if (g >= 3.7) return "Excellent — honours territory";
+    if (g >= 3.3) return "Strong — above average";
+    if (g >= 3.0) return "Good — solid B average";
+    if (g >= 2.5) return "Fair — room to climb";
+    if (g >= 2.0) return "Passing — protect the heavy courses";
+    return "At risk — focus on the biggest-credit courses first";
+  }
+  function calc() {
+    var pts = 0, creds = 0, n = 0;
+    rowsEl.querySelectorAll(".gpa-row").forEach(function (row) {
+      var g = parseFloat(row.querySelector(".course-grade").value);
+      var c = parseFloat(row.querySelector(".course-credits").value);
+      if (!isNaN(g) && !isNaN(c) && c > 0) { pts += g * c; creds += c; n++; }
+    });
+    if (!creds) { $("gpa").textContent = "—"; $("detail").textContent = "Add at least one course with credit hours."; return; }
+    var gpa = pts / creds;
+    $("gpa").textContent = gpa.toFixed(2);
+    $("detail").textContent = n + " course" + (n > 1 ? "s" : "") + " · " + creds + " total credits · " + standing(gpa);
+  }
+  $("add").addEventListener("click", function () { addRow(); calc(); });
+  addRow("", "4.0", 3);
+  addRow("", "3.0", 3);
+  addRow("", "3.7", 4);
+  calc();
+})();
+</script>
+</body>
+</html>

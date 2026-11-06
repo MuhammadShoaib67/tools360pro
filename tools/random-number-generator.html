@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4544572079119949" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Number Generator — Secure & Free Online | Tools360Pro</title>
+<meta name="description" content="Generate secure random numbers in any range — one or a thousand at once, unique or with decimals. Uses your browser's cryptographic randomness. Free, no sign-up.">
+<link rel="canonical" href="https://tools360pro.com/tools/random-number-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Random Number Generator — Secure & Free Online | Tools360Pro">
+<meta property="og:description" content="Generate secure random numbers in any range — one or a thousand at once, unique or with decimals. Uses your browser's cryptographic randomness. Free, no sign-up.">
+<meta property="og:url" content="https://tools360pro.com/tools/random-number-generator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Random Number Generator — Secure & Free Online | Tools360Pro">
+<meta name="twitter:description" content="Generate secure random numbers in any range — one or a thousand at once, unique or with decimals. Uses your browser's cryptographic randomness. Free, no sign-up.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=56.0">
+<style>
+  .rng-big { font-size: 2.6rem; font-weight: 800; letter-spacing: .02em; text-align: center; padding: 18px 8px; word-break: break-all; }
+  .rng-list { max-height: 220px; overflow: auto; background: var(--panel-2, #f3f4f6); border-radius: 10px; padding: 12px 14px; line-height: 1.9; word-break: break-word; }
+  .rng-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Random Number Generator",
+   "url": "https://tools360pro.com/tools/random-number-generator.html",
+   "description": "Generate secure random numbers in any range — one or a thousand at once, unique or with decimals. Uses your browser's cryptographic randomness. Free, no sign-up.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools360pro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Generators", "item": "https://tools360pro.com/index.html#generators" },
+    { "@type": "ListItem", "position": 3, "name": "Random Number Generator", "item": "https://tools360pro.com/tools/random-number-generator.html" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    { "@type": "Question", "name": "Are these numbers truly random?", "acceptedAnswer": { "@type": "Answer", "text": "They come from your browser's cryptographic random source (the same system used for security tokens), not from a predictable formula. Every draw is independent and unbiased across the whole range." } },
+    { "@type": "Question", "name": "Can I generate numbers with no repeats?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — tick 'No duplicates' and each number in the batch will be unique, like drawing lottery balls without putting them back. The count cannot exceed the size of the range." } },
+    { "@type": "Question", "name": "What is this used for?", "acceptedAnswer": { "@type": "Answer", "text": "Giveaways and raffles, picking lottery numbers, classroom cold-calling, sampling and statistics practice, game nights, and splitting people into random groups or order." } },
+    { "@type": "Question", "name": "Is anything sent to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. The numbers are generated in your browser tab and never leave your device." } }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="random-number-generator" data-category="generators">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#generators">Generators</a> <span class="sep">›</span> <span aria-current="page">Random Number Generator</span></nav>
+  <h1>Random Number Generator</h1>
+  <p class="lede">Pick a range, get genuinely random numbers — singly or by the thousand.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <div class="rng-grid">
+      <div class="field"><label for="min">Minimum</label><input class="input" type="number" id="min" value="1"></div>
+      <div class="field"><label for="max">Maximum</label><input class="input" type="number" id="max" value="100"></div>
+      <div class="field"><label for="count">How many</label><input class="input" type="number" id="count" value="1" min="1" max="1000"></div>
+      <div class="field"><label for="decimals">Decimal places</label><input class="input" type="number" id="decimals" value="0" min="0" max="6"></div>
+    </div>
+    <div class="options-bar" style="margin-top:12px">
+      <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="unique"> No duplicates</label>
+      <label style="display:flex;gap:8px;align-items:center"><input type="checkbox" id="sorted"> Sort the results</label>
+    </div>
+    <div class="options-bar" style="margin-top:8px">
+      <button class="btn btn-primary btn-lg" id="go" type="button">Generate</button>
+      <button class="btn btn-ghost" id="copy" type="button">Copy results</button>
+    </div>
+    <p class="error-text hidden" id="err"></p>
+    <div class="rng-big hidden" id="big"></div>
+    <div class="rng-list hidden" id="list"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to use the Random Number Generator</h2>
+    <ol class="steps">
+      <li>Set the smallest and largest numbers allowed.</li>
+      <li>Choose how many numbers you need, and whether decimals or no-duplicates apply.</li>
+      <li>Press <b>Generate</b> — copy the results with one click.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>Fair draws, honest randomness</h2>
+    <p>Random numbers run more of daily life than we notice: the order students get called on, the winner of an Instagram giveaway, the sample a researcher pulls from a list, the dice a board game lost. Doing it by hand invites bias — people unconsciously favour the middle of a range and avoid repeats that are actually normal. This generator uses the cryptographic random source built into your browser, the same one websites trust for security codes, so every value in your range is equally likely, every time.</p>
+    <p>Two options cover the common special cases. "No duplicates" turns the draw into a lottery-style pick, where each number can appear only once — ideal for raffles and random orders. Decimal places switch the tool from whole numbers to measurements and simulations. Need names instead of numbers? Our List Randomizer shuffles a list of anything.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Are these numbers truly random?</summary><p>They come from your browser's cryptographic random source (the same system used for security tokens), not from a predictable formula. Every draw is independent and unbiased across the whole range.</p></details>
+    <details><summary>Can I generate numbers with no repeats?</summary><p>Yes — tick "No duplicates" and each number in the batch will be unique, like drawing lottery balls without putting them back. The count cannot exceed the size of the range.</p></details>
+    <details><summary>What is this used for?</summary><p>Giveaways and raffles, picking lottery numbers, classroom cold-calling, sampling and statistics practice, game nights, and splitting people into random groups or order.</p></details>
+    <details><summary>Is anything sent to a server?</summary><p>No. The numbers are generated in your browser tab and never leave your device.</p></details>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/site.js?v=56.0"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var err = $("err"), big = $("big"), list = $("list"), lastText = "";
+  function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
+  function randBelow(n) { // unbiased integer in [0, n)
+    var max = 4294967296, limit = max - (max % n), buf = new Uint32Array(1);
+    do { crypto.getRandomValues(buf); } while (buf[0] >= limit);
+    return buf[0] % n;
+  }
+  $("go").addEventListener("click", function () {
+    showErr("");
+    var min = parseFloat($("min").value), max = parseFloat($("max").value);
+    var count = Math.floor(parseFloat($("count").value)), dec = Math.floor(parseFloat($("decimals").value));
+    if (isNaN(min) || isNaN(max) || isNaN(count)) { showErr("Please fill in the minimum, maximum and how many numbers you need."); return; }
+    if (max < min) { showErr("The maximum must be bigger than the minimum."); return; }
+    if (count < 1 || count > 1000) { showErr("You can generate between 1 and 1000 numbers at a time."); return; }
+    if (dec < 0 || dec > 6) { showErr("Decimal places must be between 0 and 6."); return; }
+    var unique = $("unique").checked, out = [];
+    try {
+      if (dec === 0) {
+        var lo = Math.ceil(min), hi = Math.floor(max), range = hi - lo + 1;
+        if (range <= 0) { showErr("That range contains no whole numbers — add decimal places or widen it."); return; }
+        if (unique && count > range) { showErr("No-duplicates needs a range at least as big as the count (" + range + " whole numbers available)."); return; }
+        if (unique) {
+          var seen = {};
+          while (out.length < count) { var v = lo + randBelow(range); if (!seen[v]) { seen[v] = 1; out.push(v); } }
+        } else {
+          for (var i = 0; i < count; i++) out.push(lo + randBelow(range));
+        }
+      } else {
+        var span = max - min;
+        for (var j = 0; j < count; j++) {
+          var f = min + (crypto.getRandomValues(new Uint32Array(1))[0] / 4294967296) * span;
+          out.push(parseFloat(f.toFixed(dec)));
+        }
+        if (unique) out = Array.from(new Set(out));
+      }
+    } catch (e) { showErr("Generation failed in this browser."); return; }
+    if ($("sorted").checked) out.sort(function (a, b) { return a - b; });
+    lastText = out.join(", ");
+    if (count === 1) {
+      big.textContent = out[0];
+      big.classList.remove("hidden"); list.classList.add("hidden");
+    } else {
+      list.textContent = lastText;
+      list.classList.remove("hidden"); big.classList.add("hidden");
+    }
+    T360.toast("Generated " + out.length + " number" + (out.length > 1 ? "s" : ""));
+  });
+  $("copy").addEventListener("click", function () { if (lastText) T360.copyText(lastText); });
+})();
+</script>
+</body>
+</html>

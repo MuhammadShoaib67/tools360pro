@@ -65,6 +65,17 @@
     "screen-recorder":  ic('<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/>'),
     "mp4-to-mp3":       ic('<path d="M9 18V6l10-2v11"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="15" r="2.5"/>'),
     "pdf-to-word":      ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><text x="8.4" y="17.5" font-size="9.5" font-weight="700" fill="currentColor" stroke="none" font-family="inherit">W</text>'),
+    "random-number-generator": ic('<rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.3" fill="currentColor" stroke="none"/><circle cx="15" cy="9" r="1.3" fill="currentColor" stroke="none"/><circle cx="9" cy="15" r="1.3" fill="currentColor" stroke="none"/><circle cx="15" cy="15" r="1.3" fill="currentColor" stroke="none"/>'),
+    "timestamp-converter": ic('<path d="M4.9 8.2A8.5 8.5 0 1 1 3.6 13"/><path d="M3.4 4.6v4h4"/><path d="M12 8v4.2l3 1.8"/>'),
+    "diff-checker": ic('<path d="M8 3H5.5A1.5 1.5 0 0 0 4 4.5v15A1.5 1.5 0 0 0 5.5 21H8M16 3h2.5A1.5 1.5 0 0 1 20 4.5v15a1.5 1.5 0 0 1-1.5 1.5H16"/><path d="M12 3v18"/>'),
+    "hash-generator": ic('<path d="M9.5 3.5L7.5 20.5M16.5 3.5l-2 17M4 9h17M3 15.5h17"/>'),
+    "youtube-thumbnail-downloader": ic('<rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10.3 9.7v4.6l4.2-2.3z" fill="currentColor" stroke="none"/>'),
+    "voice-recorder": ic('<rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.8 11.5a6.2 6.2 0 0 0 12.4 0M12 17.7V21M9 21h6"/>'),
+    "meme-generator": ic('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9.5h10M7 15.5h6"/>'),
+    "text-to-handwriting": ic('<path d="M4 20l.8-3.8L16.6 4.4a2 2 0 0 1 2.9 0l.1.1a2 2 0 0 1 0 2.9L7.8 19.2z"/><path d="M14.8 6.2l2.9 2.9"/>'),
+    "date-calculator": ic('<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>'),
+    "compound-interest-calculator": ic('<path d="M4 4v16h16"/><path d="M7.5 15.5l3.8-4.8 3 2.8 4.7-6"/><path d="M15.3 7.5H19V11"/>'),
+    "gpa-calculator": ic('<path d="M2.5 9.3L12 5l9.5 4.3L12 13.6z"/><path d="M6.4 11.4v4.1c0 1.3 2.5 2.6 5.6 2.6s5.6-1.3 5.6-2.6v-4.1M21.5 9.3v4.7"/>'),
     "soon":             ic('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),
     "popular":          ic('<path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1-5.4-3-5.4 3 1.1-6.1L3.2 9.4l6.1-.8z"/>')
   };
@@ -122,7 +133,18 @@
     { slug: "invoice-generator", name: "Invoice Generator", cat: "generators", desc: "Create professional PDF invoices with items, tax and totals." },
     { slug: "screen-recorder",  name: "Screen Recorder",  cat: "generators", desc: "Record your screen, window or tab and download the video." },
     { slug: "mp4-to-mp3",       name: "MP4 to MP3 Converter", cat: "converters", desc: "Extract MP3 audio from MP4 and other video files." },
-    { slug: "pdf-to-word",      name: "PDF to Word Converter", cat: "pdf", desc: "Turn a text-based PDF into an editable Word document." }
+    { slug: "pdf-to-word",      name: "PDF to Word Converter", cat: "pdf", desc: "Turn a text-based PDF into an editable Word document." },
+    { slug: "random-number-generator", name: "Random Number Generator", cat: "generators", desc: "Generate secure random numbers in any range, in bulk." },
+    { slug: "timestamp-converter", name: "Unix Timestamp Converter", cat: "developer", desc: "Convert Unix timestamps to dates and back, with a live clock." },
+    { slug: "diff-checker",      name: "Diff Checker",      cat: "developer", desc: "Compare two texts line by line and highlight the changes." },
+    { slug: "hash-generator",    name: "Hash Generator",    cat: "developer", desc: "Calculate MD5, SHA-1, SHA-256 and SHA-512 hashes." },
+    { slug: "youtube-thumbnail-downloader", name: "YouTube Thumbnail Downloader", cat: "generators", desc: "Download any YouTube video's thumbnail in HD and more sizes." },
+    { slug: "voice-recorder",    name: "Voice Recorder",    cat: "generators", desc: "Record your voice in the browser and download the audio." },
+    { slug: "meme-generator",    name: "Meme Generator",    cat: "image",     desc: "Add top and bottom text to any image and download the meme." },
+    { slug: "text-to-handwriting", name: "Text to Handwriting Converter", cat: "text", desc: "Turn typed text into handwritten notebook pages." },
+    { slug: "date-calculator",   name: "Date Calculator",   cat: "calculators", desc: "Count days between dates, or add days to a date." },
+    { slug: "compound-interest-calculator", name: "Compound Interest Calculator", cat: "calculators", desc: "See how savings grow with compound interest over time." },
+    { slug: "gpa-calculator",    name: "GPA Calculator",    cat: "calculators", desc: "Work out your GPA from grades and credit hours." }
   ];
   var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator"];
 

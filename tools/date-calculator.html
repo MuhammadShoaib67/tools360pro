@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4544572079119949" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Calculator — Days Between Dates, Free | Tools360Pro</title>
+<meta name="description" content="Count the days between two dates, or add and subtract days from any date. Exact calendar maths including leap years, shown in days, weeks and years/months/days.">
+<link rel="canonical" href="https://tools360pro.com/tools/date-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Date Calculator — Days Between Dates, Free | Tools360Pro">
+<meta property="og:description" content="Count the days between two dates, or add and subtract days from any date. Exact calendar maths including leap years, shown in days, weeks and years/months/days.">
+<meta property="og:url" content="https://tools360pro.com/tools/date-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Date Calculator — Days Between Dates, Free | Tools360Pro">
+<meta name="twitter:description" content="Count the days between two dates, or add and subtract days from any date. Exact calendar maths including leap years, shown in days, weeks and years/months/days.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=56.0">
+<style>
+  .date-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .big-result { font-size: 1.6rem; font-weight: 800; margin-top: 12px; }
+  .sub-result { color: var(--muted); margin-top: 2px; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Date Calculator",
+   "url": "https://tools360pro.com/tools/date-calculator.html",
+   "description": "Count the days between two dates, or add and subtract days from any date. Exact calendar maths including leap years, shown in days, weeks and years/months/days.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools360pro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://tools360pro.com/index.html#calculators" },
+    { "@type": "ListItem", "position": 3, "name": "Date Calculator", "item": "https://tools360pro.com/tools/date-calculator.html" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    { "@type": "Question", "name": "Does the count include both the first and last day?", "acceptedAnswer": { "@type": "Answer", "text": "The result is the exact difference: from 1 January to 2 January is 1 day. This matches how contracts, ages and countdowns are normally counted. If you need inclusive counting (both endpoints), simply add one day." } },
+    { "@type": "Question", "name": "Are leap years handled?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The calculation uses the real calendar, so a span covering 29 February counts that extra day, and century rules (1900 not a leap year, 2000 a leap year) are applied correctly." } },
+    { "@type": "Question", "name": "What is the 'years, months, days' breakdown?", "acceptedAnswer": { "@type": "Answer", "text": "The same span expressed the way people say ages: whole calendar years first, then whole months, then the leftover days. It always adds back up to the exact total days shown." } },
+    { "@type": "Question", "name": "Can I find a deadline like '90 days from today'?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — use the Add / subtract mode: pick today (or any start date), enter 90 days, and the resulting date and weekday are shown." } }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="date-calculator" data-category="calculators">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#calculators">Calculators</a> <span class="sep">›</span> <span aria-current="page">Date Calculator</span></nav>
+  <h1>Date Calculator</h1>
+  <p class="lede">Days between two dates — or the date that is N days from now.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <span class="seg" id="mode-seg">
+      <button type="button" class="active" data-mode="diff">Days between dates</button>
+      <button type="button" data-mode="add">Add / subtract days</button>
+    </span>
+    <div id="pane-diff" style="margin-top:14px">
+      <div class="date-grid">
+        <div class="field"><label for="d1">Start date</label><input class="input" type="date" id="d1"></div>
+        <div class="field"><label for="d2">End date</label><input class="input" type="date" id="d2"></div>
+      </div>
+      <div class="big-result hidden" id="diff-big"></div>
+      <div class="sub-result hidden" id="diff-sub"></div>
+    </div>
+    <div id="pane-add" class="hidden" style="margin-top:14px">
+      <div class="date-grid">
+        <div class="field"><label for="base">Start date</label><input class="input" type="date" id="base"></div>
+        <div class="field"><label for="ndays">Days</label><input class="input" type="number" id="ndays" value="90" min="0" max="36500"></div>
+        <div class="field"><label>Direction</label>
+          <span class="seg" id="dir-seg">
+            <button type="button" class="active" data-dir="1">Add</button>
+            <button type="button" data-dir="-1">Subtract</button>
+          </span>
+        </div>
+      </div>
+      <div class="big-result hidden" id="add-big"></div>
+      <div class="sub-result hidden" id="add-sub"></div>
+    </div>
+    <p class="error-text hidden" id="err"></p>
+  </section>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to use the Date Calculator</h2>
+    <ol class="steps">
+      <li>For a duration, pick the start and end dates — the exact span appears instantly.</li>
+      <li>For a deadline, switch to <b>Add / subtract days</b>, enter the number of days, and read the resulting date and weekday.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>Deadlines, countdowns and 'how long until…'</h2>
+    <p>Date arithmetic looks trivial until months of different lengths and the occasional 29 February get involved — which is exactly when the answer matters: a visa that expires 90 days after entry, a contract notice period, a project countdown, a baby's due-date maths, or the simple question of how many days you have been alive. Counting squares on a calendar is slow and error-prone; this calculator does the real calendar maths, leap years and century rules included.</p>
+    <p>The result is given three ways because people think about time three ways: the raw total of days (what contracts use), weeks and leftover days (what planners use), and the years-months-days breakdown (how everyone states an age). The add/subtract mode answers the mirror-image question — not "how long between" but "when exactly" — and names the weekday, because a deadline that lands on a Sunday is a different deadline.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Does the count include both the first and last day?</summary><p>The result is the exact difference: from 1 January to 2 January is 1 day. This matches how contracts, ages and countdowns are normally counted. If you need inclusive counting (both endpoints), simply add one day.</p></details>
+    <details><summary>Are leap years handled?</summary><p>Yes. The calculation uses the real calendar, so a span covering 29 February counts that extra day, and century rules (1900 not a leap year, 2000 a leap year) are applied correctly.</p></details>
+    <details><summary>What is the "years, months, days" breakdown?</summary><p>The same span expressed the way people say ages: whole calendar years first, then whole months, then the leftover days. It always adds back up to the exact total days shown.</p></details>
+    <details><summary>Can I find a deadline like "90 days from today"?</summary><p>Yes — use the Add / subtract mode: pick today (or any start date), enter 90 days, and the resulting date and weekday are shown.</p></details>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/site.js?v=56.0"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var err = $("err"), dir = 1;
+  function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
+  function parse(v) {
+    if (!v) return null;
+    var p = v.split("-").map(Number);
+    return new Date(Date.UTC(p[0], p[1] - 1, p[2]));
+  }
+  function fmtDate(d) {
+    return d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+  }
+  function todayStr() { return new Date().toISOString().slice(0, 10); }
+  $("d1").value = todayStr();
+  $("d2").value = todayStr();
+  $("base").value = todayStr();
+  function breakdown(a, b) {
+    var y = b.getUTCFullYear() - a.getUTCFullYear();
+    var m = b.getUTCMonth() - a.getUTCMonth();
+    var d = b.getUTCDate() - a.getUTCDate();
+    if (d < 0) {
+      m--;
+      var prevMonthDays = new Date(Date.UTC(b.getUTCFullYear(), b.getUTCMonth(), 0)).getUTCDate();
+      d += prevMonthDays;
+    }
+    if (m < 0) { y--; m += 12; }
+    return { y: y, m: m, d: d };
+  }
+  function calcDiff() {
+    showErr("");
+    var a = parse($("d1").value), b = parse($("d2").value);
+    if (!a || !b) return;
+    var neg = b < a;
+    if (neg) { var t = a; a = b; b = t; }
+    var days = Math.round((b - a) / 864e5);
+    var bd = breakdown(a, b);
+    var weeks = Math.floor(days / 7), rem = days % 7;
+    $("diff-big").textContent = days.toLocaleString() + " days" + (neg ? " (backwards)" : "");
+    $("diff-big").classList.remove("hidden");
+    var parts = [];
+    parts.push(weeks + " week" + (weeks !== 1 ? "s" : "") + (rem ? " and " + rem + " day" + (rem !== 1 ? "s" : "") : ""));
+    var ymd = [];
+    if (bd.y) ymd.push(bd.y + " year" + (bd.y !== 1 ? "s" : ""));
+    if (bd.m) ymd.push(bd.m + " month" + (bd.m !== 1 ? "s" : ""));
+    if (bd.d || !ymd.length) ymd.push(bd.d + " day" + (bd.d !== 1 ? "s" : ""));
+    parts.push(ymd.join(", "));
+    $("diff-sub").textContent = "= " + parts.join("  ·  ");
+    $("diff-sub").classList.remove("hidden");
+  }
+  function calcAdd() {
+    showErr("");
+    var base = parse($("base").value);
+    var n = parseInt($("ndays").value, 10);
+    if (!base || isNaN(n)) return;
+    var out = new Date(base.getTime() + dir * n * 864e5);
+    $("add-big").textContent = fmtDate(out);
+    $("add-big").classList.remove("hidden");
+    $("add-sub").textContent = n.toLocaleString() + " days " + (dir > 0 ? "after" : "before") + " " + fmtDate(base);
+    $("add-sub").classList.remove("hidden");
+  }
+  ["d1", "d2"].forEach(function (id) { $(id).addEventListener("change", calcDiff); $(id).addEventListener("input", calcDiff); });
+  ["base", "ndays"].forEach(function (id) { $(id).addEventListener("change", calcAdd); $(id).addEventListener("input", calcAdd); });
+  $("mode-seg").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-mode]"); if (!b) return;
+    this.querySelectorAll("button").forEach(function (x) { x.classList.remove("active"); });
+    b.classList.add("active");
+    var isDiff = b.getAttribute("data-mode") === "diff";
+    $("pane-diff").classList.toggle("hidden", !isDiff);
+    $("pane-add").classList.toggle("hidden", isDiff);
+  });
+  $("dir-seg").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-dir]"); if (!b) return;
+    this.querySelectorAll("button").forEach(function (x) { x.classList.remove("active"); });
+    b.classList.add("active");
+    dir = parseInt(b.getAttribute("data-dir"), 10);
+    calcAdd();
+  });
+  calcDiff(); calcAdd();
+})();
+</script>
+</body>
+</html>

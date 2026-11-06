@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4544572079119949" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Interest Calculator — Free Online | Tools360Pro</title>
+<meta name="description" content="See how your money grows with compound interest — starting amount, regular monthly deposits, interest rate and years, with a year-by-year growth table. Free.">
+<link rel="canonical" href="https://tools360pro.com/tools/compound-interest-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Compound Interest Calculator — Free Online | Tools360Pro">
+<meta property="og:description" content="See how your money grows with compound interest — starting amount, regular monthly deposits, interest rate and years, with a year-by-year growth table. Free.">
+<meta property="og:url" content="https://tools360pro.com/tools/compound-interest-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Compound Interest Calculator — Free Online | Tools360Pro">
+<meta name="twitter:description" content="See how your money grows with compound interest — starting amount, regular monthly deposits, interest rate and years, with a year-by-year growth table. Free.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=56.0">
+<style>
+  .ci-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+  .ci-big { font-size: 1.9rem; font-weight: 800; margin-top: 10px; }
+  .ci-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+  .ci-table th, .ci-table td { padding: 6px 10px; border-bottom: 1px solid var(--border, #e5e7eb); text-align: right; }
+  .ci-table th:first-child, .ci-table td:first-child { text-align: left; }
+  .ci-scroll { max-height: 300px; overflow: auto; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Compound Interest Calculator",
+   "url": "https://tools360pro.com/tools/compound-interest-calculator.html",
+   "description": "See how your money grows with compound interest — starting amount, regular monthly deposits, interest rate and years, with a year-by-year growth table. Free.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools360pro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://tools360pro.com/index.html#calculators" },
+    { "@type": "ListItem", "position": 3, "name": "Compound Interest Calculator", "item": "https://tools360pro.com/tools/compound-interest-calculator.html" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    { "@type": "Question", "name": "What is compound interest, in plain words?", "acceptedAnswer": { "@type": "Answer", "text": "Interest on top of interest. Each period your balance earns interest, and the next period that bigger balance earns interest too — so growth accelerates over time instead of staying flat." } },
+    { "@type": "Question", "name": "How often should interest compound?", "acceptedAnswer": { "@type": "Answer", "text": "Use whatever your account actually does: savings accounts commonly compound monthly or daily, while many investments are shown yearly. More frequent compounding grows slightly faster at the same rate." } },
+    { "@type": "Question", "name": "Does this account for tax or inflation?", "acceptedAnswer": { "@type": "Answer", "text": "No — it shows the headline growth before tax, fees and inflation. For a rough 'real' return, you can lower the interest rate by the inflation rate (for example 8% growth with 3% inflation ≈ use 5%)." } },
+    { "@type": "Question", "name": "Is this financial advice?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a maths illustration using the numbers you type. Real products vary, markets move, and big decisions deserve a qualified adviser." } }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="compound-interest-calculator" data-category="calculators">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#calculators">Calculators</a> <span class="sep">›</span> <span aria-current="page">Compound Interest Calculator</span></nav>
+  <h1>Compound Interest Calculator</h1>
+  <p class="lede">Watch a starting amount and steady deposits snowball over time.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <div class="ci-grid">
+      <div class="field"><label for="principal">Starting amount</label><input class="input" type="number" id="principal" value="1000" min="0"></div>
+      <div class="field"><label for="monthly">Monthly deposit</label><input class="input" type="number" id="monthly" value="100" min="0"></div>
+      <div class="field"><label for="rate">Yearly interest rate (%)</label><input class="input" type="number" id="rate" value="8" step="0.1" min="0" max="100"></div>
+      <div class="field"><label for="years">Years</label><input class="input" type="number" id="years" value="10" min="1" max="60"></div>
+      <div class="field"><label for="freq">Compounds</label>
+        <select class="select" id="freq">
+          <option value="1">Yearly</option>
+          <option value="4">Quarterly</option>
+          <option value="12" selected>Monthly</option>
+          <option value="365">Daily</option>
+        </select>
+      </div>
+      <div class="field"><label for="currency">Currency</label>
+        <select class="select" id="currency">
+          <option value="USD" selected>USD $</option>
+          <option value="PKR">PKR ₨</option>
+          <option value="EUR">EUR €</option>
+          <option value="GBP">GBP £</option>
+          <option value="INR">INR ₹</option>
+          <option value="AED">AED</option>
+        </select>
+      </div>
+    </div>
+    <div class="ci-big" id="final"></div>
+    <p style="margin:2px 0 0;color:var(--muted)" id="split"></p>
+    <div class="ci-scroll"><table class="ci-table hidden" id="table"></table></div>
+    <p class="error-text hidden" id="err"></p>
+  </section>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to use the Compound Interest Calculator</h2>
+    <ol class="steps">
+      <li>Enter what you start with and what you add each month.</li>
+      <li>Set the yearly rate and how many years the money stays invested.</li>
+      <li>Read the final balance, how much of it is interest, and the year-by-year table.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>The snowball that rewards patience</h2>
+    <p>Compound interest is the reason starting early beats starting big. Because each period's interest itself starts earning, growth is not a straight line but a curve that steepens — in the example defaults above, notice how much of the final total arrives in the last few years rather than the first. The year-by-year table makes the snowball visible: deposits stay the same, but the interest column quietly overtakes them.</p>
+    <p>Play with the levers to feel their weight. Doubling the years usually beats doubling the deposit; a couple of points of rate matter more than a slightly larger starting amount; and the monthly deposit — boring as it sounds — is the lever fully in your control. Remember the result is the clean maths version: real accounts add tax, fees and inflation on top, which the FAQ above shows how to approximate.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is compound interest, in plain words?</summary><p>Interest on top of interest. Each period your balance earns interest, and the next period that bigger balance earns interest too — so growth accelerates over time instead of staying flat.</p></details>
+    <details><summary>How often should interest compound?</summary><p>Use whatever your account actually does: savings accounts commonly compound monthly or daily, while many investments are shown yearly. More frequent compounding grows slightly faster at the same rate.</p></details>
+    <details><summary>Does this account for tax or inflation?</summary><p>No — it shows the headline growth before tax, fees and inflation. For a rough "real" return, you can lower the interest rate by the inflation rate (for example 8% growth with 3% inflation ≈ use 5%).</p></details>
+    <details><summary>Is this financial advice?</summary><p>No. It is a maths illustration using the numbers you type. Real products vary, markets move, and big decisions deserve a qualified adviser.</p></details>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/site.js?v=56.0"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var err = $("err");
+  function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
+  function money(v, cur) {
+    try { return new Intl.NumberFormat(undefined, { style: "currency", currency: cur, maximumFractionDigits: 0 }).format(v); }
+    catch (e) { return cur + " " + Math.round(v).toLocaleString(); }
+  }
+  function calc() {
+    showErr("");
+    var P = parseFloat($("principal").value), M = parseFloat($("monthly").value),
+        rate = parseFloat($("rate").value), years = parseInt($("years").value, 10),
+        n = parseInt($("freq").value, 10), cur = $("currency").value;
+    if (isNaN(P) || isNaN(M) || isNaN(rate) || isNaN(years)) { showErr("Please fill in every field with numbers."); return; }
+    if (years < 1 || years > 60) { showErr("Years must be between 1 and 60."); return; }
+    var r = rate / 100, per = r / n, periods = n * years;
+    var perDeposit = M * 12 / n;
+    var balance = P, deposited = P;
+    var rowsHtml = "<tr><th>Year</th><th>Deposited</th><th>Interest earned</th><th>Balance</th></tr>";
+    var interestTotal = 0;
+    for (var p = 1; p <= periods; p++) {
+      var interest = balance * per;
+      balance += interest + perDeposit;
+      interestTotal += interest;
+      deposited += perDeposit;
+      if (p % n === 0) {
+        var yr = p / n;
+        rowsHtml += "<tr><td>" + yr + "</td><td>" + money(deposited, cur) + "</td><td>" + money(interestTotal, cur) + "</td><td>" + money(balance, cur) + "</td></tr>";
+      }
+    }
+    $("final").textContent = money(balance, cur);
+    $("split").textContent = "after " + years + " years — you put in " + money(deposited, cur) + " and interest added " + money(interestTotal, cur);
+    var table = $("table");
+    table.innerHTML = rowsHtml;
+    table.classList.remove("hidden");
+  }
+  ["principal", "monthly", "rate", "years", "freq", "currency"].forEach(function (id) {
+    $(id).addEventListener("input", calc);
+    $(id).addEventListener("change", calc);
+  });
+  calc();
+})();
+</script>
+</body>
+</html>
