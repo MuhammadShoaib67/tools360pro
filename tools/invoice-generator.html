@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4544572079119949" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice Generator — Create Free PDF Invoices | Tools360Pro</title>
+<meta name="description" content="Create professional invoices and download them as PDF, free in your browser. Add your logo, items, tax and discount. No sign-up, nothing uploaded.">
+<link rel="canonical" href="https://tools360pro.com/tools/invoice-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Invoice Generator — Create Free PDF Invoices | Tools360Pro">
+<meta property="og:description" content="Create professional invoices and download them as PDF, free in your browser. Add your logo, items, tax and discount. No sign-up, nothing uploaded.">
+<meta property="og:url" content="https://tools360pro.com/tools/invoice-generator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Invoice Generator — Create Free PDF Invoices | Tools360Pro">
+<meta name="twitter:description" content="Create professional invoices and download them as PDF, free in your browser. Add your logo, items, tax and discount. No sign-up, nothing uploaded.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=51.0">
+<style>
+  .inv-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:640px){ .inv-grid{ grid-template-columns:1fr; } }
+  .inv-items-head, .inv-item-row { display:grid; grid-template-columns:1fr 74px 104px 96px 36px; gap:8px; align-items:center; }
+  .inv-items-head { font-weight:700; font-size:.88rem; margin:14px 0 6px; }
+  .inv-item-row { margin-bottom:8px; }
+  .inv-item-row .amt { text-align:right; font-weight:600; }
+  @media (max-width:640px){ .inv-items-head{ display:none; } .inv-item-row{ grid-template-columns:1fr 60px 84px 76px 32px; } }
+  .inv-sheet { background:#ffffff; color:#191919; border-radius:12px; padding:30px 32px; margin-top:18px; box-shadow:0 2px 14px rgba(0,0,0,.12); font-size:14px; line-height:1.45; }
+  .inv-sheet h3 { margin:0; font-size:26px; letter-spacing:.06em; }
+  .inv-sheet .muted { color:#666; }
+  .inv-sheet table { width:100%; border-collapse:collapse; margin-top:14px; }
+  .inv-sheet th { text-align:left; border-bottom:2px solid #191919; padding:7px 6px; font-size:12.5px; text-transform:uppercase; letter-spacing:.04em; }
+  .inv-sheet td { border-bottom:1px solid #e3e3e3; padding:7px 6px; vertical-align:top; }
+  .inv-sheet .r { text-align:right; }
+  .inv-sheet .totals { width:250px; margin-left:auto; margin-top:12px; }
+  .inv-sheet .totals td { border-bottom:none; padding:3px 6px; }
+  .inv-sheet .grand { font-weight:800; font-size:16px; border-top:2px solid #191919; }
+  .inv-flex { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+  .inv-logo { max-height:56px; max-width:150px; object-fit:contain; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Invoice Generator",
+   "url": "https://tools360pro.com/tools/invoice-generator.html",
+   "description": "Create professional invoices and download them as PDF, free in your browser. Add your logo, items, tax and discount. No sign-up, nothing uploaded.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://tools360pro.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Generators",
+     "item": "https://tools360pro.com/index.html#generators"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Invoice Generator",
+     "item": "https://tools360pro.com/tools/invoice-generator.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is my invoice data uploaded or stored anywhere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Everything is typed, calculated and turned into a PDF inside your browser. A draft is kept only in your own browser's local storage so you do not lose your work if you close the tab — it never leaves your device."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What should a proper invoice include?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Your business name and contact details, the client's name, a unique invoice number, the issue date and due date, an itemised list of what you are charging for, the total amount, and how you want to be paid. This form covers all of them."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which currencies are supported?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "US Dollar, Pakistani Rupee, Euro, British Pound, Indian Rupee and UAE Dirham. The currency symbol appears in the preview and in the downloaded PDF."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do tax and discount work here?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The discount percentage comes off the subtotal first. Tax is then calculated on the discounted amount. If your client also pays part of the invoice upfront, enter it under Amount paid and the balance due updates automatically."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I add my logo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Upload a PNG or JPG logo and it appears at the top of the preview and in the PDF, next to your business name."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the PDF good enough to send to clients?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. The PDF is a clean A4 invoice with your details, the client's details, itemised charges and totals — the same layout as the on-screen preview, ready to email or print."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="invoice-generator" data-category="generators">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#generators">Generators</a> <span class="sep">›</span> <span aria-current="page">Invoice Generator</span></nav>
+  <h1>Invoice Generator</h1>
+  <p class="lede">Fill in the form, watch the invoice build itself, download the PDF.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <div class="inv-grid">
+      <div>
+        <h3 style="margin:2px 0 10px">Your business</h3>
+        <div class="field"><label for="biz-name">Business name</label><input class="input" id="biz-name" placeholder="e.g. Boost360Pro"></div>
+        <div class="field"><label for="biz-email">Email</label><input class="input" id="biz-email" placeholder="e.g. hello@yourbusiness.com"></div>
+        <div class="field"><label for="biz-addr">Address</label><textarea class="textarea" id="biz-addr" rows="2" placeholder="Street, city, country"></textarea></div>
+        <div class="field"><label for="logo-input">Logo (optional, PNG or JPG)</label><input class="input" type="file" id="logo-input" accept="image/png,image/jpeg"></div>
+      </div>
+      <div>
+        <h3 style="margin:2px 0 10px">Client &amp; invoice details</h3>
+        <div class="field"><label for="client-name">Client name</label><input class="input" id="client-name" placeholder="e.g. Ahmed Traders"></div>
+        <div class="field"><label for="client-addr">Client address</label><textarea class="textarea" id="client-addr" rows="2" placeholder="Street, city, country"></textarea></div>
+        <div class="inv-grid" style="gap:10px">
+          <div class="field"><label for="inv-no">Invoice number</label><input class="input" id="inv-no" value="INV-001"></div>
+          <div class="field"><label for="currency">Currency</label>
+            <select class="select" id="currency">
+              <option value="USD" selected>USD — $</option>
+              <option value="PKR">PKR — Rs</option>
+              <option value="EUR">EUR — €</option>
+              <option value="GBP">GBP — £</option>
+              <option value="INR">INR — ₹</option>
+              <option value="AED">AED</option>
+            </select>
+          </div>
+          <div class="field"><label for="issue-date">Issue date</label><input class="input" type="date" id="issue-date"></div>
+          <div class="field"><label for="due-date">Due date</label><input class="input" type="date" id="due-date"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin:18px 0 0">Items</h3>
+    <div class="inv-items-head"><span>Item description</span><span>Qty</span><span>Rate</span><span style="text-align:right">Amount</span><span></span></div>
+    <div id="items"></div>
+    <button class="btn btn-ghost" id="add-item" type="button">+ Add item</button>
+
+    <div class="inv-grid" style="margin-top:16px">
+      <div class="field"><label for="notes">Notes (payment details, thank-you line…)</label><textarea class="textarea" id="notes" rows="3" placeholder="e.g. Bank transfer — Account title: …, IBAN: …"></textarea></div>
+      <div>
+        <div class="inv-grid" style="gap:10px">
+          <div class="field"><label for="discount">Discount %</label><input class="input" type="number" id="discount" min="0" max="100" step="any" value="0"></div>
+          <div class="field"><label for="tax">Tax %</label><input class="input" type="number" id="tax" min="0" max="100" step="any" value="0"></div>
+          <div class="field"><label for="paid">Amount paid</label><input class="input" type="number" id="paid" min="0" step="any" value="0"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="options-bar" style="margin-top:16px">
+      <button class="btn btn-primary btn-lg" id="pdf-btn" type="button">Download PDF invoice</button>
+      <button class="btn btn-ghost" id="clear-btn" type="button">Clear form</button>
+    </div>
+    <p class="error-text hidden" id="err"></p>
+
+    <div class="inv-sheet" id="preview"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to use the Invoice Generator</h2>
+    <ol class="steps">
+      <li>Enter your business details and your client's details.</li>
+      <li>Add each item with its quantity and rate — amounts and totals calculate themselves.</li>
+      <li>Add a discount or tax percentage if you need one, and check the live preview.</li>
+      <li>Press <b>Download PDF invoice</b> and send the PDF to your client.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>Bill like a professional — and get paid faster</h2>
+    <p>Clients pay clear invoices faster. An invoice that shows exactly what was delivered, the agreed rate, the total and the due date — with your payment details in the notes — leaves nothing to query, so it goes straight into the client's payment queue. Freelancers and small businesses lose days every month to back-and-forth over unclear bills; a tidy, itemised PDF removes that friction and makes a one-person business look established.</p>
+    <p>Two habits make this tool work even better. First, keep your invoice numbers in sequence (INV-001, INV-002…) — it makes your records easy to search when tax time comes. Second, set a real due date rather than leaving payment open-ended; most freelancers use 7–14 days. Your draft is saved in your own browser as you type, so you can close the tab and come back without losing the invoice — and because nothing is uploaded, your prices and client names stay yours.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Is my invoice data uploaded or stored anywhere?</summary><p>No. Everything is typed, calculated and turned into a PDF inside your browser. A draft is kept only in your own browser's local storage so you do not lose your work if you close the tab — it never leaves your device.</p></details>
+    <details><summary>What should a proper invoice include?</summary><p>Your business name and contact details, the client's name, a unique invoice number, the issue date and due date, an itemised list of what you are charging for, the total amount, and how you want to be paid. This form covers all of them.</p></details>
+    <details><summary>Which currencies are supported?</summary><p>US Dollar, Pakistani Rupee, Euro, British Pound, Indian Rupee and UAE Dirham. The currency symbol appears in the preview and in the downloaded PDF.</p></details>
+    <details><summary>How do tax and discount work here?</summary><p>The discount percentage comes off the subtotal first. Tax is then calculated on the discounted amount. If your client also pays part of the invoice upfront, enter it under Amount paid and the balance due updates automatically.</p></details>
+    <details><summary>Can I add my logo?</summary><p>Yes. Upload a PNG or JPG logo and it appears at the top of the preview and in the PDF, next to your business name.</p></details>
+    <details><summary>Is the PDF good enough to send to clients?</summary><p>Yes. The PDF is a clean A4 invoice with your details, the client's details, itemised charges and totals — the same layout as the on-screen preview, ready to email or print.</p></details>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/js/site.js?v=51.0"></script>
+<script src="../assets/vendor/pdf-lib.min.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var itemsBox = $("items"), preview = $("preview"), err = $("err");
+  var SYMBOLS = { USD: "$", PKR: "Rs ", EUR: "€", GBP: "£", INR: "₹", AED: "AED " };
+  var logoData = null; // {dataUrl, bytes, kind}
+  var DRAFT_KEY = "t360:invoice-draft";
+
+  function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
+  function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function num(v) { var n = parseFloat(v); return isNaN(n) || n < 0 ? 0 : n; }
+  function sym() { return SYMBOLS[$("currency").value] || ""; }
+  function money(n) { return sym() + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  function fmtDate(v) {
+    if (!v) return "";
+    var d = new Date(v + "T00:00:00");
+    return isNaN(d) ? v : d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  }
+
+  function addItemRow(desc, qty, rate) {
+    var row = document.createElement("div");
+    row.className = "inv-item-row";
+    row.innerHTML =
+      '<input class="input it-desc" placeholder="Description of work or product" value="' + esc(desc || "") + '">' +
+      '<input class="input it-qty" type="number" min="0" step="any" value="' + esc(qty == null ? 1 : qty) + '">' +
+      '<input class="input it-rate" type="number" min="0" step="any" value="' + esc(rate == null ? 0 : rate) + '">' +
+      '<span class="amt">' + money(0) + "</span>" +
+      '<button class="chip-btn it-rm" type="button" aria-label="Remove item">✕</button>';
+    row.querySelector(".it-rm").addEventListener("click", function () { row.remove(); update(); });
+    row.addEventListener("input", update);
+    itemsBox.appendChild(row);
+  }
+  function readItems() {
+    var out = [];
+    itemsBox.querySelectorAll(".inv-item-row").forEach(function (row) {
+      var desc = row.querySelector(".it-desc").value.trim();
+      var qty = num(row.querySelector(".it-qty").value);
+      var rate = num(row.querySelector(".it-rate").value);
+      row.querySelector(".amt").textContent = money(qty * rate);
+      out.push({ desc: desc, qty: qty, rate: rate, amount: qty * rate });
+    });
+    return out;
+  }
+  function totals(items) {
+    var sub = items.reduce(function (a, i) { return a + i.amount; }, 0);
+    var discPct = Math.min(100, num($("discount").value));
+    var disc = sub * discPct / 100;
+    var taxPct = Math.min(100, num($("tax").value));
+    var tax = (sub - disc) * taxPct / 100;
+    var total = sub - disc + tax;
+    var paid = num($("paid").value);
+    return { sub: sub, discPct: discPct, disc: disc, taxPct: taxPct, tax: tax, total: total, paid: paid, balance: Math.max(0, total - paid) };
+  }
+  function render() {
+    var items = readItems();
+    var t = totals(items);
+    var rows = items.map(function (i) {
+      return "<tr><td>" + esc(i.desc || "—") + "</td><td class='r'>" + i.qty + "</td><td class='r'>" + money(i.rate) + "</td><td class='r'>" + money(i.amount) + "</td></tr>";
+    }).join("");
+    var logoHtml = logoData ? '<img class="inv-logo" src="' + logoData.dataUrl + '" alt="">' : "";
+    preview.innerHTML =
+      '<div class="inv-flex"><div>' + logoHtml +
+      '<div style="font-size:19px;font-weight:800;margin-top:4px">' + esc($("biz-name").value || "Your Business") + "</div>" +
+      '<div class="muted">' + esc($("biz-email").value) + "</div>" +
+      '<div class="muted" style="white-space:pre-line">' + esc($("biz-addr").value) + "</div></div>" +
+      '<div style="text-align:right"><h3>INVOICE</h3>' +
+      '<div class="muted">Invoice no: <b style="color:#191919">' + esc($("inv-no").value) + "</b></div>" +
+      '<div class="muted">Issued: ' + fmtDate($("issue-date").value) + "</div>" +
+      '<div class="muted">Due: ' + fmtDate($("due-date").value) + "</div></div></div>" +
+      '<div style="margin-top:16px"><div class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.04em">Billed to</div>' +
+      '<div style="font-weight:700">' + esc($("client-name").value || "Client") + "</div>" +
+      '<div class="muted" style="white-space:pre-line">' + esc($("client-addr").value) + "</div></div>" +
+      "<table><thead><tr><th>Description</th><th class='r'>Qty</th><th class='r'>Rate</th><th class='r'>Amount</th></tr></thead><tbody>" + rows + "</tbody></table>" +
+      '<table class="totals"><tbody>' +
+      '<tr><td>Subtotal</td><td class="r">' + money(t.sub) + "</td></tr>" +
+      (t.disc ? '<tr><td>Discount (' + t.discPct + '%)</td><td class="r">−' + money(t.disc) + "</td></tr>" : "") +
+      (t.tax ? '<tr><td>Tax (' + t.taxPct + '%)</td><td class="r">' + money(t.tax) + "</td></tr>" : "") +
+      '<tr class="grand"><td>Total</td><td class="r">' + money(t.total) + "</td></tr>" +
+      (t.paid ? '<tr><td>Amount paid</td><td class="r">' + money(t.paid) + "</td></tr>" +
+      '<tr class="grand"><td>Balance due</td><td class="r">' + money(t.balance) + "</td></tr>" : "") +
+      "</tbody></table>" +
+      ($("notes").value ? '<div style="margin-top:18px"><div class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:.04em">Notes</div><div style="white-space:pre-line">' + esc($("notes").value) + "</div></div>" : "");
+    saveDraft(items);
+  }
+  function update() { render(); }
+
+  function saveDraft(items) {
+    try {
+      var d = {
+        biz: [$("biz-name").value, $("biz-email").value, $("biz-addr").value],
+        client: [$("client-name").value, $("client-addr").value],
+        meta: [$("inv-no").value, $("currency").value, $("issue-date").value, $("due-date").value],
+        nums: [$("discount").value, $("tax").value, $("paid").value],
+        notes: $("notes").value,
+        items: items.map(function (i) { return [i.desc, i.qty, i.rate]; })
+      };
+      localStorage.setItem(DRAFT_KEY, JSON.stringify(d));
+    } catch (e) {}
+  }
+  function loadDraft() {
+    try {
+      var d = JSON.parse(localStorage.getItem(DRAFT_KEY) || "null");
+      if (!d) return false;
+      $("biz-name").value = d.biz[0] || ""; $("biz-email").value = d.biz[1] || ""; $("biz-addr").value = d.biz[2] || "";
+      $("client-name").value = d.client[0] || ""; $("client-addr").value = d.client[1] || "";
+      $("inv-no").value = d.meta[0] || "INV-001"; $("currency").value = d.meta[1] || "USD";
+      $("issue-date").value = d.meta[2] || ""; $("due-date").value = d.meta[3] || "";
+      $("discount").value = d.nums[0] || 0; $("tax").value = d.nums[1] || 0; $("paid").value = d.nums[2] || 0;
+      $("notes").value = d.notes || "";
+      itemsBox.innerHTML = "";
+      (d.items && d.items.length ? d.items : [["", 1, 0]]).forEach(function (r) { addItemRow(r[0], r[1], r[2]); });
+      return true;
+    } catch (e) { return false; }
+  }
+
+  $("add-item").addEventListener("click", function () { addItemRow("", 1, 0); update(); });
+  ["biz-name","biz-email","biz-addr","client-name","client-addr","inv-no","currency","issue-date","due-date","discount","tax","paid","notes"].forEach(function (id) {
+    $(id).addEventListener("input", update);
+    $(id).addEventListener("change", update);
+  });
+  $("logo-input").addEventListener("change", function () {
+    var f = $("logo-input").files[0];
+    if (!f) { logoData = null; update(); return; }
+    var reader = new FileReader();
+    reader.onload = function () {
+      var dataUrl = String(reader.result);
+      var r2 = new FileReader();
+      r2.onload = function () {
+        logoData = { dataUrl: dataUrl, bytes: new Uint8Array(r2.result), kind: f.type === "image/png" ? "png" : "jpg" };
+        update();
+      };
+      r2.readAsArrayBuffer(f);
+    };
+    reader.readAsDataURL(f);
+  });
+  $("clear-btn").addEventListener("click", function () {
+    try { localStorage.removeItem(DRAFT_KEY); } catch (e) {}
+    window.location.reload();
+  });
+
+  function fitText(text, font, size, maxWidth) {
+    text = String(text || "");
+    if (font.widthOfTextAtSize(text, size) <= maxWidth) return text;
+    while (text.length && font.widthOfTextAtSize(text + "…", size) > maxWidth) text = text.slice(0, -1);
+    return text + "…";
+  }
+  function wrapText(text, font, size, maxWidth) {
+    var words = String(text || "").split(/\s+/).filter(Boolean), lines = [], line = "";
+    words.forEach(function (w) {
+      var test = line ? line + " " + w : w;
+      if (font.widthOfTextAtSize(test, size) > maxWidth && line) { lines.push(line); line = w; }
+      else line = test;
+    });
+    if (line) lines.push(line);
+    return lines;
+  }
+  $("pdf-btn").addEventListener("click", async function () {
+    showErr("");
+    if (typeof PDFLib === "undefined") { showErr("The PDF library could not be loaded. Please refresh the page."); return; }
+    var items = readItems().filter(function (i) { return i.desc || i.amount; });
+    if (!items.length) { showErr("Add at least one item with a description before downloading the PDF."); return; }
+    var t = totals(items);
+    var doc = await PDFLib.PDFDocument.create();
+    var font = await doc.embedFont(PDFLib.StandardFonts.Helvetica);
+    var bold = await doc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+    var W = 595, H = 842, M = 50;
+    var page = doc.addPage([W, H]);
+    var y = H - 56;
+    function right(text, size, f, yy, color) {
+      var w = f.widthOfTextAtSize(text, size);
+      page.drawText(text, { x: W - M - w, y: yy, size: size, font: f, color: color || PDFLib.rgb(0.1, 0.1, 0.1) });
+    }
+    var grey = PDFLib.rgb(0.42, 0.42, 0.42), dark = PDFLib.rgb(0.1, 0.1, 0.1);
+    var headerBottom = y;
+    if (logoData) {
+      try {
+        var img = logoData.kind === "png" ? await doc.embedPng(logoData.bytes) : await doc.embedJpg(logoData.bytes);
+        var sc = Math.min(150 / img.width, 56 / img.height, 1);
+        page.drawImage(img, { x: M, y: y - img.height * sc + 14, width: img.width * sc, height: img.height * sc });
+        headerBottom = y - img.height * sc - 4;
+      } catch (e) {}
+    }
+    page.drawText(fitText($("biz-name").value || "Your Business", bold, 16, 300), { x: M, y: headerBottom - 16, size: 16, font: bold, color: dark });
+    var by = headerBottom - 32;
+    if ($("biz-email").value) { page.drawText(fitText($("biz-email").value, font, 9.5, 300), { x: M, y: by, size: 9.5, font: font, color: grey }); by -= 13; }
+    wrapText($("biz-addr").value, font, 9.5, 300).slice(0, 3).forEach(function (ln) { page.drawText(ln, { x: M, y: by, size: 9.5, font: font, color: grey }); by -= 13; });
+    page.drawText("INVOICE", { x: W - M - bold.widthOfTextAtSize("INVOICE", 24), y: y - 8, size: 24, font: bold, color: dark });
+    right("Invoice no: " + ($("inv-no").value || ""), 10, font, y - 30, grey);
+    right("Issued: " + fmtDate($("issue-date").value), 10, font, y - 45, grey);
+    right("Due: " + fmtDate($("due-date").value), 10, font, y - 60, grey);
+    y = Math.min(by, y - 60) - 26;
+    page.drawText("BILLED TO", { x: M, y: y, size: 9, font: bold, color: grey }); y -= 15;
+    page.drawText(fitText($("client-name").value || "Client", bold, 12, 400), { x: M, y: y, size: 12, font: bold, color: dark }); y -= 14;
+    wrapText($("client-addr").value, font, 9.5, 400).slice(0, 3).forEach(function (ln) { page.drawText(ln, { x: M, y: y, size: 9.5, font: font, color: grey }); y -= 13; });
+    y -= 12;
+    function tableHeader() {
+      page.drawRectangle({ x: M, y: y - 4, width: W - 2 * M, height: 20, color: PDFLib.rgb(0.93, 0.93, 0.94) });
+      page.drawText("DESCRIPTION", { x: M + 4, y: y + 1, size: 9, font: bold, color: dark });
+      page.drawText("QTY", { x: 372 - bold.widthOfTextAtSize("QTY", 9), y: y + 1, size: 9, font: bold, color: dark });
+      page.drawText("RATE", { x: 462 - bold.widthOfTextAtSize("RATE", 9), y: y + 1, size: 9, font: bold, color: dark });
+      page.drawText("AMOUNT", { x: W - M - bold.widthOfTextAtSize("AMOUNT", 9), y: y + 1, size: 9, font: bold, color: dark });
+      y -= 22;
+    }
+    // table header (columns: description 54-322, qty right@372, rate right@462, amount right@545)
+    tableHeader();
+    items.forEach(function (i) {
+      if (y < 150) { page = doc.addPage([W, H]); y = H - 56; tableHeader(); }
+      page.drawText(fitText(i.desc || "—", font, 10.5, 268), { x: M + 4, y: y, size: 10.5, font: font, color: dark });
+      var q = String(i.qty);
+      page.drawText(q, { x: 372 - font.widthOfTextAtSize(q, 10.5), y: y, size: 10.5, font: font, color: dark });
+      var r = money(i.rate);
+      page.drawText(r, { x: 462 - font.widthOfTextAtSize(r, 10.5), y: y, size: 10.5, font: font, color: dark });
+      var a = money(i.amount);
+      page.drawText(a, { x: W - M - font.widthOfTextAtSize(a, 10.5), y: y, size: 10.5, font: font, color: dark });
+      y -= 19;
+    });
+    y -= 6;
+    page.drawLine({ start: { x: 330, y: y + 10 }, end: { x: W - M, y: y + 10 }, thickness: 0.7, color: PDFLib.rgb(0.8, 0.8, 0.8) });
+    function totalRow(label, val, isBold, prefix) {
+      var f = isBold ? bold : font;
+      page.drawText(label, { x: 330, y: y, size: isBold ? 12 : 10.5, font: f, color: dark });
+      var v = (prefix || "") + money(val);
+      page.drawText(v, { x: W - M - f.widthOfTextAtSize(v, isBold ? 12 : 10.5), y: y, size: isBold ? 12 : 10.5, font: f, color: dark });
+      y -= isBold ? 20 : 16;
+    }
+    totalRow("Subtotal", t.sub, false);
+    if (t.disc) totalRow("Discount (" + t.discPct + "%)", t.disc, false, "−");
+    if (t.tax) totalRow("Tax (" + t.taxPct + "%)", t.tax, false);
+    totalRow("Total", t.total, true);
+    if (t.paid) { totalRow("Amount paid", t.paid, false); totalRow("Balance due", t.balance, true); }
+    if ($("notes").value) {
+      y -= 14;
+      page.drawText("NOTES", { x: M, y: y, size: 9, font: bold, color: grey }); y -= 14;
+      wrapText($("notes").value, font, 10, W - 2 * M).slice(0, 8).forEach(function (ln) {
+        if (y < 40) { page = doc.addPage([W, H]); y = H - 56; }
+        page.drawText(ln, { x: M, y: y, size: 10, font: font, color: dark }); y -= 14;
+      });
+    }
+    var bytes = await doc.save();
+    T360.download(new Blob([bytes], { type: "application/pdf" }), ($("inv-no").value || "invoice").replace(/[^\w\- ]/g, "") + ".pdf");
+    T360.toast("Invoice PDF downloaded");
+  });
+
+  // defaults
+  var today = new Date(), due = new Date(Date.now() + 14 * 24 * 3600 * 1000);
+  function iso(d) { return d.toISOString().slice(0, 10); }
+  if (!loadDraft()) {
+    $("issue-date").value = iso(today);
+    $("due-date").value = iso(due);
+    addItemRow("", 1, 0);
+  }
+  if (!$("issue-date").value) $("issue-date").value = iso(today);
+  if (!$("due-date").value) $("due-date").value = iso(due);
+  update();
+})();
+</script>
+</body>
+</html>

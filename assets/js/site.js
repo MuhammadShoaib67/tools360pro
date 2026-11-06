@@ -60,6 +60,7 @@
     "regex-tester":     ic('<path d="M12 4v9"/><path d="M5.8 6.5l12.4 6"/><path d="M18.2 6.5l-12.4 6"/><circle cx="5.5" cy="18.5" r="1.6"/>'),
     "color-palette":    ic('<path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-.9 2-1.9 0-1.2-1-1.7-1-2.9 0-1 .8-1.7 2-1.7h2.1A3.9 3.9 0 0 0 21 10.6C20.6 6.4 16.6 3 12 3z"/><circle cx="7.5" cy="10.5" r="1.2"/><circle cx="12" cy="7.5" r="1.2"/><circle cx="16.5" cy="10.5" r="1.2"/>'),
     "list-randomizer":  ic('<path d="M3 7h4l10 10h4"/><path d="M19 14.5 21.5 17 19 19.5"/><path d="M3 17h4l2.6-2.6"/><path d="M13.4 9.4 17 7h4"/><path d="M19 4.5 21.5 7 19 9.5"/>'),
+    "invoice-generator": ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><text x="9.2" y="17.5" font-size="10" font-weight="700" fill="currentColor" stroke="none" font-family="inherit">$</text>'),
     "soon":             ic('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>')
   };
 
@@ -111,7 +112,8 @@
     { slug: "qr-code-generator", name: "QR Code Generator", cat: "generators", desc: "Create QR codes for links and text, download PNG or SVG." },
     { slug: "password-generator", name: "Password Generator", cat: "generators", desc: "Generate strong random passwords with a strength meter." },
     { slug: "color-palette",    name: "Color Converter & Palette", cat: "generators", desc: "Convert HEX, RGB and HSL and build colour palettes." },
-    { slug: "list-randomizer",  name: "List Randomizer",  cat: "generators", desc: "Shuffle lists and pick random winners." }
+    { slug: "list-randomizer",  name: "List Randomizer",  cat: "generators", desc: "Shuffle lists and pick random winners." },
+    { slug: "invoice-generator", name: "Invoice Generator", cat: "generators", desc: "Create professional PDF invoices with items, tax and totals." }
   ];
   var POPULAR = ["merge-pdf", "compress-image", "qr-code-generator", "word-counter", "json-formatter", "images-to-pdf", "password-generator", "unit-converter", "resize-image", "bmi-calculator"];
 
