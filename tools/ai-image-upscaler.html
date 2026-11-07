@@ -225,7 +225,7 @@
       progressText = T360.qs("#progress-text"),
       result = T360.qs("#result"), resultList = T360.qs("#result-list"), downloadBtn = T360.qs("#download-btn");
   var CDN = [
-    "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js",
+    "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.11.0/dist/tf.min.js",
     "https://cdn.jsdelivr.net/npm/@upscalerjs/default-model@1.0.0/dist/umd/index.min.js",
     "https://cdn.jsdelivr.net/npm/upscaler@1.0.0/dist/browser/umd/upscaler.min.js"
   ];
@@ -253,11 +253,13 @@
     if (!libsPromise) {
       libsPromise = (async function () {
         for (var i = 0; i < CDN.length; i++) await loadScript(CDN[i]);
-        if (typeof Upscaler === "undefined" || typeof DefaultModel === "undefined")
+        var modelDef = (typeof DefaultUpscalerJSModel !== "undefined")
+          ? (DefaultUpscalerJSModel.default || DefaultUpscalerJSModel) : null;
+        if (typeof Upscaler === "undefined" || !modelDef)
           throw new Error("libs-missing");
-        upscaler = new Upscaler({ model: DefaultModel });
-        await upscaler.warmup({ patchSize: 64 });
+        upscaler = new Upscaler({ model: modelDef });
       })();
+      libsPromise.catch(function () { libsPromise = null; });
     }
     return libsPromise;
   }
