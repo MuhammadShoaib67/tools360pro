@@ -418,7 +418,16 @@
     do { v /= 1024; i++; } while (v >= 1024 && i < units.length - 1);
     return (v >= 100 ? v.toFixed(0) : v >= 10 ? v.toFixed(1) : v.toFixed(2)) + " " + units[i];
   }
+  function trackEvent(name) {
+    try {
+      if (window.gtag) {
+        var slug = (location.pathname.split("/").pop() || "").replace(/\.html$/, "") || "home";
+        window.gtag("event", name, { tool: slug });
+      }
+    } catch (e) { /* analytics must never break a tool */ }
+  }
   function download(blobOrUrl, filename) {
+    trackEvent("tool_download");
     var url = typeof blobOrUrl === "string" ? blobOrUrl : URL.createObjectURL(blobOrUrl);
     var a = document.createElement("a");
     a.href = url; a.download = filename || "download";
@@ -426,6 +435,7 @@
     if (typeof blobOrUrl !== "string") setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
   }
   function copyText(text, btn) {
+    trackEvent("tool_copy");
     function done() {
       if (btn) {
         var old = btn.getAttribute("data-label") || btn.textContent;
