@@ -28,7 +28,7 @@
 <meta name="twitter:description" content="Upscale images 2x or 4x with AI, free in your browser. Sharpen small or blurry photos and enlarge them without uploading — the AI runs on your device.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#070b1e":"#f7f4ef")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
-<link rel="stylesheet" href="../assets/css/style.css?v=57.0">
+<link rel="stylesheet" href="../assets/css/style.css?v=58.0">
 
 <script type="application/ld+json">
 {
@@ -59,8 +59,8 @@
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Image Tools",
-     "item": "https://tools360pro.com/index.html#image"
+     "name": "AI Tools",
+     "item": "https://tools360pro.com/index.html#ai"
     },
     {
      "@type": "ListItem",
@@ -127,10 +127,10 @@
 }
 </script>
 </head>
-<body data-tool="ai-image-upscaler" data-category="image">
+<body data-tool="ai-image-upscaler" data-category="ai">
 <div id="site-header"></div>
 <main class="container tool-page">
-  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#image">Image Tools</a> <span class="sep">›</span> <span aria-current="page">AI Image Upscaler</span></nav>
+  <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#ai">AI Tools</a> <span class="sep">›</span> <span aria-current="page">AI Image Upscaler</span></nav>
   <h1>AI Image Upscaler</h1>
   <p class="lede">Enlarge small or blurry photos 2x or 4x with AI — sharper, cleaner, and still completely private.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
@@ -213,7 +213,7 @@
   </section>
 </main>
 <div id="site-footer"></div>
-<script src="../assets/js/site.js?v=59.0"></script>
+<script src="../assets/js/site.js?v=60.0"></script>
 <script>
 (function () {
   var dz = T360.qs("#dz"), input = T360.qs("#file-input"), err = T360.qs("#err"),
@@ -329,7 +329,13 @@
     result.classList.add("hidden");
     try {
       setProgress(0, "Loading the AI model… (first use downloads a few MB)");
-      await loadLibs();
+      try {
+        await loadLibs();
+      } catch (e1) {
+        setProgress(0, "Model download hiccup — retrying once…");
+        libsPromise = null;
+        await loadLibs();
+      }
       var img = await dataUrlToImage(current.url);
       setProgress(0, "Upscaling…");
       var dataUrl = await upscaleOnce(img, "Upscaling…");

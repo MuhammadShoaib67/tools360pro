@@ -44,6 +44,7 @@
   --input-bg:#ffffff;
   --cat-pdf:#e8442e;
   --cat-image:#ef6c00;
+  --cat-ai:#c026d3;
   --cat-text:#0d9488;
   --cat-converters:#0284c7;
   --cat-calculators:#7c3aed;
@@ -81,6 +82,7 @@
   --warn:#fbbf24;
   --cat-pdf:#fb6f5e;
   --cat-image:#fb923c;
+  --cat-ai:#e879f9;
   --cat-text:#2dd4bf;
   --cat-converters:#38bdf8;
   --cat-calculators:#a78bfa;
@@ -89,6 +91,7 @@
 }
 [data-cat="pdf"]{--acc:var(--cat-pdf)}
 [data-cat="image"]{--acc:var(--cat-image)}
+[data-cat="ai"]{--acc:var(--cat-ai)}
 [data-cat="text"]{--acc:var(--cat-text)}
 [data-cat="converters"]{--acc:var(--cat-converters)}
 [data-cat="calculators"]{--acc:var(--cat-calculators)}

@@ -10,6 +10,7 @@
   var CATEGORIES = [
     { id: "pdf",         name: "PDF Tools",    tagline: "Merge, split and build PDFs" },
     { id: "image",       name: "Image Tools",  tagline: "Compress, resize and convert images" },
+    { id: "ai",          name: "AI Tools",     tagline: "Backgrounds, upscaling, OCR and more" },
     { id: "text",        name: "Text Tools",   tagline: "Count, convert and clean up text" },
     { id: "converters",  name: "Converters",   tagline: "Units, bases, time zones and more" },
     { id: "calculators", name: "Calculators",  tagline: "Percentages, age, BMI, loans and tips" },
@@ -94,8 +95,8 @@
     { slug: "resize-image",     name: "Resize Image",     cat: "image", desc: "Change image dimensions by pixels or percentage." },
     { slug: "convert-image",    name: "Convert Image",    cat: "image", desc: "Convert images between JPG, PNG and WebP formats." },
     { slug: "heic-to-jpg",      name: "HEIC to JPG Converter", cat: "image", desc: "Convert iPhone HEIC photos to JPG or PNG, no uploads." },
-    { slug: "background-remover", name: "Background Remover", cat: "image", desc: "Remove image backgrounds with AI, right in your browser." },
-    { slug: "ai-image-upscaler", name: "AI Image Upscaler", cat: "image", desc: "Upscale images 2x or 4x with AI, right in your browser." },
+    { slug: "background-remover", name: "Background Remover", cat: "ai", desc: "Remove image backgrounds with AI, right in your browser." },
+    { slug: "ai-image-upscaler", name: "AI Image Upscaler", cat: "ai", desc: "Upscale images 2x or 4x with AI, right in your browser." },
     { slug: "crop-image",       name: "Crop Image",       cat: "image", desc: "Crop images with a visual box and aspect presets." },
     { slug: "watermark-image",  name: "Watermark Image",  cat: "image", desc: "Stamp text watermarks onto your images." },
     { slug: "favicon-generator", name: "Favicon Generator", cat: "image", desc: "Generate favicon sizes and an ICO from one image." },
@@ -106,7 +107,7 @@
     { slug: "meta-tag-generator", name: "Meta Tag Generator", cat: "text", desc: "Build meta, Open Graph and Twitter Card tags with preview." },
     { slug: "lorem-ipsum",      name: "Lorem Ipsum Generator", cat: "text", desc: "Generate placeholder paragraphs, sentences or words." },
     { slug: "text-cleaner",     name: "Text Cleaner",     cat: "text", desc: "Clean up text: extra spaces, line breaks, duplicates and accents." },
-    { slug: "image-to-text",    name: "Image to Text (OCR)", cat: "text", desc: "Extract text from images and scans with OCR, in your browser." },
+    { slug: "image-to-text",    name: "Image to Text (OCR)", cat: "ai", desc: "Extract text from images and scans with OCR, in your browser." },
     { slug: "citation-generator", name: "Citation Generator (APA & MLA)", cat: "text", desc: "Format APA 7 and MLA 9 references and in-text citations." },
     /* Converters */
     { slug: "unit-converter",   name: "Unit Converter",   cat: "converters", desc: "Convert length, weight, temperature, area, speed and more." },
