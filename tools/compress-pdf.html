@@ -271,13 +271,17 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/vendor/pdf.worker.min.js";
         bar.style.width = Math.round((n / src.numPages) * 100) + "%";
       }
       var bytes = await out.save();
-      lastBlob = new Blob([bytes], { type: "application/pdf" });
+      var compressedBlob = new Blob([bytes], { type: "application/pdf" });
       T360.qs("#r-orig").textContent = T360.formatBytes(pdfFile.size);
-      T360.qs("#r-new").textContent = T360.formatBytes(lastBlob.size);
-      if (lastBlob.size < pdfFile.size) {
+      if (compressedBlob.size < pdfFile.size) {
+        lastBlob = compressedBlob;
+        T360.qs("#r-new").textContent = T360.formatBytes(lastBlob.size);
         T360.qs("#r-pct").textContent = "−" + Math.round((1 - lastBlob.size / pdfFile.size) * 100) + "%";
       } else {
-        T360.qs("#r-pct").textContent = "No smaller — try Small file";
+        // Never hand back a bigger file: keep the original and say so.
+        lastBlob = pdfFile;
+        T360.qs("#r-new").textContent = T360.formatBytes(pdfFile.size);
+        T360.qs("#r-pct").textContent = "No smaller — original file kept";
       }
       result.classList.remove("hidden");
       T360.toast("Compression finished");
