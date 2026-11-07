@@ -31,6 +31,7 @@
     "ai-image-upscaler": ic('<path d="M15 3h6v6"/><path d="M21 3l-7 7"/><path d="M9 21H3v-6"/><path d="M3 21l7-7"/><path d="M17.8 13.4l.45 1.2 1.2.45-1.2.45-.45 1.2-.45-1.2-1.2-.45 1.2-.45z"/>'),
     "ai-transcriber":   ic('<rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><path d="M12 18v3.5"/>'),
     "ai-photo-enhancer": ic('<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z"/>'),
+    "ai-object-remover": ic('<path d="M16.6 3.6a2.2 2.2 0 0 1 3.1 0l.9.9a2.2 2.2 0 0 1 0 3.1L13.2 15H8.4L4 10.6a2.2 2.2 0 0 1 0-3.1l9.5-3.9Z"/><path d="M5 21h14"/>'),
     "word-counter":     ic('<path d="M4 6h16"/><path d="M4 12h10"/><path d="M4 18h7"/><path d="M17.5 15.5v5"/><path d="M15 18h5"/>'),
     "case-converter":   ic('<text x="4" y="17" font-size="13" font-weight="700" fill="currentColor" stroke="none" font-family="inherit">Aa</text><path d="M16 8h5"/><path d="M18.5 5.5 21 8l-2.5 2.5"/>'),
     "unit-converter":   ic('<rect x="2" y="9" width="20" height="6" rx="1.5"/><path d="M6 9v3.2"/><path d="M10 9v3.2"/><path d="M14 9v3.2"/><path d="M18 9v3.2"/>'),
@@ -112,6 +113,7 @@
     { slug: "image-to-text",    name: "Image to Text (OCR)", cat: "ai", desc: "Extract text from images and scans with OCR, in your browser." },
     { slug: "ai-transcriber",   name: "AI Audio Transcriber", cat: "ai", desc: "Transcribe audio and video to text with Whisper AI, in your browser." },
     { slug: "ai-photo-enhancer", name: "AI Photo Enhancer", cat: "ai", desc: "Sharpen photos and lift dull colours with AI, in your browser." },
+    { slug: "ai-object-remover", name: "AI Object Remover", cat: "ai", desc: "Remove unwanted objects and people from photos with AI, in your browser." },
     { slug: "citation-generator", name: "Citation Generator (APA & MLA)", cat: "text", desc: "Format APA 7 and MLA 9 references and in-text citations." },
     /* Converters */
     { slug: "unit-converter",   name: "Unit Converter",   cat: "converters", desc: "Convert length, weight, temperature, area, speed and more." },
