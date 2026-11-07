@@ -21,6 +21,7 @@
   function ic(p) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + "</svg>"; }
   var ICONS = {
     "merge-pdf":        ic('<path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M16 3h3a2 2 0 0 1 2 2v3"/><path d="M8 21H5a2 2 0 0 1-2-2v-3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/><path d="M12 8v8"/><path d="M8.5 12h7"/>'),
+    "sign-pdf": ic('<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>'),
     "split-pdf":        ic('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16" stroke-dasharray="3.5 3.5"/>'),
     "images-to-pdf":    ic('<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15.5 16 10.5 5 21"/>'),
     "compress-image":   ic('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v4H5"/><path d="M15 3v4h4"/><path d="M9 21v-4H5"/><path d="M15 21v-4h4"/>'),
@@ -42,6 +43,7 @@
     "base64":           ic('<path d="M8.5 6 3.5 12l5 6"/><path d="M15.5 6l5 6-5 6"/>'),
     "uuid-generator":   ic('<circle cx="8" cy="15.5" r="4.5"/><path d="M11.2 12.3 20 3.5"/><path d="M16.8 4.6l3 3"/><path d="M14 7.4l2.2 2.2"/>'),
     "qr-code-generator": ic('<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3z"/><path d="M21 14v1"/><path d="M14 21h1"/><path d="M18.5 18.5H21V21h-2.5z"/>'),
+    "barcode-generator": ic('<path d="M4 6v12"/><path d="M8 6v12"/><path d="M11 6v12"/><path d="M15 6v12"/><path d="M18 6v12"/><path d="M21 6v12"/>'),
     "password-generator": ic('<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="15.5" r="1.4"/>'),
     "pdf-to-image":     ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><circle cx="11" cy="13" r="1.6"/><path d="M19 18.5 15.8 15.2 8.5 21"/>'),
     "rotate-pdf":       ic('<path d="M4 12a8 8 0 0 1 13.7-5.7L20 8"/><path d="M20 3v5h-5"/><path d="M20 12a8 8 0 0 1-13.7 5.7L4 16"/><path d="M4 21v-5h5"/>'),
@@ -93,6 +95,7 @@
     { slug: "pdf-to-image",     name: "PDF to Image",     cat: "pdf", desc: "Render PDF pages as JPG or PNG images." },
     { slug: "rotate-pdf",       name: "Rotate & Organize PDF", cat: "pdf", desc: "Rotate, reorder and delete PDF pages." },
     { slug: "compress-pdf",     name: "Compress PDF",     cat: "pdf", desc: "Shrink a PDF by re-encoding its images." },
+    { slug: "sign-pdf",     name: "Sign PDF",     cat: "pdf", desc: "Draw or type your signature and place it on any PDF page — no upload." },
     /* Image */
     { slug: "compress-image",   name: "Compress Image",   cat: "image", desc: "Reduce JPG, PNG and WebP file size with a quality slider." },
     { slug: "resize-image",     name: "Resize Image",     cat: "image", desc: "Change image dimensions by pixels or percentage." },
@@ -136,6 +139,7 @@
     { slug: "regex-tester",     name: "Regex Tester",     cat: "developer", desc: "Test regular expressions with highlighted matches." },
     /* Generators */
     { slug: "qr-code-generator", name: "QR Code Generator", cat: "generators", desc: "Create QR codes for links and text, download PNG or SVG." },
+    { slug: "barcode-generator", name: "Barcode Generator", cat: "generators", desc: "Create CODE128, EAN-13, UPC and CODE39 barcodes — download PNG or SVG." },
     { slug: "password-generator", name: "Password Generator", cat: "generators", desc: "Generate strong random passwords with a strength meter." },
     { slug: "color-palette",    name: "Color Converter & Palette", cat: "generators", desc: "Convert HEX, RGB and HSL and build colour palettes." },
     { slug: "list-randomizer",  name: "List Randomizer",  cat: "generators", desc: "Shuffle lists and pick random winners." },
