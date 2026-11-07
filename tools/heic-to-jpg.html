@@ -201,8 +201,6 @@
 </main>
 <div id="site-footer"></div>
 <script src="../assets/js/site.js?v=63.0"></script>
-<script src="../assets/vendor/heic2any.min.js"></script>
-<script src="../assets/vendor/jszip.min.js"></script>
 <script>
 (function () {
   var dz = T360.qs("#dz"), input = T360.qs("#file-input"), list = T360.qs("#file-list"),
@@ -211,6 +209,27 @@
       result = T360.qs("#result"), resultList = T360.qs("#result-list"), zipBtn = T360.qs("#zip-btn");
   var items = [];   // {file, name, size}
   var results = []; // {blob, name, size, srcName, srcSize, url}
+
+  // The heavy converter libraries load lazily — only once a photo is picked.
+  var libsPromise = null;
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement("script");
+      s.src = src; s.onload = resolve;
+      s.onerror = function () { reject(new Error("load-failed")); };
+      document.head.appendChild(s);
+    });
+  }
+  function loadLibs() {
+    if (!libsPromise) {
+      libsPromise = (async function () {
+        if (typeof heic2any !== "function") await loadScript("../assets/vendor/heic2any.min.js");
+        if (typeof JSZip !== "function") await loadScript("../assets/vendor/jszip.min.js");
+      })();
+      libsPromise.catch(function () { libsPromise = null; });
+    }
+    return libsPromise;
+  }
 
   function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
   function isHeic(f) { return /\.(heic|heif)$/i.test(f.name) || /heic|heif/i.test(f.type || ""); }
@@ -250,6 +269,7 @@
       items.push({ file: f, name: f.name, size: f.size });
     }
     renderFiles();
+    if (items.length) loadLibs().catch(function () {}); // warm up in the background
   }
   dz.addEventListener("click", function () { input.click(); });
   dz.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); input.click(); } });
@@ -268,6 +288,7 @@
     items = []; results = []; renderFiles(); renderResults();
   });
   convertBtn.addEventListener("click", async function () {
+    try { await loadLibs(); } catch (e) { /* fall through to the check below */ }
     if (typeof heic2any !== "function") { showErr("The converter library could not be loaded. Check your connection and refresh the page."); return; }
     convertBtn.disabled = true;
     var type = formatSel.value, ext = type === "image/png" ? "png" : "jpg", q = +quality.value / 100;
@@ -294,7 +315,9 @@
     convertBtn.disabled = items.length === 0; convertBtn.textContent = "Convert photos";
   });
   zipBtn.addEventListener("click", async function () {
-    if (!results.length || typeof JSZip !== "function") return;
+    if (!results.length) return;
+    try { await loadLibs(); } catch (e) { /* fall through to the check below */ }
+    if (typeof JSZip !== "function") { showErr("The ZIP library could not be loaded. Check your connection and refresh the page."); return; }
     zipBtn.disabled = true; zipBtn.textContent = "Preparing ZIP…";
     try {
       var zip = new JSZip(), used = {};

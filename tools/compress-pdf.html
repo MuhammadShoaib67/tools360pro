@@ -189,10 +189,28 @@
 </main>
 <div id="site-footer"></div>
 <script src="../assets/js/site.js?v=63.0"></script>
-<script src="../assets/vendor/pdf-lib.min.js"></script>
-<script src="../assets/vendor/pdf.min.js"></script>
 <script>
-pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/vendor/pdf.worker.min.js";
+// The heavy PDF libraries load lazily — only once a file is picked.
+var t360LibsPromise = null;
+function t360LoadScript(src) {
+  return new Promise(function (resolve, reject) {
+    var s = document.createElement("script");
+    s.src = src; s.onload = resolve;
+    s.onerror = function () { reject(new Error("load-failed")); };
+    document.head.appendChild(s);
+  });
+}
+function t360LoadLibs() {
+  if (!t360LibsPromise) {
+    t360LibsPromise = (async function () {
+      if (typeof PDFLib === "undefined") await t360LoadScript("../assets/vendor/pdf-lib.min.js");
+      if (typeof pdfjsLib === "undefined") await t360LoadScript("../assets/vendor/pdf.min.js");
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/vendor/pdf.worker.min.js";
+    })();
+    t360LibsPromise.catch(function () { t360LibsPromise = null; });
+  }
+  return t360LibsPromise;
+}
 (function () {
   var dz = T360.qs("#dz"), input = T360.qs("#file-input"), list = T360.qs("#file-list"),
       err = T360.qs("#err"), progress = T360.qs("#progress"),
@@ -223,6 +241,8 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/vendor/pdf.worker.min.js";
     if (!/\.pdf$/i.test(f.name) && f.type !== "application/pdf") { showErr("“" + f.name + "” is not a PDF file."); return; }
     showErr(""); lastBlob = null; result.classList.add("hidden");
     pdfBytes = null; pdfFile = null; pageCount = 0; compressBtn.disabled = true; list.innerHTML = "";
+    try { await t360LoadLibs(); }
+    catch (e) { showErr("The PDF library could not be loaded. Check your connection and refresh the page."); return; }
     try {
       var bytes = await f.arrayBuffer();
       var doc = await PDFLib.PDFDocument.load(bytes.slice(0), { ignoreEncryption: false });
