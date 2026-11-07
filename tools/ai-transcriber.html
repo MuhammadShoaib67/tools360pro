@@ -256,6 +256,8 @@
     previewWrap.style.display = "";
     result.classList.add("hidden");
     goBtn.disabled = false; clearBtn.disabled = false;
+    if (!worker) worker = new Worker("../assets/js/whisper-worker.js", { type: "module" });
+    worker.postMessage({ type: "load" }); // warm up the AI in the background
     var url = URL.createObjectURL(f);
     var media = document.createElement(/^video\//i.test(f.type) ? "video" : "audio");
     media.preload = "metadata";

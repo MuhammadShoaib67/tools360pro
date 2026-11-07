@@ -21,6 +21,11 @@ async function load() {
 
 self.addEventListener('message', async function (e) {
   const data = e.data || {};
+  if (data.type === 'load') {
+    try { await load(); postMessage({ type: 'loaded' }); }
+    catch (err) { postMessage({ type: 'error', message: String((err && err.message) || err) }); }
+    return;
+  }
   if (data.type !== 'transcribe') return;
   try {
     await load();

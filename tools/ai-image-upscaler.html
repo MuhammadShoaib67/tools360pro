@@ -284,6 +284,7 @@
       goBtn.disabled = false; clearBtn.disabled = false;
       if (img.naturalWidth > 2000 || img.naturalHeight > 2000)
         showErr("This photo is large (" + img.naturalWidth + " × " + img.naturalHeight + "). Upscaling will work in patches and may take a while — on a phone it can be slow.");
+      loadLibs().catch(function () {}); // warm up the AI in the background
     };
     img.onerror = function () { showErr("That file could not be read as an image."); };
     img.src = url;

@@ -257,6 +257,7 @@
       goBtn.disabled = false; clearBtn.disabled = false;
       if (img.naturalWidth > 2000 || img.naturalHeight > 2000)
         showErr("Note: this photo is large — enhancing can be slow and may run out of memory on phones. Resizing it to about 2000 px first works best.");
+      loadLibs().catch(function () {}); // warm up the AI in the background
     };
     img.onerror = function () { showErr("That file could not be read as an image."); };
     img.src = url;
@@ -306,7 +307,7 @@
     return libsPromise;
   }
 
-  function sharpen(ctx, w, h) {
+  async function sharpenAsync(ctx, w, h) {
     var imgData = ctx.getImageData(0, 0, w, h);
     var src = new Uint8ClampedArray(imgData.data);
     var dst = imgData.data;
@@ -324,6 +325,7 @@
           dst[idx + c] = sum;
         }
       }
+      if (y % 150 === 0) await new Promise(function (r) { setTimeout(r, 0); });
     }
     ctx.putImageData(imgData, 0, 0);
   }
@@ -366,7 +368,7 @@
       ctx.filter = "saturate(1.08) contrast(1.04) brightness(1.01)";
       ctx.drawImage(big, 0, 0, tw, th);
       ctx.filter = "none";
-      if (tw * th <= 9000000) sharpen(ctx, tw, th);
+      if (tw * th <= 9000000) await sharpenAsync(ctx, tw, th);
       var type = formatSel.value === "jpeg" ? "image/jpeg" : "image/png";
       var blob = await new Promise(function (resolve) { canvas.toBlob(resolve, type, 0.92); });
       if (!blob) throw new Error("encode-failed");

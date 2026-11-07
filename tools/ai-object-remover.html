@@ -218,7 +218,7 @@
       downloadBtn = T360.qs("#download-btn"), againBtn = T360.qs("#again-btn");
   var ctx = canvas.getContext("2d");
   var image = null, imageName = "photo", strokes = [], currentStroke = null,
-      resultBlob = null, resultFilename = "", session = null, ortPromise = null, painting = false;
+      resultBlob = null, resultFilename = "", inpaintWorker = null, workerPromise = null, painting = false;
 
   function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
   function setProgress(pct, text) {
@@ -296,6 +296,7 @@
       editor.classList.remove("hidden");
       result.classList.add("hidden");
       fitCanvas();
+      loadWorker().catch(function () {}); // warm up the AI in the background
     };
     img.onerror = function () { showErr("That file could not be read as an image."); };
     img.src = url;
@@ -307,27 +308,46 @@
   ["dragleave", "drop"].forEach(function (ev) { dz.addEventListener(ev, function (e) { e.preventDefault(); dz.classList.remove("dragover"); }); });
   dz.addEventListener("drop", function (e) { if (e.dataTransfer.files.length) setFile(e.dataTransfer.files[0]); });
 
-  function loadScript(src) {
-    return new Promise(function (resolve, reject) {
-      var sc = document.createElement("script");
-      sc.src = src; sc.onload = resolve;
-      sc.onerror = function () { reject(new Error("load-failed")); };
-      document.head.appendChild(sc);
-    });
-  }
-  function loadSession() {
-    if (!ortPromise) {
-      ortPromise = (async function () {
-        if (typeof ort === "undefined")
-          await loadScript("../assets/vendor/ort.min.js");
-        ort.env.wasm.wasmPaths = new URL("../assets/vendor/", window.location.href).href;
-        session = await ort.InferenceSession.create("../assets/models/migan.onnx", {
-          executionProviders: ["wasm"]
-        });
-      })();
-      ortPromise.catch(function () { ortPromise = null; session = null; });
+  function loadWorker() {
+    if (!workerPromise) {
+      workerPromise = new Promise(function (resolve, reject) {
+        if (!inpaintWorker) inpaintWorker = new Worker("../assets/js/inpaint-worker.js");
+        function onMsg(e) {
+          var d = e.data || {};
+          if (d.type === "loaded") { cleanup(); resolve(); }
+          else if (d.type === "error") { cleanup(); reject(new Error(d.message || "load-failed")); }
+        }
+        function onErr() { cleanup(); reject(new Error("worker-crash")); }
+        function cleanup() {
+          inpaintWorker.removeEventListener("message", onMsg);
+          inpaintWorker.removeEventListener("error", onErr);
+        }
+        inpaintWorker.addEventListener("message", onMsg);
+        inpaintWorker.addEventListener("error", onErr);
+        inpaintWorker.postMessage({ type: "load" });
+      });
+      workerPromise.catch(function () { workerPromise = null; });
     }
-    return ortPromise;
+    return workerPromise;
+  }
+  function runInpaint(imgArr, maskArr, w, h) {
+    return new Promise(function (resolve, reject) {
+      function onMsg(e) {
+        var d = e.data || {};
+        if (d.type === "result") { cleanup(); resolve(new Uint8Array(d.data)); }
+        else if (d.type === "error") { cleanup(); reject(new Error(d.message || "run-failed")); }
+      }
+      function onErr() { cleanup(); reject(new Error("worker-crash")); }
+      function cleanup() {
+        inpaintWorker.removeEventListener("message", onMsg);
+        inpaintWorker.removeEventListener("error", onErr);
+      }
+      inpaintWorker.addEventListener("message", onMsg);
+      inpaintWorker.addEventListener("error", onErr);
+      var imgBuf = imgArr.buffer.slice(imgArr.byteOffset, imgArr.byteOffset + imgArr.byteLength);
+      var maskBuf = maskArr.buffer.slice(maskArr.byteOffset, maskArr.byteOffset + maskArr.byteLength);
+      inpaintWorker.postMessage({ type: "run", img: imgBuf, mask: maskBuf, w: w, h: h }, [imgBuf, maskBuf]);
+    });
   }
 
   function buildWork() {
@@ -361,7 +381,7 @@
     goBtn.disabled = true;
     try {
       setProgress(8, "Loading the AI model… (about 28 MB, first use only)");
-      await loadSession();
+      await loadWorker();
       setProgress(30, "Studying the photo and rebuilding the painted area…");
       var work = buildWork();
       var imgData = work.imgCanvas.getContext("2d").getImageData(0, 0, work.w, work.h).data;
@@ -372,18 +392,12 @@
         for (var i = 0; i < npix; i++) imgArr[c * npix + i] = imgData[i * 4 + c];
       var maskArr = new Uint8Array(npix);
       for (var j = 0; j < npix; j++) maskArr[j] = maskData[j * 4] > 0 ? 255 : 0;
-      var feeds = {
-        image: new ort.Tensor("uint8", imgArr, [1, 3, work.h, work.w]),
-        mask: new ort.Tensor("uint8", maskArr, [1, 1, work.h, work.w])
-      };
-      var out = await session.run(feeds);
-      var res = out.result;
+      var rd = await runInpaint(imgArr, maskArr, work.w, work.h);
       setProgress(80, "Blending the repair into your photo…");
       var resCanvas = document.createElement("canvas");
       resCanvas.width = work.w; resCanvas.height = work.h;
       var rctx = resCanvas.getContext("2d");
       var rImg = rctx.createImageData(work.w, work.h);
-      var rd = res.data;
       for (var p = 0; p < npix; p++) {
         rImg.data[p * 4] = rd[p];
         rImg.data[p * 4 + 1] = rd[npix + p];
