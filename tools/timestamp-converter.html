@@ -122,6 +122,7 @@
     <h2>The number hiding inside every log file</h2>
     <p>Open any server log, API response or database export and you will meet long numbers like 1762272000 where a date should be. That is Unix time: seconds counted from 1 January 1970, UTC. Software loves it because arithmetic is trivial — subtract two timestamps and you know exactly how far apart two events were, in any country, with no time-zone arguments. Humans, sensibly, do not read time that way, which is why this converter exists on every developer's bookmark bar.</p>
     <p>The two traps are worth knowing. First, JavaScript and many APIs use <b>milliseconds</b> (13 digits) while Unix tradition uses <b>seconds</b> (10 digits) — mixing them up throws a date into 1970 or the year 56000. Second, a timestamp is not "in" a time zone; it is one instant, and only its display changes. This tool shows the UTC reading, your local reading, the ISO format and how long ago (or until) it is — the four things you actually need when debugging.</p>
+      <p>This task often leads to two others: <a href="time-zone-converter.html">Time Zone Converter</a> converts a time between cities and time zones, and <a href="jwt-decoder.html">JWT Decoder</a> decodes the header and payload of a JSON Web Token.</p>
   </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
