@@ -159,7 +159,7 @@
     { slug: "compound-interest-calculator", name: "Compound Interest Calculator", cat: "calculators", desc: "See how savings grow with compound interest over time." },
     { slug: "gpa-calculator",    name: "GPA Calculator",    cat: "calculators", desc: "Work out your GPA from grades and credit hours." }
   ];
-  var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator"];
+  var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator", "sign-pdf", "barcode-generator"];
 
   var bySlug = {}, catById = {};
   TOOLS.forEach(function (t) { bySlug[t.slug] = t; });
