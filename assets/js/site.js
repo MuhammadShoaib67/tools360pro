@@ -300,6 +300,7 @@
             "<div><h4>More tools</h4><ul>" + toolLinks(["text", "calculators", "developer", "generators"]) + "</ul></div>" +
           "</div>" +
           '<nav class="footer-links" aria-label="About Tools360Pro">' +
+            '<a href="' + BASE + 'guides/">Guides</a>' +
             '<a href="' + BASE + 'about.html">About Us</a>' +
             '<a href="' + BASE + 'contact.html">Contact Us</a>' +
             '<a href="' + BASE + 'privacy-policy.html">Privacy Policy</a>' +
