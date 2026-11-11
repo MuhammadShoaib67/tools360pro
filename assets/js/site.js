@@ -24,6 +24,7 @@
     "sign-pdf": ic('<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>'),
     "split-pdf":        ic('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16" stroke-dasharray="3.5 3.5"/>'),
     "images-to-pdf":    ic('<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15.5 16 10.5 5 21"/>'),
+    "jpg-to-pdf":       ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><circle cx="12" cy="13.5" r="1.8"/><path d="M9.8 20.5 12 16.8l2.2 3.7"/>'),
     "compress-image":   ic('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v4H5"/><path d="M15 3v4h4"/><path d="M9 21v-4H5"/><path d="M15 21v-4h4"/>'),
     "resize-image":     ic('<rect x="3" y="6" width="13" height="13" rx="2"/><path d="M16 3h5v5"/><path d="M21 3l-6.5 6.5"/>'),
     "convert-image":    ic('<path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/>'),
@@ -92,6 +93,7 @@
     { slug: "merge-pdf",        name: "Merge PDF",        cat: "pdf", desc: "Combine several PDF files into a single document." },
     { slug: "split-pdf",        name: "Split PDF",        cat: "pdf", desc: "Extract a page range or split a PDF into separate files." },
     { slug: "images-to-pdf",    name: "Images to PDF",    cat: "pdf", desc: "Turn JPG, PNG and WebP images into one PDF document." },
+    { slug: "jpg-to-pdf",       name: "JPG to PDF Converter", cat: "pdf", desc: "Convert JPG images into one PDF — reorder pages, pick size and margins." },
     { slug: "pdf-to-image",     name: "PDF to Image",     cat: "pdf", desc: "Render PDF pages as JPG or PNG images." },
     { slug: "rotate-pdf",       name: "Rotate & Organize PDF", cat: "pdf", desc: "Rotate, reorder and delete PDF pages." },
     { slug: "compress-pdf",     name: "Compress PDF",     cat: "pdf", desc: "Shrink a PDF by re-encoding its images." },
@@ -159,7 +161,7 @@
     { slug: "compound-interest-calculator", name: "Compound Interest Calculator", cat: "calculators", desc: "See how savings grow with compound interest over time." },
     { slug: "gpa-calculator",    name: "GPA Calculator",    cat: "calculators", desc: "Work out your GPA from grades and credit hours." }
   ];
-  var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator", "sign-pdf", "barcode-generator"];
+  var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator", "sign-pdf", "barcode-generator", "jpg-to-pdf"];
 
   var bySlug = {}, catById = {};
   TOOLS.forEach(function (t) { bySlug[t.slug] = t; });
