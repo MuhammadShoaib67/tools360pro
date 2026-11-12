@@ -171,7 +171,7 @@
 
   <section class="tool-section">
     <h2>Related tools</h2>
-    <div id="related-tools" class="tool-grid"></div>
+    <div id="related-tools" class="tool-grid"><a class="tool-card" href="sign-pdf.html" data-cat="pdf"><span class="tool-icon" data-icon="sign-pdf"></span><span class="tool-card-body"><span class="tool-name">Sign PDF</span><span class="tool-desc">Draw or type your signature and place it on any PDF page — no upload.</span></span></a><a class="tool-card" href="pdf-to-word.html" data-cat="pdf"><span class="tool-icon" data-icon="pdf-to-word"></span><span class="tool-card-body"><span class="tool-name">PDF to Word Converter</span><span class="tool-desc">Turn a text-based PDF into an editable Word document.</span></span></a><a class="tool-card" href="merge-pdf.html" data-cat="pdf"><span class="tool-icon" data-icon="merge-pdf"></span><span class="tool-card-body"><span class="tool-name">Merge PDF</span><span class="tool-desc">Combine several PDF files into a single document.</span></span></a><a class="tool-card" href="split-pdf.html" data-cat="pdf"><span class="tool-icon" data-icon="split-pdf"></span><span class="tool-card-body"><span class="tool-name">Split PDF</span><span class="tool-desc">Extract a page range or split a PDF into separate files.</span></span></a></div>
   </section>
 
   <section class="tool-section">
@@ -187,6 +187,11 @@
       <p>For the full picture — why PDFs get big, and when compression stays sharp — read our guide: <a href="../guides/compress-pdf-without-losing-quality.html">How to Compress a PDF Without Losing Quality</a>.</p>
   </section>
 
+  <section class="tool-section">
+    <h2>Why PDFs get big — and when compression helps</h2>
+    <p>Most oversized PDFs are heavy because of their images: scanned pages and embedded photos carry far more data than the text around them. A PDF compressor works by re-encoding those images at a lower quality, which is why scanned and photo-heavy files can shrink dramatically while a text-only PDF barely changes size.</p>
+    <p>If a file cannot be made smaller, this tool keeps the original instead of handing you a worse copy. Compression happens in your browser with no sign-up, so a personal document is never uploaded to shrink it.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my PDF uploaded to a server?</summary><p>No. The compression happens entirely in your browser using JavaScript. Your file never leaves your device, and nothing is stored anywhere.</p></details>
@@ -196,7 +201,7 @@
     <details><summary>Which quality level should I pick?</summary><p>Balanced is the sensible default for everyday sharing. Choose High quality when pages will be printed or read closely, and Small file when you must fit a strict upload or email size limit and softer pages are acceptable.</p></details>
   </section>
 </main>
-<div id="site-footer"></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=67.0"></script>
 <script>
 // The heavy PDF libraries load lazily — only once a file is picked.

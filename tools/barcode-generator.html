@@ -165,7 +165,7 @@
   </section>
   <section class="tool-section">
     <h2>Related tools</h2>
-    <div id="related-tools" class="tool-grid"></div>
+    <div id="related-tools" class="tool-grid"><a class="tool-card" href="password-generator.html" data-cat="generators"><span class="tool-icon" data-icon="password-generator"></span><span class="tool-card-body"><span class="tool-name">Password Generator</span><span class="tool-desc">Generate strong random passwords with a strength meter.</span></span></a><a class="tool-card" href="color-palette.html" data-cat="generators"><span class="tool-icon" data-icon="color-palette"></span><span class="tool-card-body"><span class="tool-name">Color Converter &amp; Palette</span><span class="tool-desc">Convert HEX, RGB and HSL and build colour palettes.</span></span></a><a class="tool-card" href="list-randomizer.html" data-cat="generators"><span class="tool-icon" data-icon="list-randomizer"></span><span class="tool-card-body"><span class="tool-name">List Randomizer</span><span class="tool-desc">Shuffle lists and pick random winners.</span></span></a><a class="tool-card" href="invoice-generator.html" data-cat="generators"><span class="tool-icon" data-icon="invoice-generator"></span><span class="tool-card-body"><span class="tool-name">Invoice Generator</span><span class="tool-desc">Create professional PDF invoices with items, tax and totals.</span></span></a></div>
   </section>
   <section class="tool-section">
     <h2>How to use the Barcode Generator</h2>
@@ -178,6 +178,11 @@
     <p>Retail barcodes feel mysterious because the numbers are assigned, not invented: a company registers a prefix with GS1, adds its own item numbers, and the final digit is a check digit calculated from all the others, which is how tills catch mis-scans. This tool handles that last digit for you — enter the first 12 digits of an EAN-13 or the first 11 of a UPC-A and the correct check digit is added; enter the full number and it is verified instead.</p>
     <p>For everything that is not a shop product — stock labels, asset tags, membership cards, event tickets, file references — CODE128 is the practical choice because it carries letters and numbers of any length. Whatever the format, two habits keep barcodes scannable: leave clear white space around them (the "quiet zone" scanners look for first) and never resize them in only one direction, which squeezes the bars together. If you also need a code phones can open as a link, the <a href="qr-code-generator.html">QR Code Generator</a> is the companion tool — and if you are labelling products you sell, the <a href="invoice-generator.html">Invoice Generator</a> pairs well for the paperwork side.</p>
   </section>
+  <section class="tool-section">
+    <h2>Barcodes for products, stock and labels</h2>
+    <p>A barcode generator turns a number into a scannable barcode: CODE128 for general labelling, EAN-13 for retail products, UPC-A for North American retail, and CODE39 for simple inventory tags. The check digit is worked out for you, so a mistyped number is caught before the label is printed.</p>
+    <p>Printed barcodes work best at a decent size with quiet space around them — the PNG and SVG downloads here keep the bars sharp at any size. No sign-up, no upload: the barcode is drawn in your browser and downloaded straight to your device.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>What is the difference between CODE128, EAN-13, UPC and CODE39?</summary><p>EAN-13 is the retail standard outside North America and UPC-A is its North American cousin — both encode a fixed product number (a GTIN) that shops scan at the till. CODE128 is the flexible one: it encodes any text, numbers and symbols, so warehouses and shipping labels use it for serial numbers and references. CODE39 is the older, simpler code still found on some industrial and library labels.</p></details>
@@ -186,7 +191,7 @@
     <details><summary>Is my data uploaded anywhere?</summary><p>No. The barcode is drawn in your browser from the text you type; nothing is sent to a server, and you download the PNG or SVG straight from this page.</p></details>
   </section>
 </main>
-<div id="site-footer"></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=67.0"></script>
 <script src="../assets/vendor/qrcode.min.js"></script>
 <script>

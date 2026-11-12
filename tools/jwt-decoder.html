@@ -137,7 +137,7 @@
 <main class="container tool-page">
   <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#developer">Developer Tools</a> <span class="sep">›</span> <span aria-current="page">JWT Decoder</span></nav>
   <h1>JWT Decoder</h1>
-  <p class="lede">Paste a JSON Web Token to inspect its header, payload claims and expiry — decoded locally, never verified or uploaded.</p>
+  <p class="lede">Decode and inspect JSON Web Tokens online for free — view the header, payload, claims and expiry of a JWT in seconds. Decoding only, never verification, and the token never leaves your browser.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — nothing is uploaded</p>
 
   <section class="workspace card">
@@ -179,7 +179,7 @@
 
   <section class="tool-section">
     <h2>Related tools</h2>
-    <div id="related-tools" class="tool-grid"></div>
+    <div id="related-tools" class="tool-grid"><a class="tool-card" href="css-gradient-generator.html" data-cat="developer"><span class="tool-icon" data-icon="css-gradient-generator"></span><span class="tool-card-body"><span class="tool-name">CSS Gradient &amp; Shadow Generator</span><span class="tool-desc">Design gradients and box shadows with live preview.</span></span></a><a class="tool-card" href="regex-tester.html" data-cat="developer"><span class="tool-icon" data-icon="regex-tester"></span><span class="tool-card-body"><span class="tool-name">Regex Tester</span><span class="tool-desc">Test regular expressions with highlighted matches.</span></span></a><a class="tool-card" href="timestamp-converter.html" data-cat="developer"><span class="tool-icon" data-icon="timestamp-converter"></span><span class="tool-card-body"><span class="tool-name">Unix Timestamp Converter</span><span class="tool-desc">Convert Unix timestamps to dates and back, with a live clock.</span></span></a><a class="tool-card" href="diff-checker.html" data-cat="developer"><span class="tool-icon" data-icon="diff-checker"></span><span class="tool-card-body"><span class="tool-name">Diff Checker</span><span class="tool-desc">Compare two texts line by line and highlight the changes.</span></span></a></div>
   </section>
 
   <section class="tool-section">
@@ -193,6 +193,11 @@
       <p>Visitors often continue with <a href="base64.html">Base64 Encoder/Decoder</a>, which encodes and decodes Base64 text, or <a href="timestamp-converter.html">Timestamp Converter</a>, which converts Unix timestamps to readable dates and back.</p>
   </section>
 
+  <section class="tool-section">
+    <h2>Read a token without trusting it blindly</h2>
+    <p>A JWT decoder splits a JSON Web Token into its header, payload and signature, and shows the claims inside — who issued it, who it is for, and when it expires. That is the fastest way to debug an authentication problem: most token issues turn out to be an expired token or the wrong audience.</p>
+    <p>Decoding is not verification — this tool reads the token, it does not check the signature, so never treat a decoded token as proof of anything. Decoding happens in your browser with no sign-up, and the token is never uploaded.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Does decoding a JWT verify it?</summary><p>No. Decoding is not verifying. Anyone can create or change the header and payload of a token and it will still decode perfectly here. Verification means checking the cryptographic signature with the issuer's key, which this tool does not do — never trust a token just because it decodes.</p></details>
@@ -202,7 +207,7 @@
     <details><summary>Why does my token fail to decode?</summary><p>Common causes are a token that does not have exactly three dot-separated segments, a segment that is not valid Base64URL, or a decoded segment that is not valid JSON — for example, a token that was truncated when copied.</p></details>
   </section>
 </main>
-<div id="site-footer"></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=67.0"></script>
 <script>
 (function(){

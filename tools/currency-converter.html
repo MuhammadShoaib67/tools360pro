@@ -130,7 +130,7 @@
 <main class="container tool-page">
   <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#converters">Converters</a> <span class="sep">›</span> <span aria-current="page">Currency Converter</span></nav>
   <h1>Currency Converter</h1>
-  <p class="lede">Convert between world currencies with exchange rates fetched from ExchangeRate-API. Enter an amount, pick your currencies, and the result updates live.</p>
+  <p class="lede">Convert between world currencies with live exchange rates — USD to PKR, euros to dollars, pounds to dollars and more. Rates come from ExchangeRate-API, and the converter runs in your browser with no sign-up.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — nothing is uploaded</p>
   <section class="workspace card">
     <div class="field">
@@ -159,7 +159,7 @@
   </section>
   <section class="tool-section">
     <h2>Related tools</h2>
-    <div id="related-tools" class="tool-grid"></div>
+    <div id="related-tools" class="tool-grid"><a class="tool-card" href="mp4-to-mp3.html" data-cat="converters"><span class="tool-icon" data-icon="mp4-to-mp3"></span><span class="tool-card-body"><span class="tool-name">MP4 to MP3 Converter</span><span class="tool-desc">Extract MP3 audio from MP4 and other video files.</span></span></a><a class="tool-card" href="unit-converter.html" data-cat="converters"><span class="tool-icon" data-icon="unit-converter"></span><span class="tool-card-body"><span class="tool-name">Unit Converter</span><span class="tool-desc">Convert length, weight, temperature, area, speed and more.</span></span></a><a class="tool-card" href="time-zone-converter.html" data-cat="converters"><span class="tool-icon" data-icon="time-zone-converter"></span><span class="tool-card-body"><span class="tool-name">Time Zone Converter</span><span class="tool-desc">Convert times between world time zones.</span></span></a><a class="tool-card" href="number-base-converter.html" data-cat="converters"><span class="tool-icon" data-icon="number-base-converter"></span><span class="tool-card-body"><span class="tool-name">Number Base Converter</span><span class="tool-desc">Convert between binary, decimal, octal and hex.</span></span></a></div>
   </section>
   <section class="tool-section">
     <h2>How to use the Currency Converter</h2>
@@ -172,6 +172,11 @@
       <p>The rates come from the mid-market rate — the fair midpoint between buy and sell prices used by banks and currency markets — and they refresh daily, so the figure you see is today's honest reference value. Your own bank, card or exchange will add its margin on top, which is why the amount you finally receive can differ slightly. For travel budgeting, price comparisons and invoice checks, the mid-market figure is the right yardstick.</p>
       <p>This task often leads to two others: <a href="unit-converter.html">Unit Converter</a> converts length, weight, temperature and more between units, and <a href="percentage-calculator.html">Percentage Calculator</a> works out percentages, increases and discounts.</p>
   </section>
+  <section class="tool-section">
+    <h2>Live rates for everyday conversions</h2>
+    <p>A currency converter is only as good as its rates, which is why this one pulls live exchange rates — check USD to PKR today, euros to dollars, pounds to dollars, or any other pair before you send money, price a product or plan a trip.</p>
+    <p>Rates move during the day, so a conversion is a snapshot of the moment you checked it, not a promise of tomorrow's rate. The converter runs in your browser with no sign-up.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Where do the exchange rates come from?</summary><p>Rates are fetched from open.er-api.com, the free endpoint provided by ExchangeRate-API, with US dollars as the base currency. The “last updated” time shown under the result is the time reported by that API itself.</p></details>
@@ -181,7 +186,7 @@
     <details><summary>Is my amount uploaded or stored?</summary><p>Your amount is never sent anywhere — it is only used in calculations on this page. Only the public exchange-rate data is downloaded, and a copy of the rates (not your inputs) is cached in your browser for offline use.</p></details>
   </section>
 </main>
-<div id="site-footer"></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=67.0"></script>
 <script>
 (function(){

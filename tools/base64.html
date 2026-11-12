@@ -130,7 +130,7 @@
 <main class="container tool-page">
   <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#developer">Developer Tools</a> <span class="sep">›</span> <span aria-current="page">Base64 Encoder &amp; Decoder</span></nav>
   <h1>Base64 Encoder &amp; Decoder</h1>
-  <p class="lede">Encode text to Base64 or decode it back — with full Unicode support and file conversion.</p>
+  <p class="lede">Encode and decode Base64 online with full UTF-8 support — convert text and files to Base64 and back, instantly and privately in your browser. Nothing you paste is uploaded, so tokens, keys and personal text stay on your device.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your code and data never leave this device</p>
 
   <section class="workspace card">
@@ -184,7 +184,7 @@
 
   <section class="tool-section">
     <h2>Related tools</h2>
-    <div id="related-tools" class="tool-grid"></div>
+    <div id="related-tools" class="tool-grid"><a class="tool-card" href="uuid-generator.html" data-cat="developer"><span class="tool-icon" data-icon="uuid-generator"></span><span class="tool-card-body"><span class="tool-name">UUID Generator</span><span class="tool-desc">Generate random v4 UUIDs, one or in bulk.</span></span></a><a class="tool-card" href="url-encode.html" data-cat="developer"><span class="tool-icon" data-icon="url-encode"></span><span class="tool-card-body"><span class="tool-name">URL &amp; HTML Encoder</span><span class="tool-desc">Encode and decode URLs and HTML entities.</span></span></a><a class="tool-card" href="jwt-decoder.html" data-cat="developer"><span class="tool-icon" data-icon="jwt-decoder"></span><span class="tool-card-body"><span class="tool-name">JWT Decoder</span><span class="tool-desc">Inspect JWT headers and payloads in your browser.</span></span></a><a class="tool-card" href="css-gradient-generator.html" data-cat="developer"><span class="tool-icon" data-icon="css-gradient-generator"></span><span class="tool-card-body"><span class="tool-name">CSS Gradient &amp; Shadow Generator</span><span class="tool-desc">Design gradients and box shadows with live preview.</span></span></a></div>
   </section>
 
   <section class="tool-section">
@@ -198,6 +198,11 @@
       <p>Visitors often continue with <a href="json-formatter.html">JSON Formatter</a>, which formats, validates and beautifies JSON data, or <a href="hash-generator.html">Hash Generator</a>, which generates MD5 and SHA hashes of any text.</p>
   </section>
 
+  <section class="tool-section">
+    <h2>What Base64 is actually for</h2>
+    <p>Base64 encoding turns binary data into plain text, which is why it shows up everywhere: email attachments, data URLs, API tokens and configuration files. This base64 encode online tool handles full UTF-8 text, so non-English characters survive the round trip instead of turning into question marks.</p>
+    <p>You can encode or decode text and files here, with the result copied or downloaded in one click. Everything is processed in your browser — nothing you paste is uploaded or stored, which matters when the text is a token or a secret.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my data uploaded to a server?</summary><p>No. Encoding, decoding, and file conversion all run locally in your browser. Your text and files are never uploaded, stored, or sent anywhere.</p></details>
@@ -207,7 +212,7 @@
     <details><summary>Is Base64 encryption?</summary><p>No. Base64 is an encoding, not encryption. Anyone can decode it. Do not use it to protect passwords or secrets.</p></details>
   </section>
 </main>
-<div id="site-footer"></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=67.0"></script>
 <script>
 (function(){

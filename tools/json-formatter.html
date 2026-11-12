@@ -176,7 +176,7 @@
 
   <section class="tool-section">
     <h2>Related tools</h2>
-    <div id="related-tools" class="tool-grid"></div>
+    <div id="related-tools" class="tool-grid"><a class="tool-card" href="base64.html" data-cat="developer"><span class="tool-icon" data-icon="base64"></span><span class="tool-card-body"><span class="tool-name">Base64 Encoder &amp; Decoder</span><span class="tool-desc">Encode and decode Base64 text and files, Unicode-safe.</span></span></a><a class="tool-card" href="uuid-generator.html" data-cat="developer"><span class="tool-icon" data-icon="uuid-generator"></span><span class="tool-card-body"><span class="tool-name">UUID Generator</span><span class="tool-desc">Generate random v4 UUIDs, one or in bulk.</span></span></a><a class="tool-card" href="url-encode.html" data-cat="developer"><span class="tool-icon" data-icon="url-encode"></span><span class="tool-card-body"><span class="tool-name">URL &amp; HTML Encoder</span><span class="tool-desc">Encode and decode URLs and HTML entities.</span></span></a><a class="tool-card" href="jwt-decoder.html" data-cat="developer"><span class="tool-icon" data-icon="jwt-decoder"></span><span class="tool-card-body"><span class="tool-name">JWT Decoder</span><span class="tool-desc">Inspect JWT headers and payloads in your browser.</span></span></a></div>
   </section>
 
   <section class="tool-section">
@@ -190,6 +190,11 @@
       <p>Visitors often continue with <a href="base64.html">Base64 Encoder/Decoder</a>, which encodes and decodes Base64 text, or <a href="url-encode.html">URL Encoder/Decoder</a>, which encodes and decodes URL-safe text.</p>
   </section>
 
+  <section class="tool-section">
+    <h2>Readable JSON, and errors you can actually find</h2>
+    <p>A JSON formatter and validator does two jobs: it pretty-prints minified JSON with 2 or 4-space indentation so a human can read it, and it points at the exact line when something is wrong — a missing comma or an unclosed bracket stops being a guessing game.</p>
+    <p>Minify in the other direction when the file has to travel light. Everything runs in your browser with no sign-up, which matters when the JSON holds API keys or personal data.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my JSON data uploaded to a server?</summary><p>No. This tool runs entirely in your browser using JavaScript. Your code and data are never uploaded, stored, or sent anywhere — everything stays on this device.</p></details>
@@ -199,7 +204,7 @@
     <details><summary>Does this tool support large JSON files?</summary><p>Yes, for typical API responses and config files. Very large inputs (several megabytes) may format more slowly because all processing happens locally in your browser tab.</p></details>
   </section>
 </main>
-<div id="site-footer"></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=67.0"></script>
 <script>
 (function(){

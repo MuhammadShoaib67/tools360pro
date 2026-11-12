@@ -139,7 +139,7 @@
 <main class="container tool-page">
   <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#developer">Developer Tools</a> <span class="sep">›</span> <span aria-current="page">Regex Tester</span></nav>
   <h1>Regex Tester</h1>
-  <p class="lede">Test a regular expression against sample text with highlighted matches, indexes, and capture groups — live as you type.</p>
+  <p class="lede">Test regular expressions online for free and see highlighted matches, indexes and capture groups live as you type. Prove a pattern against real text before it reaches your code — private, in your browser, no sign-up.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — nothing is uploaded</p>
 
   <section class="workspace card">
@@ -184,7 +184,7 @@
 
   <section class="tool-section">
     <h2>Related tools</h2>
-    <div id="related-tools" class="tool-grid"></div>
+    <div id="related-tools" class="tool-grid"><a class="tool-card" href="timestamp-converter.html" data-cat="developer"><span class="tool-icon" data-icon="timestamp-converter"></span><span class="tool-card-body"><span class="tool-name">Unix Timestamp Converter</span><span class="tool-desc">Convert Unix timestamps to dates and back, with a live clock.</span></span></a><a class="tool-card" href="diff-checker.html" data-cat="developer"><span class="tool-icon" data-icon="diff-checker"></span><span class="tool-card-body"><span class="tool-name">Diff Checker</span><span class="tool-desc">Compare two texts line by line and highlight the changes.</span></span></a><a class="tool-card" href="hash-generator.html" data-cat="developer"><span class="tool-icon" data-icon="hash-generator"></span><span class="tool-card-body"><span class="tool-name">Hash Generator</span><span class="tool-desc">Calculate MD5, SHA-1, SHA-256 and SHA-512 hashes.</span></span></a><a class="tool-card" href="json-formatter.html" data-cat="developer"><span class="tool-icon" data-icon="json-formatter"></span><span class="tool-card-body"><span class="tool-name">JSON Formatter &amp; Validator</span><span class="tool-desc">Format, minify and validate JSON with clear errors.</span></span></a></div>
   </section>
 
   <section class="tool-section">
@@ -198,6 +198,11 @@
       <p>Visitors often continue with <a href="json-formatter.html">JSON Formatter</a>, which formats, validates and beautifies JSON data, or <a href="diff-checker.html">Diff Checker</a>, which highlights the differences between two texts.</p>
   </section>
 
+  <section class="tool-section">
+    <h2>Test the pattern before it reaches your code</h2>
+    <p>A regex tester shows highlighted matches, indexes and capture groups live as you type, so a regular expression can be proven against real text before it is trusted in code. Test against the awkward cases — empty strings, edge punctuation, the input you hope never arrives — because that is where patterns usually break.</p>
+    <p>Patterns and test text are processed in your browser with no sign-up, so sample data that includes real names or emails is never uploaded.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my text uploaded to a server?</summary><p>No. Patterns are compiled and run entirely in your browser using JavaScript's RegExp. Your text is never uploaded, stored, or sent anywhere.</p></details>
@@ -207,7 +212,7 @@
     <details><summary>Why is there a limit of 1,000 matches?</summary><p>Patterns that can match empty strings or very short text could otherwise produce an unbounded number of matches and freeze the page. Matches are capped at 1,000, zero-width matches safely advance the search position, and the tool notes when the cap is reached.</p></details>
   </section>
 </main>
-<div id="site-footer"></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=67.0"></script>
 <script>
 (function(){
