@@ -65,7 +65,7 @@
    "@type": "FAQPage",
    "mainEntity": [
     { "@type": "Question", "name": "Are these numbers truly random?", "acceptedAnswer": { "@type": "Answer", "text": "They come from your browser's cryptographic random source (the same system used for security tokens), not from a predictable formula. Every draw is independent and unbiased across the whole range." } },
-    { "@type": "Question", "name": "Can I generate numbers with no repeats?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — tick 'No duplicates' and each number in the batch will be unique, like drawing lottery balls without putting them back. The count cannot exceed the size of the range." } },
+    { "@type": "Question", "name": "Can I generate numbers with no repeats?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — tick \"No duplicates\" and each number in the batch will be unique, like drawing lottery balls without putting them back. The count cannot exceed the size of the range." } },
     { "@type": "Question", "name": "What is this used for?", "acceptedAnswer": { "@type": "Answer", "text": "Giveaways and raffles, picking lottery numbers, classroom cold-calling, sampling and statistics practice, game nights, and splitting people into random groups or order." } },
     { "@type": "Question", "name": "Is anything sent to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. The numbers are generated in your browser tab and never leave your device." } }
    ]
@@ -79,7 +79,7 @@
 <main class="container tool-page">
   <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#generators">Generators</a> <span class="sep">›</span> <span aria-current="page">Random Number Generator</span></nav>
   <h1>Random Number Generator</h1>
-  <p class="lede">Pick a range, get genuinely random numbers — singly or by the thousand.</p>
+  <p class="lede">Pick a range and get genuinely random numbers — one at a time or up to a thousand, with or without duplicates, whole numbers or decimals. Every draw uses your browser's cryptographic randomness: free, private, and fair every time.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
 
   <section class="workspace card">
@@ -122,6 +122,25 @@
     <p>Two options cover the common special cases. "No duplicates" turns the draw into a lottery-style pick, where each number can appear only once — ideal for raffles and random orders. Decimal places switch the tool from whole numbers to measurements and simulations. Need names instead of numbers? Our List Randomizer shuffles a list of anything.</p>
       <p>Visitors often continue with <a href="list-randomizer.html">List Randomizer</a>, which shuffles a list into a random order, or <a href="password-generator.html">Password Generator</a>, which creates strong random passwords with custom rules.</p>
   </section>
+  <section class="tool-section">
+    <h2>How the randomness works</h2>
+    <p>The numbers come from your browser's cryptographic random source — the same system websites trust for security codes and tokens — not from a predictable formula. Each draw is independent: the result of one pick has no effect on the next, and every value in your range is equally likely every time. That independence is what makes the results fair, and it is also what makes them look strange to human eyes: real randomness produces repeats, clusters and runs, because avoiding them would itself be a pattern.</p>
+    <p>People are poor random-number generators. Asked to pick a number between 1 and 100, most of us favour the middle of the range, avoid round numbers and shy away from repeats — all unconscious biases that skew a draw. A machine has no favourites. Whether the stakes are a giveaway prize or a classroom pick, letting the generator choose removes both the bias and the suspicion of it.</p>
+  </section>
+<section class="tool-section">
+    <h2>Ranges people actually use</h2>
+    <p>A random number generator 1-100 is the classic: guessing games, giveaways with a hundred entries, percentage rolls, and any draw where a hundred options feels right. A random number generator 1-10 suits quick picks — choosing between ten options, a top-ten list, a small group. A random number generator 1-5 covers the smallest draws: five team members, five raffle tickets, five choices on a menu. And 1-6 is a die, for the board game that lost its own. Set any minimum and maximum you like; the tool does not care whether the range starts at 1, 0 or 437.</p>
+    <p>How many numbers you generate matters as much as the range. One number settles a single pick. A batch — up to a thousand at a time — fills a sample, a draw list or a statistics exercise, and the Sort the results option arranges them in order so duplicates and gaps are easy to spot. Copy the results with one click and they are ready to paste wherever the draw is being recorded.</p>
+  </section>
+<section class="tool-section">
+    <h2>No duplicates and decimals</h2>
+    <p>Tick No duplicates and the draw becomes a lottery: each number can appear only once, like balls drawn from a drum without putting them back. That is the right mode for raffles, for picking several winners from one entry list, and for putting people into a random order — generate as many unique numbers as there are people and the order is set. The count cannot exceed the size of the range, because there are no more unique numbers to draw; ask for ten unique numbers from 1-5 and the tool will tell you it cannot be done.</p>
+    <p>Decimal places switch the tool from counting to measuring. A simulation that needs values between 0 and 1, a set of random prices, a sample of temperatures — up to six decimal places are available, and the same fairness rules apply: every value in the range is equally likely. Decimals and no-duplicates can combine, though with decimals the chance of a repeat is already vanishingly small.</p>
+  </section>
+<section class="tool-section">
+    <h2>Running a fair giveaway</h2>
+    <p>A quick recipe for a draw nobody can dispute: number the entries, set the range to match, tick No duplicates if there is more than one prize, generate, and share a screenshot of the result. Because the numbers are generated on your device and nothing is recorded anywhere, the draw is as transparent as the screen you show — and because the generator has no memory, running it again gives a fresh, independent result.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Are these numbers truly random?</summary><p>They come from your browser's cryptographic random source (the same system used for security tokens), not from a predictable formula. Every draw is independent and unbiased across the whole range.</p></details>
@@ -130,7 +149,7 @@
     <details><summary>Is anything sent to a server?</summary><p>No. The numbers are generated in your browser tab and never leave your device.</p></details>
   </section>
 </main>
-<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=68.0"></script>
 <script>
 (function () {

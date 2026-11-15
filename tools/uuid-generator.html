@@ -198,6 +198,21 @@
     <p>A UUID generator v4 creates random 128-bit identifiers — the standard choice for database primary keys, session IDs, transaction IDs and file names where a central counter is not practical. Generate one at a time or in bulk up to 100, with uppercase and hyphen options to match the format your system expects.</p>
     <p>Each UUID is generated with your browser's Web Crypto API, so the randomness is strong and nothing is uploaded or logged. No sign-up — copy one, or download the whole list.</p>
   </section>
+  <section class="tool-section">
+    <h2>What a UUID is</h2>
+    <p>A UUID — Universally Unique Identifier — is a 128-bit number written as 32 hexadecimal characters in five groups, like 550e8400-e29b-41d4-a716-446655440000. Version 4, the kind this page generates, is built from random numbers: 122 of the 128 bits are random, and the remaining bits mark the version and variant, which is why a v4 UUID always has a 4 in the same position and an 8, 9, a or b in another. The format is a standard, so a UUID made here is valid anywhere UUIDs are accepted.</p>
+    <p>The point of all that randomness is uniqueness without coordination. Two systems that have never spoken to each other can each generate identifiers and be confident they will not collide — no central counter, no registry, no checking first. That is why distributed systems lean on UUIDs: every server, phone or browser can mint its own IDs and the results still fit together. A uuid generator v4 is simply the easiest way to get one.</p>
+  </section>
+<section class="tool-section">
+    <h2>Where UUIDs are used</h2>
+    <p>Database primary keys are the classic use: a UUID key lets records be created on any server, or offline on a device, and merged later without clashing. Session IDs and transaction IDs use them the same way — a unique label for one interaction, generated on the spot. Developers also use UUIDs for file names when uploads must never overwrite each other, for test data, for feature flags, and for any identifier that has to be unique across systems that do not share a counter.</p>
+    <p>One thing a UUID is not: a secret. UUIDs are identifiers, not passwords, and they should never be used as the only protection for private data — anyone who can guess or see the identifier can use it. Treat them as labels, and keep real access control separate. Also worth knowing: because v4 UUIDs are random, they do not sort in creation order and they reveal nothing about when or where they were made, which is sometimes exactly the privacy you want.</p>
+  </section>
+<section class="tool-section">
+    <h2>Formats: uppercase, hyphens and bulk</h2>
+    <p>The same UUID can be written several ways, and the toggles here switch between them. Uppercase changes only the letters — some systems expect capitals, most accept either. Turning hyphens off strips them for display, leaving a compact 32-character string that some APIs and databases prefer. The underlying value never changes; only the presentation does, so pick the form your system expects and the list updates to match. Need more than one? Set the quantity up to 100, generate the batch, then copy them all at once or download the list as a .txt file.</p>
+    <p>Everything is generated with your browser's Web Crypto API, the same secure randomness behind password generation — no server, no log, no account. This uuid generator online creates each value on your device, so the IDs you generate are yours alone from the moment they exist.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my data uploaded or stored?</summary><p>No. UUIDs are generated locally in your browser with the Web Crypto API. Nothing is uploaded, logged, or stored on any server.</p></details>
@@ -207,7 +222,7 @@
     <details><summary>Where are UUIDs used?</summary><p>UUIDs are commonly used as database primary keys, session IDs, transaction IDs, file names, and distributed-system identifiers where a central counter is not practical.</p></details>
   </section>
 </main>
-<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=68.0"></script>
 <script>
 (function(){

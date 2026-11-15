@@ -88,7 +88,7 @@
 <main class="container tool-page">
   <nav class="breadcrumb"><a href="../index.html">Home</a> <span class="sep">›</span> <a href="../index.html#developer">Developer Tools</a> <span class="sep">›</span> <span aria-current="page">Diff Checker</span></nav>
   <h1>Diff Checker</h1>
-  <p class="lede">Paste two versions of a text and see exactly what changed.</p>
+  <p class="lede">Paste two versions of a text and see exactly what changed, line by line. Additions show in green, deletions in red — free, in your browser, with nothing uploaded, so contracts, essays and private code stay private.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
 
   <section class="workspace card">
@@ -126,6 +126,21 @@
     <p>This checker uses the same line-matching method (longest common subsequence) that powers the diff views in professional code tools, with a view anyone can read: plus for new, minus for gone. Because it runs in your browser, you can safely compare the documents you would never paste into a random server — drafts, agreements, unpublished writing and private code.</p>
       <p>This task often leads to two others: <a href="regex-tester.html">Regex Tester</a> tests regular expressions against sample text, and <a href="text-cleaner.html">Text Cleaner</a> removes duplicate lines, extra spaces and stray formatting.</p>
   </section>
+  <section class="tool-section">
+    <h2>How the comparison works</h2>
+    <p>The checker compares your two texts line by line, using the longest-common-subsequence method — the same line-matching approach behind the diff views in professional code tools. Lines that appear only in the new version are marked as additions with a green +; lines only in the old version are deletions with a red −. Unchanged lines sit between them so you can see each edit in context, and a summary counts how many lines were added, removed and left alone. If the two texts are identical, it says so plainly instead of showing an empty diff.</p>
+    <p>Two details shape the result. First, spacing counts: a line that differs only by a trailing space or an extra blank line is treated as changed, because the comparison works on the text exactly as typed. Second, a moved paragraph shows up as a deletion in one place and an addition in another — the tool reports what changed, not the intent behind it. Tick Show changes only to hide the unchanged lines and read just the edits, or Swap sides to flip which version is treated as the original.</p>
+  </section>
+<section class="tool-section">
+    <h2>Everyday uses for a diff checker</h2>
+    <p>Contracts are the highest-stakes use: when a counterparty returns a “slightly updated” agreement, a diff finds the one altered number in a price clause that reading twice would miss. Writers use it to compare essay drafts and see whether a revision actually improved a paragraph or just moved words around. Developers compare configuration files between servers, check what changed in a settings export, or review a colleague's edits to documentation. Anyone can use it to compare text online without installing anything — two lists, two versions of terms, two drafts of anything.</p>
+    <p>It also works as a proofreading aid. Paste a paragraph before and after editing and the diff shows whether your changes did what you meant — a useful second pair of eyes when you have read the same text so often you stop seeing it. And because the comparison runs in your browser, you can safely compare documents you would never paste into a random server: drafts, agreements, unpublished writing and private code.</p>
+  </section>
+<section class="tool-section">
+    <h2>Getting a clean diff</h2>
+    <p>A good diff starts with matching inputs. Paste the original on the left and the new version on the right — the two boxes sit side by side so you can compare text side by side before you even press Compare. Make sure both versions use the same line breaks: text copied from a PDF often arrives with a break after every visual line, which turns a clean comparison into noise. Compare the right pair — the version you sent against the version that came back, not a third draft from the middle. And keep the texts under about 3,000 lines each side; beyond that, a desktop code editor handles the job better. For most documents — contracts, essays, configs — the limit is far above anything you will paste.</p>
+    <p>When the diff looks noisier than expected, the cause is usually whitespace: an extra blank line, or spaces at the end of lines. Tidy both texts the same way before comparing — or run them through Text Cleaner first — and the real changes stand out from the formatting.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>How does the comparison work?</summary><p>The two texts are compared line by line using the same longest-common-subsequence method programmers use for code. Lines only in the second text are marked as additions (+), lines only in the first as deletions (−).</p></details>
@@ -134,7 +149,7 @@
     <details><summary>Is my text uploaded or stored?</summary><p>No. The comparison runs entirely in your browser tab, so contracts, drafts and code stay on your device.</p></details>
   </section>
 </main>
-<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=68.0"></script>
 <script>
 (function () {

@@ -212,6 +212,21 @@
     <p>Common uses include turning a scanned letter into an editable document, copying text from a screenshot or a photo of a noticeboard, digitising old printed records, and grabbing the words from a meme or poster so you can quote or translate them. Because everything runs on your device, even sensitive documents — ID cards, bank letters, medical reports — never leave your hands.</p>
       <p>Two tools that pair well with this one: <a href="ai-transcriber.html">AI Audio Transcriber</a> turns audio and video recordings into written text, and <a href="text-cleaner.html">Text Cleaner</a> removes duplicate lines, extra spaces and stray formatting.</p>
   </section>
+  <section class="tool-section">
+    <h2>What is OCR, in plain terms</h2>
+    <p>OCR — optical character recognition — is software that looks at a picture of words and works out which letters they are. It finds the shapes of characters, compares them against the alphabet of the language you selected, and assembles them into text you can copy, search and edit. It is the same idea behind scanning a printed page into a document, except here the whole engine runs in your browser: this image to text converter free of uploads and accounts downloads the OCR engine and the language data to your device the first time, then reads every image locally.</p>
+    <p>That local processing is what makes it safe for sensitive material. ID cards, bank letters, medical reports and legal notices never leave your hands, because there is no server involved at all. The trade-off is speed on the very first use — the engine and language data take a moment to download — after which extractions start quickly from the cache.</p>
+  </section>
+<section class="tool-section">
+    <h2>Seven languages — and why picking the right one matters</h2>
+    <p>English, Urdu, Hindi, Arabic, French, Spanish and German are all available, and the choice is not cosmetic. Each language loads its own script shapes and dictionary, so the engine reads far more accurately when it knows what to expect. Urdu and Arabic run right to left with connected letterforms; Hindi uses Devanagari; French, Spanish and German share the Latin alphabet but differ in accents and common words. Pick the language of the text in the image before you press Extract text — the wrong language is the single most common reason for a garbled result.</p>
+    <p>Mixed-language pages are the hard case. A poster with an English headline and Urdu body text will read best in two passes, one per language, with the results combined afterwards. Handwriting is harder still: even neat handwriting breaks the patterns the engine expects, so treat handwritten notes as a rough draft to correct, not a finished transcription.</p>
+  </section>
+<section class="tool-section">
+    <h2>From scan to editable text</h2>
+    <p>The usual workflow is short: photograph or scan the page, run it through here, copy the text or download it as a .txt file, then tidy it in a document. For a scanned PDF, convert the pages to images first with PDF to Image, then read each image here — people searching for ocr online pdf tools usually have exactly this job, a scanned document that needs its words back. Once the text is out, Text Cleaner removes duplicate lines and stray spacing, and a quick read-through catches the misread characters no OCR engine gets right every time.</p>
+    <p>Accuracy follows the quality of the image more than anything else. A straight, well-lit photo of a printed page reads almost perfectly; a tilted photo in dim light, or a screenshot of tiny text, will need more correction. Fill the frame with the text, keep the page flat, and avoid glare — five seconds of care at the photo stage saves five minutes of fixing afterwards.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Are my images uploaded to a server?</summary><p>No. The OCR engine (Tesseract) runs entirely in your browser. Your image never leaves your device — only the OCR engine and the language data you choose are downloaded, the first time you use them.</p></details>
@@ -222,7 +237,7 @@
     <details><summary>What image formats can I use?</summary><p>JPG, PNG, WebP and BMP images all work. A straight, well-lit photo of the page gives much better results than a tilted or shadowed one.</p></details>
   </section>
 </main>
-<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=68.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js"></script>
 <script>
