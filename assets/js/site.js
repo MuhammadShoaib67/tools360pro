@@ -303,6 +303,14 @@
           "</div>" +
           '<nav class="footer-links" aria-label="About Tools360Pro">' +
             '<a href="' + BASE + 'guides/">Guides</a>' +
+            '<a href="' + BASE + 'pdf-tools/">PDF Tools</a>' +
+            '<a href="' + BASE + 'image-tools/">Image Tools</a>' +
+            '<a href="' + BASE + 'ai-tools/">AI Tools</a>' +
+            '<a href="' + BASE + 'text-tools/">Text Tools</a>' +
+            '<a href="' + BASE + 'converters/">Converters</a>' +
+            '<a href="' + BASE + 'calculators/">Calculators</a>' +
+            '<a href="' + BASE + 'developer-tools/">Developer Tools</a>' +
+            '<a href="' + BASE + 'generators/">Generators</a>' +
             '<a href="' + BASE + 'about.html">About Us</a>' +
             '<a href="' + BASE + 'contact.html">Contact Us</a>' +
             '<a href="' + BASE + 'privacy-policy.html">Privacy Policy</a>' +
