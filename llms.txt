@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 67 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 70 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -55,6 +55,7 @@ Count, convert and clean up text. Category page: https://tools360pro.com/text-to
 - [Citation Generator](https://tools360pro.com/tools/citation-generator.html): Format APA, MLA, Chicago, Harvard, IEEE, Vancouver & Turabian references.
 - [Text Summarizer](https://tools360pro.com/tools/text-summarizer.html): Shorten any text to its key sentences — extractive, free, no word limit.
 - [Text to Handwriting Converter](https://tools360pro.com/tools/text-to-handwriting.html): Turn typed text into handwritten notebook pages.
+- [Flashcard Maker](https://tools360pro.com/tools/flashcard-maker.html): Make flashcards, flip through them and review on a spaced-repetition schedule.
 
 ## Converters
 
@@ -79,6 +80,7 @@ Percentages, age, BMI, loans and tips. Category page: https://tools360pro.com/ca
 - [Compound Interest Calculator](https://tools360pro.com/tools/compound-interest-calculator.html): See how savings grow with compound interest over time.
 - [GPA Calculator](https://tools360pro.com/tools/gpa-calculator.html): Work out your GPA from grades and credit hours.
 - [Final Grade Calculator](https://tools360pro.com/tools/final-grade-calculator.html): Find out what score you need on the final to reach your target grade.
+- [Scientific Calculator](https://tools360pro.com/tools/scientific-calculator.html): Trig, logs, powers and factorials with a DEG/RAD toggle — type or tap the keypad.
 
 ## Developer Tools
 
@@ -110,6 +112,7 @@ QR codes, passwords and palettes. Category page: https://tools360pro.com/generat
 - [YouTube Thumbnail Downloader](https://tools360pro.com/tools/youtube-thumbnail-downloader.html): Download any YouTube video's thumbnail in HD and more sizes.
 - [Voice Recorder](https://tools360pro.com/tools/voice-recorder.html): Record your voice in the browser and download the audio.
 - [Pomodoro Timer](https://tools360pro.com/tools/pomodoro-timer.html): Focus in 25-minute sessions with breaks — tasks and today's count saved.
+- [Resume Builder](https://tools360pro.com/tools/resume-builder.html): Build an ATS-friendly resume with live preview — templates, reorderable sections, PDF export.
 
 ## Guides
 

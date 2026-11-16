@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4F3KZHDRSS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4F3KZHDRSS');
+</script>
+
+<script>/* On refresh, always start at the top of the page */try{var __t=performance.getEntriesByType("navigation")[0];var __r=(__t&&__t.type==="reload")||(performance.navigation&&performance.navigation.type===1);if(__r){if("scrollRestoration" in history)history.scrollRestoration="manual";window.scrollTo(0,0);addEventListener("load",function(){window.scrollTo(0,0);setTimeout(function(){try{history.scrollRestoration="auto"}catch(e){}},50)})}}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcard Maker — Free Online Study Cards | Tools360Pro</title>
+<meta name="description" content="Make flashcards free: type or paste term = definition, flip through them, shuffle, and review on a spaced-repetition schedule. Decks save in your browser.">
+<link rel="canonical" href="https://tools360pro.com/tools/flashcard-maker.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="Flashcard Maker — Free Online Study Cards | Tools360Pro">
+<meta property="og:description" content="Make flashcards free: type or paste term = definition, flip through them, shuffle, and review on a spaced-repetition schedule. Decks save in your browser.">
+<meta property="og:url" content="https://tools360pro.com/tools/flashcard-maker.html">
+<meta property="og:image" content="https://tools360pro.com/og-image.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Tools360Pro logo — free online tools">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Flashcard Maker — Free Online Study Cards | Tools360Pro">
+<meta name="twitter:description" content="Make flashcards free: type or paste term = definition, flip through them, shuffle, and review on a spaced-repetition schedule. Decks save in your browser.">
+<meta name="twitter:image" content="https://tools360pro.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#070b1e":"#f7f4ef")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+<link rel="stylesheet" href="../assets/css/style.css?v=61.0">
+<style>
+  .fc-sub { margin: 22px 0 8px; }
+  .fc-deckrow { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+  .fc-deckrow .field { min-width: 180px; flex: 1 1 180px; }
+  .fc-stats { color: var(--muted); margin: 10px 0 0; }
+  .fc-list { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.95rem; }
+  .fc-list th, .fc-list td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border,#e5e7eb); vertical-align: top; }
+  .fc-list th { color: var(--muted); font-weight: 600; }
+  .fc-list td.fc-due { white-space: nowrap; color: var(--muted); }
+  .fc-stage { perspective: 900px; margin: 14px 0; }
+  .fc-card { position: relative; min-height: 190px; cursor: pointer; outline: none; }
+  .fc-inner { position: relative; width: 100%; min-height: 190px; transition: transform 0.45s; transform-style: preserve-3d; }
+  .fc-card.flipped .fc-inner { transform: rotateY(180deg); }
+  .fc-face { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 22px; text-align: center; border: 1px solid var(--border,#e5e7eb); border-radius: 14px; background: var(--card-bg,#fff); backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow-y: auto; }
+  .fc-face.fc-back { transform: rotateY(180deg); }
+  .fc-face .fc-tag { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .fc-face .fc-text { font-size: 1.25rem; font-weight: 700; line-height: 1.35; word-break: break-word; }
+  .fc-grade { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  .fc-progress { color: var(--muted); margin: 10px 0 0; }
+  .fc-test-q { font-size: 1.15rem; font-weight: 700; margin: 12px 0; }
+  .fc-test-result { font-weight: 700; margin: 10px 0 0; }
+  .fc-test-result.good { color: #16a34a; }
+  .fc-test-result.bad { color: #dc2626; }
+  .fc-hidden { display: none !important; }
+  #print-area { display: none; }
+  @media print {
+    body * { visibility: hidden; }
+    #print-area, #print-area * { visibility: visible; }
+    #print-area { display: block !important; position: absolute; left: 0; top: 0; width: 100%; color: #000; background: #fff; }
+    .fc-print-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .fc-print-card { border: 1px dashed #666; padding: 14px; min-height: 110px; page-break-inside: avoid; }
+    .fc-print-card .fc-print-tag { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #666; }
+    .fc-print-card .fc-print-text { font-size: 15px; font-weight: 700; margin-top: 6px; }
+    .fc-print-note { font-size: 12px; color: #444; margin-bottom: 12px; }
+  }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Flashcard Maker",
+   "url": "https://tools360pro.com/tools/flashcard-maker.html",
+   "description": "Make flashcards free: type or paste term = definition, flip through them, shuffle, and review on a spaced-repetition schedule. Decks save in your browser.",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Any (web browser)",
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tools360pro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Text Tools", "item": "https://tools360pro.com/text-tools/" },
+    { "@type": "ListItem", "position": 3, "name": "Flashcard Maker", "item": "https://tools360pro.com/tools/flashcard-maker.html" }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    { "@type": "Question", "name": "How do I add cards quickly?", "acceptedAnswer": { "@type": "Answer", "text": "Paste a list into the bulk box — one card per line, written as Term = Definition — and click Add cards. You can also add one card at a time with the term and definition boxes, or import a CSV file from a spreadsheet." } },
+    { "@type": "Question", "name": "What is spaced repetition, and how does the schedule work?", "acceptedAnswer": { "@type": "Answer", "text": "Spaced repetition shows you a card again just before you are likely to forget it. This maker uses the SM-2 schedule: a card you know moves to a longer gap (1 day, then 6 days, then longer), while a card you mark Still learning comes back the next day. Cards you find hard appear more often, cards you know fade into the background." } },
+    { "@type": "Question", "name": "Do my decks stay saved?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — decks are saved in your browser's local storage, on this device only. They are still there when you close the tab and come back. They are not uploaded anywhere, so they do not follow you to another device; use CSV export to move a deck." } },
+    { "@type": "Question", "name": "Can I print my flashcards?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Print cards opens your browser's print dialog with a cut-out grid: each card's term and definition print side by side in bordered boxes, ready to cut apart. Print to PDF from the same dialog if you want a file instead of paper." } },
+    { "@type": "Question", "name": "Can I import cards from a spreadsheet?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — save the sheet as CSV with the term in the first column and the definition in the second, then use Import CSV. Export CSV gives you the same format, so you can move a deck between this tool and a spreadsheet." } }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body data-tool="flashcard-maker" data-category="text">
+<div id="site-header"></div>
+<main class="container tool-page">
+  <nav class="breadcrumb"><a href="../">Home</a> <span class="sep">›</span> <a href="../text-tools/">Text Tools</a> <span class="sep">›</span> <span aria-current="page">Flashcard Maker</span></nav>
+  <h1>Flashcard Maker</h1>
+  <p class="lede">Make flashcards for any subject in seconds: type or paste your terms and definitions, then flip through them, shuffle the deck and review on a spaced-repetition schedule that brings hard cards back sooner. Your decks save in this browser, so they are still here when you come back.</p>
+  <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+
+  <section class="workspace card">
+    <h3 class="fc-sub" style="margin-top:0">Your deck</h3>
+    <div class="fc-deckrow">
+      <div class="field"><label for="deck-select">Deck</label><select class="select" id="deck-select"></select></div>
+      <div class="field"><label for="new-deck-name">New deck name</label><input class="input" id="new-deck-name" type="text" placeholder="e.g. Biology chapter 4"></div>
+      <button class="btn" id="new-deck-btn" type="button">Create deck</button>
+      <button class="btn btn-ghost" id="delete-deck-btn" type="button">Delete deck</button>
+    </div>
+    <p class="fc-stats" id="deck-stats"></p>
+
+    <h3 class="fc-sub">Add cards</h3>
+    <div class="field"><label for="bulk-input">Paste cards — one per line, as <b>Term = Definition</b></label>
+      <textarea class="textarea" id="bulk-input" rows="4" placeholder="Photosynthesis = The process by which green plants make food from sunlight, water and carbon dioxide&#10;Mitochondria = The part of the cell that produces most of its energy"></textarea>
+    </div>
+    <div class="options-bar"><button class="btn" id="add-bulk" type="button">Add cards</button><span style="color:var(--muted)" id="bulk-note"></span></div>
+    <div class="form-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
+      <div class="field"><label for="term-input">Term (front)</label><input class="input" id="term-input" type="text" placeholder="e.g. Osmosis"></div>
+      <div class="field"><label for="def-input">Definition (back)</label><input class="input" id="def-input" type="text" placeholder="e.g. Movement of water across a membrane"></div>
+    </div>
+    <div class="options-bar"><button class="btn" id="add-single" type="button">Add one card</button><span style="color:var(--muted)" id="single-note"></span></div>
+
+    <h3 class="fc-sub">Study</h3>
+    <div class="options-bar">
+      <button class="btn" id="study-due-btn" type="button">Study due cards</button>
+      <button class="btn btn-ghost" id="study-all-btn" type="button">Study all cards</button>
+      <button class="btn btn-ghost" id="test-btn" type="button">Test me</button>
+    </div>
+    <div id="study-area" class="fc-hidden">
+      <div class="fc-stage">
+        <div class="fc-card" id="flashcard" tabindex="0" role="button" aria-label="Flashcard — click or press space to flip">
+          <div class="fc-inner">
+            <div class="fc-face fc-front"><span class="fc-tag">Term — click to flip</span><span class="fc-text" id="fc-front-text"></span></div>
+            <div class="fc-face fc-back"><span class="fc-tag">Definition</span><span class="fc-text" id="fc-back-text"></span></div>
+          </div>
+        </div>
+      </div>
+      <p class="fc-progress" id="study-progress"></p>
+      <div class="fc-grade">
+        <button class="btn" id="knew-btn" type="button">✓ Knew it</button>
+        <button class="btn btn-ghost" id="learning-btn" type="button">↻ Still learning</button>
+        <button class="btn btn-ghost" id="shuffle-btn" type="button">Shuffle remaining</button>
+        <button class="btn btn-ghost" id="end-study-btn" type="button">End session</button>
+      </div>
+      <p class="fc-progress" id="study-done" style="display:none"></p>
+    </div>
+    <div id="test-area" class="fc-hidden">
+      <p class="fc-test-q" id="test-question"></p>
+      <div class="field"><label for="test-answer">Your answer (the term)</label><input class="input" id="test-answer" type="text" autocomplete="off" placeholder="Type the term…"></div>
+      <div class="options-bar"><button class="btn" id="test-check" type="button">Check</button><button class="btn btn-ghost" id="test-next" type="button">Next card</button><button class="btn btn-ghost" id="test-end" type="button">End test</button></div>
+      <p class="fc-test-result" id="test-result"></p>
+      <p class="fc-progress" id="test-progress"></p>
+    </div>
+
+    <h3 class="fc-sub">Cards in this deck</h3>
+    <div class="options-bar">
+      <label class="btn btn-ghost" for="csv-file" style="cursor:pointer">Import CSV</label>
+      <input type="file" id="csv-file" accept=".csv,text/csv" style="display:none">
+      <button class="btn btn-ghost" id="export-csv" type="button">Export CSV</button>
+      <button class="btn btn-ghost" id="print-btn" type="button">Print cards</button>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="fc-list" id="card-list">
+        <thead><tr><th>Term</th><th>Definition</th><th>Due</th><th>Interval</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p style="margin:12px 0 0;color:var(--muted)" id="empty-note"></p>
+  </section>
+
+  <div id="print-area"></div>
+
+  <section class="tool-section">
+    <h2>Related tools</h2>
+    <div id="related-tools" class="tool-grid"><a class="tool-card" href="text-to-handwriting.html" data-cat="text"><span class="tool-icon" data-icon="text-to-handwriting"></span><span class="tool-card-body"><span class="tool-name">Text to Handwriting Converter</span><span class="tool-desc">Turn typed text into handwritten notebook pages.</span></span></a><a class="tool-card" href="word-counter.html" data-cat="text"><span class="tool-icon" data-icon="word-counter"></span><span class="tool-card-body"><span class="tool-name">Word Counter</span><span class="tool-desc">Count words, characters, sentences and reading time.</span></span></a><a class="tool-card" href="case-converter.html" data-cat="text"><span class="tool-icon" data-icon="case-converter"></span><span class="tool-card-body"><span class="tool-name">Case Converter</span><span class="tool-desc">Switch text between UPPER, lower, Title, camelCase and more.</span></span></a><a class="tool-card" href="keyword-density.html" data-cat="text"><span class="tool-icon" data-icon="keyword-density"></span><span class="tool-card-body"><span class="tool-name">Keyword Density Checker</span><span class="tool-desc">See how often words and phrases repeat in your text.</span></span></a></div>
+  </section>
+
+  <section class="tool-section">
+    <h2>How to use the Flashcard Maker</h2>
+    <ol class="steps">
+      <li>Paste your cards into the bulk box — one per line, written as Term = Definition — or add them one at a time. A spreadsheet works too: save it as CSV and import it.</li>
+      <li>Click Study due cards to review what is due today, or Study all cards for the whole deck. Click a card (or press the spacebar) to flip it.</li>
+      <li>After each flip, answer honestly: Knew it pushes the card further into the future, Still learning brings it back tomorrow.</li>
+      <li>Use Test me when you want to be quizzed — it shows the definition and asks you to type the term.</li>
+    </ol>
+  </section>
+
+  <section class="tool-section">
+    <h2>Why flashcards work</h2>
+    <p>Reading notes again feels productive, but it mostly builds familiarity — the feeling of having seen something before, which is not the same as being able to recall it in an exam. Flashcards force the opposite: you see the term and have to produce the definition from memory before you flip. That effort is the point. Every time you retrieve an answer, the memory gets easier to retrieve next time, and every time you fail, you find out exactly which card needs more work instead of re-reading the whole chapter.</p>
+    <p>The second ingredient is timing. Reviewing a card you already know is almost wasted time; reviewing a card you have half-forgotten is exactly when the memory strengthens most. That is what the schedule does: cards you know get longer and longer gaps, cards you struggle with come back tomorrow. A short daily session on the due cards beats a long cramming session the night before, and it takes less time overall. Pair it with focused study blocks — <a href="pomodoro-timer.html">Pomodoro Timer</a> runs 25-minute sessions with breaks — and summarise long notes first with <a href="text-summarizer.html">Text Summarizer</a> so your cards hold only what matters.</p>
+  </section>
+  <section class="tool-section">
+    <h2>Spaced repetition, in plain English</h2>
+    <p>This maker uses the SM-2 schedule, the same algorithm Anki popularised. Every card starts with an ease factor of 2.5 and an interval of zero days. When you mark a card Knew it, its interval grows — first to 1 day, then to 6 days, then by multiplying the last interval by the ease factor, so known cards gradually move to weeks and months. When you mark a card Still learning, its interval resets to 1 day and its ease factor drops a little, so it returns sooner and stays in rotation until it sticks.</p>
+    <p>Two honest notes. First, the two buttons are a simplification of SM-2's five-point scale: Knew it counts as a perfect recall and Still learning as a failed one, which is enough for everyday revision but coarser than Anki's Again / Hard / Good / Easy. Second, the schedule only works if you answer honestly — marking a card Knew it when you guessed pushes it weeks away, and the gap will find you out in the exam. Your decks, intervals and due dates are stored only in this browser, so they never leave your device.</p>
+  </section>
+  <section class="tool-section faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>How do I add cards quickly?</summary><p>Paste a list into the bulk box — one card per line, written as Term = Definition — and click Add cards. You can also add one card at a time with the term and definition boxes, or import a CSV file from a spreadsheet.</p></details>
+    <details><summary>What is spaced repetition, and how does the schedule work?</summary><p>Spaced repetition shows you a card again just before you are likely to forget it. This maker uses the SM-2 schedule: a card you know moves to a longer gap (1 day, then 6 days, then longer), while a card you mark Still learning comes back the next day. Cards you find hard appear more often, cards you know fade into the background.</p></details>
+    <details><summary>Do my decks stay saved?</summary><p>Yes — decks are saved in your browser's local storage, on this device only. They are still there when you close the tab and come back. They are not uploaded anywhere, so they do not follow you to another device; use CSV export to move a deck.</p></details>
+    <details><summary>Can I print my flashcards?</summary><p>Yes. Print cards opens your browser's print dialog with a cut-out grid: each card's term and definition print side by side in bordered boxes, ready to cut apart. Print to PDF from the same dialog if you want a file instead of paper.</p></details>
+    <details><summary>Can I import cards from a spreadsheet?</summary><p>Yes — save the sheet as CSV with the term in the first column and the definition in the second, then use Import CSV. Export CSV gives you the same format, so you can move a deck between this tool and a spreadsheet.</p></details>
+  </section>
+</main>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
+<script src="../assets/js/site.js?v=71.0"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var LS_KEY = "t360:flashcards-v1";
+
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function dayStr(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function today() { return dayStr(new Date()); }
+  function addDays(iso, n) { var d = new Date(iso + "T12:00:00"); d.setDate(d.getDate() + n); return dayStr(d); }
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function uid() { return "c" + Date.now().toString(36) + Math.floor(Math.random() * 1e6).toString(36); }
+  function newCard(term, def) { return { id: uid(), term: term, def: def, ef: 2.5, interval: 0, reps: 0, due: today() }; }
+
+  function defaultState() {
+    return {
+      current: "My deck",
+      decks: { "My deck": { cards: [
+        newCard("Photosynthesis", "The process by which green plants convert sunlight, water and carbon dioxide into oxygen and glucose."),
+        newCard("Mitochondria", "The part of the cell that produces most of its energy (ATP)."),
+        newCard("Newton's second law", "Force equals mass times acceleration (F = ma).")
+      ] } }
+    };
+  }
+  function load() {
+    try {
+      var raw = localStorage.getItem(LS_KEY);
+      if (!raw) return defaultState();
+      var s = JSON.parse(raw);
+      if (!s || !s.decks || !s.decks[s.current]) return defaultState();
+      return s;
+    } catch (e) { return defaultState(); }
+  }
+  function save() { try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch (e) {} }
+  var state = load();
+  function deck() { return state.decks[state.current]; }
+  function dueCards() { var t = today(); return deck().cards.filter(function (c) { return c.due <= t; }); }
+
+  /* ---------- SM-2 ---------- */
+  function grade(card, quality) {
+    if (quality < 3) {
+      card.reps = 0;
+      card.interval = 1;
+    } else {
+      card.ef = Math.max(1.3, card.ef + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02)));
+      if (card.reps === 0) card.interval = 1;
+      else if (card.reps === 1) card.interval = 6;
+      else card.interval = Math.round(card.interval * card.ef);
+      card.reps += 1;
+    }
+    card.due = addDays(today(), card.interval);
+    save();
+  }
+
+  /* ---------- Render: decks, stats, list ---------- */
+  var deleteArmed = false, deleteTimer = null;
+  function renderDecks() {
+    var sel = $("deck-select");
+    sel.innerHTML = "";
+    Object.keys(state.decks).forEach(function (name) {
+      var o = document.createElement("option");
+      o.value = name; o.textContent = name + " (" + state.decks[name].cards.length + ")";
+      if (name === state.current) o.selected = true;
+      sel.appendChild(o);
+    });
+  }
+  function renderStats() {
+    var cards = deck().cards, due = dueCards().length;
+    var next = cards.length ? cards.map(function (c) { return c.due; }).sort()[0] : null;
+    $("deck-stats").textContent = cards.length + " card" + (cards.length === 1 ? "" : "s") + " · " + due + " due today" + (next ? " · next review " + next : "") + " · saved in this browser";
+  }
+  function renderList() {
+    var tbody = document.querySelector("#card-list tbody");
+    tbody.innerHTML = "";
+    deck().cards.forEach(function (c) {
+      var tr = document.createElement("tr");
+      var dueCell = c.due <= today() ? "Due today" : c.due;
+      tr.innerHTML = "<td>" + esc(c.term) + "</td><td>" + esc(c.def) + "</td><td class='fc-due'>" + esc(dueCell) + "</td><td class='fc-due'>" + (c.interval === 0 ? "New" : c.interval + " day" + (c.interval === 1 ? "" : "s")) + "</td><td><button class='btn btn-ghost fc-del' type='button' data-id='" + c.id + "' aria-label='Delete card'>✕</button></td>";
+      tbody.appendChild(tr);
+    });
+    $("empty-note").textContent = deck().cards.length ? "" : "No cards yet — add your first card above, or paste a list.";
+    tbody.querySelectorAll(".fc-del").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var id = b.getAttribute("data-id");
+        deck().cards = deck().cards.filter(function (c) { return c.id !== id; });
+        save(); renderAll();
+      });
+    });
+  }
+  function renderAll() { renderDecks(); renderStats(); renderList(); }
+
+  /* ---------- Add cards ---------- */
+  $("add-bulk").addEventListener("click", function () {
+    var lines = $("bulk-input").value.split(/\r?\n/);
+    var added = 0, skipped = 0;
+    lines.forEach(function (line) {
+      var t = line.trim();
+      if (!t) return;
+      var idx = t.indexOf("=");
+      var sep = "=";
+      if (idx < 0) { idx = t.indexOf("\t"); sep = "\t"; }
+      if (idx <= 0) { skipped++; return; }
+      var term = t.slice(0, idx).trim(), def = t.slice(idx + sep.length).trim();
+      if (!term || !def) { skipped++; return; }
+      deck().cards.push(newCard(term, def));
+      added++;
+    });
+    save(); renderAll();
+    $("bulk-input").value = "";
+    $("bulk-note").textContent = added + " card" + (added === 1 ? "" : "s") + " added" + (skipped ? " · " + skipped + " line" + (skipped === 1 ? "" : "s") + " skipped (no = separator)" : "") + ".";
+  });
+  var editingId = null;
+  $("add-single").addEventListener("click", function () {
+    var term = $("term-input").value.trim(), def = $("def-input").value.trim();
+    if (!term || !def) { $("single-note").textContent = "Enter both a term and a definition."; return; }
+    if (editingId) {
+      var c = deck().cards.filter(function (x) { return x.id === editingId; })[0];
+      if (c) { c.term = term; c.def = def; }
+      editingId = null;
+      $("add-single").textContent = "Add one card";
+      $("single-note").textContent = "Card updated.";
+    } else {
+      deck().cards.push(newCard(term, def));
+      $("single-note").textContent = "Card added.";
+    }
+    $("term-input").value = ""; $("def-input").value = "";
+    save(); renderAll();
+  });
+
+  /* ---------- Decks ---------- */
+  $("deck-select").addEventListener("change", function () { state.current = this.value; save(); endSession(); endTest(); renderAll(); });
+  $("new-deck-btn").addEventListener("click", function () {
+    var name = $("new-deck-name").value.trim();
+    if (!name) return;
+    if (state.decks[name]) { $("new-deck-name").value = ""; state.current = name; save(); renderAll(); return; }
+    state.decks[name] = { cards: [] };
+    state.current = name;
+    $("new-deck-name").value = "";
+    save(); renderAll();
+  });
+  $("delete-deck-btn").addEventListener("click", function () {
+    if (Object.keys(state.decks).length <= 1) return;
+    if (!deleteArmed) {
+      deleteArmed = true;
+      this.textContent = "Click again to confirm";
+      var btn = this;
+      deleteTimer = setTimeout(function () { deleteArmed = false; btn.textContent = "Delete deck"; }, 3000);
+      return;
+    }
+    clearTimeout(deleteTimer);
+    deleteArmed = false;
+    this.textContent = "Delete deck";
+    delete state.decks[state.current];
+    state.current = Object.keys(state.decks)[0];
+    save(); endSession(); endTest(); renderAll();
+  });
+
+  /* ---------- Study session ---------- */
+  var session = null;
+  function startSession(mode) {
+    endTest();
+    var cards = mode === "due" ? dueCards() : deck().cards.slice();
+    if (!cards.length) {
+      $("study-area").classList.remove("fc-hidden");
+      $("study-progress").textContent = mode === "due" ? "No cards are due today — nice work. Use “Study all cards” to review the whole deck." : "This deck has no cards yet — add some above first.";
+      $("flashcard").classList.add("fc-hidden");
+      $("study-done").style.display = "none";
+      session = null;
+      return;
+    }
+    session = { queue: cards.slice(), index: 0, knew: 0, learning: 0, total: cards.length };
+    $("flashcard").classList.remove("fc-hidden");
+    $("study-area").classList.remove("fc-hidden");
+    $("study-done").style.display = "none";
+    showCard();
+  }
+  function showCard() {
+    if (!session || session.index >= session.queue.length) { endSession(true); return; }
+    var c = session.queue[session.index];
+    $("fc-front-text").textContent = c.term;
+    $("fc-back-text").textContent = c.def;
+    $("flashcard").classList.remove("flipped");
+    $("study-progress").textContent = "Card " + (session.index + 1) + " of " + session.queue.length + " · Knew " + session.knew + " · Still learning " + session.learning;
+  }
+  function flip() { if (session) $("flashcard").classList.toggle("flipped"); }
+  function answer(knew) {
+    if (!session || session.index >= session.queue.length) return;
+    var c = session.queue[session.index];
+    grade(c, knew ? 5 : 2);
+    if (knew) session.knew++; else session.learning++;
+    session.index++;
+    renderStats(); renderList();
+    if (session.index >= session.queue.length) endSession(true); else showCard();
+  }
+  function endSession(finished) {
+    if (finished && session) {
+      $("study-done").style.display = "";
+      $("study-done").textContent = "Session done — " + session.knew + " knew, " + session.learning + " still learning. Come back tomorrow for the next due cards.";
+      $("study-progress").textContent = "";
+    }
+    session = null;
+  }
+  $("study-due-btn").addEventListener("click", function () { startSession("due"); });
+  $("study-all-btn").addEventListener("click", function () { startSession("all"); });
+  $("flashcard").addEventListener("click", flip);
+  $("flashcard").addEventListener("keydown", function (e) { if (e.key === " " || e.key === "Enter") { e.preventDefault(); flip(); } });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== " " || !session) return;
+    var t = document.activeElement;
+    if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT")) return;
+    e.preventDefault();
+    flip();
+  });
+  $("knew-btn").addEventListener("click", function () { answer(true); });
+  $("learning-btn").addEventListener("click", function () { answer(false); });
+  $("shuffle-btn").addEventListener("click", function () {
+    if (!session) return;
+    var rest = session.queue.slice(session.index + 1);
+    for (var i = rest.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var tmp = rest[i]; rest[i] = rest[j]; rest[j] = tmp; }
+    session.queue = session.queue.slice(0, session.index + 1).concat(rest);
+    showCard();
+  });
+  $("end-study-btn").addEventListener("click", function () { endSession(false); $("study-area").classList.add("fc-hidden"); });
+
+  /* ---------- Test mode ---------- */
+  var test = null;
+  function startTest() {
+    endSession(false);
+    $("study-area").classList.add("fc-hidden");
+    var cards = deck().cards.slice();
+    if (!cards.length) {
+      $("test-area").classList.remove("fc-hidden");
+      $("test-question").textContent = "This deck has no cards yet — add some above first.";
+      $("test-progress").textContent = "";
+      test = null;
+      return;
+    }
+    for (var i = cards.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var tmp = cards[i]; cards[i] = cards[j]; cards[j] = tmp; }
+    test = { queue: cards, index: 0, correct: 0, answered: false };
+    $("test-area").classList.remove("fc-hidden");
+    showTestCard();
+  }
+  function showTestCard() {
+    if (!test || test.index >= test.queue.length) { endTest(true); return; }
+    test.answered = false;
+    $("test-question").textContent = "What is this? — " + test.queue[test.index].def;
+    $("test-answer").value = "";
+    $("test-result").textContent = "";
+    $("test-result").className = "fc-test-result";
+    $("test-progress").textContent = "Card " + (test.index + 1) + " of " + test.queue.length + " · Correct " + test.correct;
+    $("test-answer").focus();
+  }
+  function norm(s) { return s.trim().toLowerCase().replace(/\s+/g, " "); }
+  $("test-check").addEventListener("click", function () {
+    if (!test || test.answered) return;
+    test.answered = true;
+    var want = test.queue[test.index].term;
+    var ok = norm($("test-answer").value) === norm(want);
+    var r = $("test-result");
+    if (ok) { test.correct++; r.textContent = "Correct!"; r.className = "fc-test-result good"; }
+    else { r.textContent = "Not quite — the answer is “" + want + "”."; r.className = "fc-test-result bad"; }
+    $("test-progress").textContent = "Card " + (test.index + 1) + " of " + test.queue.length + " · Correct " + test.correct;
+  });
+  $("test-answer").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); $("test-check").click(); } });
+  $("test-next").addEventListener("click", function () { if (!test) return; test.index++; showTestCard(); });
+  function endTest(finished) {
+    if (finished && test) {
+      $("test-question").textContent = "Test done — you got " + test.correct + " out of " + test.queue.length + " right.";
+      $("test-progress").textContent = "";
+      $("test-result").textContent = "";
+    }
+    test = null;
+  }
+  $("test-btn").addEventListener("click", startTest);
+  $("test-end").addEventListener("click", function () { endTest(false); $("test-area").classList.add("fc-hidden"); });
+
+  /* ---------- CSV ---------- */
+  function parseCSV(text) {
+    var rows = [], row = [], field = "", inQ = false;
+    for (var i = 0; i < text.length; i++) {
+      var ch = text[i];
+      if (inQ) {
+        if (ch === '"') { if (text[i + 1] === '"') { field += '"'; i++; } else inQ = false; }
+        else field += ch;
+      } else if (ch === '"') inQ = true;
+      else if (ch === ",") { row.push(field); field = ""; }
+      else if (ch === "\n" || ch === "\r") { if (ch === "\r" && text[i + 1] === "\n") i++; row.push(field); field = ""; rows.push(row); row = []; }
+      else field += ch;
+    }
+    if (field !== "" || row.length) { row.push(field); rows.push(row); }
+    return rows;
+  }
+  function csvCell(s) { s = String(s); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; }
+  function downloadBlob(name, blob) {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  }
+  $("csv-file").addEventListener("change", function () {
+    var f = this.files[0];
+    if (!f) return;
+    var reader = new FileReader();
+    reader.onload = function () {
+      var rows = parseCSV(String(reader.result || ""));
+      var added = 0;
+      rows.forEach(function (r) {
+        var term = (r[0] || "").trim(), def = (r[1] || "").trim();
+        if (term && def) { deck().cards.push(newCard(term, def)); added++; }
+      });
+      save(); renderAll();
+      $("empty-note").textContent = added + " card" + (added === 1 ? "" : "s") + " imported from CSV.";
+    };
+    reader.readAsText(f);
+    this.value = "";
+  });
+  $("export-csv").addEventListener("click", function () {
+    var lines = deck().cards.map(function (c) { return csvCell(c.term) + "," + csvCell(c.def); });
+    downloadBlob(state.current.replace(/[^a-z0-9]+/gi, "-").toLowerCase() + "-flashcards.csv", new Blob([lines.join("\n")], { type: "text/csv" }));
+  });
+
+  /* ---------- Print ---------- */
+  $("print-btn").addEventListener("click", function () {
+    var area = $("print-area");
+    var cards = deck().cards;
+    if (!cards.length) { area.innerHTML = "<p>No cards to print yet.</p>"; }
+    else {
+      var html = "<p class='fc-print-note'>" + esc(state.current) + " — " + cards.length + " flashcards. Cut along the dashed lines; each term sits next to its definition.</p><div class='fc-print-grid'>";
+      cards.forEach(function (c) {
+        html += "<div class='fc-print-card'><div class='fc-print-tag'>Term</div><div class='fc-print-text'>" + esc(c.term) + "</div></div>";
+        html += "<div class='fc-print-card'><div class='fc-print-tag'>Definition</div><div class='fc-print-text'>" + esc(c.def) + "</div></div>";
+      });
+      area.innerHTML = html + "</div>";
+    }
+    window.print();
+  });
+
+  renderAll();
+})();
+</script>
+</body>
+</html>
