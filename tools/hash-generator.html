@@ -117,6 +117,16 @@
     <p>The four algorithms here cover the common cases: MD5 and SHA-1 still appear on older download pages (fine for spotting corruption, not for proving authenticity), while SHA-256 and SHA-512 are the modern standards. Everything runs in your browser using its built-in cryptography for the SHA family, so even a private file can be hashed safely — it never leaves your device.</p>
       <p>Visitors often continue with <a href="base64.html">Base64 Encoder/Decoder</a>, which encodes and decodes Base64 text, or <a href="uuid-generator.html">UUID Generator</a>, which generates random UUIDs in bulk.</p>
   </section>
+  <section class="tool-section">
+    <h2>One-way by design: what a hash can and cannot do</h2>
+    <p>A hash function takes any input — a word, a document, a whole film — and squeezes it into a fixed-length string of characters that looks random. Change one letter of the input and the output changes completely, which is what makes a hash a fingerprint rather than a summary. The same input always produces the same hash, so two people can compare fingerprints without ever sharing the original file.</p>
+    <p>The one-way part is the point: there is no un-hash button. You cannot turn a SHA-256 string back into the text that made it, which is why hashes are safe to publish — a download page can print its file's hash in public, and anyone can check their copy against it. The only way to "reverse" a hash is to guess the input and hash the guess, which is why short, predictable inputs like common passwords are still a bad idea even when hashed.</p>
+  </section>
+  <section class="tool-section">
+    <h2>MD5, SHA-1, SHA-256, SHA-512: picking the right one</h2>
+    <p>MD5 is the oldest of the four and the fastest, but its collision resistance is broken — two different files can be crafted to share the same MD5 — so it belongs only on legacy download pages and quick corruption checks. SHA-1 has the same problem in a milder form and is being phased out everywhere. For anything that matters, SHA-256 is the default: it is the standard publishers print next to their downloads, and it is what this tool's file hashing is built for.</p>
+    <p>SHA-512 is SHA-256's longer sibling — a 128-character fingerprint instead of 64. It is not meaningfully "more secure" for ordinary checks, but it is the right choice where a specification demands it, and it runs just as fast in your browser. The practical rule is simple: match the hash the publisher printed, prefer SHA-256 or SHA-512 for anything new, and never store passwords as a plain hash of any kind — password storage needs a slow, salted algorithm, which is a different job entirely.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>What is a hash used for?</summary><p>A hash is a fingerprint of data. Websites publish the SHA-256 of a download so you can confirm the file you received is complete and untampered: if even one byte differs, the hash is completely different.</p></details>
