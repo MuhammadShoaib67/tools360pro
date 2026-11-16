@@ -1,0 +1,135 @@
+# Tools360Pro
+
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 64 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
+
+Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
+
+## PDF Tools
+
+Merge, split and build PDFs. Category page: https://tools360pro.com/pdf-tools/
+
+- [Merge PDF](https://tools360pro.com/tools/merge-pdf.html): Combine several PDF files into a single document.
+- [Split PDF](https://tools360pro.com/tools/split-pdf.html): Extract a page range or split a PDF into separate files.
+- [Images to PDF](https://tools360pro.com/tools/images-to-pdf.html): Turn JPG, PNG and WebP images into one PDF document.
+- [JPG to PDF Converter](https://tools360pro.com/tools/jpg-to-pdf.html): Convert JPG images into one PDF — reorder pages, pick size and margins.
+- [PDF to Image](https://tools360pro.com/tools/pdf-to-image.html): Render PDF pages as JPG or PNG images.
+- [Rotate & Organize PDF](https://tools360pro.com/tools/rotate-pdf.html): Rotate, reorder and delete PDF pages.
+- [Compress PDF](https://tools360pro.com/tools/compress-pdf.html): Shrink a PDF by re-encoding its images.
+- [Sign PDF](https://tools360pro.com/tools/sign-pdf.html): Draw or type your signature and place it on any PDF page — no upload.
+- [PDF to Word Converter](https://tools360pro.com/tools/pdf-to-word.html): Turn a text-based PDF into an editable Word document.
+
+## Image Tools
+
+Compress, resize and convert images. Category page: https://tools360pro.com/image-tools/
+
+- [Compress Image](https://tools360pro.com/tools/compress-image.html): Reduce JPG, PNG and WebP file size with a quality slider.
+- [Resize Image](https://tools360pro.com/tools/resize-image.html): Change image dimensions by pixels or percentage.
+- [Convert Image](https://tools360pro.com/tools/convert-image.html): Convert images between JPG, PNG and WebP formats.
+- [HEIC to JPG Converter](https://tools360pro.com/tools/heic-to-jpg.html): Convert iPhone HEIC photos to JPG or PNG, no uploads.
+- [Crop Image](https://tools360pro.com/tools/crop-image.html): Crop images with a visual box and aspect presets.
+- [Watermark Image](https://tools360pro.com/tools/watermark-image.html): Stamp text watermarks onto your images.
+- [Favicon Generator](https://tools360pro.com/tools/favicon-generator.html): Generate favicon sizes and an ICO from one image.
+- [Meme Generator](https://tools360pro.com/tools/meme-generator.html): Add top and bottom text to any image and download the meme.
+
+## AI Tools
+
+Backgrounds, upscaling, OCR and more. Category page: https://tools360pro.com/ai-tools/
+
+- [Background Remover](https://tools360pro.com/tools/background-remover.html): Remove image backgrounds with AI, right in your browser.
+- [AI Image Upscaler](https://tools360pro.com/tools/ai-image-upscaler.html): Upscale images 2x or 4x with AI, right in your browser.
+- [Image to Text (OCR)](https://tools360pro.com/tools/image-to-text.html): Extract text from images and scans with OCR, in your browser.
+- [AI Audio Transcriber](https://tools360pro.com/tools/ai-transcriber.html): Transcribe audio and video to text with Whisper AI, in your browser.
+- [AI Photo Enhancer](https://tools360pro.com/tools/ai-photo-enhancer.html): Sharpen photos and lift dull colours with AI, in your browser.
+- [AI Object Remover](https://tools360pro.com/tools/ai-object-remover.html): Remove unwanted objects and people from photos with AI, in your browser.
+
+## Text Tools
+
+Count, convert and clean up text. Category page: https://tools360pro.com/text-tools/
+
+- [Word Counter](https://tools360pro.com/tools/word-counter.html): Count words, characters, sentences and reading time.
+- [Case Converter](https://tools360pro.com/tools/case-converter.html): Switch text between UPPER, lower, Title, camelCase and more.
+- [Keyword Density Checker](https://tools360pro.com/tools/keyword-density.html): See how often words and phrases repeat in your text.
+- [Meta Tag Generator](https://tools360pro.com/tools/meta-tag-generator.html): Build meta, Open Graph and Twitter Card tags with preview.
+- [Lorem Ipsum Generator](https://tools360pro.com/tools/lorem-ipsum.html): Generate placeholder paragraphs, sentences or words.
+- [Text Cleaner](https://tools360pro.com/tools/text-cleaner.html): Clean up text: extra spaces, line breaks, duplicates and accents.
+- [Citation Generator (APA, MLA & Chicago)](https://tools360pro.com/tools/citation-generator.html): Format APA 7, MLA 9 and Chicago 17th references and in-text citations.
+- [Text to Handwriting Converter](https://tools360pro.com/tools/text-to-handwriting.html): Turn typed text into handwritten notebook pages.
+
+## Converters
+
+Units, bases, time zones and more. Category page: https://tools360pro.com/converters/
+
+- [Unit Converter](https://tools360pro.com/tools/unit-converter.html): Convert length, weight, temperature, area, speed and more.
+- [Time Zone Converter](https://tools360pro.com/tools/time-zone-converter.html): Convert times between world time zones.
+- [Number Base Converter](https://tools360pro.com/tools/number-base-converter.html): Convert between binary, decimal, octal and hex.
+- [Currency Converter](https://tools360pro.com/tools/currency-converter.html): Convert currencies with daily exchange rates.
+- [MP4 to MP3 Converter](https://tools360pro.com/tools/mp4-to-mp3.html): Extract MP3 audio from MP4 and other video files.
+
+## Calculators
+
+Percentages, age, BMI, loans and tips. Category page: https://tools360pro.com/calculators/
+
+- [Percentage Calculator](https://tools360pro.com/tools/percentage-calculator.html): Find percentages, ratios and percentage change.
+- [Age Calculator](https://tools360pro.com/tools/age-calculator.html): Calculate exact age in years, months and days.
+- [BMI Calculator](https://tools360pro.com/tools/bmi-calculator.html): Check your body mass index and healthy weight range.
+- [Loan / EMI Calculator](https://tools360pro.com/tools/loan-calculator.html): Monthly payments plus a full amortisation table.
+- [Tip & Bill Split Calculator](https://tools360pro.com/tools/tip-calculator.html): Work out the tip and split the bill fairly.
+- [Date Calculator](https://tools360pro.com/tools/date-calculator.html): Count days between dates, or add days to a date.
+- [Compound Interest Calculator](https://tools360pro.com/tools/compound-interest-calculator.html): See how savings grow with compound interest over time.
+- [GPA Calculator](https://tools360pro.com/tools/gpa-calculator.html): Work out your GPA from grades and credit hours.
+
+## Developer Tools
+
+JSON, Base64, JWT, CSS and regex. Category page: https://tools360pro.com/developer-tools/
+
+- [JSON Formatter & Validator](https://tools360pro.com/tools/json-formatter.html): Format, minify and validate JSON with clear errors.
+- [Base64 Encoder & Decoder](https://tools360pro.com/tools/base64.html): Encode and decode Base64 text and files, Unicode-safe.
+- [UUID Generator](https://tools360pro.com/tools/uuid-generator.html): Generate random v4 UUIDs, one or in bulk.
+- [URL & HTML Encoder](https://tools360pro.com/tools/url-encode.html): Encode and decode URLs and HTML entities.
+- [JWT Decoder](https://tools360pro.com/tools/jwt-decoder.html): Inspect JWT headers and payloads in your browser.
+- [CSS Gradient & Shadow Generator](https://tools360pro.com/tools/css-gradient-generator.html): Design gradients and box shadows with live preview.
+- [Regex Tester](https://tools360pro.com/tools/regex-tester.html): Test regular expressions with highlighted matches.
+- [Unix Timestamp Converter](https://tools360pro.com/tools/timestamp-converter.html): Convert Unix timestamps to dates and back, with a live clock.
+- [Diff Checker](https://tools360pro.com/tools/diff-checker.html): Compare two texts line by line and highlight the changes.
+- [Hash Generator](https://tools360pro.com/tools/hash-generator.html): Calculate MD5, SHA-1, SHA-256 and SHA-512 hashes.
+
+## Generators
+
+QR codes, passwords and palettes. Category page: https://tools360pro.com/generators/
+
+- [QR Code Generator](https://tools360pro.com/tools/qr-code-generator.html): Create QR codes for links and text, download PNG or SVG.
+- [Barcode Generator](https://tools360pro.com/tools/barcode-generator.html): Create CODE128, EAN-13, UPC and CODE39 barcodes — download PNG or SVG.
+- [Password Generator](https://tools360pro.com/tools/password-generator.html): Generate strong random passwords with a strength meter.
+- [Color Converter & Palette](https://tools360pro.com/tools/color-palette.html): Convert HEX, RGB and HSL and build colour palettes.
+- [List Randomizer](https://tools360pro.com/tools/list-randomizer.html): Shuffle lists and pick random winners.
+- [Invoice Generator](https://tools360pro.com/tools/invoice-generator.html): Create professional PDF invoices with items, tax and totals.
+- [Screen Recorder](https://tools360pro.com/tools/screen-recorder.html): Record your screen, window or tab and download the video.
+- [Random Number Generator](https://tools360pro.com/tools/random-number-generator.html): Generate secure random numbers in any range, in bulk.
+- [YouTube Thumbnail Downloader](https://tools360pro.com/tools/youtube-thumbnail-downloader.html): Download any YouTube video's thumbnail in HD and more sizes.
+- [Voice Recorder](https://tools360pro.com/tools/voice-recorder.html): Record your voice in the browser and download the audio.
+
+## Guides
+
+- [How to Convert HEIC to JPG on Android](https://tools360pro.com/guides/how-to-convert-heic-to-jpg-on-android.html)
+- [How to Convert HEIC to JPG on Mac](https://tools360pro.com/guides/how-to-convert-heic-to-jpg-on-mac.html)
+- [How to Convert HEIC to JPG on iPhone](https://tools360pro.com/guides/how-to-convert-heic-to-jpg-on-iphone.html)
+- [How to Compress Images Without Losing Quality](https://tools360pro.com/guides/how-to-compress-an-image-without-losing-quality.html)
+- [How to Resize an Image Without Losing Quality](https://tools360pro.com/guides/how-to-resize-an-image-without-losing-quality.html)
+- [How to Split a PDF into Individual Pages](https://tools360pro.com/guides/how-to-split-pdf-into-individual-pages.html)
+- [How to Merge PDF Files Into One Without Adobe](https://tools360pro.com/guides/how-to-merge-pdf-files-into-one-without-adobe.html)
+- [How to Convert HEIC to JPG on Windows 11](https://tools360pro.com/guides/how-to-convert-heic-to-jpg-on-windows-11.html)
+- [How to Calculate BMI: Formula, Chart and What Your Number Means](https://tools360pro.com/guides/how-to-calculate-bmi.html)
+- [How to Convert PDF to Word Without Losing Formatting](https://tools360pro.com/guides/how-to-convert-pdf-to-word-without-losing-formatting.html)
+- [Your First Invoice: What Must Be On It](https://tools360pro.com/guides/your-first-invoice-what-must-be-on-it.html)
+- [How to Make a QR Code for a Link, a PDF or a Google Form](https://tools360pro.com/guides/how-to-make-a-qr-code-for-a-link-pdf-or-google-form.html)
+- [Why Browser-Based Tools Are Safer for Personal Documents](https://tools360pro.com/guides/why-browser-based-tools-are-safer-for-personal-documents.html)
+- [Citations Without the Panic: APA 7th vs MLA 9th](https://tools360pro.com/guides/citations-without-the-panic-apa-7th-vs-mla-9th.html)
+- [HEIC Photos Won't Open? How to Convert Them on Any Device](https://tools360pro.com/guides/heic-photos-wont-open-convert-any-device.html)
+- [How to Compress an Image to Exactly 20KB, 200KB or 1MB](https://tools360pro.com/guides/compress-image-to-exact-size.html)
+- [How to Reduce PDF File Size Online Free](https://tools360pro.com/guides/compress-pdf-without-losing-quality.html)
+
+## About
+
+- [About Tools360Pro](https://tools360pro.com/about.html): What Tools360Pro is and how the tools work.
+- [Contact Us](https://tools360pro.com/contact.html): Contact page (email hello@tools360pro.com).
+- [Privacy Policy](https://tools360pro.com/privacy-policy.html): Tools run in the browser; files are not uploaded.
