@@ -58,6 +58,7 @@
     "text-cleaner":     ic('<path d="M12 3l1.7 4.3L18 9l-4.3 1.7L12 15l-1.7-4.3L6 9l4.3-1.7z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>'),
     "image-to-text":    ic('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h6"/><path d="M7 12h10"/><path d="M7 16h8"/>'),
     "citation-generator": ic('<path d="M5.5 5.5h5.5v6c0 3-1.4 4.8-3.8 5.8"/><path d="M13.5 5.5H19v6c0 3-1.4 4.8-3.8 5.8"/>'),
+    "text-summarizer":  ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 12.5h6M9 15.5h6"/>'),
     "time-zone-converter": ic('<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15.2 15.2 0 0 1 0 18"/><path d="M12 3a15.2 15.2 0 0 0 0 18"/>'),
     "number-base-converter": ic('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8.5 16v-8"/><path d="M6.7 9.6 8.5 8l1.8 1.6"/><circle cx="15.5" cy="12" r="3.4"/>'),
     "currency-converter": ic('<path d="M12 2.5v19"/><path d="M16.8 6.4c-.9-1.1-2.6-1.7-4.8-1.7-2.9 0-4.7 1.4-4.7 3.4 0 4.7 9.6 2.5 9.6 7 0 2-2 3.3-4.9 3.3-2.3 0-4.1-.7-5-2"/>'),
@@ -79,11 +80,13 @@
     "hash-generator": ic('<path d="M9.5 3.5L7.5 20.5M16.5 3.5l-2 17M4 9h17M3 15.5h17"/>'),
     "youtube-thumbnail-downloader": ic('<rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10.3 9.7v4.6l4.2-2.3z" fill="currentColor" stroke="none"/>'),
     "voice-recorder": ic('<rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.8 11.5a6.2 6.2 0 0 0 12.4 0M12 17.7V21M9 21h6"/>'),
+    "pomodoro-timer":   ic('<circle cx="12" cy="13" r="8"/><path d="M12 9.5V13l2.5 2"/><path d="M12 5c0-1.6 1.2-2.5 2.8-2.5"/>'),
     "meme-generator": ic('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9.5h10M7 15.5h6"/>'),
     "text-to-handwriting": ic('<path d="M4 20l.8-3.8L16.6 4.4a2 2 0 0 1 2.9 0l.1.1a2 2 0 0 1 0 2.9L7.8 19.2z"/><path d="M14.8 6.2l2.9 2.9"/>'),
     "date-calculator": ic('<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>'),
     "compound-interest-calculator": ic('<path d="M4 4v16h16"/><path d="M7.5 15.5l3.8-4.8 3 2.8 4.7-6"/><path d="M15.3 7.5H19V11"/>'),
     "gpa-calculator": ic('<path d="M2.5 9.3L12 5l9.5 4.3L12 13.6z"/><path d="M6.4 11.4v4.1c0 1.3 2.5 2.6 5.6 2.6s5.6-1.3 5.6-2.6v-4.1M21.5 9.3v4.7"/>'),
+    "final-grade-calculator": ic('<circle cx="12" cy="12" r="9"/><path d="M8.5 8.5l7 7"/><circle cx="9" cy="9" r="1.1"/><circle cx="15" cy="15" r="1.1"/>'),
     "soon":             ic('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),
     "popular":          ic('<path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1-5.4-3-5.4 3 1.1-6.1L3.2 9.4l6.1-.8z"/>')
   };
@@ -119,7 +122,8 @@
     { slug: "ai-transcriber",   name: "AI Audio Transcriber", cat: "ai", desc: "Transcribe audio and video to text with Whisper AI, in your browser." },
     { slug: "ai-photo-enhancer", name: "AI Photo Enhancer", cat: "ai", desc: "Sharpen photos and lift dull colours with AI, in your browser." },
     { slug: "ai-object-remover", name: "AI Object Remover", cat: "ai", desc: "Remove unwanted objects and people from photos with AI, in your browser." },
-    { slug: "citation-generator", name: "Citation Generator (APA, MLA & Chicago)", cat: "text", desc: "Format APA 7, MLA 9 and Chicago 17th references and in-text citations." },
+    { slug: "citation-generator", name: "Citation Generator", cat: "text", desc: "Format APA, MLA, Chicago, Harvard, IEEE, Vancouver & Turabian references." },
+    { slug: "text-summarizer", name: "Text Summarizer", cat: "text", desc: "Shorten any text to its key sentences — extractive, free, no word limit." },
     /* Converters */
     { slug: "unit-converter",   name: "Unit Converter",   cat: "converters", desc: "Convert length, weight, temperature, area, speed and more." },
     { slug: "time-zone-converter", name: "Time Zone Converter", cat: "converters", desc: "Convert times between world time zones." },
@@ -155,11 +159,13 @@
     { slug: "hash-generator",    name: "Hash Generator",    cat: "developer", desc: "Calculate MD5, SHA-1, SHA-256 and SHA-512 hashes." },
     { slug: "youtube-thumbnail-downloader", name: "YouTube Thumbnail Downloader", cat: "generators", desc: "Download any YouTube video's thumbnail in HD and more sizes." },
     { slug: "voice-recorder",    name: "Voice Recorder",    cat: "generators", desc: "Record your voice in the browser and download the audio." },
+    { slug: "pomodoro-timer",    name: "Pomodoro Timer",    cat: "generators", desc: "Focus in 25-minute sessions with breaks — tasks and today's count saved." },
     { slug: "meme-generator",    name: "Meme Generator",    cat: "image",     desc: "Add top and bottom text to any image and download the meme." },
     { slug: "text-to-handwriting", name: "Text to Handwriting Converter", cat: "text", desc: "Turn typed text into handwritten notebook pages." },
     { slug: "date-calculator",   name: "Date Calculator",   cat: "calculators", desc: "Count days between dates, or add days to a date." },
     { slug: "compound-interest-calculator", name: "Compound Interest Calculator", cat: "calculators", desc: "See how savings grow with compound interest over time." },
-    { slug: "gpa-calculator",    name: "GPA Calculator",    cat: "calculators", desc: "Work out your GPA from grades and credit hours." }
+    { slug: "gpa-calculator",    name: "GPA Calculator",    cat: "calculators", desc: "Work out your GPA from grades and credit hours." },
+    { slug: "final-grade-calculator", name: "Final Grade Calculator", cat: "calculators", desc: "Find out what score you need on the final to reach your target grade." }
   ];
   var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator", "sign-pdf", "barcode-generator", "jpg-to-pdf"];
 

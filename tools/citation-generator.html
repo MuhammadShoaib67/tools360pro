@@ -17,21 +17,21 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Citation Generator — APA, MLA & Chicago Free | Tools360Pro</title>
-<meta name="description" content="Generate APA 7, MLA 9 and Chicago 17 citations for websites, books, journals and videos — free in your browser, no sign-up, nothing uploaded. In-text included.">
+<title>Citation Generator — APA, MLA, Harvard &amp; More | Tools360Pro</title>
+<meta name="description" content="Generate APA, MLA, Chicago, Harvard, IEEE, Vancouver &amp; Turabian citations for 10 source types — free, no sign-up. DOI &amp; ISBN lookup included.">
 <link rel="canonical" href="https://tools360pro.com/tools/citation-generator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tools360Pro">
-<meta property="og:title" content="Citation Generator — APA, MLA & Chicago Free | Tools360Pro">
-<meta property="og:description" content="Generate APA 7, MLA 9 and Chicago 17 citations for websites, books, journals and videos — free in your browser, no sign-up, nothing uploaded. In-text included.">
+<meta property="og:title" content="Citation Generator — APA, MLA, Harvard &amp; More | Tools360Pro">
+<meta property="og:description" content="Generate APA, MLA, Chicago, Harvard, IEEE, Vancouver &amp; Turabian citations for 10 source types — free, no sign-up. DOI &amp; ISBN lookup included.">
 <meta property="og:url" content="https://tools360pro.com/tools/citation-generator.html">
 <meta property="og:image" content="https://tools360pro.com/og-image.png">
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <meta property="og:image:alt" content="Tools360Pro logo — free online tools">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Citation Generator — APA, MLA & Chicago Free | Tools360Pro">
-<meta name="twitter:description" content="Generate APA 7, MLA 9 and Chicago 17 citations for websites, books, journals and videos — free in your browser, no sign-up, nothing uploaded. In-text included.">
+<meta name="twitter:title" content="Citation Generator — APA, MLA, Harvard &amp; More | Tools360Pro">
+<meta name="twitter:description" content="Generate APA, MLA, Chicago, Harvard, IEEE, Vancouver &amp; Turabian citations for 10 source types — free, no sign-up. DOI &amp; ISBN lookup included.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -46,6 +46,9 @@
   .auth-grid { display: grid; grid-template-columns: 1fr 1fr 36px; gap: 8px; align-items: center; margin-bottom: 8px; }
   .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
   @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+  .lookup-result { display: block; width: 100%; text-align: left; padding: 10px 12px; margin-bottom: 6px; border: 1px solid rgba(127,127,127,.3); border-radius: 10px; background: transparent; color: inherit; cursor: pointer; font: inherit; }
+  .lookup-result:hover { border-color: var(--accent,#2563eb); }
+  .lookup-result small { color: var(--muted); }
 </style>
 <script type="application/ld+json">
 {
@@ -53,9 +56,9 @@
  "@graph": [
   {
    "@type": "WebApplication",
-   "name": "Citation Generator (APA, MLA & Chicago)",
+   "name": "Citation Generator",
    "url": "https://tools360pro.com/tools/citation-generator.html",
-   "description": "Generate APA 7, MLA 9 and Chicago 17 citations for websites, books, journals and videos — free in your browser, no sign-up, nothing uploaded. In-text included.",
+   "description": "Generate APA, MLA, Chicago, Harvard, IEEE, Vancouver & Turabian citations for 10 source types — free, no sign-up. DOI & ISBN lookup included.",
    "applicationCategory": "UtilitiesApplication",
    "operatingSystem": "Any (web browser)",
    "offers": {
@@ -82,7 +85,7 @@
     {
      "@type": "ListItem",
      "position": 3,
-     "name": "Citation Generator (APA, MLA & Chicago)",
+     "name": "Citation Generator",
      "item": "https://tools360pro.com/tools/citation-generator.html"
     }
    ]
@@ -95,7 +98,7 @@
      "name": "Which citation styles are supported?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "APA (7th edition), MLA (9th edition) and Chicago (17th edition), for the four most common source types: websites, books, journal articles and online videos. In-text citations are generated too."
+      "text": "Seven: APA (7th edition), MLA (9th edition), Chicago (17th edition), Harvard (Cite Them Right), IEEE, Vancouver and Turabian, for ten source types: websites, books, journal articles, videos, podcasts, films, dissertations, newspaper articles, reports and conference papers. In-text citations are generated too — numbered [1] for IEEE and Vancouver, and a footnote form for Turabian."
      }
     },
     {
@@ -103,7 +106,7 @@
      "name": "Is anything uploaded or stored?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No. The citations are formatted by JavaScript in your browser. Nothing you type is uploaded, stored or tracked."
+      "text": "Almost nothing. Citations are formatted by JavaScript in your browser. The only exceptions are the DOI, ISBN and title lookups, which send just that identifier to Crossref or OpenLibrary to fetch the details, and your reference list, which is saved in this browser's localStorage so it survives a refresh — it is never sent to any server."
      }
     },
     {
@@ -111,7 +114,7 @@
      "name": "How do I cite a source with no author?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Leave the author fields empty. APA, MLA and Chicago all move the title to the front of the citation in that case, and this tool does that automatically."
+      "text": "Leave the author fields empty. Every style moves the title to the front of the citation in that case, and this tool does that automatically."
      }
     },
     {
@@ -119,7 +122,7 @@
      "name": "What if there is no date?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Leave the date empty. APA shows (n.d.) for no date, MLA leaves the date out, and Chicago uses your access date for web pages instead — the tool follows each style's rule."
+      "text": "Leave the date empty. APA shows (n.d.) for no date, MLA leaves the date out, Chicago uses your access date for web pages instead, and Harvard shows (no date) — the tool follows each style's rule."
      }
     },
     {
@@ -127,7 +130,7 @@
      "name": "Should I double-check the result?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes — always compare against your institution's guide before submitting graded work. This tool covers standard sources; unusual cases (edited books, government reports, sources with many authors) have extra rules."
+      "text": "Yes — always compare against your institution's guide before submitting graded work. This tool covers standard sources; unusual cases (edited books, sources with many authors, archival material) have extra rules."
      }
     },
     {
@@ -135,7 +138,15 @@
      "name": "Can I build a whole reference list?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes. Press Add to list for each source and the tool keeps them sorted alphabetically, as APA, MLA and Chicago require. Then copy the whole list at once, with formatting."
+      "text": "Yes. Press Add to list for each source — author-date styles stay sorted alphabetically, while IEEE and Vancouver lists stay in the order you added them, because those styles number sources in citation order. The list is saved in your browser, and you can copy it whole or download it as a .docx file."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do the DOI and ISBN lookups work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Type a DOI, an ISBN or a title and press the lookup button. The tool asks the public Crossref or OpenLibrary database and fills the form for you. If nothing is found, or the service cannot be reached, you get a clear message and can still type the details by hand — nothing is ever made up."
      }
     }
    ]
@@ -147,9 +158,9 @@
 <body data-tool="citation-generator" data-category="text">
 <div id="site-header"></div>
 <main class="container tool-page">
-  <nav class="breadcrumb"><a href="../">Home</a> <span class="sep">›</span> <a href="../text-tools/">Text Tools</a> <span class="sep">›</span> <span aria-current="page">Citation Generator (APA, MLA &amp; Chicago)</span></nav>
-  <h1>Citation Generator (APA, MLA &amp; Chicago)</h1>
-  <p class="lede">Type the details once — get a perfectly formatted reference and in-text citation.</p>
+  <nav class="breadcrumb"><a href="../">Home</a> <span class="sep">›</span> <a href="../text-tools/">Text Tools</a> <span class="sep">›</span> <span aria-current="page">Citation Generator</span></nav>
+  <h1>Citation Generator</h1>
+  <p class="lede">Pick one of seven styles — APA, MLA, Chicago, Harvard, IEEE, Vancouver or Turabian — type the details once, and get a perfectly formatted reference with its in-text citation, ready to copy.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
 
   <section class="workspace card">
@@ -159,6 +170,10 @@
           <button type="button" data-style="apa" class="active">APA 7th</button>
           <button type="button" data-style="mla">MLA 9th</button>
           <button type="button" data-style="chicago">Chicago 17th</button>
+          <button type="button" data-style="harvard">Harvard</button>
+          <button type="button" data-style="ieee">IEEE</button>
+          <button type="button" data-style="vancouver">Vancouver</button>
+          <button type="button" data-style="turabian">Turabian</button>
         </div>
       </div>
       <div class="field"><label>Source type</label>
@@ -167,9 +182,26 @@
           <button type="button" data-type="book">Book</button>
           <button type="button" data-type="journal">Journal article</button>
           <button type="button" data-type="video">Online video</button>
+          <button type="button" data-type="podcast">Podcast</button>
+          <button type="button" data-type="film">Film</button>
+          <button type="button" data-type="dissertation">Dissertation / thesis</button>
+          <button type="button" data-type="newspaper">Newspaper article</button>
+          <button type="button" data-type="report">Report</button>
+          <button type="button" data-type="conference">Conference paper</button>
         </div>
       </div>
     </div>
+
+    <h3 style="margin:16px 0 8px">Fill from DOI, ISBN or title <span style="font-weight:400;color:var(--muted)">(optional)</span></h3>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <input class="input" id="f-lookup" placeholder="e.g. 10.1000/xyz123, 978-0-123456-78-9, or an article title" style="flex:1;min-width:220px">
+      <button class="btn btn-ghost" id="lookup-doi" type="button">Look up DOI</button>
+      <button class="btn btn-ghost" id="lookup-isbn" type="button">Look up ISBN</button>
+      <button class="btn btn-ghost" id="lookup-title" type="button">Search title</button>
+    </div>
+    <p style="margin:8px 0 0;color:var(--muted)" id="lookup-status"></p>
+    <div id="lookup-results" style="margin-top:8px"></div>
+    <p style="margin:8px 0 0;color:var(--muted)">A lookup sends only what you typed — the DOI, ISBN or title — to the public Crossref or OpenLibrary service. Nothing else leaves your browser.</p>
 
     <h3 style="margin:16px 0 8px">Authors</h3>
     <div id="authors"></div>
@@ -178,22 +210,24 @@
     <div class="form-grid">
       <div class="field"><label for="f-title" id="lbl-title">Page title</label><input class="input" id="f-title" placeholder="Title of the page, book or article"></div>
       <div class="field"><label for="f-date">Date published (full date if you know it)</label><input class="input" type="date" id="f-date"></div>
-      <div class="field type-website type-journal"><label for="f-container" id="lbl-container">Website name</label><input class="input" id="f-container" placeholder="e.g. BBC News"></div>
-      <div class="field type-book"><label for="f-publisher">Publisher</label><input class="input" id="f-publisher" placeholder="e.g. Penguin Books"></div>
+      <div class="field type-website type-journal type-podcast type-newspaper type-conference"><label for="f-container" id="lbl-container">Website name</label><input class="input" id="f-container" placeholder="e.g. BBC News"></div>
+      <div class="field type-book type-film type-dissertation type-report"><label for="f-publisher" id="lbl-publisher">Publisher</label><input class="input" id="f-publisher" placeholder="e.g. Penguin Books"></div>
       <div class="field type-journal"><label for="f-volume">Volume</label><input class="input" id="f-volume" placeholder="e.g. 12"></div>
       <div class="field type-journal"><label for="f-issue">Issue</label><input class="input" id="f-issue" placeholder="e.g. 3"></div>
-      <div class="field type-journal"><label for="f-pages">Pages (e.g. 45-60)</label><input class="input" id="f-pages" placeholder="e.g. 45-60"></div>
-      <div class="field type-video"><label for="f-uploader">Uploader / channel name</label><input class="input" id="f-uploader" placeholder="e.g. TED"></div>
-      <div class="field type-website type-journal type-video"><label for="f-url">URL</label><input class="input" id="f-url" placeholder="https://…"></div>
-      <div class="field type-journal"><label for="f-doi">DOI (optional, instead of URL)</label><input class="input" id="f-doi" placeholder="e.g. 10.1000/xyz123"></div>
-      <div class="field type-website"><label for="f-accessed">Date you accessed it (MLA, optional)</label><input class="input" type="date" id="f-accessed"></div>
+      <div class="field type-journal type-conference"><label for="f-pages">Pages (e.g. 45-60)</label><input class="input" id="f-pages" placeholder="e.g. 45-60"></div>
+      <div class="field type-video type-podcast"><label for="f-uploader" id="lbl-uploader">Uploader / channel name</label><input class="input" id="f-uploader" placeholder="e.g. TED"></div>
+      <div class="field type-website type-journal type-video type-podcast type-newspaper type-report type-conference type-dissertation"><label for="f-url">URL</label><input class="input" id="f-url" placeholder="https://…"></div>
+      <div class="field type-journal type-conference type-report type-dissertation"><label for="f-doi">DOI (optional, instead of URL)</label><input class="input" id="f-doi" placeholder="e.g. 10.1000/xyz123"></div>
+      <div class="field type-dissertation"><label for="f-degree">Degree / type (e.g. PhD dissertation)</label><input class="input" id="f-degree" placeholder="e.g. PhD dissertation"></div>
+      <div class="field type-report"><label for="f-reportno">Report number (optional)</label><input class="input" id="f-reportno" placeholder="e.g. 2024-07"></div>
+      <div class="field"><label for="f-accessed">Date you accessed it (optional, for online sources)</label><input class="input" type="date" id="f-accessed"></div>
       <div class="field"><label for="f-page">Page number for an in-text quote (optional)</label><input class="input" id="f-page" placeholder="e.g. 45"></div>
     </div>
 
     <h3 style="margin:20px 0 8px">Your citation</h3>
     <div class="cite-out">
       <p class="cite-hang" id="out-ref"></p>
-      <p style="margin:0"><span style="font-weight:700">In-text: </span><span id="out-intext"></span></p>
+      <p style="margin:0"><span style="font-weight:700" id="lbl-intext">In-text: </span><span id="out-intext"></span></p>
     </div>
     <div class="options-bar">
       <button class="btn btn-primary" id="copy-ref" type="button">Copy citation</button>
@@ -205,52 +239,69 @@
       <div class="cite-out" id="out-list"></div>
       <div class="options-bar">
         <button class="btn btn-primary" id="copy-list" type="button">Copy whole list</button>
+        <button class="btn btn-ghost" id="download-docx" type="button">Download .docx</button>
         <button class="btn btn-ghost" id="clear-list" type="button">Clear list</button>
       </div>
+      <p style="margin:8px 0 0;color:var(--muted)">Saved in this browser only — it stays after a refresh and is never sent anywhere.</p>
     </div>
   </section>
 
   <section class="tool-section">
     <h2>Related tools</h2>
-    <div id="related-tools" class="tool-grid"><a class="tool-card" href="text-to-handwriting.html" data-cat="text"><span class="tool-icon" data-icon="text-to-handwriting"></span><span class="tool-card-body"><span class="tool-name">Text to Handwriting Converter</span><span class="tool-desc">Turn typed text into handwritten notebook pages.</span></span></a><a class="tool-card" href="word-counter.html" data-cat="text"><span class="tool-icon" data-icon="word-counter"></span><span class="tool-card-body"><span class="tool-name">Word Counter</span><span class="tool-desc">Count words, characters, sentences and reading time.</span></span></a><a class="tool-card" href="case-converter.html" data-cat="text"><span class="tool-icon" data-icon="case-converter"></span><span class="tool-card-body"><span class="tool-name">Case Converter</span><span class="tool-desc">Switch text between UPPER, lower, Title, camelCase and more.</span></span></a><a class="tool-card" href="keyword-density.html" data-cat="text"><span class="tool-icon" data-icon="keyword-density"></span><span class="tool-card-body"><span class="tool-name">Keyword Density Checker</span><span class="tool-desc">See how often words and phrases repeat in your text.</span></span></a></div>
+    <div id="related-tools" class="tool-grid"><a class="tool-card" href="text-summarizer.html" data-cat="text"><span class="tool-icon" data-icon="text-summarizer"></span><span class="tool-card-body"><span class="tool-name">Text Summarizer</span><span class="tool-desc">Shorten any text to its key sentences — extractive, free, no word limit.</span></span></a><a class="tool-card" href="text-to-handwriting.html" data-cat="text"><span class="tool-icon" data-icon="text-to-handwriting"></span><span class="tool-card-body"><span class="tool-name">Text to Handwriting Converter</span><span class="tool-desc">Turn typed text into handwritten notebook pages.</span></span></a><a class="tool-card" href="word-counter.html" data-cat="text"><span class="tool-icon" data-icon="word-counter"></span><span class="tool-card-body"><span class="tool-name">Word Counter</span><span class="tool-desc">Count words, characters, sentences and reading time.</span></span></a><a class="tool-card" href="case-converter.html" data-cat="text"><span class="tool-icon" data-icon="case-converter"></span><span class="tool-card-body"><span class="tool-name">Case Converter</span><span class="tool-desc">Switch text between UPPER, lower, Title, camelCase and more.</span></span></a></div>
   </section>
 
   <section class="tool-section">
     <h2>How to use the Citation Generator</h2>
     <ol class="steps">
-      <li>Pick your style — APA 7th, MLA 9th or Chicago 17th — and the source type.</li>
-      <li>Type the author names and the other details of your source.</li>
-      <li>Copy the formatted reference and the in-text citation.</li>
-      <li>For a full bibliography, press <b>Add to reference list</b> for each source — the list stays alphabetically sorted.</li>
+      <li>Pick your style — APA 7th, MLA 9th, Chicago 17th, Harvard, IEEE, Vancouver or Turabian — and the source type.</li>
+      <li>Type the author names and the other details — or fill the form automatically with a DOI, ISBN or title lookup.</li>
+      <li>Copy the formatted reference and the in-text citation (a footnote, for Turabian).</li>
+      <li>For a full bibliography, press <b>Add to reference list</b> for each source. The list is saved in your browser — copy it whole or download it as a .docx file.</li>
     </ol>
   </section>
 
   <section class="tool-section">
     <h2>Why citing properly matters</h2>
-    <p>Every university and journal insists on a citation style because it makes your work checkable: a reader can find the exact source you used, and you get credit for building on real research instead of hiding it. APA is the standard in psychology, education and the social sciences; MLA rules in literature and the humanities, and Chicago is the standard in history and much of publishing. The fiddly part is never the idea — it is the punctuation: where the year goes, which title is italic, and when "et al." appears. That is exactly what this tool does for you.</p>
-    <p>One honest warning: generators handle standard sources well, but graded work deserves a final human check. Compare your reference list against your institution's own guide, especially for unusual items like edited chapters, reports or sources with twenty authors. And never cite a source you have not actually read — a perfect format cannot rescue a reference that does not support your argument.</p>
-      <p>Also worth knowing: <a href="word-counter.html">Word Counter</a> counts words, characters and reading time in any text, while <a href="text-cleaner.html">Text Cleaner</a> removes duplicate lines, extra spaces and stray formatting.</p>
+    <p>Every university and journal insists on a citation style because it makes your work checkable: a reader can find the exact source you used, and you get credit for building on real research instead of hiding it. APA is the standard in psychology, education and the social sciences; MLA rules in literature and the humanities, Chicago is the standard in history and much of publishing, Harvard (Cite Them Right) is the default at many UK universities, and IEEE and Vancouver number their sources for engineering and medicine. The fiddly part is never the idea — it is the punctuation: where the year goes, which title is italic, and when "et al." appears. That is exactly what this tool does for you, across seven styles and ten source types.</p>
+    <p>One honest warning: generators handle standard sources well, but graded work deserves a final human check. Compare your reference list against your institution's own guide, especially for unusual items like edited chapters, archival material or sources with many authors. And never cite a source you have not actually read — a perfect format cannot rescue a reference that does not support your argument.</p>
+      <p>Also worth knowing: <a href="word-counter.html">Word Counter</a> counts words, characters and reading time in any text, <a href="text-cleaner.html">Text Cleaner</a> removes duplicate lines, extra spaces and stray formatting, and <a href="text-summarizer.html">Text Summarizer</a> shortens long articles to their key sentences.</p>
       <p>For the full comparison — in-text citations, reference lists, titles and DOIs — read our guide: <a href="../guides/citations-without-the-panic-apa-7th-vs-mla-9th.html">Citations Without the Panic: APA 7th vs MLA 9th</a>.</p>
+  </section>
+  <section class="tool-section">
+    <h2>Seven styles, one form</h2>
+    <p>The seven styles fall into three families. APA, MLA, Chicago (author-date) and Harvard are author-date styles: the in-text citation names the author and year, and the reference list is alphabetical. IEEE and Vancouver are numbered styles: sources are numbered in the order you cite them, and the in-text citation is just the number in brackets — which is why their lists stay in the order you add them instead of sorting alphabetically. Turabian uses footnotes: the bibliography looks like Chicago's, and the box below the reference shows the footnote form, with the author's first name first.</p>
+    <p>Pick the style your institution asks for, not the one that looks simplest — a marker checks the style first and the punctuation second. If your guide says "Harvard", it almost always means Cite Them Right, the version this tool follows; if it says "Vancouver", check whether your school wants the reference list numbered in citation order (the standard) or alphabetically (a common local variation). When in doubt, the safest move is to match a published example from your own department's guide, line for line.</p>
+  </section>
+  <section class="tool-section">
+    <h2>DOI, ISBN and title lookup — and the saved bibliography</h2>
+    <p>Typing every detail by hand is slow and error-prone, so the lookup buttons do it for you. A DOI lookup asks Crossref — the registry that issues DOIs — for the article's title, authors, journal, volume, issue and pages. An ISBN lookup asks OpenLibrary for the book's title, authors and publisher. A title search lists the five closest Crossref matches, and one click fills the form. If a lookup finds nothing, or the service cannot be reached, you get a plain message and can still type the details yourself — the tool never guesses or invents a detail.</p>
+    <p>Your reference list lives in this browser's localStorage, so it survives a refresh and is still there tomorrow — but it is not sent to any server, and clearing your browser data clears it too. Download the .docx copy before a deadline, and keep a backup of anything that matters: localStorage is convenient, not archival.</p>
   </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
-    <details><summary>Which citation styles are supported?</summary><p>APA (7th edition), MLA (9th edition) and Chicago (17th edition), for the four most common source types: websites, books, journal articles and online videos. In-text citations are generated too.</p></details>
-    <details><summary>Is anything uploaded or stored?</summary><p>No. The citations are formatted by JavaScript in your browser. Nothing you type is uploaded, stored or tracked.</p></details>
-    <details><summary>How do I cite a source with no author?</summary><p>Leave the author fields empty. APA, MLA and Chicago all move the title to the front of the citation in that case, and this tool does that automatically.</p></details>
-    <details><summary>What if there is no date?</summary><p>Leave the date empty. APA shows (n.d.) for no date, MLA leaves the date out, and Chicago uses your access date for web pages instead — the tool follows each style's rule.</p></details>
-    <details><summary>Should I double-check the result?</summary><p>Yes — always compare against your institution's guide before submitting graded work. This tool covers standard sources; unusual cases (edited books, government reports, sources with many authors) have extra rules.</p></details>
-    <details><summary>Can I build a whole reference list?</summary><p>Yes. Press Add to list for each source and the tool keeps them sorted alphabetically, as APA, MLA and Chicago require. Then copy the whole list at once, with formatting.</p></details>
+    <details><summary>Which citation styles are supported?</summary><p>Seven: APA (7th edition), MLA (9th edition), Chicago (17th edition), Harvard (Cite Them Right), IEEE, Vancouver and Turabian, for ten source types: websites, books, journal articles, videos, podcasts, films, dissertations, newspaper articles, reports and conference papers. In-text citations are generated too — numbered [1] for IEEE and Vancouver, and a footnote form for Turabian.</p></details>
+    <details><summary>Is anything uploaded or stored?</summary><p>Almost nothing. Citations are formatted by JavaScript in your browser. The only exceptions are the DOI, ISBN and title lookups, which send just that identifier to Crossref or OpenLibrary to fetch the details, and your reference list, which is saved in this browser's localStorage so it survives a refresh — it is never sent to any server.</p></details>
+    <details><summary>How do I cite a source with no author?</summary><p>Leave the author fields empty. Every style moves the title to the front of the citation in that case, and this tool does that automatically.</p></details>
+    <details><summary>What if there is no date?</summary><p>Leave the date empty. APA shows (n.d.) for no date, MLA leaves the date out, Chicago uses your access date for web pages instead, and Harvard shows (no date) — the tool follows each style's rule.</p></details>
+    <details><summary>Should I double-check the result?</summary><p>Yes — always compare against your institution's guide before submitting graded work. This tool covers standard sources; unusual cases (edited books, sources with many authors, archival material) have extra rules.</p></details>
+    <details><summary>Can I build a whole reference list?</summary><p>Yes. Press Add to list for each source — author-date styles stay sorted alphabetically, while IEEE and Vancouver lists stay in the order you added them, because those styles number sources in citation order. The list is saved in your browser, and you can copy it whole or download it as a .docx file.</p></details>
+    <details><summary>How do the DOI and ISBN lookups work?</summary><p>Type a DOI, an ISBN or a title and press the lookup button. The tool asks the public Crossref or OpenLibrary database and fills the form for you. If nothing is found, or the service cannot be reached, you get a clear message and can still type the details by hand — nothing is ever made up.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
-<script src="../assets/js/site.js?v=69.0"></script>
+<script src="../assets/js/site.js?v=70.0"></script>
+<script src="../assets/vendor/jszip.min.js"></script>
+
 <script>
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   var style = "apa", type = "website";
   var list = [];
+  var lookupYear = null;
   var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   var MON3 = ["Jan.","Feb.","Mar.","Apr.","May","June","July","Aug.","Sept.","Oct.","Nov.","Dec."];
+  var MONV = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"];
 
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
   function initials(first) {
@@ -301,16 +352,38 @@
   }
   function dateParts() {
     var v = $("f-date").value;
+    if (v) {
+      var p = v.split("-");
+      return { y: p[0], m: parseInt(p[1], 10), d: parseInt(p[2], 10) };
+    }
+    if (lookupYear) return { y: String(lookupYear), m: null, d: null };
+    return null;
+  }
+  function accessedParts() {
+    var v = $("f-accessed").value;
     if (!v) return null;
     var p = v.split("-");
     return { y: p[0], m: parseInt(p[1], 10), d: parseInt(p[2], 10) };
   }
+  function todayParts() {
+    var t = new Date();
+    return { y: String(t.getFullYear()), m: t.getMonth() + 1, d: t.getDate() };
+  }
+  function vancouverCited() {
+    var a = accessedParts() || todayParts();
+    return a.y + " " + MONV[a.m - 1] + " " + a.d;
+  }
+  function harvardAccessed() {
+    var a = accessedParts();
+    return a ? " (Accessed: " + a.d + " " + MONTHS[a.m - 1] + " " + a.y + ")" : "";
+  }
   function apaDate(full) {
     var d = dateParts();
     if (!d) return "(n.d.)";
+    if (!d.m) return "(" + d.y + ")";
     return full ? "(" + d.y + ", " + MONTHS[d.m - 1] + " " + d.d + ")" : "(" + d.y + ")";
   }
-  function mlaDate(d) { return d.d + " " + MON3[d.m - 1] + " " + d.y; }
+  function mlaDate(d) { if (!d.m) return d.y; return d.d + " " + MON3[d.m - 1] + " " + d.y; }
   function apaAuthors(authors) {
     var parts = authors.map(function (a) { return a.ini ? a.last + ", " + a.ini : a.last; });
     if (!parts.length) return "";
@@ -333,6 +406,33 @@
     if (authors.length <= 10) return first + ", " + rest.slice(0, -1).join(", ") + ", and " + rest[rest.length - 1];
     return first + ", " + rest.slice(0, 6).join(", ") + ", et al";
   }
+  function harvardAuthors(authors) {
+    if (!authors.length) return "";
+    var parts = authors.map(function (a) { return a.ini ? a.last + ", " + a.ini : a.last; });
+    if (parts.length === 1) return parts[0];
+    if (parts.length === 2) return parts[0] + " and " + parts[1];
+    if (parts.length === 3) return parts[0] + ", " + parts[1] + " and " + parts[2];
+    return parts[0] + " et al.";
+  }
+  function ieeeAuthors(authors) {
+    if (!authors.length) return "";
+    var parts = authors.map(function (a) { return a.ini ? a.ini + " " + a.last : a.last; });
+    if (parts.length === 1) return parts[0];
+    if (parts.length === 2) return parts[0] + " and " + parts[1];
+    return parts.slice(0, -1).join(", ") + ", and " + parts[parts.length - 1];
+  }
+  function vancouverAuthors(authors) {
+    if (!authors.length) return "";
+    return authors.map(function (a) { return a.ini ? a.last + " " + a.ini.replace(/\./g, "") : a.last; }).join(", ");
+  }
+  function turabianNoteAuthors(authors) {
+    if (!authors.length) return "";
+    var parts = authors.map(function (a) { return (a.first ? a.first + " " : "") + a.last; });
+    if (parts.length === 1) return parts[0];
+    if (parts.length === 2) return parts[0] + " and " + parts[1];
+    if (parts.length === 3) return parts[0] + ", " + parts[1] + ", and " + parts[2];
+    return parts[0] + " et al.";
+  }
   function build() {
     var authors = getAuthors();
     var title = $("f-title").value.trim();
@@ -343,8 +443,11 @@
     var doi = $("f-doi").value.trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i, "");
     var url = $("f-url").value.trim();
     var uploader = $("f-uploader").value.trim();
+    var degree = $("f-degree").value.trim();
+    var reportno = $("f-reportno").value.trim();
     var d = dateParts();
     var page = $("f-page").value.trim();
+    var firstFull = authors.length ? ((authors[0].first ? authors[0].first + " " : "") + authors[0].last) : "";
     var sortKey = (authors.length ? authors[0].last : title).toLowerCase();
     var html = "", text = "", intext = "";
 
@@ -393,22 +496,64 @@
         html = (who ? whoH + ". " : "") + dateV + ". <i>" + esc(sentenceCase(title)) + "</i> [Video]. YouTube. ";
         text = (who ? who + ". " : "") + dateV + ". " + sentenceCase(title) + " [Video]. YouTube. ";
         if (url) { html += esc(url); text += url; }
+      } else if (type === "podcast") {
+        var host = uploader || A;
+        var hostH = uploader ? esc(uploader) : esc(A);
+        html = (host ? hostH + " (Host). " : "") + apaDate(true) + ". " + esc(sentenceCase(title)) + " [Audio podcast episode]. ";
+        text = (host ? host + " (Host). " : "") + apaDate(true) + ". " + sentenceCase(title) + " [Audio podcast episode]. ";
+        if (container) { html += "In <i>" + esc(titleCase(container)) + "</i>. "; text += "In " + titleCase(container) + ". "; }
+        if (url) { html += esc(url); text += url; }
+      } else if (type === "film") {
+        var tF = sentenceCase(title);
+        if (A) { html = esc(A) + " (Director). " + apaDate(false) + ". <i>" + esc(tF) + "</i> [Film]. "; text = A + " (Director). " + apaDate(false) + ". " + tF + " [Film]. "; }
+        else { html = "<i>" + esc(tF) + "</i> [Film]. " + apaDate(false) + ". "; text = tF + " [Film]. " + apaDate(false) + ". "; }
+        if (publisher) { html += esc(publisher) + "."; text += publisher + "."; }
+      } else if (type === "dissertation") {
+        var deg = degree || "Doctoral dissertation";
+        var tD = sentenceCase(title);
+        var degPart = publisher ? "[" + deg + ", " + publisher + "]" : "[" + deg + "]";
+        if (A) { html = esc(A) + " " + apaDate(false) + ". <i>" + esc(tD) + "</i> " + esc(degPart) + ". "; text = A + " " + apaDate(false) + ". " + tD + " " + degPart + ". "; }
+        else { html = "<i>" + esc(tD) + "</i> " + esc(degPart) + ". " + apaDate(false) + ". "; text = tD + " " + degPart + ". " + apaDate(false) + ". "; }
+        if (doi) { html += "https://doi.org/" + esc(doi); text += "https://doi.org/" + doi; }
+        else if (url) { html += esc(url); text += url; }
+      } else if (type === "newspaper") {
+        var tN = sentenceCase(title);
+        var paper = container ? titleCase(container) : "";
+        if (A) { html = esc(A) + " " + apaDate(true) + ". " + esc(tN) + ". "; text = A + " " + apaDate(true) + ". " + tN + ". "; }
+        else { html = esc(tN) + ". " + apaDate(true) + ". "; text = tN + ". " + apaDate(true) + ". "; }
+        if (paper) { html += "<i>" + esc(paper) + "</i>. "; text += paper + ". "; }
+        if (url) { html += esc(url); text += url; }
+      } else if (type === "report") {
+        var tR = sentenceCase(title);
+        var repNo = reportno ? " (Report No. " + reportno + ")" : "";
+        if (A) { html = esc(A) + " " + apaDate(false) + ". <i>" + esc(tR) + "</i>" + esc(repNo) + ". "; text = A + " " + apaDate(false) + ". " + tR + repNo + ". "; }
+        else { html = "<i>" + esc(tR) + "</i>" + esc(repNo) + ". " + apaDate(false) + ". "; text = tR + repNo + ". " + apaDate(false) + ". "; }
+        if (publisher) { html += esc(publisher) + ". "; text += publisher + ". "; }
+        if (url) { html += esc(url); text += url; }
+      } else if (type === "conference") {
+        var tC = sentenceCase(title);
+        if (A) { html = esc(A) + " " + apaDate(true) + ". " + esc(tC) + " [Paper presentation]. "; text = A + " " + apaDate(true) + ". " + tC + " [Paper presentation]. "; }
+        else { html = esc(tC) + " [Paper presentation]. " + apaDate(true) + ". "; text = tC + " [Paper presentation]. " + apaDate(true) + ". "; }
+        if (container) { html += esc(titleCase(container)) + ". "; text += titleCase(container) + ". "; }
+        if (doi) { html += "https://doi.org/" + esc(doi); text += "https://doi.org/" + doi; }
+        else if (url) { html += esc(url); text += url; }
       }
       var shortTitle = title ? sentenceCase(title).split(":")[0] : "Title";
-      if (!authors.length && !uploader) intext = "(\u201C" + shortTitle + ",\u201D " + (d ? d.y : "n.d.") + ")";
+      if (!authors.length && !uploader) intext = "(“" + shortTitle + ",” " + (d ? d.y : "n.d.") + ")";
       else if (authors.length === 1) intext = "(" + authors[0].last + ", " + (d ? d.y : "n.d.") + (page ? ", p. " + page : "") + ")";
       else if (authors.length === 2) intext = "(" + authors[0].last + " & " + authors[1].last + ", " + (d ? d.y : "n.d.") + (page ? ", p. " + page : "") + ")";
       else if (authors.length >= 3) intext = "(" + authors[0].last + " et al., " + (d ? d.y : "n.d.") + (page ? ", p. " + page : "") + ")";
       else intext = "(" + (uploader || "Title") + ", " + (d ? d.y : "n.d.") + ")";
-    } else if (style === "chicago") {
+    } else if (style === "chicago" || style === "turabian") {
       var CA = chicagoAuthors(authors);
       var cHead = CA ? esc(CA) + ". " : "";
       var cHeadT = CA ? CA + ". " : "";
       if (type === "website") {
-        html = cHead + "\u201C" + esc(titleCase(title)) + ".\u201D ";
-        text = cHeadT + "\u201C" + titleCase(title) + ".\u201D ";
+        html = cHead + "“" + esc(titleCase(title)) + ".” ";
+        text = cHeadT + "“" + titleCase(title) + ".” ";
         if (container) { html += "<i>" + esc(titleCase(container)) + "</i>. "; text += titleCase(container) + ". "; }
-        if (d) { html += MONTHS[d.m - 1] + " " + d.d + ", " + d.y + ". "; text += MONTHS[d.m - 1] + " " + d.d + ", " + d.y + ". "; }
+        if (d && d.m) { html += MONTHS[d.m - 1] + " " + d.d + ", " + d.y + ". "; text += MONTHS[d.m - 1] + " " + d.d + ", " + d.y + ". "; }
+        else if (d) { html += d.y + ". "; text += d.y + ". "; }
         else { var acc2 = $("f-accessed").value; if (acc2) { var ap2 = acc2.split("-"); var ad2 = { y: ap2[0], m: parseInt(ap2[1], 10), d: parseInt(ap2[2], 10) }; html += "Accessed " + MONTHS[ad2.m - 1] + " " + ad2.d + ", " + ad2.y + ". "; text += "Accessed " + MONTHS[ad2.m - 1] + " " + ad2.d + ", " + ad2.y + ". "; } }
         if (url) { html += esc(url) + "."; text += url + "."; }
       } else if (type === "book") {
@@ -417,8 +562,8 @@
         if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
         if (d) { html += d.y + "."; text += d.y + "."; }
       } else if (type === "journal") {
-        html = cHead + "\u201C" + esc(titleCase(title)) + ".\u201D ";
-        text = cHeadT + "\u201C" + titleCase(title) + ".\u201D ";
+        html = cHead + "“" + esc(titleCase(title)) + ".” ";
+        text = cHeadT + "“" + titleCase(title) + ".” ";
         if (container) {
           html += "<i>" + esc(titleCase(container)) + "</i>"; text += titleCase(container);
           if (volume) { html += " " + esc(volume); text += " " + volume; }
@@ -431,25 +576,108 @@
         }
       } else if (type === "video") {
         var cWho = uploader || CA;
-        html = (cWho ? esc(cWho) + ". " : "") + "\u201C" + esc(titleCase(title)) + ".\u201D YouTube video";
-        text = (cWho ? cWho + ". " : "") + "\u201C" + titleCase(title) + ".\u201D YouTube video";
-        if (d) { html += ", " + MONTHS[d.m - 1] + " " + d.d + ", " + d.y; text += ", " + MONTHS[d.m - 1] + " " + d.d + ", " + d.y; }
+        html = (cWho ? esc(cWho) + ". " : "") + "“" + esc(titleCase(title)) + ".” YouTube video";
+        text = (cWho ? cWho + ". " : "") + "“" + titleCase(title) + ".” YouTube video";
+        if (d && d.m) { html += ", " + MONTHS[d.m - 1] + " " + d.d + ", " + d.y; text += ", " + MONTHS[d.m - 1] + " " + d.d + ", " + d.y; }
+        else if (d) { html += ", " + d.y; text += ", " + d.y; }
         html += ". "; text += ". ";
         if (url) { html += esc(url) + "."; text += url + "."; }
+      } else if (type === "podcast") {
+        var pHead = CA ? cHead : (uploader ? esc(uploader) + ". " : "");
+        var pHeadT = CA ? cHeadT : (uploader ? uploader + ". " : "");
+        html = pHead + "“" + esc(titleCase(title)) + ".” ";
+        text = pHeadT + "“" + titleCase(title) + ".” ";
+        if (container) { html += "<i>" + esc(titleCase(container)) + "</i>. "; text += titleCase(container) + ". "; }
+        if (d && d.m) { html += MONTHS[d.m - 1] + " " + d.d + ", " + d.y + ". "; text += MONTHS[d.m - 1] + " " + d.d + ", " + d.y + ". "; }
+        else if (d) { html += d.y + ". "; text += d.y + ". "; }
+        if (url) { html += esc(url) + "."; text += url + "."; }
+      } else if (type === "film") {
+        html = "<i>" + esc(titleCase(title)) + "</i>. ";
+        text = titleCase(title) + ". ";
+        if (authors.length) { html += "Directed by " + esc(firstFull) + ". "; text += "Directed by " + firstFull + ". "; }
+        if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "dissertation") {
+        html = cHead + "“" + esc(titleCase(title)) + ".” ";
+        text = cHeadT + "“" + titleCase(title) + ".” ";
+        html += esc(degree || "PhD diss.") + ", ";
+        text += (degree || "PhD diss.") + ", ";
+        if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "newspaper") {
+        html = cHead + "“" + esc(titleCase(title)) + ".” ";
+        text = cHeadT + "“" + titleCase(title) + ".” ";
+        if (container) { html += "<i>" + esc(titleCase(container)) + "</i>. "; text += titleCase(container) + ". "; }
+        if (d && d.m) { html += MONTHS[d.m - 1] + " " + d.d + ", " + d.y + ". "; text += MONTHS[d.m - 1] + " " + d.d + ", " + d.y + ". "; }
+        else if (d) { html += d.y + ". "; text += d.y + ". "; }
+        if (url) { html += esc(url) + "."; text += url + "."; }
+      } else if (type === "report") {
+        html = cHead + "<i>" + esc(titleCase(title)) + "</i>. ";
+        text = cHeadT + titleCase(title) + ". ";
+        if (reportno) { html += "Report No. " + esc(reportno) + ". "; text += "Report No. " + reportno + ". "; }
+        if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "conference") {
+        html = cHead + "“" + esc(titleCase(title)) + ".” ";
+        text = cHeadT + "“" + titleCase(title) + ".” ";
+        if (container) { html += "Paper presented at " + esc(titleCase(container)); text += "Paper presented at " + titleCase(container); }
+        if (d) { html += ", " + d.y; text += ", " + d.y; }
+        if (pages) { html += ", " + esc(pages); text += ", " + pages; }
+        html += "."; text += ".";
       }
       var cYear = d ? d.y : "n.d.";
-      if (!authors.length && !uploader) intext = "(\u201C" + (title ? titleCase(title).split(":")[0] : "Title") + ",\u201D " + cYear + ")";
+      if (!authors.length && !uploader) intext = "(“" + (title ? titleCase(title).split(":")[0] : "Title") + ",” " + cYear + ")";
       else if (authors.length === 1) intext = "(" + authors[0].last + " " + cYear + (page ? ", " + page : "") + ")";
       else if (authors.length === 2) intext = "(" + authors[0].last + " and " + authors[1].last + " " + cYear + (page ? ", " + page : "") + ")";
       else if (authors.length >= 3) intext = "(" + authors[0].last + " et al. " + cYear + (page ? ", " + page : "") + ")";
       else intext = "(" + (uploader || "Title") + " " + cYear + ")";
-    } else {
+      if (style === "turabian") {
+        /* Turabian bibliography matches Chicago; the second line shows the footnote form. */
+        var TN = turabianNoteAuthors(authors);
+        var nWho = TN || ((type === "video" || type === "podcast") && uploader ? uploader : "");
+        var nShort = title ? titleCase(title).split(":")[0] : "Title";
+        var nTitle = titleCase(title);
+        var nDate = (d && d.m) ? MONTHS[d.m - 1] + " " + d.d + ", " + d.y : (d ? d.y : "");
+        var nOpen = nWho ? nWho + ", “" + nTitle + ",” " : "“" + nShort + ",” ";
+        var note = "";
+        if (type === "film") {
+          note = nTitle + (authors.length ? ", directed by " + firstFull : "") +
+            ((publisher || d) ? " (" + [publisher, d ? d.y : ""].filter(Boolean).join(", ") + ")" : "") + ".";
+        } else if (type === "book") {
+          note = (nWho ? nWho + ", " : "") + nTitle +
+            ((publisher || d) ? " (" + [publisher, d ? d.y : ""].filter(Boolean).join(", ") + ")" : "") +
+            (page ? ", " + page : "") + ".";
+        } else if (type === "dissertation") {
+          note = (nWho ? nWho + ", " : "") + "“" + nTitle + "” (" + (degree || "PhD diss.") +
+            (publisher ? ", " + publisher : "") + (d ? ", " + d.y : "") + ")" + (page ? ", " + page : "") + ".";
+        } else if (type === "report") {
+          note = (nWho ? nWho + ", " : "") + nTitle + (reportno ? ", Report No. " + reportno : "") +
+            ((publisher || d) ? " (" + [publisher, d ? d.y : ""].filter(Boolean).join(", ") + ")" : "") +
+            (page ? ", " + page : "") + ".";
+        } else if (type === "journal") {
+          note = nOpen + (container ? titleCase(container) : "") +
+            (volume ? " " + volume : "") + (issue ? ", no. " + issue : "") +
+            (d ? " (" + d.y + ")" : "") + (pages ? ": " + pages : "") +
+            (doi ? ", https://doi.org/" + doi : url ? ", " + url : "") + ".";
+        } else if (type === "video") {
+          note = nOpen + "YouTube video" + (nDate ? ", " + nDate : "") + (url ? ", " + url : "") + ".";
+        } else if (type === "podcast") {
+          note = nOpen + (container ? titleCase(container) + ", " : "") + (nDate ? nDate + ", " : "") + (url ? url + "." : "");
+        } else if (type === "conference") {
+          note = nOpen + "paper presented at " + (container ? titleCase(container) : "") +
+            (d ? ", " + d.y : "") + (pages ? ", " + pages : "") + ".";
+        } else {
+          note = nOpen + (container ? titleCase(container) + ", " : "") + (nDate ? nDate + ", " : "") + (url ? url + "." : "");
+        }
+        intext = note.trim();
+      }
+    } else if (style === "mla") {
       var M = mlaAuthors(authors);
       var mHead = M ? M + ". " : "";
       var mHeadE = M ? esc(M) + ". " : "";
       if (type === "website") {
-        html = mHeadE + "\u201C" + esc(titleCase(title)) + ".\u201D ";
-        text = mHead + "\u201C" + titleCase(title) + ".\u201D ";
+        html = mHeadE + "“" + esc(titleCase(title)) + ".” ";
+        text = mHead + "“" + titleCase(title) + ".” ";
         if (container) { html += "<i>" + esc(titleCase(container)) + "</i>, "; text += titleCase(container) + ", "; }
         if (d) { html += mlaDate(d) + ", "; text += mlaDate(d) + ", "; }
         if (url) { html += esc(url.replace(/^https?:\/\//, "")) + "."; text += url.replace(/^https?:\/\//, "") + "."; }
@@ -461,8 +689,8 @@
         if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
         if (d) { html += d.y + "."; text += d.y + "."; }
       } else if (type === "journal") {
-        html = mHeadE + "\u201C" + esc(titleCase(title)) + ".\u201D ";
-        text = mHead + "\u201C" + titleCase(title) + ".\u201D ";
+        html = mHeadE + "“" + esc(titleCase(title)) + ".” ";
+        text = mHead + "“" + titleCase(title) + ".” ";
         if (container) {
           html += "<i>" + esc(titleCase(container)) + "</i>"; text += titleCase(container);
           if (volume) { html += ", vol. " + esc(volume); text += ", vol. " + volume; }
@@ -474,26 +702,309 @@
           else if (url) { html += " " + esc(url.replace(/^https?:\/\//, "")) + "."; text += " " + url.replace(/^https?:\/\//, "") + "."; }
         }
       } else if (type === "video") {
-        html = mHeadE + "\u201C" + esc(titleCase(title)) + ".\u201D <i>YouTube</i>, ";
-        text = mHead + "\u201C" + titleCase(title) + ".\u201D YouTube, ";
+        html = mHeadE + "“" + esc(titleCase(title)) + ".” <i>YouTube</i>, ";
+        text = mHead + "“" + titleCase(title) + ".” YouTube, ";
         if (uploader) { html += "uploaded by " + esc(uploader) + ", "; text += "uploaded by " + uploader + ", "; }
         if (d) { html += mlaDate(d) + ", "; text += mlaDate(d) + ", "; }
         if (url) { html += esc(url.replace(/^https?:\/\//, "")) + "."; text += url.replace(/^https?:\/\//, "") + "."; }
+      } else if (type === "podcast") {
+        html = mHeadE + "“" + esc(titleCase(title)) + ".” ";
+        text = mHead + "“" + titleCase(title) + ".” ";
+        if (container) { html += "<i>" + esc(titleCase(container)) + "</i>, "; text += titleCase(container) + ", "; }
+        if (uploader) { html += "hosted by " + esc(uploader) + ", "; text += "hosted by " + uploader + ", "; }
+        if (d) { html += mlaDate(d) + ", "; text += mlaDate(d) + ", "; }
+        if (url) { html += esc(url.replace(/^https?:\/\//, "")) + "."; text += url.replace(/^https?:\/\//, "") + "."; }
+      } else if (type === "film") {
+        html = "<i>" + esc(titleCase(title)) + "</i>. ";
+        text = titleCase(title) + ". ";
+        if (authors.length) { html += "Directed by " + esc(firstFull) + ", "; text += "Directed by " + firstFull + ", "; }
+        if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "dissertation") {
+        html = mHeadE + "<i>" + esc(titleCase(title)) + "</i>. ";
+        text = mHead + titleCase(title) + ". ";
+        if (d) { html += d.y + ". "; text += d.y + ". "; }
+        if (publisher) { html += esc(publisher); text += publisher; }
+        if (degree) { html += ", " + esc(degree); text += ", " + degree; }
+        html += "."; text += ".";
+      } else if (type === "newspaper") {
+        html = mHeadE + "“" + esc(titleCase(title)) + ".” ";
+        text = mHead + "“" + titleCase(title) + ".” ";
+        if (container) { html += "<i>" + esc(titleCase(container)) + "</i>, "; text += titleCase(container) + ", "; }
+        if (d) { html += mlaDate(d) + ", "; text += mlaDate(d) + ", "; }
+        if (url) { html += esc(url.replace(/^https?:\/\//, "")) + "."; text += url.replace(/^https?:\/\//, "") + "."; }
+      } else if (type === "report") {
+        html = mHeadE + "<i>" + esc(titleCase(title)) + "</i>. ";
+        text = mHead + titleCase(title) + ". ";
+        if (reportno) { html += "Report No. " + esc(reportno) + ", "; text += "Report No. " + reportno + ", "; }
+        if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "conference") {
+        html = mHeadE + "“" + esc(titleCase(title)) + ".” ";
+        text = mHead + "“" + titleCase(title) + ".” ";
+        if (container) {
+          html += "<i>" + esc(titleCase(container)) + "</i>"; text += titleCase(container);
+          if (d) { html += ", " + d.y; text += ", " + d.y; }
+          if (pages) { html += ", pp. " + esc(pages); text += ", pp. " + pages; }
+          html += "."; text += ".";
+          if (url) { html += " " + esc(url.replace(/^https?:\/\//, "")) + "."; text += " " + url.replace(/^https?:\/\//, "") + "."; }
+        }
       }
       var shortT = title ? titleCase(title).split(":")[0] : "Title";
-      if (!authors.length) intext = "(\u201C" + shortT + (page ? "\u201D " + page : "\u201D") + ")";
+      if (!authors.length) intext = "(“" + shortT + (page ? "” " + page : "”") + ")";
       else if (authors.length === 1) intext = "(" + authors[0].last + (page ? " " + page : "") + ")";
       else if (authors.length === 2) intext = "(" + authors[0].last + " and " + authors[1].last + (page ? " " + page : "") + ")";
       else intext = "(" + authors[0].last + " et al." + (page ? " " + page : "") + ")";
+    } else if (style === "harvard") {
+      var H = harvardAuthors(authors);
+      var hYear = d ? d.y : "no date";
+      var accH = harvardAccessed();
+      var avail = function (u) { return u ? "Available at: " + u + accH + "." : ""; };
+      var availH = function (u) { return u ? "Available at: " + esc(u) + esc(accH) + "." : ""; };
+      var hHead = H ? esc(H) + " (" + hYear + ") " : "";
+      var hHeadT = H ? H + " (" + hYear + ") " : "";
+      if (type === "website") {
+        if (H) { html = hHead + "<i>" + esc(titleCase(title)) + "</i>. "; text = hHeadT + titleCase(title) + ". "; }
+        else { html = "<i>" + esc(titleCase(title)) + "</i>. (" + hYear + "). "; text = titleCase(title) + ". (" + hYear + "). "; }
+        if (url) { html += availH(url); text += avail(url); }
+      } else if (type === "book") {
+        if (H) { html = hHead + "<i>" + esc(titleCase(title)) + "</i>. "; text = hHeadT + titleCase(title) + ". "; }
+        else { html = "<i>" + esc(titleCase(title)) + "</i>. (" + hYear + "). "; text = titleCase(title) + ". (" + hYear + "). "; }
+        if (publisher) { html += esc(publisher) + "."; text += publisher + "."; }
+      } else if (type === "journal") {
+        var hArt = "'" + titleCase(title) + "', ";
+        if (H) { html = hHead + esc(hArt); text = hHeadT + hArt; }
+        else { html = esc(hArt) + "(" + hYear + "). "; text = hArt + "(" + hYear + "). "; }
+        if (container) {
+          html += "<i>" + esc(titleCase(container)) + "</i>"; text += titleCase(container);
+          if (volume) { html += ", " + esc(volume); text += ", " + volume; }
+          if (issue) { html += "(" + esc(issue) + ")"; text += "(" + issue + ")"; }
+          if (pages) { html += ", pp. " + esc(pages); text += ", pp. " + pages; }
+          html += ". "; text += ". ";
+        }
+        if (doi) { html += "doi: " + esc(doi) + "."; text += "doi: " + doi + "."; }
+        else if (url) { html += availH(url); text += avail(url); }
+      } else if (type === "video") {
+        var vWhoH = H || uploader;
+        if (vWhoH) { html = esc(vWhoH) + " (" + hYear + ") "; text = vWhoH + " (" + hYear + ") "; }
+        else { html = ""; text = ""; }
+        html += "<i>" + esc(titleCase(title)) + "</i> [Online video]. YouTube. ";
+        text += titleCase(title) + " [Online video]. YouTube. ";
+        if (url) { html += availH(url); text += avail(url); }
+      } else if (type === "podcast") {
+        var pWhoH = H || uploader;
+        if (pWhoH) { html = esc(pWhoH) + " (" + hYear + ") "; text = pWhoH + " (" + hYear + ") "; }
+        else { html = ""; text = ""; }
+        html += "'" + esc(titleCase(title)) + "', ";
+        text += "'" + titleCase(title) + "', ";
+        if (container) { html += "<i>" + esc(titleCase(container)) + "</i>"; text += titleCase(container); }
+        if (d && d.m) { html += ", " + d.d + " " + MONTHS[d.m - 1]; text += ", " + d.d + " " + MONTHS[d.m - 1]; }
+        html += ". "; text += ". ";
+        if (url) { html += availH(url); text += avail(url); }
+      } else if (type === "film") {
+        if (H) { html = hHead + "<i>" + esc(titleCase(title)) + "</i> [Film]. "; text = hHeadT + titleCase(title) + " [Film]. "; }
+        else { html = "<i>" + esc(titleCase(title)) + "</i> [Film]. (" + hYear + "). "; text = titleCase(title) + " [Film]. (" + hYear + "). "; }
+        if (publisher) { html += esc(publisher) + "."; text += publisher + "."; }
+      } else if (type === "dissertation") {
+        if (H) { html = hHead + "<i>" + esc(titleCase(title)) + "</i>. "; text = hHeadT + titleCase(title) + ". "; }
+        else { html = "<i>" + esc(titleCase(title)) + "</i>. (" + hYear + "). "; text = titleCase(title) + ". (" + hYear + "). "; }
+        html += esc(degree || "PhD thesis"); text += (degree || "PhD thesis");
+        if (publisher) { html += ", " + esc(publisher); text += ", " + publisher; }
+        html += ". "; text += ". ";
+        if (url) { html += availH(url); text += avail(url); }
+      } else if (type === "newspaper") {
+        if (H) { html = hHead + "'" + esc(titleCase(title)) + "', "; text = hHeadT + "'" + titleCase(title) + "', "; }
+        else { html = "'" + esc(titleCase(title)) + "', (" + hYear + "). "; text = "'" + titleCase(title) + "', (" + hYear + "). "; }
+        if (container) { html += "<i>" + esc(titleCase(container)) + "</i>"; text += titleCase(container); }
+        if (d && d.m) { html += ", " + d.d + " " + MONTHS[d.m - 1]; text += ", " + d.d + " " + MONTHS[d.m - 1]; }
+        html += ". "; text += ". ";
+        if (url) { html += availH(url); text += avail(url); }
+      } else if (type === "report") {
+        if (H) { html = hHead + "<i>" + esc(titleCase(title)) + "</i>. "; text = hHeadT + titleCase(title) + ". "; }
+        else { html = "<i>" + esc(titleCase(title)) + "</i>. (" + hYear + "). "; text = titleCase(title) + ". (" + hYear + "). "; }
+        if (reportno) { html += "Report No. " + esc(reportno) + ". "; text += "Report No. " + reportno + ". "; }
+        if (publisher) { html += esc(publisher) + ". "; text += publisher + ". "; }
+        if (url) { html += availH(url); text += avail(url); }
+      } else if (type === "conference") {
+        if (H) { html = hHead + "'" + esc(titleCase(title)) + "', "; text = hHeadT + "'" + titleCase(title) + "', "; }
+        else { html = "'" + esc(titleCase(title)) + "', (" + hYear + "). "; text = "'" + titleCase(title) + "', (" + hYear + "). "; }
+        if (container) { html += "<i>" + esc(titleCase(container)) + "</i>"; text += titleCase(container); }
+        if (pages) { html += ", pp. " + esc(pages); text += ", pp. " + pages; }
+        html += ". "; text += ". ";
+        if (url) { html += availH(url); text += avail(url); }
+      }
+      var hShort = title ? titleCase(title).split(":")[0] : "Title";
+      var hPage = page ? ", p. " + page : "";
+      if (!authors.length && !uploader) intext = "('" + hShort + "', " + hYear + ")";
+      else if (authors.length === 1) intext = "(" + authors[0].last + ", " + hYear + hPage + ")";
+      else if (authors.length === 2) intext = "(" + authors[0].last + " and " + authors[1].last + ", " + hYear + hPage + ")";
+      else if (authors.length >= 3) intext = "(" + authors[0].last + " et al., " + hYear + hPage + ")";
+      else intext = "(" + uploader + ", " + hYear + ")";
+    } else if (style === "ieee") {
+      var I = ieeeAuthors(authors);
+      var iHead = I ? esc(I) + ", " : "";
+      var iHeadT = I ? I + ", " : "";
+      var iDate = (d && d.m) ? MON3[d.m - 1] + " " + d.d + ", " + d.y : (d ? d.y : "");
+      var iMonthYear = (d && d.m) ? MON3[d.m - 1] + " " + d.y : (d ? d.y : "");
+      if (type === "website") {
+        html = iHead + "“" + esc(titleCase(title)) + ",” "; text = iHeadT + "“" + titleCase(title) + ",” ";
+        if (container) { html += esc(titleCase(container)) + ", "; text += titleCase(container) + ", "; }
+        if (iDate) { html += iDate + ". "; text += iDate + ". "; }
+        if (url) { html += "[Online]. Available: " + esc(url); text += "[Online]. Available: " + url; }
+      } else if (type === "book") {
+        html = iHead + "<i>" + esc(titleCase(title)) + "</i>. "; text = iHeadT + titleCase(title) + ". ";
+        if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "journal") {
+        html = iHead + "“" + esc(titleCase(title)) + ",” "; text = iHeadT + "“" + titleCase(title) + ",” ";
+        if (container) {
+          html += "<i>" + esc(titleCase(container)) + "</i>"; text += titleCase(container);
+          if (volume) { html += ", vol. " + esc(volume); text += ", vol. " + volume; }
+          if (issue) { html += ", no. " + esc(issue); text += ", no. " + issue; }
+          if (pages) { html += ", pp. " + esc(pages); text += ", pp. " + pages; }
+          if (iMonthYear) { html += ", " + iMonthYear; text += ", " + iMonthYear; }
+          if (doi) { html += ", doi: " + esc(doi) + "."; text += ", doi: " + doi + "."; }
+          else if (url) { html += ". [Online]. Available: " + esc(url); text += ". [Online]. Available: " + url; }
+          else { html += "."; text += "."; }
+        }
+      } else if (type === "video") {
+        var ivWho = I || uploader;
+        html = (ivWho ? esc(ivWho) + ", " : "") + "“" + esc(titleCase(title)) + ",” YouTube, ";
+        text = (ivWho ? ivWho + ", " : "") + "“" + titleCase(title) + ",” YouTube, ";
+        if (iDate) { html += iDate + ". "; text += iDate + ". "; }
+        if (url) { html += "[Online Video]. Available: " + esc(url); text += "[Online Video]. Available: " + url; }
+      } else if (type === "podcast") {
+        var ipWho = I || uploader;
+        html = (ipWho ? esc(ipWho) + ", " : "") + "“" + esc(titleCase(title)) + ",” ";
+        text = (ipWho ? ipWho + ", " : "") + "“" + titleCase(title) + ",” ";
+        if (container) { html += "<i>" + esc(titleCase(container)) + "</i>, "; text += titleCase(container) + ", "; }
+        if (iDate) { html += iDate + ". "; text += iDate + ". "; }
+        if (url) { html += "[Online]. Available: " + esc(url); text += "[Online]. Available: " + url; }
+      } else if (type === "film") {
+        html = "<i>" + esc(titleCase(title)) + "</i>. "; text = titleCase(title) + ". ";
+        if (authors.length) { html += "Directed by " + esc(firstFull) + ", "; text += "Directed by " + firstFull + ", "; }
+        if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "dissertation") {
+        html = iHead + "“" + esc(titleCase(title)) + ",” "; text = iHeadT + "“" + titleCase(title) + ",” ";
+        html += esc(degree || "Ph.D. dissertation") + ", "; text += (degree || "Ph.D. dissertation") + ", ";
+        if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "newspaper") {
+        html = iHead + "“" + esc(titleCase(title)) + ",” "; text = iHeadT + "“" + titleCase(title) + ",” ";
+        if (container) { html += "<i>" + esc(titleCase(container)) + "</i>, "; text += titleCase(container) + ", "; }
+        if (iDate) { html += iDate + ". "; text += iDate + ". "; }
+        if (url) { html += "[Online]. Available: " + esc(url); text += "[Online]. Available: " + url; }
+      } else if (type === "report") {
+        html = iHead + "<i>" + esc(titleCase(title)) + "</i>, "; text = iHeadT + titleCase(title) + ", ";
+        if (reportno) { html += "Report No. " + esc(reportno) + ", "; text += "Report No. " + reportno + ", "; }
+        if (publisher) { html += esc(publisher) + ", "; text += publisher + ", "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+        if (url) { html += " [Online]. Available: " + esc(url); text += " [Online]. Available: " + url; }
+      } else if (type === "conference") {
+        html = iHead + "“" + esc(titleCase(title)) + ",” "; text = iHeadT + "“" + titleCase(title) + ",” ";
+        if (container) { html += "in <i>" + esc(titleCase(container)) + "</i>"; text += "in " + titleCase(container); }
+        if (d) { html += ", " + d.y; text += ", " + d.y; }
+        if (pages) { html += ", pp. " + esc(pages); text += ", pp. " + pages; }
+        html += "."; text += ".";
+      }
+      html = "[1] " + html; text = "[1] " + text;
+      intext = "[1]";
+    } else if (style === "vancouver") {
+      var V = vancouverAuthors(authors);
+      var vHead = V ? esc(V) + ". " : "";
+      var vHeadT = V ? V + ". " : "";
+      var cited = vancouverCited();
+      if (type === "website") {
+        html = vHead + esc(sentenceCase(title)) + " [Internet]. "; text = vHeadT + sentenceCase(title) + " [Internet]. ";
+        if (container) { html += esc(titleCase(container)) + "; "; text += titleCase(container) + "; "; }
+        if (d) { html += d.y + " "; text += d.y + " "; }
+        html += "[cited " + cited + "]. "; text += "[cited " + cited + "]. ";
+        if (url) { html += "Available from: " + esc(url); text += "Available from: " + url; }
+      } else if (type === "book") {
+        html = vHead + "<i>" + esc(titleCase(title)) + "</i>. "; text = vHeadT + titleCase(title) + ". ";
+        if (publisher) { html += esc(publisher) + "; "; text += publisher + "; "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "journal") {
+        html = vHead + esc(sentenceCase(title)) + ". "; text = vHeadT + sentenceCase(title) + ". ";
+        if (container) {
+          html += "<i>" + esc(titleCase(container)) + "</i>. "; text += titleCase(container) + ". ";
+          if (d) { html += d.y; text += d.y; }
+          if (volume) { html += ";" + esc(volume); text += ";" + volume; }
+          if (issue) { html += "(" + esc(issue) + ")"; text += "(" + issue + ")"; }
+          if (pages) { html += ":" + esc(pages); text += ":" + pages; }
+          html += ". "; text += ". ";
+          if (doi) { html += "doi: " + esc(doi) + "."; text += "doi: " + doi + "."; }
+          else if (url) { html += "Available from: " + esc(url); text += "Available from: " + url; }
+        }
+      } else if (type === "video") {
+        var vvWho = V || uploader;
+        html = (vvWho ? esc(vvWho) + ". " : "") + esc(sentenceCase(title)) + " [video on the Internet]. YouTube; ";
+        text = (vvWho ? vvWho + ". " : "") + sentenceCase(title) + " [video on the Internet]. YouTube; ";
+        if (d) { html += " " + d.y; text += " " + d.y; }
+        html += " [cited " + cited + "]. "; text += " [cited " + cited + "]. ";
+        if (url) { html += "Available from: " + esc(url); text += "Available from: " + url; }
+      } else if (type === "podcast") {
+        var vpWho = V || uploader;
+        html = (vpWho ? esc(vpWho) + ". " : "") + esc(sentenceCase(title)) + " [podcast on the Internet]. ";
+        text = (vpWho ? vpWho + ". " : "") + sentenceCase(title) + " [podcast on the Internet]. ";
+        if (container) { html += esc(titleCase(container)) + "; "; text += titleCase(container) + "; "; }
+        if (d) { html += d.y + " "; text += d.y + " "; }
+        html += "[cited " + cited + "]. "; text += "[cited " + cited + "]. ";
+        if (url) { html += "Available from: " + esc(url); text += "Available from: " + url; }
+      } else if (type === "film") {
+        html = (V ? esc(V) + ", director. " : "") + "<i>" + esc(titleCase(title)) + "</i> [film]. ";
+        text = (V ? V + ", director. " : "") + titleCase(title) + " [film]. ";
+        if (publisher) { html += esc(publisher) + "; "; text += publisher + "; "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "dissertation") {
+        html = vHead + "<i>" + esc(titleCase(title)) + "</i> [" + esc(degree || "dissertation") + "]. ";
+        text = vHeadT + titleCase(title) + " [" + (degree || "dissertation") + "]. ";
+        if (publisher) { html += esc(publisher) + "; "; text += publisher + "; "; }
+        if (d) { html += d.y + "."; text += d.y + "."; }
+      } else if (type === "newspaper") {
+        html = vHead + esc(sentenceCase(title)) + ". "; text = vHeadT + sentenceCase(title) + ". ";
+        if (container) { html += "<i>" + esc(titleCase(container)) + "</i>. "; text += titleCase(container) + ". "; }
+        if (d) { html += d.y + (d.m ? " " + MONV[d.m - 1] + " " + d.d : "") + ". "; text += d.y + (d.m ? " " + MONV[d.m - 1] + " " + d.d : "") + ". "; }
+        if (url) { html += "Available from: " + esc(url); text += "Available from: " + url; }
+      } else if (type === "report") {
+        html = vHead + "<i>" + esc(titleCase(title)) + "</i>. "; text = vHeadT + titleCase(title) + ". ";
+        if (publisher) { html += esc(publisher) + "; "; text += publisher + "; "; }
+        if (d) { html += d.y + ". "; text += d.y + ". "; }
+        if (reportno) { html += "Report No.: " + esc(reportno) + ". "; text += "Report No.: " + reportno + ". "; }
+        if (url) { html += "Available from: " + esc(url); text += "Available from: " + url; }
+      } else if (type === "conference") {
+        html = vHead + esc(sentenceCase(title)) + ". "; text = vHeadT + sentenceCase(title) + ". ";
+        if (container) { html += "In: <i>" + esc(titleCase(container)) + "</i>. "; text += "In: " + titleCase(container) + ". "; }
+        if (d) { html += d.y; text += d.y; }
+        if (pages) { html += ". p. " + esc(pages); text += ". p. " + pages; }
+        html += "."; text += ".";
+      }
+      html = "[1] " + html; text = "[1] " + text;
+      intext = "[1]";
     }
-    return { html: html.trim(), text: text.trim(), intext: intext, sort: sortKey };
+    return { html: html.trim(), text: text.trim(), intext: intext, sort: sortKey, style: style };
   }
   function update() {
-    ["website", "book", "journal", "video"].forEach(function (t) {
-      document.querySelectorAll(".type-" + t).forEach(function (el) { el.style.display = (t === type) ? "" : "none"; });
+    document.querySelectorAll(".form-grid .field").forEach(function (el) {
+      var typed = false, match = false;
+      for (var i = 0; i < el.classList.length; i++) {
+        if (el.classList[i].indexOf("type-") === 0) {
+          typed = true;
+          if (el.classList[i] === "type-" + type) match = true;
+        }
+      }
+      if (typed) el.style.display = match ? "" : "none";
     });
-    $("lbl-title").textContent = type === "book" ? "Book title" : type === "journal" ? "Article title" : type === "video" ? "Video title" : "Page title";
-    $("lbl-container").textContent = type === "journal" ? "Journal name" : "Website name";
+    var titles = { website: "Page title", book: "Book title", journal: "Article title", video: "Video title", podcast: "Episode title", film: "Film title", dissertation: "Thesis title", newspaper: "Article title", report: "Report title", conference: "Paper title" };
+    var containers = { website: "Website name", journal: "Journal name", podcast: "Podcast name", newspaper: "Newspaper name", conference: "Conference name" };
+    var publishers = { book: "Publisher", film: "Studio / distributor", dissertation: "University", report: "Organisation" };
+    var uploaders = { video: "Uploader / channel name", podcast: "Host / network" };
+    $("lbl-title").textContent = titles[type] || "Title";
+    if (containers[type]) $("lbl-container").textContent = containers[type];
+    if (publishers[type]) $("lbl-publisher").textContent = publishers[type];
+    if (uploaders[type]) $("lbl-uploader").textContent = uploaders[type];
+    $("lbl-intext").textContent = (style === "turabian") ? "Footnote: " : "In-text: ";
     var b = build();
     $("out-ref").innerHTML = b.html || "Start typing — your citation will appear here.";
     $("out-intext").textContent = b.intext;
@@ -511,10 +1022,11 @@
   segWire("style-seg", "style", function (v) { style = v; });
   segWire("type-seg", "type", function (v) { type = v; });
   $("add-author").addEventListener("click", addAuthorRow);
-  ["f-title","f-container","f-publisher","f-volume","f-issue","f-pages","f-doi","f-url","f-uploader","f-page","f-date","f-accessed"].forEach(function (id) {
+  ["f-title","f-container","f-publisher","f-volume","f-issue","f-pages","f-doi","f-url","f-uploader","f-page","f-date","f-accessed","f-degree","f-reportno"].forEach(function (id) {
     $(id).addEventListener("input", update);
     $(id).addEventListener("change", update);
   });
+  $("f-date").addEventListener("input", function () { lookupYear = null; });
   function copyRich(html, text, msg) {
     if (navigator.clipboard && window.ClipboardItem) {
       var item = new ClipboardItem({
@@ -531,34 +1043,250 @@
     var b = build();
     copyRich("<p style='padding-left:2em;text-indent:-2em'>" + b.html + "</p>", b.text, "Citation copied");
   });
+
+  /* ---- reference list: saved in localStorage, numbered styles keep citation order ---- */
+  var LIST_KEY = "t360:citation-list";
+  function saveList() {
+    try { localStorage.setItem(LIST_KEY, JSON.stringify(list.slice(0, 200))); } catch (e) {}
+  }
+  function loadList() {
+    try {
+      var saved = JSON.parse(localStorage.getItem(LIST_KEY) || "null");
+      if (Array.isArray(saved)) list = saved.filter(function (b) { return b && typeof b.text === "string" && typeof b.html === "string"; });
+    } catch (e) { list = []; }
+  }
+  function isNumbered(b) { return b.style === "ieee" || b.style === "vancouver"; }
+  function numberedList() {
+    var n = 0;
+    return list.map(function (b) {
+      if (!isNumbered(b)) return b;
+      n++;
+      return {
+        html: b.html.replace(/^\[1\]/, "[" + n + "]"),
+        text: b.text.replace(/^\[1\]/, "[" + n + "]"),
+        intext: b.intext, sort: b.sort, style: b.style
+      };
+    });
+  }
   $("add-list").addEventListener("click", function () {
     var b = build();
     if (!b.text) { T360.toast("Type the source details first"); return; }
+    if (list.length >= 200) { T360.toast("The list holds up to 200 sources"); return; }
     list.push(b);
-    list.sort(function (a, z) { return a.sort < z.sort ? -1 : a.sort > z.sort ? 1 : 0; });
+    if (!list.some(isNumbered)) list.sort(function (a, z) { return a.sort < z.sort ? -1 : a.sort > z.sort ? 1 : 0; });
+    saveList();
     renderList();
     T360.toast("Added to reference list");
   });
   function renderList() {
     $("list-wrap").classList.toggle("hidden", !list.length);
-    $("out-list").innerHTML = list.map(function (b, i) {
+    var shown = numberedList();
+    $("out-list").innerHTML = shown.map(function (b, i) {
       return '<div class="cite-list-item"><p class="cite-hang">' + b.html + '</p><button class="chip-btn" data-rm="' + i + '" aria-label="Remove">✕</button></div>';
     }).join("");
   }
   $("out-list").addEventListener("click", function (e) {
     var btn = e.target.closest("[data-rm]"); if (!btn) return;
     list.splice(+btn.getAttribute("data-rm"), 1);
+    saveList();
     renderList();
   });
   $("copy-list").addEventListener("click", function () {
     if (!list.length) return;
-    var html = list.map(function (b) { return "<p style='padding-left:2em;text-indent:-2em'>" + b.html + "</p>"; }).join("");
-    var text = list.map(function (b) { return b.text; }).join("\n\n");
+    var shown = numberedList();
+    var html = shown.map(function (b) { return "<p style='padding-left:2em;text-indent:-2em'>" + b.html + "</p>"; }).join("");
+    var text = shown.map(function (b) { return b.text; }).join("\n\n");
     copyRich(html, text, "Reference list copied");
   });
-  $("clear-list").addEventListener("click", function () { list = []; renderList(); });
+  $("clear-list").addEventListener("click", function () { list = []; saveList(); renderList(); });
 
+  /* ---- .docx export (same builder pattern as pdf-to-word) ---- */
+  function buildDocx(paras) {
+    var body = "";
+    paras.forEach(function (p) {
+      var ppr = p.pageBreakBefore ? "<w:pPr><w:pageBreakBefore/></w:pPr>" : "";
+      var runs = p.runs.map(function (r) {
+        var rpr = "";
+        if (r.bold || r.size) {
+          rpr = "<w:rPr>" + (r.bold ? "<w:b/>" : "") + (r.size ? "<w:sz w:val=\"" + (r.size * 2) + "\"/><w:szCs w:val=\"" + (r.size * 2) + "\"/>" : "") + "</w:rPr>";
+        }
+        return "<w:r>" + rpr + "<w:t xml:space=\"preserve\">" + esc(r.text) + "</w:t></w:r>";
+      }).join("");
+      body += "<w:p>" + ppr + runs + "</w:p>";
+    });
+    var xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
+      "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body>" + body +
+      "<w:sectPr><w:pgSz w:w=\"12240\" w:h=\"15840\"/><w:pgMar w:top=\"1440\" w:right=\"1440\" w:bottom=\"1440\" w:left=\"1440\"/></w:sectPr></w:body></w:document>";
+    var ct = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
+      "<Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\">" +
+      "<Default Extension=\"rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\"/>" +
+      "<Default Extension=\"xml\" ContentType=\"application/xml\"/>" +
+      "<Override PartName=\"/word/document.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml\"/></Types>";
+    var rels = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
+      "<Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\">" +
+      "<Relationship Id=\"rId1\" Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument\" Target=\"word/document.xml\"/></Relationships>";
+    var zip = new JSZip();
+    zip.file("[Content_Types].xml", ct);
+    zip.folder("_rels").file(".rels", rels);
+    zip.folder("word").file("document.xml", xml);
+    return zip.generateAsync({ type: "blob", mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
+  }
+  $("download-docx").addEventListener("click", function () {
+    if (!list.length) return;
+    if (typeof JSZip === "undefined") { T360.toast("The Word export library did not load — try refreshing the page"); return; }
+    var shown = numberedList();
+    var paras = [{ runs: [{ text: "References", bold: true, size: 16 }] }];
+    shown.forEach(function (b) { paras.push({ runs: [{ text: b.text }] }); });
+    buildDocx(paras).then(function (blob) {
+      T360.download(blob, "references.docx");
+      T360.toast("Bibliography downloaded");
+    }).catch(function () { T360.toast("Could not build the .docx file"); });
+  });
+
+  /* ---- DOI / ISBN / title lookups (Crossref + OpenLibrary, graceful failure) ---- */
+  var CROSSREF_MAIL = "mailto=hello@tools360pro.com";
+  function lookupStatus(msg) { $("lookup-status").textContent = msg; }
+  function fetchJson(url, timeoutMs) {
+    var ctrl = new AbortController();
+    var timer = setTimeout(function () { ctrl.abort(); }, timeoutMs || 10000);
+    return fetch(url, { signal: ctrl.signal }).then(function (res) {
+      clearTimeout(timer);
+      if (!res.ok) throw new Error("not-found");
+      return res.json();
+    }).catch(function (err) {
+      clearTimeout(timer);
+      throw err;
+    });
+  }
+  function setType(t) {
+    type = t;
+    $("type-seg").querySelectorAll("button").forEach(function (x) { x.classList.toggle("active", x.getAttribute("data-type") === t); });
+  }
+  function setAuthors(items) {
+    $("authors").innerHTML = "";
+    var list2 = (items || []).slice(0, 6);
+    if (!list2.length) list2 = [null];
+    list2.forEach(function (a) {
+      addAuthorRow();
+      var rows = document.querySelectorAll(".author-row");
+      var row = rows[rows.length - 1];
+      if (a) {
+        row.querySelector(".a-last").value = a.last || "";
+        row.querySelector(".a-first").value = a.first || "";
+      }
+    });
+  }
+  function crossrefDate(msg) {
+    var src = msg["published-print"] || msg["published-online"] || msg.issued || msg.created;
+    if (src && src["date-parts"] && src["date-parts"][0]) {
+      var p = src["date-parts"][0];
+      return { y: p[0], m: p[1] || null, d: p[2] || null };
+    }
+    return null;
+  }
+  function applyDateParts(dp) {
+    if (!dp) { lookupYear = null; $("f-date").value = ""; return; }
+    if (dp.m && dp.d) {
+      $("f-date").value = dp.y + "-" + String(dp.m).padStart(2, "0") + "-" + String(dp.d).padStart(2, "0");
+      lookupYear = null;
+    } else {
+      $("f-date").value = "";
+      lookupYear = dp.y;
+    }
+  }
+  function fillFromCrossref(msg) {
+    var t = msg.type || "";
+    var map = { "journal-article": "journal", "book": "book", "monograph": "book", "proceedings-article": "conference", "report": "report", "dissertation": "dissertation", "peer-review": "journal", "other": "journal" };
+    var newType = map[t] || ((msg["container-title"] && msg["container-title"].length) ? "journal" : "website");
+    setType(newType);
+    var authors = (msg.author || []).map(function (a) { return { last: a.family || "", first: a.given || "" }; }).filter(function (a) { return a.last; });
+    setAuthors(authors);
+    if (msg.title && msg.title[0]) $("f-title").value = msg.title[0];
+    if (msg["container-title"] && msg["container-title"][0]) $("f-container").value = msg["container-title"][0];
+    if (msg.publisher) $("f-publisher").value = msg.publisher;
+    if (msg.volume) $("f-volume").value = msg.volume;
+    if (msg.issue) $("f-issue").value = msg.issue;
+    if (msg.page) $("f-pages").value = msg.page;
+    if (msg.DOI) $("f-doi").value = msg.DOI;
+    if (msg.URL) $("f-url").value = msg.URL;
+    applyDateParts(crossrefDate(msg));
+    update();
+  }
+  $("lookup-doi").addEventListener("click", function () {
+    var doi = $("f-lookup").value.trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i, "");
+    $("lookup-results").innerHTML = "";
+    if (!doi) { lookupStatus("Type a DOI first — for example 10.1000/xyz123."); return; }
+    lookupStatus("Looking up the DOI…");
+    fetchJson("https://api.crossref.org/works/" + encodeURIComponent(doi) + "?" + CROSSREF_MAIL).then(function (data) {
+      if (!data || !data.message) throw new Error("not-found");
+      fillFromCrossref(data.message);
+      lookupStatus("Found it — the details are filled in below. Check them before you cite.");
+    }).catch(function (err) {
+      lookupStatus(err && err.name === "AbortError" ? "Crossref took too long to answer — check your connection and try again." : (err && err.message === "not-found" ? "Nothing found for that DOI — check it and try again." : "Could not reach Crossref — check your connection and try again."));
+    });
+  });
+  $("lookup-isbn").addEventListener("click", function () {
+    var isbn = $("f-lookup").value.replace(/[^0-9Xx]/g, "");
+    $("lookup-results").innerHTML = "";
+    if (!isbn) { lookupStatus("Type an ISBN first — 10 or 13 digits, hyphens are fine."); return; }
+    lookupStatus("Looking up the ISBN…");
+    fetchJson("https://openlibrary.org/isbn/" + encodeURIComponent(isbn) + ".json").then(function (data) {
+      if (!data || !data.title) throw new Error("not-found");
+      setType("book");
+      $("f-title").value = data.title || "";
+      if (data.publishers && data.publishers[0]) $("f-publisher").value = data.publishers[0];
+      var ym = String(data.publish_date || "").match(/\d{4}/);
+      if (ym) { $("f-date").value = ""; lookupYear = parseInt(ym[0], 10); }
+      var keys = (data.authors || []).slice(0, 3).map(function (a) { return a.key; }).filter(Boolean);
+      if (!keys.length) { setAuthors([]); update(); lookupStatus("Found the book — the details are filled in below. Check them before you cite."); return; }
+      Promise.all(keys.map(function (k) {
+        return fetchJson("https://openlibrary.org" + k + ".json", 8000).catch(function () { return null; });
+      })).then(function (results) {
+        var authors = results.filter(Boolean).map(function (a) {
+          var parts = String(a.name || "").trim().split(/\s+/);
+          var last = parts.length > 1 ? parts.pop() : (parts[0] || "");
+          return { last: last, first: parts.join(" ") };
+        }).filter(function (a) { return a.last; });
+        setAuthors(authors);
+        update();
+        lookupStatus("Found the book — the details are filled in below. Check them before you cite.");
+      });
+    }).catch(function (err) {
+      lookupStatus(err && err.name === "AbortError" ? "OpenLibrary took too long to answer — check your connection and try again." : (err && err.message === "not-found" ? "Nothing found for that ISBN — check it and try again." : "Could not reach OpenLibrary — check your connection and try again."));
+    });
+  });
+  $("lookup-title").addEventListener("click", function () {
+    var q = $("f-lookup").value.trim();
+    $("lookup-results").innerHTML = "";
+    if (!q) { lookupStatus("Type a title first."); return; }
+    lookupStatus("Searching Crossref…");
+    var url = "https://api.crossref.org/works?query.bibliographic=" + encodeURIComponent(q) + "&rows=5&select=DOI,title,author,published-print,published-online,issued,container-title,type,volume,issue,page,publisher,URL&" + CROSSREF_MAIL;
+    fetchJson(url).then(function (data) {
+      var items = (data && data.message && data.message.items) || [];
+      if (!items.length) { lookupStatus("No matches for that title — try different words, or type the details by hand."); return; }
+      lookupStatus("Pick the right match — the details fill in when you tap one.");
+      $("lookup-results").innerHTML = items.map(function (it, i) {
+        var t = (it.title && it.title[0]) || "Untitled";
+        var au = (it.author || []).slice(0, 2).map(function (a) { return a.family || ""; }).filter(Boolean).join(", ");
+        var dp = crossrefDate(it);
+        var yr = dp ? dp.y : "";
+        return '<button class="lookup-result" type="button" data-result="' + i + '">' + esc(t) + '<br><small>' + esc([au, yr].filter(Boolean).join(" · ")) + '</small></button>';
+      }).join("");
+      $("lookup-results").querySelectorAll("[data-result]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          fillFromCrossref(items[+btn.getAttribute("data-result")]);
+          $("lookup-results").innerHTML = "";
+          lookupStatus("Details filled in — check them before you cite.");
+        });
+      });
+    }).catch(function (err) {
+      lookupStatus(err && err.name === "AbortError" ? "Crossref took too long to answer — check your connection and try again." : "Could not reach Crossref — check your connection and try again.");
+    });
+  });
+
+  loadList();
   addAuthorRow();
+  renderList();
   update();
 })();
 </script>
