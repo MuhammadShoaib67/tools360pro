@@ -119,7 +119,7 @@
     { slug: "ai-transcriber",   name: "AI Audio Transcriber", cat: "ai", desc: "Transcribe audio and video to text with Whisper AI, in your browser." },
     { slug: "ai-photo-enhancer", name: "AI Photo Enhancer", cat: "ai", desc: "Sharpen photos and lift dull colours with AI, in your browser." },
     { slug: "ai-object-remover", name: "AI Object Remover", cat: "ai", desc: "Remove unwanted objects and people from photos with AI, in your browser." },
-    { slug: "citation-generator", name: "Citation Generator (APA & MLA)", cat: "text", desc: "Format APA 7 and MLA 9 references and in-text citations." },
+    { slug: "citation-generator", name: "Citation Generator (APA, MLA & Chicago)", cat: "text", desc: "Format APA 7, MLA 9 and Chicago 17th references and in-text citations." },
     /* Converters */
     { slug: "unit-converter",   name: "Unit Converter",   cat: "converters", desc: "Convert length, weight, temperature, area, speed and more." },
     { slug: "time-zone-converter", name: "Time Zone Converter", cat: "converters", desc: "Convert times between world time zones." },
