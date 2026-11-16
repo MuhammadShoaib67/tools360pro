@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 70 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 75 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -56,6 +56,9 @@ Count, convert and clean up text. Category page: https://tools360pro.com/text-to
 - [Text Summarizer](https://tools360pro.com/tools/text-summarizer.html): Shorten any text to its key sentences — extractive, free, no word limit.
 - [Text to Handwriting Converter](https://tools360pro.com/tools/text-to-handwriting.html): Turn typed text into handwritten notebook pages.
 - [Flashcard Maker](https://tools360pro.com/tools/flashcard-maker.html): Make flashcards, flip through them and review on a spaced-repetition schedule.
+- [Words to Pages Converter](https://tools360pro.com/tools/words-to-pages.html): Convert words to pages or pages to words — font, size and spacing included.
+- [Title Page Generator](https://tools360pro.com/tools/title-page-generator.html): Build a title page in APA 7, MLA 9, Chicago, Harvard or IEEE — download as .docx.
+- [Text Similarity Checker](https://tools360pro.com/tools/text-similarity-checker.html): Compare your text with up to 5 pasted sources — similarity % and highlights.
 
 ## Converters
 
@@ -113,6 +116,8 @@ QR codes, passwords and palettes. Category page: https://tools360pro.com/generat
 - [Voice Recorder](https://tools360pro.com/tools/voice-recorder.html): Record your voice in the browser and download the audio.
 - [Pomodoro Timer](https://tools360pro.com/tools/pomodoro-timer.html): Focus in 25-minute sessions with breaks — tasks and today's count saved.
 - [Resume Builder](https://tools360pro.com/tools/resume-builder.html): Build an ATS-friendly resume with live preview — templates, reorderable sections, PDF export.
+- [Random Group Generator](https://tools360pro.com/tools/random-group-generator.html): Split names into fair, balanced random groups for class or teams.
+- [Typing Speed Test](https://tools360pro.com/tools/typing-test.html): Measure typing speed: net and gross WPM, accuracy, CPM and a speed graph.
 
 ## Guides
 
