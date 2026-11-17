@@ -5,8 +5,10 @@
    (light #FAFAFA / dark #0A0A0A). No rainbow, no per-category
    colours in the base look. Colour appears ONLY on hover:
    each category chip/card lights up in its own vivid hover
-   colour (--hov-*). Dark theme via [data-theme="dark"].
-   Light is the default (:root).
+   colour (--hov-*). Inside tool grids each card hovers in its
+   own colour, cycling 12 vivid shades by position (--cyc-*);
+   Popular keeps per-category colours. Dark theme via
+   [data-theme="dark"]. Light is the default (:root).
    ============================================================ */
 @property --ang { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
 
@@ -62,6 +64,21 @@
   --hov-calculators:#EAB308;
   --hov-developer:#6366F1;
   --hov-generators:#EC4899;
+  --hov-popular:#D946EF;
+  /* Per-tool hover cycle — 12 vivid shades, cycled by position
+     inside each tool grid so neighbouring cards never match. */
+  --cyc-1:#DC2626;
+  --cyc-2:#EA580C;
+  --cyc-3:#D97706;
+  --cyc-4:#65A30D;
+  --cyc-5:#16A34A;
+  --cyc-6:#0D9488;
+  --cyc-7:#0891B2;
+  --cyc-8:#2563EB;
+  --cyc-9:#4F46E5;
+  --cyc-10:#9333EA;
+  --cyc-11:#C026D3;
+  --cyc-12:#DB2777;
   --font:"Inter","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
   --mono:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;
 }
@@ -121,6 +138,34 @@
 .p7-chip[data-cat="calculators"]:hover,.p7-chip[data-cat="calculators"]:focus-visible,a.tool-card[data-cat="calculators"]:hover,.cat-card[data-cat="calculators"]:hover{--acc:var(--hov-calculators)}
 .p7-chip[data-cat="developer"]:hover,.p7-chip[data-cat="developer"]:focus-visible,a.tool-card[data-cat="developer"]:hover,.cat-card[data-cat="developer"]:hover{--acc:var(--hov-developer)}
 .p7-chip[data-cat="generators"]:hover,.p7-chip[data-cat="generators"]:focus-visible,a.tool-card[data-cat="generators"]:hover,.cat-card[data-cat="generators"]:hover{--acc:var(--hov-generators)}
+/* ---------- Per-tool hover cycle ---------- */
+/* Inside every tool grid, each card hovers in its own colour,
+   cycling 12 vivid shades by position, so no two neighbouring
+   cards ever share a colour. Beats the per-category rules above
+   on specificity inside grids. */
+.tool-grid a.tool-card:nth-child(12n+1):hover{--acc:var(--cyc-1)}
+.tool-grid a.tool-card:nth-child(12n+2):hover{--acc:var(--cyc-2)}
+.tool-grid a.tool-card:nth-child(12n+3):hover{--acc:var(--cyc-3)}
+.tool-grid a.tool-card:nth-child(12n+4):hover{--acc:var(--cyc-4)}
+.tool-grid a.tool-card:nth-child(12n+5):hover{--acc:var(--cyc-5)}
+.tool-grid a.tool-card:nth-child(12n+6):hover{--acc:var(--cyc-6)}
+.tool-grid a.tool-card:nth-child(12n+7):hover{--acc:var(--cyc-7)}
+.tool-grid a.tool-card:nth-child(12n+8):hover{--acc:var(--cyc-8)}
+.tool-grid a.tool-card:nth-child(12n+9):hover{--acc:var(--cyc-9)}
+.tool-grid a.tool-card:nth-child(12n+10):hover{--acc:var(--cyc-10)}
+.tool-grid a.tool-card:nth-child(12n+11):hover{--acc:var(--cyc-11)}
+.tool-grid a.tool-card:nth-child(12n):hover{--acc:var(--cyc-12)}
+/* Popular keeps its per-category hover colours — it already mixes
+   categories, so its cards are colourful as-is. These beat the
+   cycle above on specificity. */
+.p7-world[data-cat="popular"] a.tool-card[data-cat="pdf"]:hover{--acc:var(--hov-pdf)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="image"]:hover{--acc:var(--hov-image)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="ai"]:hover{--acc:var(--hov-ai)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="text"]:hover{--acc:var(--hov-text)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="converters"]:hover{--acc:var(--hov-converters)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="calculators"]:hover{--acc:var(--hov-calculators)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="developer"]:hover{--acc:var(--hov-developer)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="generators"]:hover{--acc:var(--hov-generators)}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -144,7 +189,7 @@ img,svg{display:block}
 .container{max-width:1160px;margin:0 auto;padding:0 20px}
 .hidden{display:none !important}
 .mono{font-family:var(--mono)}
-::selection{background:#7c3aed;color:#fff}
+::selection{background:color-mix(in srgb,var(--text) 88%,transparent);color:var(--bg)}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:6px}
 
 /* ---------- Header (floating glass pill) ---------- */
@@ -167,9 +212,20 @@ img,svg{display:block}
 .main-nav::-webkit-scrollbar{display:none}
 .main-nav a{
   padding:7px 11px;border-radius:8px;color:var(--muted);font-size:.92rem;font-weight:600;white-space:nowrap;
-  transition:color .15s ease,background .15s ease;
+  transition:color .15s ease,background .15s ease,box-shadow .15s ease;
 }
 .main-nav a:hover{color:var(--text);background:var(--surface-2)}
+/* Header nav: each item glows in its own category colour on hover
+   (Popular gets its own magenta). Focus-visible matches hover. */
+.main-nav a[href$="#popular"]:hover,.main-nav a[href$="#popular"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-popular) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-popular),inset 0 0 0 1px color-mix(in srgb,var(--hov-popular) 45%,transparent)}
+.main-nav a[href$="#pdf"]:hover,.main-nav a[href$="#pdf"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-pdf) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-pdf),inset 0 0 0 1px color-mix(in srgb,var(--hov-pdf) 45%,transparent)}
+.main-nav a[href$="#image"]:hover,.main-nav a[href$="#image"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-image) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-image),inset 0 0 0 1px color-mix(in srgb,var(--hov-image) 45%,transparent)}
+.main-nav a[href$="#ai"]:hover,.main-nav a[href$="#ai"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-ai) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-ai),inset 0 0 0 1px color-mix(in srgb,var(--hov-ai) 45%,transparent)}
+.main-nav a[href$="#text"]:hover,.main-nav a[href$="#text"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-text) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-text),inset 0 0 0 1px color-mix(in srgb,var(--hov-text) 45%,transparent)}
+.main-nav a[href$="#converters"]:hover,.main-nav a[href$="#converters"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-converters) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-converters),inset 0 0 0 1px color-mix(in srgb,var(--hov-converters) 45%,transparent)}
+.main-nav a[href$="#calculators"]:hover,.main-nav a[href$="#calculators"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-calculators) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-calculators),inset 0 0 0 1px color-mix(in srgb,var(--hov-calculators) 45%,transparent)}
+.main-nav a[href$="#developer"]:hover,.main-nav a[href$="#developer"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-developer) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-developer),inset 0 0 0 1px color-mix(in srgb,var(--hov-developer) 45%,transparent)}
+.main-nav a[href$="#generators"]:hover,.main-nav a[href$="#generators"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-generators) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-generators),inset 0 0 0 1px color-mix(in srgb,var(--hov-generators) 45%,transparent)}
 .header-actions{display:flex;align-items:center;gap:8px;flex:none}
 .search-btn{
   display:flex;align-items:center;gap:9px;background:var(--surface-2);border:1px solid var(--border);
@@ -852,8 +908,22 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 .p7-world-icon{width:56px;height:56px;border-radius:17px}
 .p7-world-icon svg{width:30px;height:30px}
 .p7-world-titles{min-width:0;text-align:center}
-.p7-world-titles h2{margin:0;font-size:clamp(1.45rem,2.6vw,1.85rem);letter-spacing:-.025em;line-height:1.1;font-weight:800}
-.p7-world-titles h2::after{content:"";display:block;width:64px;height:4px;border-radius:99px;background:var(--brand-grad);margin:10px auto 0}
+.p7-world-titles h2{margin:0;font-size:clamp(1.45rem,2.6vw,1.85rem);letter-spacing:-.025em;line-height:1.1;font-weight:800;transition:color .18s ease}
+.p7-world-titles h2::after{content:"";display:block;width:64px;height:4px;border-radius:99px;background:var(--brand-grad);margin:10px auto 0;transition:background .18s ease}
+/* Category headings: base stays monochrome, but hovering a heading
+   lights up its text, icon and underline in that category's vivid
+   colour (the icon and count pill follow --acc automatically). */
+.p7-world[data-cat="popular"] .p7-world-head:hover{--acc:var(--hov-popular)}
+.p7-world[data-cat="pdf"] .p7-world-head:hover{--acc:var(--hov-pdf)}
+.p7-world[data-cat="image"] .p7-world-head:hover{--acc:var(--hov-image)}
+.p7-world[data-cat="ai"] .p7-world-head:hover{--acc:var(--hov-ai)}
+.p7-world[data-cat="text"] .p7-world-head:hover{--acc:var(--hov-text)}
+.p7-world[data-cat="converters"] .p7-world-head:hover{--acc:var(--hov-converters)}
+.p7-world[data-cat="calculators"] .p7-world-head:hover{--acc:var(--hov-calculators)}
+.p7-world[data-cat="developer"] .p7-world-head:hover{--acc:var(--hov-developer)}
+.p7-world[data-cat="generators"] .p7-world-head:hover{--acc:var(--hov-generators)}
+.p7-world-head:hover .p7-world-titles h2{color:var(--acc)}
+.p7-world-head:hover .p7-world-titles h2::after{background:var(--acc)}
 .p7-world-titles p{margin:10px 0 0;color:var(--muted);font-size:.97rem}
 .p7-world-count{
   margin-left:0;flex:none;font-size:.76rem;font-weight:850;letter-spacing:.05em;text-transform:uppercase;
