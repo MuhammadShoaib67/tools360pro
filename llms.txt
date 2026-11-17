@@ -132,6 +132,18 @@ QR codes, passwords and palettes. Category page: https://tools360pro.com/generat
 
 ## Guides
 
+- [How to Convert PNG to JPG](https://tools360pro.com/guides/how-to-convert-png-to-jpg.html)
+- [How to Convert PNG to WebP](https://tools360pro.com/guides/how-to-convert-png-to-webp.html)
+- [How to Convert JPG to PNG](https://tools360pro.com/guides/how-to-convert-jpg-to-png.html)
+- [How to Convert JPG to WebP](https://tools360pro.com/guides/how-to-convert-jpg-to-webp.html)
+- [How to Convert WebP to PNG](https://tools360pro.com/guides/how-to-convert-webp-to-png.html)
+- [How to Convert WebP to JPG](https://tools360pro.com/guides/how-to-convert-webp-to-jpg.html)
+- [How to Convert AVIF to JPG](https://tools360pro.com/guides/how-to-convert-avif-to-jpg.html)
+- [How to Convert AVIF to PNG](https://tools360pro.com/guides/how-to-convert-avif-to-png.html)
+- [How to Convert BMP to PNG](https://tools360pro.com/guides/how-to-convert-bmp-to-png.html)
+- [How to Convert SVG to PNG](https://tools360pro.com/guides/how-to-convert-svg-to-png.html)
+- [How to Convert HEIC to JPG on Windows 10](https://tools360pro.com/guides/how-to-convert-heic-to-jpg-on-windows-10.html)
+- [How to Convert PDF to Word on Mac](https://tools360pro.com/guides/how-to-convert-pdf-to-word-on-mac.html)
 - [How to Convert HEIC to JPG on Android](https://tools360pro.com/guides/how-to-convert-heic-to-jpg-on-android.html)
 - [How to Convert HEIC to JPG on Mac](https://tools360pro.com/guides/how-to-convert-heic-to-jpg-on-mac.html)
 - [How to Convert HEIC to JPG on iPhone](https://tools360pro.com/guides/how-to-convert-heic-to-jpg-on-iphone.html)
