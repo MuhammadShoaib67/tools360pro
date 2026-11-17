@@ -198,6 +198,15 @@ QR codes, passwords and palettes. Category page: https://tools360pro.com/generat
 
 ## Guides
 
+- [How to Check Password Strength (Score, Crack Time and Fixes)](https://tools360pro.com/guides/how-to-check-password-strength.html)
+- [How to Scan a QR Code from an Image (No Camera Needed)](https://tools360pro.com/guides/how-to-scan-a-qr-code.html)
+- [How to Create a Username (Ideas, Styles and Checks)](https://tools360pro.com/guides/how-to-create-a-username.html)
+- [How to Generate a Random Name (Characters, Testing, Placeholders)](https://tools360pro.com/guides/how-to-generate-a-random-name.html)
+- [How to Use a Color Picker (Eyedropper, Image and Palette)](https://tools360pro.com/guides/how-to-use-a-color-picker.html)
+- [How to Generate Hashtags (Topic, Platform and Counts)](https://tools360pro.com/guides/how-to-generate-hashtags.html)
+- [How to Use a Wheel Spinner (Pick a Random Winner)](https://tools360pro.com/guides/how-to-use-a-wheel-spinner.html)
+- [How to Roll Dice Online (d4 to d20, Totals and History)](https://tools360pro.com/guides/how-to-roll-dice-online.html)
+- [How to Flip a Coin Online (Heads or Tails, Fairly)](https://tools360pro.com/guides/how-to-flip-a-coin-online.html)
 - [How to Calculate a Discount (Sale Price Formula)](https://tools360pro.com/guides/how-to-calculate-a-discount.html)
 - [How to Calculate Percentage Change (Increase and Decrease)](https://tools360pro.com/guides/how-to-calculate-percentage-change.html)
 - [How to Calculate Meeting Cost (The Real Price of a Meeting)](https://tools360pro.com/guides/how-to-calculate-meeting-cost.html)
