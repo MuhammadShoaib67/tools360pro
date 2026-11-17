@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 106 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 114 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -130,6 +130,14 @@ JSON, Base64, JWT, CSS and regex. Category page: https://tools360pro.com/develop
 - [Unix Timestamp Converter](https://tools360pro.com/tools/timestamp-converter.html): Convert Unix timestamps to dates and back, with a live clock.
 - [Diff Checker](https://tools360pro.com/tools/diff-checker.html): Compare two texts line by line and highlight the changes.
 - [Hash Generator](https://tools360pro.com/tools/hash-generator.html): Calculate MD5, SHA-1, SHA-256 and SHA-512 hashes.
+- [CSS Minifier](https://tools360pro.com/tools/css-minifier.html): Minify CSS: strip comments and whitespace, see bytes saved.
+- [HTML Minifier](https://tools360pro.com/tools/html-minifier.html): Minify HTML: strip comments, collapse whitespace, keep code blocks safe.
+- [HTML Formatter](https://tools360pro.com/tools/html-formatter.html): Beautify HTML with clean indentation, one element per line.
+- [XML Formatter & Validator](https://tools360pro.com/tools/xml-formatter.html): Format XML with indentation and validate it, with clear errors.
+- [Markdown to HTML Converter](https://tools360pro.com/tools/markdown-to-html.html): Convert Markdown to HTML in your browser, with a live preview.
+- [HTML to Markdown Converter](https://tools360pro.com/tools/html-to-markdown.html): Convert HTML pages into clean Markdown, ready for docs and CMS.
+- [JSON to CSV Converter](https://tools360pro.com/tools/json-csv.html): Convert a JSON array of objects into a CSV spreadsheet file.
+- [CSV to JSON Converter](https://tools360pro.com/tools/csv-json.html): Convert CSV rows into JSON objects, with quoted-field support.
 
 ## Generators
 
