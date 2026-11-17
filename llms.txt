@@ -142,6 +142,16 @@ QR codes, passwords and palettes. Category page: https://tools360pro.com/generat
 
 ## Guides
 
+- [How to Rotate an Image](https://tools360pro.com/guides/how-to-rotate-an-image.html)
+- [How to Flip an Image](https://tools360pro.com/guides/how-to-flip-an-image.html)
+- [How to Adjust Image Brightness](https://tools360pro.com/guides/how-to-adjust-image-brightness.html)
+- [How to Adjust Image Contrast](https://tools360pro.com/guides/how-to-adjust-image-contrast.html)
+- [How to Adjust Image Saturation](https://tools360pro.com/guides/how-to-adjust-image-saturation.html)
+- [How to Convert an Image to Grayscale](https://tools360pro.com/guides/how-to-convert-image-to-grayscale.html)
+- [How to Blur an Image](https://tools360pro.com/guides/how-to-blur-an-image.html)
+- [How to Enlarge an Image](https://tools360pro.com/guides/how-to-enlarge-an-image.html)
+- [How to Crop an Image into a Circle](https://tools360pro.com/guides/how-to-crop-an-image-into-a-circle.html)
+- [How to Make an Image Square](https://tools360pro.com/guides/how-to-make-an-image-square.html)
 - [How to Convert PNG to JPG](https://tools360pro.com/guides/how-to-convert-png-to-jpg.html)
 - [How to Convert PNG to WebP](https://tools360pro.com/guides/how-to-convert-png-to-webp.html)
 - [How to Convert JPG to PNG](https://tools360pro.com/guides/how-to-convert-jpg-to-png.html)
