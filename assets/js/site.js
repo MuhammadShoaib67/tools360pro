@@ -153,6 +153,14 @@
     "gpa-calculator": ic('<path d="M2.5 9.3L12 5l9.5 4.3L12 13.6z"/><path d="M6.4 11.4v4.1c0 1.3 2.5 2.6 5.6 2.6s5.6-1.3 5.6-2.6v-4.1M21.5 9.3v4.7"/>'),
     "final-grade-calculator": ic('<circle cx="12" cy="12" r="9"/><path d="M8.5 8.5l7 7"/><circle cx="9" cy="9" r="1.1"/><circle cx="15" cy="15" r="1.1"/>'),
     "scientific-calculator": ic('<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8.5 7.5h7"/><path d="M9 12h.01M12 12h.01M15 12h.01M9 15.5h.01M12 15.5h.01M15 15.5h.01"/>'),
+    "discount-calculator":   ic('<path d="M20.59 13.41 11 3H4v7l9.59 9.59a2 2 0 0 0 2.82 0l4.18-4.18a2 2 0 0 0 0-2.82z"/><circle cx="7.5" cy="7.5" r="1.2"/>'),
+    "percentage-change":     ic('<path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/>'),
+    "meeting-cost-calculator": ic('<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.2 3.4-5 6.5-5s5.7 1.8 6.5 5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M17.5 15.4c2 .6 3.3 2.1 3.9 4.6"/>'),
+    "subscription-cost-calculator": ic('<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/>'),
+    "sleep-cycle-calculator": ic('<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>'),
+    "emi-calculator":        ic('<circle cx="12" cy="12" r="9"/><path d="M12 6.5v11M15 8.5c-.6-1-1.7-1.5-3-1.5-1.7 0-3 .9-3 2.2 0 3.1 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.4 0-2.5-.6-3-1.6"/>'),
+    "countdown":             ic('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/>'),
+    "stopwatch":             ic('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M10 2h4"/><path d="M12 2v3"/>'),
     "soon":             ic('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),
     "popular":          ic('<path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1-5.4-3-5.4 3 1.1-6.1L3.2 9.4l6.1-.8z"/>')
   };
@@ -297,7 +305,15 @@
     { slug: "compound-interest-calculator", name: "Compound Interest Calculator", cat: "calculators", desc: "See how savings grow with compound interest over time." },
     { slug: "gpa-calculator",    name: "GPA Calculator",    cat: "calculators", desc: "Work out your GPA from grades and credit hours." },
     { slug: "final-grade-calculator", name: "Final Grade Calculator", cat: "calculators", desc: "Find out what score you need on the final to reach your target grade." },
-    { slug: "scientific-calculator", name: "Scientific Calculator", cat: "calculators", desc: "Trig, logs, powers and factorials with a DEG/RAD toggle — type or tap the keypad." }
+    { slug: "scientific-calculator", name: "Scientific Calculator", cat: "calculators", desc: "Trig, logs, powers and factorials with a DEG/RAD toggle — type or tap the keypad." },
+    { slug: "discount-calculator",       name: "Discount Calculator",           cat: "calculators", desc: "Work out sale prices: enter a price and discount percent to see what you pay and what you save." },
+    { slug: "percentage-change",         name: "Percentage Change Calculator",  cat: "calculators", desc: "Find the percentage increase or decrease between two numbers." },
+    { slug: "meeting-cost-calculator",   name: "Meeting Cost Calculator",       cat: "calculators", desc: "See what a meeting really costs: people, hourly rate and duration." },
+    { slug: "subscription-cost-calculator", name: "Subscription Cost Calculator",  cat: "calculators", desc: "Add up what your subscriptions cost per month, per year and over 5 years." },
+    { slug: "sleep-cycle-calculator",    name: "Sleep Cycle Calculator",        cat: "calculators", desc: "Find the best times to wake up or go to bed, in 90-minute sleep cycles." },
+    { slug: "emi-calculator",            name: "EMI Calculator",                cat: "calculators", desc: "Work out your monthly EMI, total interest and a full amortisation schedule." },
+    { slug: "countdown",                 name: "Countdown Timer",               cat: "calculators", desc: "Count down to any date and time, live in your browser tab." },
+    { slug: "stopwatch",                 name: "Stopwatch",                     cat: "calculators", desc: "A free online stopwatch with laps and millisecond display." }
   ];
   var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator", "sign-pdf", "barcode-generator", "jpg-to-pdf"];
 
