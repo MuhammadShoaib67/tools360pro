@@ -283,12 +283,12 @@
     if (header) {
       var nav = '<a href="' + BASE + 'index.html#popular">Popular</a>' + CATEGORIES.map(function (c) {
         return '<a href="' + BASE + "index.html#" + c.id + '">' + c.name.replace(" Tools", "") + "</a>";
-      }).join("");
+      }).join("") + '<a href="' + BASE + 'guides/">Guides</a>';
       header.className = "site-header";
       header.innerHTML =
         '<div class="container header-inner">' +
           '<a class="logo" href="' + BASE + 'index.html" aria-label="Tools360Pro home">' + LOGO_SVG + '<span>Tools<span class="logo-num">360</span>Pro</span></a>' +
-          '<nav class="main-nav" aria-label="Tool categories">' + nav + "</nav>" +
+          '<nav class="main-nav" aria-label="Main navigation">' + nav + "</nav>" +
           '<div class="header-actions">' +
             '<button class="search-btn" id="hdr-search" type="button" aria-label="Search tools">' + searchSVG + '<span class="sb-label">Search tools…</span><span class="spacer"></span><span class="kbd">Ctrl K</span></button>' +
             '<button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">' + (currentTheme() === "dark" ? sunSVG : moonSVG) + "</button>" +
