@@ -2,12 +2,12 @@
 /* ============================================================
    Tools360Pro — design system
    Palette: "Unified Mono" — monochrome black & white base
-   (light #FAFAFA / dark #0A0A0A). No rainbow, no per-category
-   colours in the base look. Colour appears ONLY on hover:
-   each category chip/card lights up in its own vivid hover
-   colour (--hov-*). Inside tool grids each card hovers in its
-   own colour, cycling 12 vivid shades by position (--cyc-*);
-   Popular keeps per-category colours. Dark theme via
+   (light #FAFAFA / dark #0A0A0A). Category headings and tool
+   icons wear their vivid colours permanently (--hov-* /
+   --cyc-*); card borders and glows appear ONLY on hover.
+   Inside tool grids each card hovers in its own colour,
+   cycling 12 vivid shades by position (--cyc-*); Popular
+   keeps per-category colours. Dark theme via
    [data-theme="dark"]. Light is the default (:root).
    ============================================================ */
 @property --ang { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
@@ -54,19 +54,22 @@
   --radius:18px;
   --radius-sm:11px;
   --acc:var(--brand-1);
-  /* Hover colours — vivid per-category accents, shown ONLY on hover.
-     The base look stays monochrome; hovering a chip/card lights it up. */
+  /* Hover colours — vivid per-category accents: permanent on
+     category headings, shown on hover for chips/cards/nav.
+     Light-theme values are the darker, readable shades; the
+     dark theme below restores the brighter ones. */
   --hov-pdf:#E11D48;
-  --hov-image:#F97316;
+  --hov-image:#EA580C;
   --hov-ai:#8B5CF6;
-  --hov-text:#10B981;
-  --hov-converters:#0EA5E9;
-  --hov-calculators:#EAB308;
+  --hov-text:#059669;
+  --hov-converters:#0284C7;
+  --hov-calculators:#CA8A04;
   --hov-developer:#6366F1;
   --hov-generators:#EC4899;
   --hov-popular:#D946EF;
   /* Per-tool hover cycle — 12 vivid shades, cycled by position
-     inside each tool grid so neighbouring cards never match. */
+     inside each tool grid so neighbouring cards never match.
+     Tool icons wear their cycle colour permanently. */
   --cyc-1:#DC2626;
   --cyc-2:#EA580C;
   --cyc-3:#D97706;
@@ -116,6 +119,11 @@
   --cat-calculators:#E5E7EB;
   --cat-developer:#F3F4F6;
   --cat-generators:#D4D4D4;
+  /* Hover colours: brighter shades on dark backgrounds. */
+  --hov-image:#F97316;
+  --hov-text:#10B981;
+  --hov-converters:#0EA5E9;
+  --hov-calculators:#EAB308;
 }
 [data-cat="pdf"]{--acc:var(--cat-pdf)}
 [data-cat="image"]{--acc:var(--cat-image)}
@@ -166,6 +174,31 @@
 .p7-world[data-cat="popular"] a.tool-card[data-cat="calculators"]:hover{--acc:var(--hov-calculators)}
 .p7-world[data-cat="popular"] a.tool-card[data-cat="developer"]:hover{--acc:var(--hov-developer)}
 .p7-world[data-cat="popular"] a.tool-card[data-cat="generators"]:hover{--acc:var(--hov-generators)}
+/* ---------- Permanent icon colours ---------- */
+/* Each tool card's icon permanently wears its hover-cycle colour
+   (icon colour = hover colour). Only the icon is coloured: the
+   card's border and glow still appear on hover only. */
+.tool-grid a.tool-card:nth-child(12n+1) .tool-icon{--acc:var(--cyc-1)}
+.tool-grid a.tool-card:nth-child(12n+2) .tool-icon{--acc:var(--cyc-2)}
+.tool-grid a.tool-card:nth-child(12n+3) .tool-icon{--acc:var(--cyc-3)}
+.tool-grid a.tool-card:nth-child(12n+4) .tool-icon{--acc:var(--cyc-4)}
+.tool-grid a.tool-card:nth-child(12n+5) .tool-icon{--acc:var(--cyc-5)}
+.tool-grid a.tool-card:nth-child(12n+6) .tool-icon{--acc:var(--cyc-6)}
+.tool-grid a.tool-card:nth-child(12n+7) .tool-icon{--acc:var(--cyc-7)}
+.tool-grid a.tool-card:nth-child(12n+8) .tool-icon{--acc:var(--cyc-8)}
+.tool-grid a.tool-card:nth-child(12n+9) .tool-icon{--acc:var(--cyc-9)}
+.tool-grid a.tool-card:nth-child(12n+10) .tool-icon{--acc:var(--cyc-10)}
+.tool-grid a.tool-card:nth-child(12n+11) .tool-icon{--acc:var(--cyc-11)}
+.tool-grid a.tool-card:nth-child(12n) .tool-icon{--acc:var(--cyc-12)}
+/* Popular icons wear their category colour (their hover colour). */
+.p7-world[data-cat="popular"] a.tool-card[data-cat="pdf"] .tool-icon{--acc:var(--hov-pdf)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="image"] .tool-icon{--acc:var(--hov-image)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="ai"] .tool-icon{--acc:var(--hov-ai)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="text"] .tool-icon{--acc:var(--hov-text)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="converters"] .tool-icon{--acc:var(--hov-converters)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="calculators"] .tool-icon{--acc:var(--hov-calculators)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="developer"] .tool-icon{--acc:var(--hov-developer)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="generators"] .tool-icon{--acc:var(--hov-generators)}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -910,20 +943,31 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 .p7-world-titles{min-width:0;text-align:center}
 .p7-world-titles h2{margin:0;font-size:clamp(1.45rem,2.6vw,1.85rem);letter-spacing:-.025em;line-height:1.1;font-weight:800;transition:color .18s ease}
 .p7-world-titles h2::after{content:"";display:block;width:64px;height:4px;border-radius:99px;background:var(--brand-grad);margin:10px auto 0;transition:background .18s ease}
-/* Category headings: base stays monochrome, but hovering a heading
-   lights up its text, icon and underline in that category's vivid
-   colour (the icon and count pill follow --acc automatically). */
-.p7-world[data-cat="popular"] .p7-world-head:hover{--acc:var(--hov-popular)}
-.p7-world[data-cat="pdf"] .p7-world-head:hover{--acc:var(--hov-pdf)}
-.p7-world[data-cat="image"] .p7-world-head:hover{--acc:var(--hov-image)}
-.p7-world[data-cat="ai"] .p7-world-head:hover{--acc:var(--hov-ai)}
-.p7-world[data-cat="text"] .p7-world-head:hover{--acc:var(--hov-text)}
-.p7-world[data-cat="converters"] .p7-world-head:hover{--acc:var(--hov-converters)}
-.p7-world[data-cat="calculators"] .p7-world-head:hover{--acc:var(--hov-calculators)}
-.p7-world[data-cat="developer"] .p7-world-head:hover{--acc:var(--hov-developer)}
-.p7-world[data-cat="generators"] .p7-world-head:hover{--acc:var(--hov-generators)}
-.p7-world-head:hover .p7-world-titles h2{color:var(--acc)}
-.p7-world-head:hover .p7-world-titles h2::after{background:var(--acc)}
+/* Category headings: PERMANENT colour. Each heading (text, icon,
+   count pill and underline) always wears its category's vivid
+   colour; the icon and pill follow --acc automatically. */
+.p7-world[data-cat="popular"] .p7-world-head{--acc:var(--hov-popular)}
+.p7-world[data-cat="pdf"] .p7-world-head{--acc:var(--hov-pdf)}
+.p7-world[data-cat="image"] .p7-world-head{--acc:var(--hov-image)}
+.p7-world[data-cat="ai"] .p7-world-head{--acc:var(--hov-ai)}
+.p7-world[data-cat="text"] .p7-world-head{--acc:var(--hov-text)}
+.p7-world[data-cat="converters"] .p7-world-head{--acc:var(--hov-converters)}
+.p7-world[data-cat="calculators"] .p7-world-head{--acc:var(--hov-calculators)}
+.p7-world[data-cat="developer"] .p7-world-head{--acc:var(--hov-developer)}
+.p7-world[data-cat="generators"] .p7-world-head{--acc:var(--hov-generators)}
+.p7-world-head .p7-world-titles h2{color:var(--acc)}
+.p7-world-head .p7-world-titles h2::after{background:var(--acc)}
+/* Hub pages: the same permanent colour on the page h1 and on the
+   "All N tools" heading above the grid (other content headings
+   stay monochrome). Hub pages carry data-cat on <body>. */
+body[data-cat="pdf"] main.tool-page > h1,body[data-cat="pdf"] .tool-section:has(.tool-grid) > h2{color:var(--hov-pdf)}
+body[data-cat="image"] main.tool-page > h1,body[data-cat="image"] .tool-section:has(.tool-grid) > h2{color:var(--hov-image)}
+body[data-cat="ai"] main.tool-page > h1,body[data-cat="ai"] .tool-section:has(.tool-grid) > h2{color:var(--hov-ai)}
+body[data-cat="text"] main.tool-page > h1,body[data-cat="text"] .tool-section:has(.tool-grid) > h2{color:var(--hov-text)}
+body[data-cat="converters"] main.tool-page > h1,body[data-cat="converters"] .tool-section:has(.tool-grid) > h2{color:var(--hov-converters)}
+body[data-cat="calculators"] main.tool-page > h1,body[data-cat="calculators"] .tool-section:has(.tool-grid) > h2{color:var(--hov-calculators)}
+body[data-cat="developer"] main.tool-page > h1,body[data-cat="developer"] .tool-section:has(.tool-grid) > h2{color:var(--hov-developer)}
+body[data-cat="generators"] main.tool-page > h1,body[data-cat="generators"] .tool-section:has(.tool-grid) > h2{color:var(--hov-generators)}
 .p7-world-titles p{margin:10px 0 0;color:var(--muted);font-size:.97rem}
 .p7-world-count{
   margin-left:0;flex:none;font-size:.76rem;font-weight:850;letter-spacing:.05em;text-transform:uppercase;
