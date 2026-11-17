@@ -91,7 +91,7 @@
  <url><loc>https://tools360pro.com/tools/typing-test.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
  <url>
   <loc>https://tools360pro.com/guides/</loc>
-  <lastmod>2026-11-16</lastmod>
+  <lastmod>2026-11-17</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
  </url>
@@ -206,6 +206,18 @@
  <url>
   <loc>https://tools360pro.com/guides/how-to-convert-heic-to-jpg-on-mac.html</loc>
   <lastmod>2026-11-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://tools360pro.com/guides/how-to-convert-heic-to-jpg-on-windows-10.html</loc>
+  <lastmod>2026-11-17</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://tools360pro.com/guides/how-to-convert-pdf-to-word-on-mac.html</loc>
+  <lastmod>2026-11-17</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
  </url>
