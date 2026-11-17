@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 96 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 106 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -47,6 +47,16 @@ Compress, resize and convert images. Category page: https://tools360pro.com/imag
 - [Image Enlarger](https://tools360pro.com/tools/image-enlarger.html): Make images bigger by percentage or target size, in your browser.
 - [Circle Crop](https://tools360pro.com/tools/circle-crop.html): Crop any image into a circle with a transparent background.
 - [Square Image Maker](https://tools360pro.com/tools/square-image-maker.html): Make any image square by cropping or padding, for profiles and posts.
+- [Image Border Maker](https://tools360pro.com/tools/image-border-maker.html): Add a border to any image — choose the thickness and colour.
+- [Image Shadow Maker](https://tools360pro.com/tools/image-shadow-maker.html): Add a soft drop shadow to images and logos, with transparent padding.
+- [Add Text to Image](https://tools360pro.com/tools/image-text-adder.html): Put text on any image — captions, labels and watermarks in one click.
+- [Image Dimension Checker](https://tools360pro.com/tools/image-dimension-checker.html): Find any image's width, height, aspect ratio and file size instantly.
+- [Image Resolution Converter](https://tools360pro.com/tools/image-resolution-converter.html): Change an image's pixel dimensions for print or screen, with print presets.
+- [Image to Base64 Converter](https://tools360pro.com/tools/image-to-base64-converter.html): Turn an image into a base64 data URI for embedding in code and CSS.
+- [Bulk Image Resizer](https://tools360pro.com/tools/bulk-image-resizer.html): Resize many images at once with the same settings, download as a ZIP.
+- [Social Media Image Resizer](https://tools360pro.com/tools/social-media-image-resizer.html): Resize images for Instagram, Facebook, X, LinkedIn and YouTube.
+- [Ecommerce Product Image Resizer](https://tools360pro.com/tools/ecommerce-product-image-resizer.html): Resize product photos for Amazon, eBay, Etsy and Shopify.
+- [Aspect Ratio Calculator](https://tools360pro.com/tools/aspect-ratio.html): Find an aspect ratio from width and height, or compute a missing dimension.
 - [Crop Image](https://tools360pro.com/tools/crop-image.html): Crop images with a visual box and aspect presets.
 - [Watermark Image](https://tools360pro.com/tools/watermark-image.html): Stamp text watermarks onto your images.
 - [Favicon Generator](https://tools360pro.com/tools/favicon-generator.html): Generate favicon sizes and an ICO from one image.
