@@ -189,6 +189,16 @@
     <p>A time zone converter for meetings shows what a time in one city means in another, with UTC offsets and the time difference spelled out. Check live clocks for major cities before you send the invite — daylight saving changes mean the gap between two cities is not always what it was last month.</p>
     <p>Convert any date and time, not just right now, so a future meeting is checked against the rules in force on that day. It runs in your browser with no sign-up.</p>
   </section>
+  <section class="tool-section">
+    <h2>Why the gap between two cities keeps changing</h2>
+    <p>Time zones are not fixed distances. Many regions move their clocks forward in spring and back in autumn for daylight saving time, so the gap between two cities can change by an hour twice a year — and the change happens on different dates in different places. The southern hemisphere runs on the opposite cycle, which means the difference between, say, London and Sydney shifts several times a year. A converter that only knows today's offset will quietly give the wrong answer for a meeting booked three months away.</p>
+    <p>This converter avoids that trap by calculating the offset for the exact date you enter, using the same IANA time zone database your operating system uses. Pick any date and time, and the result shows the offset in force on that day for both zones, plus how far ahead or behind the second city is. Some zones also sit on half-hour offsets — India, for example, is UTC+05:30 — so the difference between two cities is not always a whole number of hours.</p>
+  </section>
+  <section class="tool-section">
+    <h2>Scheduling across the date line</h2>
+    <p>Converting a time can also change the day. A 9 a.m. meeting in New York is already evening in Tokyo, and a late call from Sydney can land on the previous morning in Los Angeles. The result panel shows the full weekday and date for the converted time, so a shift across midnight is visible at a glance rather than discovered when someone misses the call. Always read the date as well as the time — the two travel together.</p>
+    <p>For a quick check, the world clock at the bottom shows live times for eight major cities — New York, London, Dubai, Karachi, Singapore, Tokyo, Sydney and UTC — updating every second, with the current date and UTC offset under each one. Use the Swap button to reverse the direction and check a time both ways, which catches mistakes when you are converting in your head. And when the meeting is set, send the invite with the time zone named, not just the hour: “3 p.m. Karachi time” leaves no room for doubt.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>How are daylight saving changes handled?</summary><p>The converter uses your browser’s built-in time zone database (the same IANA data used by operating systems), so daylight saving time is applied automatically for the exact date you enter. A city can be an hour further ahead or behind in summer than in winter.</p></details>

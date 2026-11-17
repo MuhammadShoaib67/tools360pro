@@ -179,6 +179,16 @@
     <p>A list randomizer shuffles any list — names, teams, tasks, giveaway entries — using secure browser randomness, so every item has a genuinely equal chance of landing on top. Paste one item per line, shuffle the whole list, or pick a single random winner.</p>
     <p>It is the same idea as drawing names from a hat, minus the hat and the suspicion. No sign-up, no upload: your list never leaves your browser.</p>
   </section>
+  <section class="tool-section">
+    <h2>Why this shuffle is fair</h2>
+    <p>Not every shuffle is equally fair. A common shortcut is to sort items by a random number, which can quietly favour some positions over others. This tool uses the Fisher–Yates algorithm instead: it walks through the list from the end, swapping each item with another one picked at random from the positions still ahead of it. Every possible ordering of the list is equally likely, because each swap is decided by a fresh random choice. The randomness itself comes from your browser's cryptographic generator, the same source used for security-sensitive work, with rejection sampling to keep the distribution even.</p>
+    <p>Picking winners uses the same shuffle, then takes the first N items from the shuffled list. Because the draw is made without replacement, no entry can win twice in a single draw — each line can only appear once among the winners. If you ask for more winners than there are items, the tool simply picks the whole list and tells you so. Re-shuffling or re-picking gives a fresh result every time, since nothing about a previous draw is remembered.</p>
+  </section>
+  <section class="tool-section">
+    <h2>Good draws start with a clean list</h2>
+    <p>The tool reads one item per line and ignores blank lines, so pasting from a spreadsheet or a chat message usually works as-is. Duplicates, however, are kept as separate entries: if the same name appears on two lines, it counts twice and could win as either entry. That is sometimes exactly what you want — extra entries as extra chances — but for a one-person-one-entry draw, remove duplicate lines first. The live item count above the buttons shows how many entries the tool sees, which is the number that matters.</p>
+    <p>Once you have a result, copy it exactly as shown or download it as a .txt file for your records. The numbering toggle adds line numbers like “1. item” to the output, which is handy for announcing a running order or a ranked draw — turn it off first if you want plain items only. Nothing is uploaded or saved: the list lives only in this tab, and leaving the page clears it. For anything that needs a paper trail, download the result before you go.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>How random is the shuffle?</summary><p>The shuffle uses the Fisher–Yates algorithm with randomness from your browser's cryptographic generator (crypto.getRandomValues) and rejection sampling, so every ordering is equally likely and there is no bias towards any position.</p></details>

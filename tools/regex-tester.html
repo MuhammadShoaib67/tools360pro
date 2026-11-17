@@ -205,6 +205,16 @@
     <p>A regex tester shows highlighted matches, indexes and capture groups live as you type, so a regular expression can be proven against real text before it is trusted in code. Test against the awkward cases — empty strings, edge punctuation, the input you hope never arrives — because that is where patterns usually break.</p>
     <p>Patterns and test text are processed in your browser with no sign-up, so sample data that includes real names or emails is never uploaded.</p>
   </section>
+  <section class="tool-section">
+    <h2>What the flags actually change</h2>
+    <p>Five checkboxes control how the pattern is applied. The g flag finds every match in the text instead of stopping at the first; without it, the tester behaves like a single search. The i flag ignores case, so a pattern written in lowercase also matches capitals. The m flag changes how ^ and $ behave, making them match the start and end of each line rather than the whole text — essential for multi-line input. The s flag lets the dot match line breaks too, and the u flag switches on full Unicode handling for characters beyond basic Latin text.</p>
+    <p>Flags combine freely, so “gi” means every match regardless of case, and “gms” means every match across lines with dots that cross line breaks. Toggle a flag and watch the match count change — it is the fastest way to learn what each one does. If a pattern behaves differently here than in another language, the flags are the first place to look: JavaScript's RegExp has its own rules, and this tester follows them exactly.</p>
+  </section>
+  <section class="tool-section">
+    <h2>Build the pattern in small steps</h2>
+    <p>Long patterns are rarely written correctly in one go. Start with the simplest piece that matches what you want — a word, a number, a single character class — and confirm it highlights the right text. Then add one element at a time: an anchor, a quantifier, a group. Each addition either keeps the matches you expect or breaks them, and because the preview updates as you type, you can see exactly which change caused the problem. Working this way turns debugging into a short loop instead of a long hunt.</p>
+    <p>Try the inputs you hope never arrive: empty strings, stray punctuation, double spaces and text in the wrong order — patterns usually break on the edges, not the middle. Check the capture groups under each match as well: parentheses do more than group a pattern, they capture text, and the match list shows exactly what each group caught. If a group captured something unexpected, the parentheses are in the wrong place. Matches are capped at 1,000, so a pattern that matches empty strings cannot freeze the page.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my text uploaded to a server?</summary><p>No. Patterns are compiled and run entirely in your browser using JavaScript's RegExp. Your text is never uploaded, stored, or sent anywhere.</p></details>

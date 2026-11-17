@@ -197,6 +197,16 @@
     <p>A JSON formatter and validator does two jobs: it pretty-prints minified JSON with 2 or 4-space indentation so a human can read it, and it points at the exact line when something is wrong — a missing comma or an unclosed bracket stops being a guessing game.</p>
     <p>Minify in the other direction when the file has to travel light. Everything runs in your browser with no sign-up, which matters when the JSON holds API keys or personal data.</p>
   </section>
+  <section class="tool-section">
+    <h2>The errors that break JSON most often</h2>
+    <p>Most invalid JSON fails for a small handful of reasons. A trailing comma after the last item in an object or array is the classic one — JavaScript allows it in code, but strict JSON does not. Single quotes around strings are another: JSON only accepts double quotes. Unquoted keys, a missing closing bracket, or a stray character pasted from a log file all produce the same result — the parser stops at the first problem and refuses the whole document, even if everything else is correct.</p>
+    <p>That is why the error message includes a position. When the browser reports where parsing failed, this tool counts the characters before that point and works out the exact line and column, so you can jump straight to the offending comma or quote instead of scanning a thousand lines by eye. Fix that one spot, format again, and repeat — large files often hide two or three small errors, and each pass reveals the next one.</p>
+  </section>
+  <section class="tool-section">
+    <h2>Format for reading, minify for shipping</h2>
+    <p>Pretty-printing exists for human eyes: indentation turns a single dense line into a structure you can scan, compare and debug. Two spaces is the common default, four spaces suits deeply nested data, and tabs match codebases that already use them. The choice changes nothing about the data itself — a formatted file and its minified twin carry exactly the same information, which is why you can switch between the two freely without losing anything.</p>
+    <p>Minifying does the opposite job: it strips every space and line break the parser does not need, leaving a single line that is as small as possible. That matters when JSON travels over a network or sits inside a configuration file where size counts. The size readout shows the before-and-after in bytes, so you can see exactly what minifying saved. Use Validate only when you simply want a yes-or-no answer about a document — it reports the character count, the top-level type and how many keys or items the document holds, without touching the output.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my JSON data uploaded to a server?</summary><p>No. This tool runs entirely in your browser using JavaScript. Your code and data are never uploaded, stored, or sent anywhere — everything stays on this device.</p></details>
