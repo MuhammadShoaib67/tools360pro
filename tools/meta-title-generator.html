@@ -221,10 +221,11 @@
     var brand = brandEl.value.trim();
     if (!kw) { showMsg('Enter a page topic or primary keyword first.', 'error-text'); return; }
     var Kw = cap(kw);
+    var howKw = kw.replace(/^how to\s+/i, '');
     var year = new Date().getFullYear();
     var titles = [
       Kw + ': The Complete Guide',
-      'How to ' + kw + ' (Step by Step)',
+      'How to ' + howKw + ' (Step by Step)',
       Kw + ' in ' + year + ': What Actually Works',
       '10 ' + Kw + ' Tips You Can Use Today',
       Kw + ' \u2014 Everything You Need to Know',
