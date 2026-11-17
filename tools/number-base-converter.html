@@ -193,6 +193,16 @@
     <p>A number base converter moves numbers between binary, octal, decimal and hexadecimal — the everyday need behind binary to decimal conversion for students, programmers checking bit patterns, and anyone reading a colour code or a memory address. Very large integers are supported, so the answer does not silently round off.</p>
     <p>Type in one base and see all the others update instantly. It runs in your browser with no sign-up.</p>
   </section>
+  <section class="tool-section">
+    <h2>How place value works in any base</h2>
+    <p>Every number system works the same way: each position is worth the base raised to a power, counting from the right. In decimal, 245 means two hundreds, four tens and five ones. In binary, 101 means one four, no twos and one one — the number five. The same idea stretches to octal, where each digit is worth a power of eight, and to hexadecimal, where each digit is worth a power of sixteen and the letters A to F stand for the values ten to fifteen. Once that pattern clicks, converting is just regrouping the same value into different-sized bundles.</p>
+    <p>That is why the same number looks so different across bases. A byte — eight bits — holds values from 0 to 255 in decimal, which is 11111111 in binary and FF in hexadecimal. Hex is popular with programmers precisely because it is compact: every four bits become exactly one hex digit, so a long binary string collapses into a short, readable code. Octal plays a similar role in groups of three bits, which is why it still appears in file permissions on Unix systems, where each digit packs three switches into one number.</p>
+  </section>
+  <section class="tool-section">
+    <h2>Where you actually meet other bases</h2>
+    <p>Hexadecimal turns up wherever computers show raw values: colour codes on the web, where #FF0000 means full red and no green or blue; memory addresses in debuggers and error messages; and the long identifiers that label devices, files and network hardware. Binary is the language of the hardware itself, and it is also how settings made of on-off switches are stored — each bit is one switch, so a single number can carry eight yes-or-no answers at once.</p>
+    <p>Octal is rarer today, but it has not disappeared: Unix file permissions such as 755 are three octal digits, one each for the owner, the group and everyone else, and each digit packs three read-write-execute switches into a single number. Whatever the base, the practical skill is the same — read the number in the base it is written in, and convert it to decimal when you need to compare it with an ordinary quantity. This converter does that step instantly, in both directions, for numbers of any size.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Which digits are allowed in each base?</summary><p>Binary uses only 0 and 1. Octal uses 0–7. Decimal uses 0–9. Hexadecimal uses 0–9 plus the letters A–F (upper or lower case). If you type a character outside the field’s base, an error names the allowed digits and the other fields keep their last valid values.</p></details>
