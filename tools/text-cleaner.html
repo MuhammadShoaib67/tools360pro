@@ -175,6 +175,17 @@
     <p>A text cleaner removes the mess that copied text carries with it: extra spaces, blank lines, duplicate lines, unwanted line breaks and stray accents. Paste text from a PDF, a spreadsheet or a web page and get clean, evenly-spaced text back — ready to paste into a document, a form or a code editor.</p>
     <p>Cleaning is done in your browser with no sign-up, so the text you paste is never uploaded or stored.</p>
   </section>
+  <section class="tool-section">
+    <h2>Why the clean-ups run in a fixed order</h2>
+    <p>The six clean-ups always run in the same sequence — accents, duplicate lines, line breaks, blank lines, extra spaces, then trim — and the order is deliberate. Removing accents first means a line written as “café” and the same line written as “cafe” are recognised as duplicates in the next step; collapsing spaces before trimming means the final trim only has to deal with the edges of the text. Each step hands a tidier text to the next one.</p>
+    <p>A fixed order also makes the tool predictable: the same text with the same boxes ticked always produces the same result, which matters when you are preparing data for an import or a count. The before-and-after character and line counts under the output show what actually changed, so you can untick an option and watch the numbers move if a clean-up removed something you wanted to keep.</p>
+  </section>
+
+  <section class="tool-section">
+    <h2>Where messy text comes from</h2>
+    <p>Pasted text arrives messy for predictable reasons. Text copied from a PDF breaks mid-sentence where the page layout put a line break; spreadsheet exports leave trailing spaces on cells; web pages add blank lines between paragraphs; and lists gathered from several places repeat the same entry many times. Each of the six checkboxes answers one of those habits, so you tick only the problems your text actually has.</p>
+    <p>The result is text ready for the next step: a clean list for a spreadsheet, a tidy paragraph for a document, or a block of code without stray blank lines. Copy it straight from the output box, or download it as cleaned.txt when the text is going into a file. Nothing is uploaded at any point — the cleaning runs entirely on your device.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>In what order are the clean-ups applied?</summary><p>Always in the same fixed order: remove accents → remove duplicate lines → remove line breaks → remove blank lines → remove extra spaces → trim. A fixed order means the same input and options always give the same result.</p></details>

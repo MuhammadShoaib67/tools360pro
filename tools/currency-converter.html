@@ -179,6 +179,17 @@
     <p>A currency converter is only as good as its rates, which is why this one pulls live exchange rates — check USD to PKR today, euros to dollars, pounds to dollars, or any other pair before you send money, price a product or plan a trip.</p>
     <p>Rates move during the day, so a conversion is a snapshot of the moment you checked it, not a promise of tomorrow's rate. The converter runs in your browser with no sign-up.</p>
   </section>
+  <section class="tool-section">
+    <h2>The mid-market rate, explained</h2>
+    <p>Every currency has two prices at any moment: the price at which banks buy it and the price at which they sell it. The mid-market rate is the midpoint between those two — the rate banks and currency markets use when they trade with each other. It is the fairest single number for a conversion, which is why this converter uses it as its reference for every pair.</p>
+    <p>The rates come from ExchangeRate-API's free endpoint, refreshed daily, with the US dollar as the base currency. Pairs that do not involve the dollar are worked out through it in two steps — first into dollars, then into the target currency. The time shown under the result is the last-updated time reported by the API itself, so you always know how fresh the figure is.</p>
+  </section>
+
+  <section class="tool-section">
+    <h2>Why the bank's rate is never the same</h2>
+    <p>A bank, a card network or a money changer has to make money on the exchange, so each one adds its own margin to the mid-market rate — and sometimes a flat fee on top. That is why the amount that finally lands in an account is usually a little less than the converter shows, and why the rate at an airport kiosk is often the worst of all. The converter's figure is the honest yardstick to compare those offers against.</p>
+    <p>If you are offline, the converter does not stop working: it falls back to the rates from its last successful fetch, stored in your browser, and shows you when they were saved. For travel budgeting, checking an invoice in another currency, or deciding whether a transfer quote is fair, a day-old mid-market rate is still a far better guide than guessing.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Where do the exchange rates come from?</summary><p>Rates are fetched from open.er-api.com, the free endpoint provided by ExchangeRate-API, with US dollars as the base currency. The “last updated” time shown under the result is the time reported by that API itself.</p></details>

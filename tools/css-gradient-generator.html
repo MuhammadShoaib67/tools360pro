@@ -266,6 +266,17 @@
     <p>A CSS gradient generator turns colour stops, angles and shadow values into copy-paste CSS. As a linear gradient generator, it builds the CSS for any angle from 0 to 360 degrees with two or three colour stops; switch to radial and the same stops spread outward from a centre point. A soft box shadow gives a card or button depth — all with a live preview, so you see the result before the code goes anywhere near your stylesheet.</p>
     <p>Gradients and shadows are pure CSS, so they cost no image downloads and scale to any screen. The code here is generated in your browser — no sign-up, no account, just copy and paste.</p>
   </section>
+  <section class="tool-section">
+    <h2>How stops shape a gradient</h2>
+    <p>A gradient is defined by its stops: each stop is a colour at a position from 0% to 100% along the blend, and the browser fills in the smooth transition between neighbouring stops. Move a stop and the transition moves with it — two stops close together make a sharp change, two stops far apart make a slow fade. With two colours the result is a simple blend; ticking the middle-stop option adds a third colour and a band of it in the centre.</p>
+    <p>Linear gradients run along a straight line at the angle you set, from 0 to 360 degrees, so the same two colours can look completely different at 45 degrees and at 180. Radial gradients ignore the angle entirely and spread outward from a centre point in a circle, which suits glows, vignettes and spotlight effects. The preview updates as you drag, so you can watch the shape change before copying anything.</p>
+  </section>
+
+  <section class="tool-section">
+    <h2>Shadows that give a card depth</h2>
+    <p>A box shadow is built from a few numbers that each do one job: the horizontal and vertical offsets move the shadow away from the element, blur softens its edge, and spread grows or shrinks it. A small blur with low opacity lifts a card just off the page; larger offsets and more blur make it look as if it floats. The preview card shows the effect on a real surface, not just in code.</p>
+    <p>Tick the inset option and the shadow is drawn inside the box instead, which reads as a pressed-in panel or an inner glow — useful for input fields and toggles. The opacity slider writes the colour as rgba(), so a black shadow at 20% opacity becomes rgba(0, 0, 0, 0.2) in the copied CSS. Copy the declaration straight into your stylesheet; it is plain CSS, with no image files to manage.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is anything uploaded to a server?</summary><p>No. The previews and CSS are generated entirely in your browser using JavaScript. Nothing is uploaded, stored, or sent anywhere.</p></details>

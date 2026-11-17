@@ -200,6 +200,17 @@
     <p>A JWT decoder splits a JSON Web Token into its header, payload and signature, and shows the claims inside — who issued it, who it is for, and when it expires. That is the fastest way to debug an authentication problem: most token issues turn out to be an expired token or the wrong audience.</p>
     <p>Decoding is not verification — this tool reads the token, it does not check the signature, so never treat a decoded token as proof of anything. Decoding happens in your browser with no sign-up, and the token is never uploaded.</p>
   </section>
+  <section class="tool-section">
+    <h2>The claims that matter most</h2>
+    <p>Most tokens carry the same handful of standard claims, and three of them are dates. exp says when the token stops being valid, iat says when it was issued, and nbf says the earliest moment it may be accepted — all three are Unix timestamps in seconds, and the claims table shows each one as a readable UTC date and in your local time, so you never have to convert a ten-digit number by hand.</p>
+    <p>The other claims identify the token: iss names the issuer, sub names the subject the token is about, and aud names the audience it was made for. When an API rejects a token, the cause is usually one of two things — the token has expired, or it was issued for a different audience — and both are visible in the claims table within seconds of pasting the token.</p>
+  </section>
+
+  <section class="tool-section">
+    <h2>Debugging with a decoded token</h2>
+    <p>The usual workflow starts in your browser's developer tools or an API response: copy the token, paste it here, and the header and payload decode live as you type. Comparing the decoded claims with what your server expects usually pinpoints the problem — a clock skew of a few minutes, a missing claim, or a token from the wrong environment. If decoding fails, the token was probably truncated when copied: it must have exactly three dot-separated segments, each valid Base64URL, with JSON in the first two.</p>
+    <p>One warning belongs in every debugging session: decoding proves nothing about trust. Anyone can write a payload, encode it and hand you a token that decodes beautifully — only the signature, checked against the issuer's key, says whether it is genuine, and this tool deliberately does not verify signatures. Paste test tokens freely, but keep production tokens off shared machines, even though nothing here is uploaded.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Does decoding a JWT verify it?</summary><p>No. Decoding is not verifying. Anyone can create or change the header and payload of a token and it will still decode perfectly here. Verification means checking the cryptographic signature with the issuer's key, which this tool does not do — never trust a token just because it decodes.</p></details>
