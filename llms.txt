@@ -187,6 +187,14 @@ QR codes, passwords and palettes. Category page: https://tools360pro.com/generat
 
 ## Guides
 
+- [How to Calculate a Discount (Sale Price Formula)](https://tools360pro.com/guides/how-to-calculate-a-discount.html)
+- [How to Calculate Percentage Change (Increase and Decrease)](https://tools360pro.com/guides/how-to-calculate-percentage-change.html)
+- [How to Calculate Meeting Cost (The Real Price of a Meeting)](https://tools360pro.com/guides/how-to-calculate-meeting-cost.html)
+- [How to Calculate Subscription Costs (Monthly, Yearly, 5 Years)](https://tools360pro.com/guides/how-to-calculate-subscription-cost.html)
+- [How to Calculate Your Sleep Cycle (Best Times to Wake Up)](https://tools360pro.com/guides/how-to-calculate-your-sleep-cycle.html)
+- [How to Calculate EMI (Formula, Examples and Schedule)](https://tools360pro.com/guides/how-to-calculate-emi.html)
+- [How to Set a Countdown Timer Online (Free, No App)](https://tools360pro.com/guides/how-to-set-a-countdown-timer.html)
+- [How to Use a Stopwatch Online (Laps, Timing and Tips)](https://tools360pro.com/guides/how-to-use-a-stopwatch-online.html)
 - [How to Check Word Frequency (Free Word Counter Table)](https://tools360pro.com/guides/how-to-check-word-frequency.html)
 - [How to Remove Duplicate Lines (Free, Keeps the Order)](https://tools360pro.com/guides/how-to-remove-duplicate-lines.html)
 - [How to Sort Lines Alphabetically (Free, A to Z and More)](https://tools360pro.com/guides/how-to-sort-lines-alphabetically.html)
