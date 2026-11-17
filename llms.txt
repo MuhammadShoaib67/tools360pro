@@ -179,6 +179,17 @@ QR codes, passwords and palettes. Category page: https://tools360pro.com/generat
 
 ## Guides
 
+- [How to Check Word Frequency (Free Word Counter Table)](https://tools360pro.com/guides/how-to-check-word-frequency.html)
+- [How to Remove Duplicate Lines (Free, Keeps the Order)](https://tools360pro.com/guides/how-to-remove-duplicate-lines.html)
+- [How to Sort Lines Alphabetically (Free, A to Z and More)](https://tools360pro.com/guides/how-to-sort-lines-alphabetically.html)
+- [How to Reverse Text (Free, Characters, Words or Lines)](https://tools360pro.com/guides/how-to-reverse-text.html)
+- [How to Create a URL Slug (Free Slug Generator)](https://tools360pro.com/guides/how-to-create-a-url-slug.html)
+- [How to Escape HTML (Free HTML Entity Encoder)](https://tools360pro.com/guides/how-to-escape-html.html)
+- [How to Encode Text with ROT13 (Free ROT13 Cipher)](https://tools360pro.com/guides/how-to-encode-text-with-rot13.html)
+- [How to Convert Text to Morse Code (Free, with Audio)](https://tools360pro.com/guides/how-to-convert-text-to-morse-code.html)
+- [How to Convert Text to Binary (Free, UTF-8)](https://tools360pro.com/guides/how-to-convert-text-to-binary.html)
+- [How to Convert Text to Hex (Free, UTF-8)](https://tools360pro.com/guides/how-to-convert-text-to-hex.html)
+- [How to Convert Text to Speech (Free, in Your Browser)](https://tools360pro.com/guides/how-to-convert-text-to-speech.html)
 - [How to Create a Robots.txt File (Free, in 2 Minutes)](https://tools360pro.com/guides/how-to-create-a-robots-txt-file.html)
 - [How to Add Schema Markup to a Website (JSON-LD, Free)](https://tools360pro.com/guides/how-to-add-schema-markup-to-a-website.html)
 - [How to Create an XML Sitemap (Free, in Minutes)](https://tools360pro.com/guides/how-to-create-an-xml-sitemap.html)
