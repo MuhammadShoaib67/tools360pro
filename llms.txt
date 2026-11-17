@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 76 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 86 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -27,6 +27,16 @@ Compress, resize and convert images. Category page: https://tools360pro.com/imag
 - [Resize Image](https://tools360pro.com/tools/resize-image.html): Change image dimensions by pixels or percentage.
 - [Convert Image](https://tools360pro.com/tools/convert-image.html): Convert images between JPG, PNG and WebP formats.
 - [HEIC to JPG Converter](https://tools360pro.com/tools/heic-to-jpg.html): Convert iPhone HEIC photos to JPG or PNG, no uploads.
+- [PNG to JPG Converter](https://tools360pro.com/tools/png-to-jpg.html): Convert PNG images to JPG — smaller files for sharing, forms and uploads.
+- [PNG to WebP Converter](https://tools360pro.com/tools/png-to-webp.html): Convert PNG images to WebP — much smaller files, transparency kept.
+- [JPG to PNG Converter](https://tools360pro.com/tools/jpg-to-png.html): Convert JPG photos to PNG — lossless files for editing and archiving.
+- [JPG to WebP Converter](https://tools360pro.com/tools/jpg-to-webp.html): Convert JPG photos to WebP — smaller files with the same quality.
+- [WebP to PNG Converter](https://tools360pro.com/tools/webp-to-png.html): Convert WebP images to PNG — open them in any app or editor.
+- [WebP to JPG Converter](https://tools360pro.com/tools/webp-to-jpg.html): Convert WebP images to JPG — the format every app accepts.
+- [AVIF to JPG Converter](https://tools360pro.com/tools/avif-to-jpg.html): Convert AVIF images to JPG — open them anywhere, no special software.
+- [AVIF to PNG Converter](https://tools360pro.com/tools/avif-to-png.html): Convert AVIF images to PNG — lossless files for any editor.
+- [BMP to PNG Converter](https://tools360pro.com/tools/bmp-to-png.html): Convert BMP images to PNG — shrink huge bitmaps without losing quality.
+- [SVG to PNG Converter](https://tools360pro.com/tools/svg-to-png.html): Convert SVG vectors to PNG — rasterize logos and icons at true size.
 - [Crop Image](https://tools360pro.com/tools/crop-image.html): Crop images with a visual box and aspect presets.
 - [Watermark Image](https://tools360pro.com/tools/watermark-image.html): Stamp text watermarks onto your images.
 - [Favicon Generator](https://tools360pro.com/tools/favicon-generator.html): Generate favicon sizes and an ICO from one image.

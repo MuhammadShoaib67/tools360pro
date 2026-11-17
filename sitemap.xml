@@ -16,8 +16,11 @@
   <url><loc>https://tools360pro.com/developer-tools/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://tools360pro.com/generators/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://tools360pro.com/tools/age-calculator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/avif-to-jpg.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/avif-to-png.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/base64.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/bmi-calculator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/bmp-to-png.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/case-converter.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/color-palette.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/compress-image.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
@@ -32,6 +35,11 @@
   <url><loc>https://tools360pro.com/tools/image-to-text.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/invoice-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/citation-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/jpg-to-png.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/jpg-to-webp.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/png-to-jpg.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/png-to-webp.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/svg-to-png.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/text-summarizer.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/screen-recorder.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/mp4-to-mp3.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
@@ -67,6 +75,8 @@
   <url><loc>https://tools360pro.com/tools/url-encode.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/uuid-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/watermark-image.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/webp-to-jpg.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/webp-to-png.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/word-counter.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/random-number-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/timestamp-converter.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
