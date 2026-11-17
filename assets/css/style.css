@@ -924,6 +924,19 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 .p7-chip .tool-icon{width:33px;height:33px;border-radius:10px}
 .p7-chip .tool-icon svg{width:19px;height:19px}
 .p7-chip small{color:var(--acc);font-size:.78rem;font-weight:850;transition:color .15s ease}
+/* Orbit chips: each category chip wears a light pastel background
+   in BOTH themes — always a DIFFERENT hue from its vivid hover
+   colour — with dark text for contrast. Hover (vivid border,
+   glow, icon and count) is untouched. */
+.p7-chip{color:#1F2937;--acc:#1F2937}
+.p7-chip[data-cat="pdf"]{background:#E0F2FE}
+.p7-chip[data-cat="image"]{background:#EDE9FE}
+.p7-chip[data-cat="ai"]{background:#D1FAE5}
+.p7-chip[data-cat="text"]{background:#FDE8EC}
+.p7-chip[data-cat="converters"]{background:#FEF9C3}
+.p7-chip[data-cat="calculators"]{background:#DBEAFE}
+.p7-chip[data-cat="developer"]{background:#FAE8FF}
+.p7-chip[data-cat="generators"]{background:#FFEDD5}
 .p7-chip:hover,.p7-chip:focus-visible{border-color:var(--acc);box-shadow:var(--shadow-lg),0 10px 26px -10px var(--acc)}
 .p7-chip-tool{width:46px;height:46px;padding:0;justify-content:center;border-radius:50%}
 .p7-chip-tool .tool-icon{width:32px;height:32px;border-radius:10px}
