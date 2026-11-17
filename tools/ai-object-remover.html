@@ -203,6 +203,16 @@
     <p>The repair is blended into your original photo, so everything you did not paint keeps its original resolution and detail. It shines on small and medium objects against simple backgrounds — sky, walls, grass, sand, plain floors. Very large objects over busy, detailed backgrounds are the hardest job in photo editing for any AI, free or paid; if the first pass is imperfect, painting over the rough patch and running it again usually gets you the rest of the way.</p>
       <p>Also worth knowing: <a href="ai-photo-enhancer.html">AI Photo Enhancer</a> sharpens and polishes a dull or blurry photo, while <a href="background-remover.html">Background Remover</a> removes a photo's background with AI in seconds.</p>
   </section>
+  <section class="tool-section">
+    <h2>How the AI decides what to paint</h2>
+    <p>The remover does not know what was behind the object — it guesses, and it guesses from the pixels around the hole. The inpainting model studies the surrounding texture — the grain of a wall, the pattern of grass, the gradient of a sky — and rebuilds what plausibly belongs there, then blends the patch into your photo at full resolution.</p>
+    <p>That is why simple backgrounds vanish cleanly and busy ones fight back. A stranger against a plain sky is an easy guess; a handbag on a patterned rug, or a sign across a face, forces the model to invent detail it cannot see. The result is still often good enough for a social post, but the busier the background, the more closely you should look at the repair before you trust it.</p>
+  </section>
+  <section class="tool-section">
+    <h2>Painting a mask that works</h2>
+    <p>The brush size slider runs from 8 to 90, and matching it to the job matters more than it looks. A small brush suits thin things — a wire, a date stamp, a stray hair — where a big brush would paint away detail you want to keep. A large brush clears big areas in a few strokes. The default of 36 is a sensible middle for most objects.</p>
+    <p>Paint a little beyond the object's edges so the model has room to blend, and do not worry if the first pass is imperfect — paint over the rough patch and run it again, or step back with the undo button and try a different brush size. Two careful passes usually beat one hurried one, especially on larger objects.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>How does the object remover work?</summary><p>You paint over the person, object or text you want gone. An AI inpainting model (MI-GAN) studies the surrounding area and rebuilds what should be behind it, then blends the repaired patch into your original photo at full resolution.</p></details>
