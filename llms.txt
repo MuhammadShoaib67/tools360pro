@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 114 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 122 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -138,6 +138,14 @@ JSON, Base64, JWT, CSS and regex. Category page: https://tools360pro.com/develop
 - [HTML to Markdown Converter](https://tools360pro.com/tools/html-to-markdown.html): Convert HTML pages into clean Markdown, ready for docs and CMS.
 - [JSON to CSV Converter](https://tools360pro.com/tools/json-csv.html): Convert a JSON array of objects into a CSV spreadsheet file.
 - [CSV to JSON Converter](https://tools360pro.com/tools/csv-json.html): Convert CSV rows into JSON objects, with quoted-field support.
+- [Robots.txt Generator](https://tools360pro.com/tools/robots-txt-generator.html): Build a robots.txt file: user-agent, allow and disallow rules, sitemap line.
+- [Schema Markup Generator](https://tools360pro.com/tools/schema-markup-generator.html): Generate JSON-LD schema markup for articles, FAQs, businesses and products.
+- [XML Sitemap Generator](https://tools360pro.com/tools/xml-sitemap-generator.html): Turn a list of URLs into a valid XML sitemap, ready to submit.
+- [Meta Title Generator](https://tools360pro.com/tools/meta-title-generator.html): Title ideas from proven templates, with live length and pixel-width checks.
+- [Meta Description Generator](https://tools360pro.com/tools/meta-description-generator.html): Description ideas from proven templates, with a Google-style SERP preview.
+- [Open Graph Preview Tool](https://tools360pro.com/tools/open-graph-preview-tool.html): Preview Facebook and X cards from your OG tags before you share.
+- [SEO Draft Checker](https://tools360pro.com/tools/seo-draft-checker.html): Check a draft page against a basic SEO checklist: title, description, H1, keyword.
+- [HEX to RGB Converter](https://tools360pro.com/tools/hex-to-rgb-converter.html): Convert HEX to RGB and HSL and back, with a live colour preview.
 
 ## Generators
 

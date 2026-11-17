@@ -30,6 +30,7 @@
   <url><loc>https://tools360pro.com/tools/compress-pdf.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/convert-image.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/heic-to-jpg.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/hex-to-rgb-converter.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/html-formatter.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/html-minifier.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/html-to-markdown.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
@@ -83,8 +84,11 @@
   <url><loc>https://tools360pro.com/tools/lorem-ipsum.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/markdown-to-html.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/merge-pdf.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/meta-description-generator.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/meta-tag-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/meta-title-generator.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/number-base-converter.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/open-graph-preview-tool.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/password-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/pdf-to-image.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/percentage-calculator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
@@ -106,6 +110,7 @@
   <url><loc>https://tools360pro.com/tools/webp-to-png.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/word-counter.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/xml-formatter.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/xml-sitemap-generator.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/random-number-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/timestamp-converter.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/diff-checker.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
@@ -121,7 +126,10 @@
   <url><loc>https://tools360pro.com/tools/final-grade-calculator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
  <url><loc>https://tools360pro.com/tools/flashcard-maker.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
  <url><loc>https://tools360pro.com/tools/scientific-calculator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/schema-markup-generator.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/seo-draft-checker.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
  <url><loc>https://tools360pro.com/tools/resume-builder.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/robots-txt-generator.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
  <url><loc>https://tools360pro.com/tools/words-to-pages.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
  <url><loc>https://tools360pro.com/tools/title-page-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
  <url><loc>https://tools360pro.com/tools/text-similarity-checker.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
