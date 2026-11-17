@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4F3KZHDRSS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4F3KZHDRSS');
+</script>
+
+<script>/* On refresh, always start at the top of the page */try{var __t=performance.getEntriesByType("navigation")[0];var __r=(__t&&__t.type==="reload")||(performance.navigation&&performance.navigation.type===1);if(__r){if("scrollRestoration" in history)history.scrollRestoration="manual";window.scrollTo(0,0);addEventListener("load",function(){window.scrollTo(0,0);setTimeout(function(){try{history.scrollRestoration="auto"}catch(e){}},50)})}}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Format XML | Tools360Pro</title>
+<meta name="description" content="Format and validate XML: clean indentation, clear parser errors, and the mistakes that break XML most often.">
+<link rel="canonical" href="https://tools360pro.com/guides/how-to-format-xml.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="How to Format XML | Tools360Pro">
+<meta property="og:description" content="Format and validate XML: clean indentation, clear parser errors, and the mistakes that break XML most often.">
+<meta property="og:url" content="https://tools360pro.com/guides/how-to-format-xml.html">
+<meta property="og:image" content="https://tools360pro.com/og-image.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Tools360Pro logo — free online tools">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Format XML | Tools360Pro">
+<meta name="twitter:description" content="Format and validate XML: clean indentation, clear parser errors, and the mistakes that break XML most often.">
+<meta name="twitter:image" content="https://tools360pro.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+<link rel="stylesheet" href="../assets/css/style.css?v=67.0">
+<style>
+.doc p{color:var(--muted);max-width:760px}
+.doc ul{color:var(--muted);max-width:760px;display:grid;gap:7px;padding-left:21px}
+.doc li::marker{color:var(--acc);font-weight:800}
+.doc a{font-weight:600}
+.doc .updated{font-size:.9rem}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "headline": "How to Format XML",
+   "description": "Format and validate XML: clean indentation, clear parser errors, and the mistakes that break XML most often.",
+   "author": {
+    "@type": "Person",
+    "name": "Muhammad Shoaib"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Tools360Pro",
+    "url": "https://tools360pro.com/"
+   },
+   "mainEntityOfPage": "https://tools360pro.com/guides/how-to-format-xml.html",
+   "datePublished": "2026-11-17",
+   "dateModified": "2026-11-17"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://tools360pro.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guides",
+     "item": "https://tools360pro.com/guides/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Format XML",
+     "item": "https://tools360pro.com/guides/how-to-format-xml.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+ {
+  "@type": "Question",
+  "name": "What does well-formed mean?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "It means the document follows the basic XML rules: one root element, every tag closed, matching case, quoted attributes and no stray text outside the root. Well-formed is the minimum a parser accepts."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "Does formatting check my schema?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "No. This tool checks that the document is well-formed XML, not that it matches a particular schema, DTD or expected structure. Schema validation needs a dedicated validator."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "Why does one error hide the next?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "A parser stops at the first problem it meets, because everything after it may be misread. Fix the reported error, format again, and repeat until the document passes cleanly."
+  }
+ }
+]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container tool-page doc">
+<section class="page-head">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
+  <h1>How to format XML</h1>
+  <p class="lede">XML is strict: one unclosed tag breaks the whole document. Formatting it means laying the structure out with indentation — and checking, in the same pass, that the document is actually valid.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Formatting and validation go together</h2>
+  <p>XML is stricter than HTML: every tag must close, attributes must be quoted, and there must be exactly one root element. A formatter for XML therefore does two jobs. First it checks the document with a real XML parser, which is the same strict parser a server or an importer would use. If the document fails, you get the parser's error message instead of a guess. Only if it passes does the formatting step run.</p>
+  <p>The formatting itself is straightforward: one element per line, children indented under their parent, and elements that hold only text kept on a single line so the output stays compact. Attributes stay on the opening tag, in their original order. Comments and CDATA sections are preserved, and the XML declaration at the top of the file is kept.</p>
+</section>
+
+<section class="tool-section">
+  <h2>The errors that break XML most often</h2>
+  <p>Most invalid XML fails for a small handful of reasons. An unclosed tag is the classic one — XML has no void elements, so every opening tag needs its close. Mismatched case is another: <code>&lt;Title&gt;</code> closed by <code>&lt;/title&gt;</code> is an error, because XML tag names are case-sensitive. Unescaped ampersands and angle brackets inside text are a third — a bare <code>&amp;</code> in a product name must be written as <code>&amp;amp;</code>, and a <code>&lt;</code> in a comparison as <code>&amp;lt;</code>.</p>
+  <p>Two structural errors round out the list: more than one root element, and text or markup sitting outside the root. The parser stops at the first problem it meets, so a large file often hides two or three errors — fix the reported one, format again, and repeat until the document passes cleanly.</p>
+</section>
+
+<section class="tool-section">
+  <h2>XML versus JSON: when each fits</h2>
+  <p>JSON has taken over most new APIs, but XML still runs a large part of the working world: configuration files, sitemaps, RSS feeds, office documents, SOAP services, and data feeds between companies. XML's strengths are the ones JSON lacks — comments, attributes, mixed content, and a schema language for validation — which is why it survives wherever documents, not just data, need to move.</p>
+  <p>The choice is rarely yours to make: the system you integrate with has already chosen. What you can choose is how you work with the format you are given, and formatting plus validation is the fastest way to understand an XML document you did not write.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Format XML in the browser</h2>
+  <ol class="steps">
+    <li>Open the <a href="../tools/xml-formatter.html">XML Formatter</a> and paste your document into the Input box.</li>
+    <li>Choose 2 or 4 spaces for indentation, then click Format and Validate.</li>
+    <li>If the document is valid, the formatted output appears with an element count. If it is not, the parser error is shown plainly.</li>
+    <li>Fix the reported error in the original file and format again — the parser stops at the first problem, so a large file may hide more than one.</li>
+    <li>Click Copy output or Download to save the formatted document.</li>
+  </ol>
+</section>
+
+<section class="tool-section">
+  <h2>Reading parser errors</h2>
+  <p>Parser errors look cryptic until you know their shape. They usually name the problem — an unclosed tag, an unexpected character — and give a line number. Go to that line in your original file, not the formatted output, and read the tags around it. The error is usually one line above or below the reported position, because the parser only notices the problem when it reaches the next thing that does not fit.</p>
+  <p>The most confusing errors come from unescaped characters. An ampersand in text produces an error about an entity reference, and a stray angle bracket produces an error about a malformed tag. When the message mentions entities or markup where you expected plain text, look for a bare <code>&amp;</code> or <code>&lt;</code> in the text near the reported line.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Keeping XML readable in a team</h2>
+  <p>XML files tend to grow: a configuration file gains settings, a feed gains fields, and before long nobody can say what the structure is. Formatting on a schedule — or better, automatically, when the file is saved — keeps the structure visible and the diffs clean. Most editors can format XML on save with an extension.</p>
+  <p>The same habit applies to generated XML. A feed or export produced by code should be formatted before it is committed or shared, even if machines read it in production. The person debugging it at midnight will be grateful.</p>
+</section>
+
+<section class="tool-section faq">
+  <h2>Questions people ask</h2>
+<details><summary>What does well-formed mean?</summary><p>It means the document follows the basic XML rules: one root element, every tag closed, matching case, quoted attributes and no stray text outside the root. Well-formed is the minimum a parser accepts.</p></details>
+    <details><summary>Does formatting check my schema?</summary><p>No. This tool checks that the document is well-formed XML, not that it matches a particular schema, DTD or expected structure. Schema validation needs a dedicated validator.</p></details>
+    <details><summary>Why does one error hide the next?</summary><p>A parser stops at the first problem it meets, because everything after it may be misread. Fix the reported error, format again, and repeat until the document passes cleanly.</p></details>
+</section>
+
+</main>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
+<script src="../assets/js/site.js?v=80.0"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4F3KZHDRSS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4F3KZHDRSS');
+</script>
+
+<script>/* On refresh, always start at the top of the page */try{var __t=performance.getEntriesByType("navigation")[0];var __r=(__t&&__t.type==="reload")||(performance.navigation&&performance.navigation.type===1);if(__r){if("scrollRestoration" in history)history.scrollRestoration="manual";window.scrollTo(0,0);addEventListener("load",function(){window.scrollTo(0,0);setTimeout(function(){try{history.scrollRestoration="auto"}catch(e){}},50)})}}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Convert CSV to JSON | Tools360Pro</title>
+<meta name="description" content="Convert CSV to JSON: how the conversion works, the quoting quirks that break naive converters, and why every value is a string.">
+<link rel="canonical" href="https://tools360pro.com/guides/how-to-convert-csv-to-json.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="How to Convert CSV to JSON | Tools360Pro">
+<meta property="og:description" content="Convert CSV to JSON: how the conversion works, the quoting quirks that break naive converters, and why every value is a string.">
+<meta property="og:url" content="https://tools360pro.com/guides/how-to-convert-csv-to-json.html">
+<meta property="og:image" content="https://tools360pro.com/og-image.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Tools360Pro logo — free online tools">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Convert CSV to JSON | Tools360Pro">
+<meta name="twitter:description" content="Convert CSV to JSON: how the conversion works, the quoting quirks that break naive converters, and why every value is a string.">
+<meta name="twitter:image" content="https://tools360pro.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+<link rel="stylesheet" href="../assets/css/style.css?v=67.0">
+<style>
+.doc p{color:var(--muted);max-width:760px}
+.doc ul{color:var(--muted);max-width:760px;display:grid;gap:7px;padding-left:21px}
+.doc li::marker{color:var(--acc);font-weight:800}
+.doc a{font-weight:600}
+.doc .updated{font-size:.9rem}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "headline": "How to Convert CSV to JSON",
+   "description": "Convert CSV to JSON: how the conversion works, the quoting quirks that break naive converters, and why every value is a string.",
+   "author": {
+    "@type": "Person",
+    "name": "Muhammad Shoaib"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Tools360Pro",
+    "url": "https://tools360pro.com/"
+   },
+   "mainEntityOfPage": "https://tools360pro.com/guides/how-to-convert-csv-to-json.html",
+   "datePublished": "2026-11-17",
+   "dateModified": "2026-11-17"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://tools360pro.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guides",
+     "item": "https://tools360pro.com/guides/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "CSV to JSON",
+     "item": "https://tools360pro.com/guides/how-to-convert-csv-to-json.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+ {
+  "@type": "Question",
+  "name": "What if a row has the wrong number of fields?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "The conversion stops with an honest error naming the row and the field counts. Fix the row in the input — usually a missing comma or an unclosed quote — and convert again."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "Are numbers kept as numbers?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "No. CSV has no type information, so every value becomes a string in the JSON. Convert values to numbers in your own code after importing, where the conversion is visible."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "Can I convert a CSV without headers?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "No. The first row is always treated as the field names. If your file has no headers, add a header row first, or the first data row will be used as the names."
+  }
+ }
+]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container tool-page doc">
+<section class="page-head">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
+  <h1>How to convert CSV to JSON</h1>
+  <p class="lede">CSV is the format spreadsheets speak, JSON is the format code speaks. Converting means turning rows into objects — and handling the quoting quirks that break naive converters.</p>
+</section>
+
+<section class="tool-section">
+  <h2>From spreadsheet to structured data</h2>
+  <p>A CSV file is a table, and a JSON array of objects is the same table in a different shape. Converting means reading the first row as the field names, then turning every following row into one object whose keys are those names. Three data rows become three objects, each with the same keys — the shape APIs and JavaScript code expect.</p>
+  <p>The output is immediately usable: paste it into a JavaScript file, send it to an API that accepts JSON, load it into a database that imports JSON documents, or use it as test data. It is also easy to reshape from here — filter the array, pick out one field, or nest it under another object, all with a few lines of code.</p>
+</section>
+
+<section class="tool-section">
+  <h2>The CSV quirks that break naive converters</h2>
+  <p>Real-world CSV is messier than the textbook version. Fields that contain commas are wrapped in quotes, and a converter must honour those quotes: <code>&quot;Laptop, 15 inch&quot;</code> is one field, not two. A quote inside a quoted field is written doubled, and the parser must turn it back into a single quote. Line breaks inside quoted fields are kept as part of the field, not treated as row breaks.</p>
+  <p>Files saved on Windows end their lines with a carriage return plus a newline, and files from other systems use a newline alone — a good converter accepts both. Trailing blank lines at the end of the file are ignored, and empty fields become empty strings rather than errors. A converter that splits on commas and newlines without understanding quotes will mangle all of this, silently.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Types: everything is a string</h2>
+  <p>CSV carries no type information, so every value comes out as a string in the JSON: a price of <code>899</code> becomes the string <code>&quot;899&quot;</code>, not the number <code>899</code>, and <code>true</code> becomes the string <code>&quot;true&quot;</code>. That is deliberate — guessing types would silently change your data, and a value like <code>00123</code> or <code>2024-01-05</code> would be mangled by any guesser.</p>
+  <p>Convert values to numbers in your own code after importing, where the conversion is visible and under your control. A single mapping step — parse the fields you know are numbers, leave the rest as strings — is explicit, reviewable, and does not surprise you three months later.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Convert CSV to JSON in the browser</h2>
+  <ol class="steps">
+    <li>Open the <a href="../tools/csv-json.html">CSV to JSON Converter</a> and paste your CSV into the Input box. The first row must be the header row.</li>
+    <li>Click Convert to JSON. Each following row becomes one object, with the header names as its keys.</li>
+    <li>If a row has the wrong number of fields, the error names the row — fix it in the input and convert again.</li>
+    <li>Check the object and field count in the success message.</li>
+    <li>Click Copy output or Download to save the JSON, then use it in your app, API test or config file.</li>
+  </ol>
+</section>
+
+<section class="tool-section">
+  <h2>Fixing a row that fails</h2>
+  <p>The most common failure is a row with the wrong number of fields: a missing comma, or a quote that was opened and never closed, so the rest of the row collapses into one field. A good error message names the row number and tells you how many fields it found versus how many the header has, so you can jump straight to the problem instead of counting commas by eye.</p>
+  <p>If the whole file fails with an unclosed-quote error, the culprit is usually a single stray quote mark somewhere in the middle — often in a product name or a note written by hand. Find it, remove it or quote the field properly, and the file will convert.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Using the JSON afterwards</h2>
+  <p>The output is a JSON array of objects, ready for the usual destinations. In JavaScript, fetch it or import it and work with the array directly. For an API test, paste it into the request body. For a config file, save it as <code>.json</code> and load it at startup. For a database that imports JSON documents, the array is already in the right shape.</p>
+  <p>If you need the data back in a spreadsheet later, the trip reverses cleanly with our <a href="../tools/json-csv.html">JSON to CSV Converter</a> — with the caveat that numbers stay strings on the round trip, because CSV never knew they were numbers.</p>
+</section>
+
+<section class="tool-section faq">
+  <h2>Questions people ask</h2>
+<details><summary>What if a row has the wrong number of fields?</summary><p>The conversion stops with an honest error naming the row and the field counts. Fix the row in the input — usually a missing comma or an unclosed quote — and convert again.</p></details>
+    <details><summary>Are numbers kept as numbers?</summary><p>No. CSV has no type information, so every value becomes a string in the JSON. Convert values to numbers in your own code after importing, where the conversion is visible.</p></details>
+    <details><summary>Can I convert a CSV without headers?</summary><p>No. The first row is always treated as the field names. If your file has no headers, add a header row first, or the first data row will be used as the names.</p></details>
+</section>
+
+</main>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
+<script src="../assets/js/site.js?v=80.0"></script>
+</body>
+</html>

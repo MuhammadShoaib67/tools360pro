@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4F3KZHDRSS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4F3KZHDRSS');
+</script>
+
+<script>/* On refresh, always start at the top of the page */try{var __t=performance.getEntriesByType("navigation")[0];var __r=(__t&&__t.type==="reload")||(performance.navigation&&performance.navigation.type===1);if(__r){if("scrollRestoration" in history)history.scrollRestoration="manual";window.scrollTo(0,0);addEventListener("load",function(){window.scrollTo(0,0);setTimeout(function(){try{history.scrollRestoration="auto"}catch(e){}},50)})}}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Convert JSON to CSV | Tools360Pro</title>
+<meta name="description" content="Convert JSON to CSV: how the conversion works, why some fields get quoted, and what happens to nested data.">
+<link rel="canonical" href="https://tools360pro.com/guides/how-to-convert-json-to-csv.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="How to Convert JSON to CSV | Tools360Pro">
+<meta property="og:description" content="Convert JSON to CSV: how the conversion works, why some fields get quoted, and what happens to nested data.">
+<meta property="og:url" content="https://tools360pro.com/guides/how-to-convert-json-to-csv.html">
+<meta property="og:image" content="https://tools360pro.com/og-image.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Tools360Pro logo — free online tools">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Convert JSON to CSV | Tools360Pro">
+<meta name="twitter:description" content="Convert JSON to CSV: how the conversion works, why some fields get quoted, and what happens to nested data.">
+<meta name="twitter:image" content="https://tools360pro.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+<link rel="stylesheet" href="../assets/css/style.css?v=67.0">
+<style>
+.doc p{color:var(--muted);max-width:760px}
+.doc ul{color:var(--muted);max-width:760px;display:grid;gap:7px;padding-left:21px}
+.doc li::marker{color:var(--acc);font-weight:800}
+.doc a{font-weight:600}
+.doc .updated{font-size:.9rem}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "headline": "How to Convert JSON to CSV",
+   "description": "Convert JSON to CSV: how the conversion works, why some fields get quoted, and what happens to nested data.",
+   "author": {
+    "@type": "Person",
+    "name": "Muhammad Shoaib"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Tools360Pro",
+    "url": "https://tools360pro.com/"
+   },
+   "mainEntityOfPage": "https://tools360pro.com/guides/how-to-convert-json-to-csv.html",
+   "datePublished": "2026-11-17",
+   "dateModified": "2026-11-17"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://tools360pro.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guides",
+     "item": "https://tools360pro.com/guides/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "JSON to CSV",
+     "item": "https://tools360pro.com/guides/how-to-convert-json-to-csv.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+ {
+  "@type": "Question",
+  "name": "What if my objects have different keys?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "Headers are the union of all keys across all objects, in the order they first appear. An object missing a key gets an empty cell in that column, so every row stays aligned."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "What happens to nested objects?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "They are flattened to JSON strings inside their cells, not expanded into columns. A tags array becomes its JSON text in one cell, preserving the data in readable form."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "Why do some fields have quotes?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "Fields containing a comma, a quote or a line break must be quoted, or a spreadsheet would split them. Quotes inside a field are doubled, following the standard CSV rules."
+  }
+ }
+]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container tool-page doc">
+<section class="page-head">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
+  <h1>How to convert JSON to CSV</h1>
+  <p class="lede">A JSON array of objects is already a table — each object is a row, its keys are the columns. Converting to CSV makes that table readable in any spreadsheet, and here is how it works, including the quoting rules and the nested-data problem.</p>
+</section>
+
+<section class="tool-section">
+  <h2>JSON is a table in disguise</h2>
+  <p>A JSON array of objects is already a table: each object is a row, and its keys are the columns. Converting to CSV makes that structure visible to tools that never learned JSON — spreadsheets, databases, data-analysis tools, and colleagues who work in Excel. The conversion itself is mechanical: collect every key into a header row, then write one CSV row per object.</p>
+  <p>Headers are collected in the order they first appear, and every object contributes its keys — so if the third object has a key the first two lack, it still gets a column. Rows that do not have a value for a column get an empty cell. The result is a rectangular table, which is what spreadsheets expect. A single object on its own becomes a one-row table.</p>
+</section>
+
+<section class="tool-section">
+  <h2>The quoting rules that matter</h2>
+  <p>CSV looks simple until a value contains a comma. The standard rules handle it: any field containing a comma, a quote or a line break is wrapped in double quotes, and a quote inside a field is doubled. A product named <code>Chair, wooden</code> therefore arrives in one cell, not split across two — and a spreadsheet reading the file will put it back together correctly.</p>
+  <p>These rules are why you should never convert by hand with find-and-replace. A naive join with commas breaks the moment a value contains one, and the break is silent — the file looks fine until someone sorts it and finds half a product name in the wrong column. A converter that quotes properly is the difference between data and a mess.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Nested data and the flattening problem</h2>
+  <p>JSON allows nesting; CSV does not. An object inside an object, or an array inside a value, has no natural home in a flat table. The honest options are two: flatten the nested value into a JSON string inside one cell, preserving the data in readable form, or expand it into extra columns, which needs a decision about how deep to go.</p>
+  <p>This converter takes the first option: nested objects and arrays become their JSON text in a single cell. The data is preserved and still readable, but it is not split into columns. If you need one column per nested field — a <code>details.size</code> column, say — flatten the JSON first, in code or with a dedicated tool, and then convert.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Convert JSON to CSV in the browser</h2>
+  <ol class="steps">
+    <li>Open the <a href="../tools/json-csv.html">JSON to CSV Converter</a> and paste a JSON array of objects into the Input box.</li>
+    <li>Click Convert to CSV. The first row of the output is the header row, built from the object keys.</li>
+    <li>Check the row and column count in the success message — it should match what you expect from the data.</li>
+    <li>Click Copy output or Download to save the CSV file.</li>
+    <li>Open the downloaded file in Excel, Google Sheets or any tool that reads CSV.</li>
+  </ol>
+</section>
+
+<section class="tool-section">
+  <h2>Opening the CSV in a spreadsheet</h2>
+  <p>The most common destination is a spreadsheet: open the downloaded file in Excel, Google Sheets or LibreOffice and the table appears, ready to sort, filter and chart. If the file opens with everything in one column, the cause is usually a regional setting — some locales expect a semicolon separator. Open the file through the import wizard, choose comma as the separator, and the columns will appear.</p>
+  <p>A spreadsheet is also where small data-cleaning jobs become easy. Once the CSV is open, you can sort by any column, filter out rows you do not need, remove duplicates, and spot the empty cells where an object was missing a key. Do that tidying in the spreadsheet, not by editing the JSON — the table view makes problems visible in a way a wall of brackets never does.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Going the other way</h2>
+  <p>CSV to JSON is the reverse trip, and it has its own quirks: the first row becomes the field names, quoted fields need proper parsing, and every value comes out as a string because CSV carries no type information. Our <a href="../tools/csv-json.html">CSV to JSON Converter</a> handles that direction with the same care — quoted commas, doubled quotes and all.</p>
+  <p>Round-tripping is possible but lossy in one direction: JSON to CSV and back gives you strings where numbers and booleans used to be, and nested values stay flattened. Keep the original JSON if you need the types back.</p>
+</section>
+
+<section class="tool-section faq">
+  <h2>Questions people ask</h2>
+<details><summary>What if my objects have different keys?</summary><p>Headers are the union of all keys across all objects, in the order they first appear. An object missing a key gets an empty cell in that column, so every row stays aligned.</p></details>
+    <details><summary>What happens to nested objects?</summary><p>They are flattened to JSON strings inside their cells, not expanded into columns. A tags array becomes its JSON text in one cell, preserving the data in readable form.</p></details>
+    <details><summary>Why do some fields have quotes?</summary><p>Fields containing a comma, a quote or a line break must be quoted, or a spreadsheet would split them. Quotes inside a field are doubled, following the standard CSV rules.</p></details>
+</section>
+
+</main>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
+<script src="../assets/js/site.js?v=80.0"></script>
+</body>
+</html>
