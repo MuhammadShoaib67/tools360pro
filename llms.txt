@@ -168,6 +168,14 @@ QR codes, passwords and palettes. Category page: https://tools360pro.com/generat
 
 ## Guides
 
+- [How to Create a Robots.txt File (Free, in 2 Minutes)](https://tools360pro.com/guides/how-to-create-a-robots-txt-file.html)
+- [How to Add Schema Markup to a Website (JSON-LD, Free)](https://tools360pro.com/guides/how-to-add-schema-markup-to-a-website.html)
+- [How to Create an XML Sitemap (Free, in Minutes)](https://tools360pro.com/guides/how-to-create-an-xml-sitemap.html)
+- [How to Write a Meta Title That Gets Clicked (2026)](https://tools360pro.com/guides/how-to-write-a-meta-title.html)
+- [How to Write a Meta Description That Gets Clicked (2026)](https://tools360pro.com/guides/how-to-write-a-meta-description.html)
+- [How to Preview Open Graph Tags Before You Share (Free)](https://tools360pro.com/guides/how-to-preview-open-graph-tags.html)
+- [How to Check a Page for Basic SEO (Free Checklist)](https://tools360pro.com/guides/how-to-check-a-page-for-basic-seo.html)
+- [How to Convert HEX to RGB (Free Converter + Formula)](https://tools360pro.com/guides/how-to-convert-hex-to-rgb.html)
 - [How to Minify CSS](https://tools360pro.com/guides/how-to-minify-css.html)
 - [How to Minify HTML](https://tools360pro.com/guides/how-to-minify-html.html)
 - [How to Format HTML](https://tools360pro.com/guides/how-to-format-html.html)

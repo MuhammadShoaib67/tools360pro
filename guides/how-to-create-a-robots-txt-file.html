@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4F3KZHDRSS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4F3KZHDRSS');
+</script>
+
+<script>/* On refresh, always start at the top of the page */try{var __t=performance.getEntriesByType("navigation")[0];var __r=(__t&&__t.type==="reload")||(performance.navigation&&performance.navigation.type===1);if(__r){if("scrollRestoration" in history)history.scrollRestoration="manual";window.scrollTo(0,0);addEventListener("load",function(){window.scrollTo(0,0);setTimeout(function(){try{history.scrollRestoration="auto"}catch(e){}},50)})}}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Create a Robots.txt File (Free, in 2 Minutes) | Tools360Pro</title>
+<meta name="description" content="Create a robots.txt file for your website in minutes. Free generator, upload instructions, and the common mistakes to avoid.">
+<link rel="canonical" href="https://tools360pro.com/guides/how-to-create-a-robots-txt-file.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools360Pro">
+<meta property="og:title" content="How to Create a Robots.txt File (Free, in 2 Minutes) | Tools360Pro">
+<meta property="og:description" content="Create a robots.txt file for your website in minutes. Free generator, upload instructions, and the common mistakes to avoid.">
+<meta property="og:url" content="https://tools360pro.com/guides/how-to-create-a-robots-txt-file.html">
+<meta property="og:image" content="https://tools360pro.com/og-image.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Tools360Pro logo — free online tools">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Create a Robots.txt File (Free, in 2 Minutes) | Tools360Pro">
+<meta name="twitter:description" content="Create a robots.txt file for your website in minutes. Free generator, upload instructions, and the common mistakes to avoid.">
+<meta name="twitter:image" content="https://tools360pro.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
+<link rel="stylesheet" href="../assets/css/style.css?v=67.0">
+<style>
+.doc p{color:var(--muted);max-width:760px}
+.doc ul{color:var(--muted);max-width:760px;display:grid;gap:7px;padding-left:21px}
+.doc li::marker{color:var(--acc);font-weight:800}
+.doc a{font-weight:600}
+.doc .updated{font-size:.9rem}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "headline": "How to Create a Robots.txt File (Free, in 2 Minutes)",
+   "description": "Create a robots.txt file for your website in minutes. Free generator, upload instructions, and the common mistakes to avoid.",
+   "author": {
+    "@type": "Person",
+    "name": "Muhammad Shoaib"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Tools360Pro",
+    "url": "https://tools360pro.com/"
+   },
+   "mainEntityOfPage": "https://tools360pro.com/guides/how-to-create-a-robots-txt-file.html",
+   "datePublished": "2026-11-17",
+   "dateModified": "2026-11-17"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://tools360pro.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guides",
+     "item": "https://tools360pro.com/guides/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Create a Robots.txt File",
+     "item": "https://tools360pro.com/guides/how-to-create-a-robots-txt-file.html"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+ {
+  "@type": "Question",
+  "name": "Where does the robots.txt file go?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "At the root of your domain, so it loads at https://example.com/robots.txt. A copy in a subfolder is ignored by crawlers, and each subdomain needs its own separate file."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "Does robots.txt hide a page from Google?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "No. It only tells crawlers not to visit the page. If other pages link to it, Google may still list the URL in search results. To remove a page from results, use a noindex tag instead."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "What happens if I block my whole site by accident?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "Google stops crawling new pages, and over time your pages can drop out of search results. Remove the bad rule, save the file, and ask Google to re-crawl in Search Console. Recovery can take days or weeks, so check the file after every change."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "Do I need a robots.txt file at all?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "Strictly no, a site works without one. But it is a two-minute job that gives you control over crawl budget and keeps admin and search pages out of the crawl queue, so there is little reason to skip it."
+  }
+ }
+]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container tool-page doc">
+<section class="page-head">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
+  <h1>How to Create a Robots.txt File</h1>
+  <p class="lede">A robots.txt file is a small text file that sits at the root of your website and tells search engines which pages they may crawl and which they should leave alone. It takes two minutes to create, and most websites need only a few lines. This guide shows you how to write one, where to put it, and the mistakes that can accidentally hide your whole site from Google.</p>
+</section>
+
+<section class="tool-section">
+  <h2>What a robots.txt file actually does</h2>
+  <p>Search engines send crawlers to visit your pages, and before a crawler starts work it checks for a file called robots.txt at the root of your domain. The file is a set of plain-text instructions: which parts of the site the crawler may visit, which parts it should skip, and where your sitemap lives. It is a polite request, not a lock — well-behaved crawlers like Googlebot follow it, but nothing forces a bad bot to obey.</p>
+  <p>Two things robots.txt does not do are worth knowing before you write one. First, it does not hide a page from search results: if other pages link to a blocked URL, Google may still list it, usually without a description. To remove a page from results you need a noindex tag, not a robots.txt rule. Second, it does not protect private content — anyone can open your robots.txt file and read it, so never use it to hide sensitive URLs. Passwords protect private pages; robots.txt only manages crawling.</p>
+</section>
+
+<section class="tool-section">
+  <h2>The rules most websites need</h2>
+  <p>Most sites need only three things in robots.txt: allow everything by default, block the handful of areas that waste crawl time, and point to the sitemap. A typical file looks like this: User-agent: * on the first line, then Disallow lines for the admin area, the login page, the cart and internal search results, and finally a Sitemap line with the full sitemap URL. That is the whole file for most small sites.</p>
+  <p>Two details are easy to get wrong. Wildcards work in Google's reading of robots.txt — an asterisk matches any sequence of characters, and a dollar sign marks the end of a URL — but not every crawler supports them, so keep your rules simple enough that a basic crawler still reads them correctly. And crawl-delay, a line that asks crawlers to wait between requests, is ignored by Google entirely, so do not rely on it to protect a slow server.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Create your robots.txt file in four steps</h2>
+  <ol class="steps">
+    <li><strong>Decide what to block.</strong> Admin areas, login and account pages, carts and checkout, internal search result pages, and any staging or test area. Do not block your CSS, JavaScript or image files — Google needs them to render your pages properly, and blocking them can hurt how your pages are understood.</li>
+    <li><strong>Write the rules.</strong> The quickest way is a browser tool: open the <a href="../tools/robots-txt-generator.html">Robots.txt Generator</a>, add your allow and disallow rules, paste your sitemap URL, and copy or download the finished file. A plain text editor works too — one rule per line, no formatting, saved as robots.txt.</li>
+    <li><strong>Upload it to your website root.</strong> The file must live at https://example.com/robots.txt — a copy in a subfolder is ignored, and each subdomain needs its own file. Upload it with your hosting file manager or FTP. WordPress users can use an SEO plugin with a robots.txt editor, or upload the file manually.</li>
+    <li><strong>Test it before you trust it.</strong> Open the URL in a browser and confirm the file loads. Then check it in Google Search Console: the robots.txt Tester shows whether a given URL is blocked, and URL Inspection confirms Google can fetch the file. Re-check after every change — a typo here can block the whole site.</li>
+  </ol>
+</section>
+
+<section class="tool-section">
+  <h2>Mistakes that hide your site from Google</h2>
+  <p>The classic disaster is a single line: Disallow: / blocks the entire site. It is usually a leftover from a staging site that went live with its test robots.txt still in place. If your pages suddenly drop out of search results, check robots.txt first — it takes ten seconds and it is the most common cause of a sudden disappearance.</p>
+  <p>The other common mistakes are subtler. Blocking CSS and JavaScript files stops Google rendering pages properly. Using robots.txt to hide private pages gives a false sense of security, since the file itself is public. And assuming every bot obeys the rules is wishful thinking: scrapers and malicious bots ignore robots.txt, so anything genuinely private needs a password, not a Disallow line.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Other ways to create a robots.txt file</h2>
+  <p>If you run WordPress, SEO plugins like Yoast and Rank Math include a robots.txt editor in their settings, which is the easiest route on that platform. Shopify, Wix and Squarespace generate a robots.txt file automatically, with limited options to edit it. And for a static or hand-built site, a text editor plus your hosting file manager is all you need.</p>
+  <p>Whichever route you take, the file itself is identical: plain text, at the root, with one rule per line. The browser generator is the fastest option when you want a correct file without installing a plugin or learning the syntax.</p>
+</section>
+
+<section class="tool-section faq">
+  <h2>Questions people ask</h2>
+<details><summary>Where does the robots.txt file go?</summary><p>At the root of your domain, so it loads at https://example.com/robots.txt. A copy in a subfolder is ignored by crawlers, and each subdomain needs its own separate file.</p></details>
+    <details><summary>Does robots.txt hide a page from Google?</summary><p>No. It only tells crawlers not to visit the page. If other pages link to it, Google may still list the URL in search results. To remove a page from results, use a noindex tag instead.</p></details>
+    <details><summary>What happens if I block my whole site by accident?</summary><p>Google stops crawling new pages, and over time your pages can drop out of search results. Remove the bad rule, save the file, and ask Google to re-crawl in Search Console. Recovery can take days or weeks, so check the file after every change.</p></details>
+    <details><summary>Do I need a robots.txt file at all?</summary><p>Strictly no, a site works without one. But it is a two-minute job that gives you control over crawl budget and keeps admin and search pages out of the crawl queue, so there is little reason to skip it.</p></details>
+</section>
+
+</main>
+<div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
+<script src="../assets/js/site.js?v=81.0"></script>
+</body>
+</html>
