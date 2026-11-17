@@ -244,6 +244,9 @@
     });
     s = s.replace(/<!--[\s\S]*?-->/g, '');
     s = s.replace(/>\s*\n\s*</g, '><');
+    s = s.replace(/(>)\s*\n\s*(\u0000\d+\u0000)/g, '$1$2');
+    s = s.replace(/(\u0000\d+\u0000)\s*\n\s*(<)/g, '$1$2');
+    s = s.replace(/(\u0000\d+\u0000)\s*\n\s*(\u0000\d+\u0000)/g, '$1$2');
     s = s.replace(/\s{2,}/g, ' ');
     s = s.replace(/\u0000(\d+)\u0000/g, function (m, i) { return saved[+i]; });
     s = s.trim();
