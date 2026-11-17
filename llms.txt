@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 86 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 96 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -37,6 +37,16 @@ Compress, resize and convert images. Category page: https://tools360pro.com/imag
 - [AVIF to PNG Converter](https://tools360pro.com/tools/avif-to-png.html): Convert AVIF images to PNG — lossless files for any editor.
 - [BMP to PNG Converter](https://tools360pro.com/tools/bmp-to-png.html): Convert BMP images to PNG — shrink huge bitmaps without losing quality.
 - [SVG to PNG Converter](https://tools360pro.com/tools/svg-to-png.html): Convert SVG vectors to PNG — rasterize logos and icons at true size.
+- [Image Rotator](https://tools360pro.com/tools/image-rotator.html): Rotate images by 90°, 180° or any angle, right in your browser.
+- [Image Flipper](https://tools360pro.com/tools/image-flipper.html): Flip images horizontally or vertically — mirror photos in one click.
+- [Image Brightness Adjuster](https://tools360pro.com/tools/image-brightness.html): Brighten or darken images with a live preview slider.
+- [Image Contrast Adjuster](https://tools360pro.com/tools/image-contrast.html): Raise or lower image contrast with a live preview slider.
+- [Image Saturation Adjuster](https://tools360pro.com/tools/image-saturation-adjuster.html): Boost or mute image colours with a live saturation slider.
+- [Image to Grayscale Converter](https://tools360pro.com/tools/image-to-grayscale.html): Turn any image black and white in one click, free and private.
+- [Image Blur Tool](https://tools360pro.com/tools/image-blur-tool.html): Blur an image or soften its background with a live preview.
+- [Image Enlarger](https://tools360pro.com/tools/image-enlarger.html): Make images bigger by percentage or target size, in your browser.
+- [Circle Crop](https://tools360pro.com/tools/circle-crop.html): Crop any image into a circle with a transparent background.
+- [Square Image Maker](https://tools360pro.com/tools/square-image-maker.html): Make any image square by cropping or padding, for profiles and posts.
 - [Crop Image](https://tools360pro.com/tools/crop-image.html): Crop images with a visual box and aspect presets.
 - [Watermark Image](https://tools360pro.com/tools/watermark-image.html): Stamp text watermarks onto your images.
 - [Favicon Generator](https://tools360pro.com/tools/favicon-generator.html): Generate favicon sizes and an ICO from one image.
