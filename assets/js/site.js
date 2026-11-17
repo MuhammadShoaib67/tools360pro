@@ -161,6 +161,15 @@
     "emi-calculator":        ic('<circle cx="12" cy="12" r="9"/><path d="M12 6.5v11M15 8.5c-.6-1-1.7-1.5-3-1.5-1.7 0-3 .9-3 2.2 0 3.1 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.4 0-2.5-.6-3-1.6"/>'),
     "countdown":             ic('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/>'),
     "stopwatch":             ic('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M10 2h4"/><path d="M12 2v3"/>'),
+    "password-strength-checker": ic('<path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/>'),
+    "qr-code-scanner":       ic('<path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M3 12h18"/>'),
+    "username-generator":    ic('<circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.8-3.2 3.4-5 6.5-5s5.7 1.8 6.5 5"/>'),
+    "random-name-generator": ic('<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M14 9.5h4M14 13h4"/><path d="M5.5 16.5c.6-1.6 1.7-2.5 3-2.5s2.4.9 3 2.5"/>'),
+    "color-picker":          ic('<path d="M18.5 2.5a2.1 2.1 0 0 1 3 3L8 19l-4.5 1.5L5 16 18.5 2.5z"/><path d="M14 7l3 3"/>'),
+    "hashtag-generator":     ic('<path d="M9 4 7 20"/><path d="M17 4l-2 16"/><path d="M4 9h17"/><path d="M3 15h17"/>'),
+    "wheel-spinner":         ic('<circle cx="12" cy="12" r="9"/><path d="M12 3v9l6.4-6.4"/><path d="M12 12l-6.4 6.4"/><circle cx="12" cy="12" r="1.5"/>'),
+    "dice-roller":           ic('<rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.3"/><circle cx="15" cy="9" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="9" cy="15" r="1.3"/><circle cx="15" cy="15" r="1.3"/>'),
+    "coin-flip":             ic('<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/>'),
     "soon":             ic('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),
     "popular":          ic('<path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1-5.4-3-5.4 3 1.1-6.1L3.2 9.4l6.1-.8z"/>')
   };
@@ -313,7 +322,16 @@
     { slug: "sleep-cycle-calculator",    name: "Sleep Cycle Calculator",        cat: "calculators", desc: "Find the best times to wake up or go to bed, in 90-minute sleep cycles." },
     { slug: "emi-calculator",            name: "EMI Calculator",                cat: "calculators", desc: "Work out your monthly EMI, total interest and a full amortisation schedule." },
     { slug: "countdown",                 name: "Countdown Timer",               cat: "calculators", desc: "Count down to any date and time, live in your browser tab." },
-    { slug: "stopwatch",                 name: "Stopwatch",                     cat: "calculators", desc: "A free online stopwatch with laps and millisecond display." }
+    { slug: "stopwatch",                 name: "Stopwatch",                     cat: "calculators", desc: "A free online stopwatch with laps and millisecond display." },
+    { slug: "password-strength-checker", name: "Password Strength Checker",     cat: "generators", desc: "Check how strong a password is, with a score, crack-time estimate and fixes." },
+    { slug: "qr-code-scanner",           name: "QR Code Scanner",               cat: "generators", desc: "Read a QR code from any image — upload it and see the link or text inside." },
+    { slug: "username-generator",        name: "Username Generator",            cat: "generators", desc: "Generate username ideas from a name or keyword, in styles that fit any platform." },
+    { slug: "random-name-generator",     name: "Random Name Generator",         cat: "generators", desc: "Generate random first and last names for characters, testing and placeholders." },
+    { slug: "color-picker",              name: "Color Picker",                  cat: "generators", desc: "Pick a colour with an eyedropper or from any image — HEX, RGB and HSL included." },
+    { slug: "hashtag-generator",         name: "Hashtag Generator",             cat: "generators", desc: "Generate hashtag ideas for any topic, tuned for Instagram, TikTok, X and LinkedIn." },
+    { slug: "wheel-spinner",             name: "Wheel Spinner",                 cat: "generators", desc: "Spin a wheel of names to pick a random winner — for giveaways, classes and teams." },
+    { slug: "dice-roller",               name: "Dice Roller",                   cat: "generators", desc: "Roll 1–6 dice with 4 to 20 sides — totals and roll history included." },
+    { slug: "coin-flip",                 name: "Coin Flip",                     cat: "generators", desc: "Flip a virtual coin — heads or tails, with a running count of every flip." }
   ];
   var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator", "sign-pdf", "barcode-generator", "jpg-to-pdf"];
 
@@ -457,6 +475,7 @@
           "</div>" +
           '<nav class="footer-links" aria-label="About Tools360Pro">' +
             '<a href="' + BASE + 'guides/">Guides</a>' +
+            '<a href="' + BASE + 'new-tools.html">New Tools</a>' +
             '<a data-cat="pdf" href="' + BASE + 'pdf-tools/">PDF Tools</a>' +
             '<a data-cat="image" href="' + BASE + 'image-tools/">Image Tools</a>' +
             '<a data-cat="ai" href="' + BASE + 'ai-tools/">AI Tools</a>' +

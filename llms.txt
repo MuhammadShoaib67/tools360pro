@@ -1,8 +1,10 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 141 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 150 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
+
+- [New Tools](https://tools360pro.com/new-tools.html): The newest tools added to Tools360Pro, newest first.
 
 ## PDF Tools
 
@@ -184,6 +186,15 @@ QR codes, passwords and palettes. Category page: https://tools360pro.com/generat
 - [Resume Builder](https://tools360pro.com/tools/resume-builder.html): Build an ATS-friendly resume with live preview — templates, reorderable sections, PDF export.
 - [Random Group Generator](https://tools360pro.com/tools/random-group-generator.html): Split names into fair, balanced random groups for class or teams.
 - [Typing Speed Test](https://tools360pro.com/tools/typing-test.html): Measure typing speed: net and gross WPM, accuracy, CPM and a speed graph.
+- [Password Strength Checker](https://tools360pro.com/tools/password-strength-checker.html): Check how strong a password is, with a score, crack-time estimate and fixes.
+- [QR Code Scanner](https://tools360pro.com/tools/qr-code-scanner.html): Read a QR code from any image — upload it and see the link or text inside.
+- [Username Generator](https://tools360pro.com/tools/username-generator.html): Generate username ideas from a name or keyword, in styles that fit any platform.
+- [Random Name Generator](https://tools360pro.com/tools/random-name-generator.html): Generate random first and last names for characters, testing and placeholders.
+- [Color Picker](https://tools360pro.com/tools/color-picker.html): Pick a colour with an eyedropper or from any image — HEX, RGB and HSL included.
+- [Hashtag Generator](https://tools360pro.com/tools/hashtag-generator.html): Generate hashtag ideas for any topic, tuned for Instagram, TikTok, X and LinkedIn.
+- [Wheel Spinner](https://tools360pro.com/tools/wheel-spinner.html): Spin a wheel of names to pick a random winner — for giveaways, classes and teams.
+- [Dice Roller](https://tools360pro.com/tools/dice-roller.html): Roll 1–6 dice with 4 to 20 sides — totals and roll history included.
+- [Coin Flip](https://tools360pro.com/tools/coin-flip.html): Flip a virtual coin — heads or tails, with a running count of every flip.
 
 ## Guides
 
