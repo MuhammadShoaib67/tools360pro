@@ -632,5 +632,9 @@
   if (mqTrack && mqTrack.children.length === 1) {
     mqTrack.appendChild(mqTrack.children[0].cloneNode(true));
     mqTrack.classList.add("loop");
+    /* Constant speed (~50px/s): duration scales with the set width, so adding
+       tools never makes the strip faster. CSS 115s/84s stays as the fallback. */
+    var mqSetW = mqTrack.children[0].offsetWidth;
+    if (mqSetW > 0) mqTrack.style.animationDuration = Math.round(mqSetW / 50) + "s";
   }
 })();
