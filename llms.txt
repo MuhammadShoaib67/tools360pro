@@ -152,6 +152,16 @@ QR codes, passwords and palettes. Category page: https://tools360pro.com/generat
 
 ## Guides
 
+- [How to Add a Border to a Photo](https://tools360pro.com/guides/how-to-add-a-border-to-a-photo.html)
+- [How to Add a Drop Shadow to an Image](https://tools360pro.com/guides/how-to-add-a-drop-shadow-to-an-image.html)
+- [How to Add Text to an Image](https://tools360pro.com/guides/how-to-add-text-to-an-image.html)
+- [How to Check Image Dimensions](https://tools360pro.com/guides/how-to-check-image-dimensions.html)
+- [How to Change Image Resolution](https://tools360pro.com/guides/how-to-change-image-resolution.html)
+- [How to Convert an Image to Base64](https://tools360pro.com/guides/how-to-convert-an-image-to-base64.html)
+- [How to Resize Multiple Images at Once](https://tools360pro.com/guides/how-to-resize-multiple-images-at-once.html)
+- [How to Resize Images for Social Media](https://tools360pro.com/guides/how-to-resize-images-for-social-media.html)
+- [How to Resize Product Images for Ecommerce](https://tools360pro.com/guides/how-to-resize-product-images-for-ecommerce.html)
+- [How to Calculate Aspect Ratio](https://tools360pro.com/guides/how-to-calculate-aspect-ratio.html)
 - [How to Rotate an Image](https://tools360pro.com/guides/how-to-rotate-an-image.html)
 - [How to Flip an Image](https://tools360pro.com/guides/how-to-flip-an-image.html)
 - [How to Adjust Image Brightness](https://tools360pro.com/guides/how-to-adjust-image-brightness.html)
