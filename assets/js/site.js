@@ -305,11 +305,11 @@
     var footer = document.getElementById("site-footer");
     if (footer) {
       var catLinks = CATEGORIES.map(function (c) {
-        return '<li><a href="' + BASE + "index.html#" + c.id + '">' + c.name + "</a></li>";
+        return '<li><a data-cat="' + c.id + '" href="' + BASE + "index.html#" + c.id + '">' + c.name + "</a></li>";
       }).join("");
       function toolLinks(catIds) {
         return TOOLS.filter(function (t) { return !t.soon && catIds.indexOf(t.cat) >= 0; })
-          .map(function (t) { return '<li><a href="' + toolUrl(t.slug) + '">' + t.name + "</a></li>"; }).join("");
+          .map(function (t) { return '<li><a data-cat="' + t.cat + '" href="' + toolUrl(t.slug) + '">' + t.name + "</a></li>"; }).join("");
       }
       footer.className = "site-footer";
       footer.innerHTML =
@@ -321,20 +321,20 @@
             "</div>" +
             "<div><h4>Categories</h4><ul>" + catLinks + "</ul></div>" +
             "<div><h4>Popular tools</h4><ul>" + POPULAR.slice(0, 7).map(function (s) {
-                var t = bySlug[s]; return '<li><a href="' + toolUrl(s) + '">' + t.name + "</a></li>";
+                var t = bySlug[s]; return '<li><a data-cat="' + t.cat + '" href="' + toolUrl(s) + '">' + t.name + "</a></li>";
               }).join("") + "</ul></div>" +
             "<div><h4>More tools</h4><ul>" + toolLinks(["text", "calculators", "developer", "generators"]) + "</ul></div>" +
           "</div>" +
           '<nav class="footer-links" aria-label="About Tools360Pro">' +
             '<a href="' + BASE + 'guides/">Guides</a>' +
-            '<a href="' + BASE + 'pdf-tools/">PDF Tools</a>' +
-            '<a href="' + BASE + 'image-tools/">Image Tools</a>' +
-            '<a href="' + BASE + 'ai-tools/">AI Tools</a>' +
-            '<a href="' + BASE + 'text-tools/">Text Tools</a>' +
-            '<a href="' + BASE + 'converters/">Converters</a>' +
-            '<a href="' + BASE + 'calculators/">Calculators</a>' +
-            '<a href="' + BASE + 'developer-tools/">Developer Tools</a>' +
-            '<a href="' + BASE + 'generators/">Generators</a>' +
+            '<a data-cat="pdf" href="' + BASE + 'pdf-tools/">PDF Tools</a>' +
+            '<a data-cat="image" href="' + BASE + 'image-tools/">Image Tools</a>' +
+            '<a data-cat="ai" href="' + BASE + 'ai-tools/">AI Tools</a>' +
+            '<a data-cat="text" href="' + BASE + 'text-tools/">Text Tools</a>' +
+            '<a data-cat="converters" href="' + BASE + 'converters/">Converters</a>' +
+            '<a data-cat="calculators" href="' + BASE + 'calculators/">Calculators</a>' +
+            '<a data-cat="developer" href="' + BASE + 'developer-tools/">Developer Tools</a>' +
+            '<a data-cat="generators" href="' + BASE + 'generators/">Generators</a>' +
             '<a href="' + BASE + 'about.html">About Us</a>' +
             '<a href="' + BASE + 'contact.html">Contact Us</a>' +
             '<a href="' + BASE + 'privacy-policy.html">Privacy Policy</a>' +

@@ -64,9 +64,13 @@
   --hov-text:#059669;
   --hov-converters:#0284C7;
   --hov-calculators:#CA8A04;
-  --hov-developer:#6366F1;
-  --hov-generators:#EC4899;
-  --hov-popular:#D946EF;
+  --hov-developer:#0D9488;
+  --hov-generators:#65A30D;
+  --hov-popular:#2563EB;
+  /* Section accents: Why heading (fuchsia) + CTA heading and
+     buttons (indigo). Dark theme below restores brighter shades. */
+  --why:#C026D3;
+  --cta:#4F46E5;
   /* Per-tool hover cycle — 12 vivid shades, cycled by position
      inside each tool grid so neighbouring cards never match.
      Tool icons wear their cycle colour permanently. */
@@ -120,10 +124,15 @@
   --cat-developer:#F3F4F6;
   --cat-generators:#D4D4D4;
   /* Hover colours: brighter shades on dark backgrounds. */
+  --hov-popular:#3B82F6;
+  --hov-developer:#14B8A6;
+  --hov-generators:#84CC16;
   --hov-image:#F97316;
   --hov-text:#10B981;
   --hov-converters:#0EA5E9;
   --hov-calculators:#EAB308;
+  --why:#E879F9;
+  --cta:#6366F1;
 }
 [data-cat="pdf"]{--acc:var(--cat-pdf)}
 [data-cat="image"]{--acc:var(--cat-image)}
@@ -485,8 +494,9 @@ a.tool-card:hover::after{opacity:1}
   background:linear-gradient(120deg,var(--acc),color-mix(in srgb,var(--acc) 55%,var(--gold-soft)));
   border-color:transparent;color:#fff;box-shadow:0 10px 24px -9px var(--acc);
 }
-.btn-primary:hover{background:linear-gradient(120deg,var(--acc),color-mix(in srgb,var(--acc) 55%,var(--gold-soft)));filter:brightness(1.1);color:#fff;border-color:transparent}
+.btn-primary:hover{background:linear-gradient(120deg,var(--cta),color-mix(in srgb,var(--cta) 65%,#fff));color:#fff;border-color:transparent;box-shadow:0 12px 28px -10px var(--cta)}
 .btn-ghost{background:transparent}
+.btn.btn-ghost:hover{color:var(--cta);border-color:var(--cta);background:color-mix(in srgb,var(--cta) 10%,transparent);box-shadow:0 10px 24px -12px var(--cta)}
 .btn-sm{padding:7px 12px;font-size:.86rem;border-radius:9px;min-height:38px}
 .btn-lg{padding:14px 26px;font-size:1.02rem}
 .btn[disabled]{opacity:.5;pointer-events:none}
@@ -589,16 +599,25 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 .progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--magenta));border-radius:99px;transition:width .25s ease}
 
 /* ---------- Footer ---------- */
-.site-footer{margin-top:64px;border-top:1px solid var(--border);background:linear-gradient(180deg,transparent,rgba(124,58,237,.05))}
+.site-footer{margin-top:64px;border-top:1px solid var(--border);background:linear-gradient(180deg,transparent,rgba(128,128,128,.05))}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;padding:42px 0 30px}
 .footer-grid h4{margin:0 0 13px;font-size:.92rem;letter-spacing:.01em}
 .footer-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .footer-grid ul a{color:var(--muted);font-size:.9rem}
-.footer-grid ul a:hover{color:var(--acc)}
+.footer-grid ul a:hover,.footer-links a:hover{color:var(--hov-converters)}
+.footer-grid ul a[data-cat="pdf"]:hover,.footer-links a[data-cat="pdf"]:hover{color:var(--hov-pdf)}
+.footer-grid ul a[data-cat="image"]:hover,.footer-links a[data-cat="image"]:hover{color:var(--hov-image)}
+.footer-grid ul a[data-cat="ai"]:hover,.footer-links a[data-cat="ai"]:hover{color:var(--hov-ai)}
+.footer-grid ul a[data-cat="text"]:hover,.footer-links a[data-cat="text"]:hover{color:var(--hov-text)}
+.footer-grid ul a[data-cat="converters"]:hover,.footer-links a[data-cat="converters"]:hover{color:var(--hov-converters)}
+.footer-grid ul a[data-cat="calculators"]:hover,.footer-links a[data-cat="calculators"]:hover{color:var(--hov-calculators)}
+.footer-grid ul a[data-cat="developer"]:hover,.footer-links a[data-cat="developer"]:hover{color:var(--hov-developer)}
+.footer-grid ul a[data-cat="generators"]:hover,.footer-links a[data-cat="generators"]:hover{color:var(--hov-generators)}
 .footer-brand p{color:var(--muted);font-size:.92rem;max-width:300px}
+.footer-brand .logo > span{background:linear-gradient(94deg,#2DAFF0 5%,#FA782D 52%,#FAC328 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.footer-brand .logo .logo-num{background:none}
 .footer-links{display:flex;gap:9px 24px;flex-wrap:wrap;padding:0 0 17px}
 .footer-links a{color:var(--muted);font-size:.9rem;font-weight:600}
-.footer-links a:hover{color:var(--acc)}
 .footer-bottom{
   border-top:1px solid var(--border);padding:17px 0;color:var(--muted);font-size:.86rem;
   display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
@@ -980,7 +999,7 @@ body[data-cat="generators"] main.tool-page > h1,body[data-cat="generators"] .too
 a.tool-card:hover .tool-open span{transform:translateX(3px)}
 
 /* ---------- Why strip + CTA ---------- */
-.p7-why-title{font-size:clamp(1.55rem,2.8vw,2rem);letter-spacing:-.025em;margin:56px 0 0}
+.p7-why-title{font-size:clamp(1.55rem,2.8vw,2rem);letter-spacing:-.025em;margin:56px 0 0;color:var(--why)}
 .p7-why{margin-top:20px}
 .p7-cta{
   margin:64px 0 8px;border-radius:28px;border:1px solid var(--border-strong);position:relative;overflow:hidden;
@@ -988,7 +1007,7 @@ a.tool-card:hover .tool-open span{transform:translateX(3px)}
   backdrop-filter:var(--glass-blur);box-shadow:var(--shadow-lg);
   padding:48px 40px;text-align:center;
 }
-.p7-cta h2{font-size:clamp(1.7rem,3vw,2.3rem);letter-spacing:-.025em;margin:0 0 10px}
+.p7-cta h2{font-size:clamp(1.7rem,3vw,2.3rem);letter-spacing:-.025em;margin:0 0 10px;color:var(--cta)}
 .p7-cta p{color:var(--muted);max-width:560px;margin:0 auto;line-height:1.65}
 .p7-cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
 
