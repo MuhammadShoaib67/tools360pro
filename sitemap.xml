@@ -20,6 +20,7 @@
   <url><loc>https://tools360pro.com/tools/avif-to-jpg.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/avif-to-png.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/base64.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/binary-text.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/bmi-calculator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/bmp-to-png.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/bulk-image-resizer.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
@@ -30,7 +31,9 @@
   <url><loc>https://tools360pro.com/tools/compress-pdf.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/convert-image.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/heic-to-jpg.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/hex-text.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/hex-to-rgb-converter.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/html-escape.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/html-formatter.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/html-minifier.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/html-to-markdown.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
@@ -87,6 +90,7 @@
   <url><loc>https://tools360pro.com/tools/meta-description-generator.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/meta-tag-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/meta-title-generator.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/morse-code.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/number-base-converter.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/open-graph-preview-tool.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/password-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
@@ -94,12 +98,18 @@
   <url><loc>https://tools360pro.com/tools/percentage-calculator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/qr-code-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/regex-tester.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/remove-duplicate-lines.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/resize-image.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/reverse-text.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/rot13.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/rotate-pdf.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/slug-generator.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/social-media-image-resizer.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/sort-lines.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/split-pdf.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/square-image-maker.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/text-cleaner.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/text-to-speech.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/time-zone-converter.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/tip-calculator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/unit-converter.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
@@ -109,6 +119,7 @@
   <url><loc>https://tools360pro.com/tools/webp-to-jpg.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/webp-to-png.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/word-counter.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/word-frequency.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/xml-formatter.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/xml-sitemap-generator.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/random-number-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>

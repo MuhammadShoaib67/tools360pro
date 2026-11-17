@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 122 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 133 tools for PDF, images, AI, text, converters, calculators, developers and generators, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -90,6 +90,17 @@ Count, convert and clean up text. Category page: https://tools360pro.com/text-to
 - [Words to Pages Converter](https://tools360pro.com/tools/words-to-pages.html): Convert words to pages or pages to words — font, size and spacing included.
 - [Title Page Generator](https://tools360pro.com/tools/title-page-generator.html): Build a title page in APA 7, MLA 9, Chicago, Harvard or IEEE — download as .docx.
 - [Text Similarity Checker](https://tools360pro.com/tools/text-similarity-checker.html): Compare your text with up to 5 pasted sources — similarity % and highlights.
+- [Word Frequency Counter](https://tools360pro.com/tools/word-frequency.html): Count how often each word appears, with percentages and a sorted table.
+- [Remove Duplicate Lines](https://tools360pro.com/tools/remove-duplicate-lines.html): Delete duplicate lines from pasted text, keeping the first occurrence in order.
+- [Sort Lines Alphabetically](https://tools360pro.com/tools/sort-lines.html): Sort lines A to Z, Z to A, by length or numerically, in one click.
+- [Reverse Text](https://tools360pro.com/tools/reverse-text.html): Reverse text by characters, words or lines — instantly, in your browser.
+- [URL Slug Generator](https://tools360pro.com/tools/slug-generator.html): Turn any title into a clean URL slug: lowercase, hyphenated, accent-free.
+- [HTML Escape and Unescape](https://tools360pro.com/tools/html-escape.html): Escape HTML entities for safe display, or unescape them back to markup.
+- [ROT13 Encoder and Decoder](https://tools360pro.com/tools/rot13.html): Encode and decode ROT13 text — the classic letter-shift cipher.
+- [Morse Code Translator](https://tools360pro.com/tools/morse-code.html): Translate text to Morse code and back, with audio playback.
+- [Text to Binary Converter](https://tools360pro.com/tools/binary-text.html): Convert text to binary and back, with UTF-8 support for any language.
+- [Text to Hex Converter](https://tools360pro.com/tools/hex-text.html): Convert text to hexadecimal and back, with or without spaces.
+- [Text to Speech](https://tools360pro.com/tools/text-to-speech.html): Hear any text read aloud in your browser, with voice, rate and pitch controls.
 
 ## Converters
 
