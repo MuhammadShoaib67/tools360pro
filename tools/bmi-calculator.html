@@ -17,21 +17,21 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BMI Calculator — Free Online BMI Calculator | Tools360Pro</title>
-<meta name="description" content="Calculate your Body Mass Index (BMI) instantly from height and weight, see your category and healthy weight range. Free, private and easy to use.">
+<title>BMI Calculator Online Free for Adults | Tools360Pro</title>
+<meta name="description" content="Free BMI calculator for adults: enter height and weight in kg and cm, or feet, inches and pounds, and see your BMI, category and healthy weight range. Private — nothing leaves your browser.">
 <link rel="canonical" href="https://tools360pro.com/tools/bmi-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tools360Pro">
-<meta property="og:title" content="BMI Calculator — Free Online BMI Calculator | Tools360Pro">
-<meta property="og:description" content="Calculate your Body Mass Index (BMI) instantly from height and weight, see your category and healthy weight range. Free, private and easy to use.">
+<meta property="og:title" content="BMI Calculator Online Free for Adults | Tools360Pro">
+<meta property="og:description" content="Free BMI calculator for adults: enter height and weight in kg and cm, or feet, inches and pounds, and see your BMI, category and healthy weight range. Private — nothing leaves your browser.">
 <meta property="og:url" content="https://tools360pro.com/tools/bmi-calculator.html">
 <meta property="og:image" content="https://tools360pro.com/og-image.png">
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <meta property="og:image:alt" content="Tools360Pro logo — free online tools">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BMI Calculator — Free Online BMI Calculator | Tools360Pro">
-<meta name="twitter:description" content="Calculate your Body Mass Index (BMI) instantly from height and weight, see your category and healthy weight range. Free, private and easy to use.">
+<meta name="twitter:title" content="BMI Calculator Online Free for Adults | Tools360Pro">
+<meta name="twitter:description" content="Free BMI calculator for adults: enter height and weight in kg and cm, or feet, inches and pounds, and see your BMI, category and healthy weight range. Private — nothing leaves your browser.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -46,7 +46,7 @@
    "@type": "WebApplication",
    "name": "BMI Calculator",
    "url": "https://tools360pro.com/tools/bmi-calculator.html",
-   "description": "Calculate your Body Mass Index (BMI) instantly from height and weight, see your category and healthy weight range. Free, private and easy to use.",
+   "description": "Free BMI calculator for adults: enter height and weight in kg and cm, or feet, inches and pounds, and see your BMI, category and healthy weight range. Private — nothing leaves your browser.",
    "applicationCategory": "UtilitiesApplication",
    "operatingSystem": "Any (web browser)",
    "offers": {
@@ -120,6 +120,30 @@
       "@type": "Answer",
       "text": "Not directly. For children and teenagers, BMI is interpreted using age- and sex-specific percentile charts. This calculator uses the adult categories."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "What is a healthy BMI for adults?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A BMI between 18.5 and 24.9 is classed as healthy for adults, on the widely used WHO ranges. This calculator also shows the healthy weight range for your height, which turns that band into kilograms or pounds — usually more useful than the number alone. BMI is a screening tool, not a diagnosis, so treat the result as general information."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I enter my height in cm and weight in kg?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Use the Metric toggle and enter your height in centimetres and your weight in kilograms — the calculator works out BMI as kg divided by height in metres squared. If you prefer imperial units, switch the toggle and enter feet, inches and pounds instead; both give the same BMI for the same person."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is BMI enough on its own to judge health?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. BMI is one screening number: it does not measure body fat directly, and it cannot tell muscle from fat, so athletes can score high while being healthy. Waist size, activity, diet and blood pressure all matter too. Use your BMI as a starting point for general information, and talk to a doctor or dietitian about what it means for you."
+     }
     }
    ]
   }
@@ -134,6 +158,10 @@
   <h1>BMI Calculator</h1>
   <p class="lede">Calculate your Body Mass Index (BMI) from height and weight, see your category and your healthy weight range — instantly, free and private. Enter metric or imperial units; your numbers are never uploaded or stored.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your inputs never leave this device</p>
+  <section class="tool-section">
+    <h2>What is BMI?</h2>
+    <p>BMI, or Body Mass Index, is a screening number calculated from your height and weight: your weight in kilograms divided by your height in metres squared. This free online BMI calculator for adults gives you the number, its category — underweight, healthy, overweight or obese — and the healthy weight range for your height. It is general information only, not medical advice, and your numbers never leave your browser.</p>
+  </section>
   <section class="workspace card">
     <div class="seg" role="group" aria-label="Unit system">
       <button type="button" id="bmi-mode-metric" class="active">Metric</button>
@@ -214,6 +242,11 @@
     <p>The most useful part of the result is not the category label but the healthy weight range for your height — it turns one number into a target you can actually aim at. If your BMI sits outside the healthy band, the range shows how far you are from it in kilograms or pounds, which is far more concrete than the word overweight on its own.</p>
     <p>Check again every few weeks rather than every day: weight moves up and down daily, and the trend over a month tells you far more than any single reading. And remember these ranges are for adults — children and teenagers are measured against different growth charts, so this calculator is not the tool for them. If a result worries you, a doctor or dietitian is the right next step, not a search engine.</p>
   </section>
+  <section class="tool-section">
+    <h2>Reading the adult BMI chart</h2>
+    <p>The adult BMI chart has four bands, and this BMI calculator places your number on it with a marker so you can see where you sit. Underweight is below 18.5, healthy is 18.5 to 24.9, overweight is 25 to 29.9, and obese is 30 or above — the widely used WHO ranges for adults. The bands are the same for men and women, and they are a screening guide, not a diagnosis: they cannot tell muscle from fat, so a very muscular person can land in the overweight band while being perfectly healthy.</p>
+    <p>More useful than the band on its own is the healthy weight range the calculator shows for your height — it turns the 18.5 to 24.9 band into kilograms or pounds, so you can see the range to aim for in real units. If you use kg and cm, enter them directly; if you measure in feet, inches and pounds, the toggle switches the units and the maths stays the same. And remember these bands are for adults — children and teenagers are measured against age- and sex-specific percentile charts, so this calculator is not the tool for them.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>How is BMI calculated?</summary><p>BMI = weight in kilograms divided by height in metres squared (kg/m²). In imperial units the equivalent formula is BMI = 703 × pounds ÷ inches². Both give the same result for the same person.</p></details>
@@ -221,6 +254,9 @@
     <details><summary>What are the standard BMI categories?</summary><p>For adults: Underweight is below 18.5, Healthy is 18.5 to 24.9, Overweight is 25 to 29.9, and Obese is 30 or above. These are the widely used WHO ranges.</p></details>
     <details><summary>Is BMI accurate for athletes or muscular people?</summary><p>BMI can overestimate body fat in people with a lot of muscle, because muscle weighs more than fat for the same volume. It is a useful general screening tool, not a complete measure of health.</p></details>
     <details><summary>Does BMI apply to children?</summary><p>Not directly. For children and teenagers, BMI is interpreted using age- and sex-specific percentile charts. This calculator uses the adult categories.</p></details>
+    <details><summary>What is a healthy BMI for adults?</summary><p>A BMI between 18.5 and 24.9 is classed as healthy for adults, on the widely used WHO ranges. This calculator also shows the healthy weight range for your height, which turns that band into kilograms or pounds — usually more useful than the number alone. BMI is a screening tool, not a diagnosis, so treat the result as general information.</p></details>
+    <details><summary>Can I enter my height in cm and weight in kg?</summary><p>Yes. Use the Metric toggle and enter your height in centimetres and your weight in kilograms — the calculator works out BMI as kg divided by height in metres squared. If you prefer imperial units, switch the toggle and enter feet, inches and pounds instead; both give the same BMI for the same person.</p></details>
+    <details><summary>Is BMI enough on its own to judge health?</summary><p>No. BMI is one screening number: it does not measure body fat directly, and it cannot tell muscle from fat, so athletes can score high while being healthy. Waist size, activity, diet and blood pressure all matter too. Use your BMI as a starting point for general information, and talk to a doctor or dietitian about what it means for you.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
