@@ -17,21 +17,21 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Regex Tester — Test Regular Expressions Free | Tools360Pro</title>
-<meta name="description" content="Test regular expressions online for free. See highlighted matches, indexes and capture groups live as you type, entirely in your browser.">
+<title>Regex Tester Online Free — Test Regular Expressions | Tools360Pro</title>
+<meta name="description" content="Free online regex tester (JavaScript engine): test regular expressions and see highlighted matches, indexes and capture groups live as you type, entirely in your browser.">
 <link rel="canonical" href="https://tools360pro.com/tools/regex-tester.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tools360Pro">
-<meta property="og:title" content="Regex Tester — Test Regular Expressions Free | Tools360Pro">
-<meta property="og:description" content="Test regular expressions online for free. See highlighted matches, indexes and capture groups live as you type, entirely in your browser.">
+<meta property="og:title" content="Regex Tester Online Free — Test Regular Expressions | Tools360Pro">
+<meta property="og:description" content="Free online regex tester (JavaScript engine): test regular expressions and see highlighted matches, indexes and capture groups live as you type, entirely in your browser.">
 <meta property="og:url" content="https://tools360pro.com/tools/regex-tester.html">
 <meta property="og:image" content="https://tools360pro.com/og-image.png">
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <meta property="og:image:alt" content="Tools360Pro logo — free online tools">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Regex Tester — Test Regular Expressions Free | Tools360Pro">
-<meta name="twitter:description" content="Test regular expressions online for free. See highlighted matches, indexes and capture groups live as you type, entirely in your browser.">
+<meta name="twitter:title" content="Regex Tester Online Free — Test Regular Expressions | Tools360Pro">
+<meta name="twitter:description" content="Free online regex tester (JavaScript engine): test regular expressions and see highlighted matches, indexes and capture groups live as you type, entirely in your browser.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -55,7 +55,7 @@
    "@type": "WebApplication",
    "name": "Regex Tester",
    "url": "https://tools360pro.com/tools/regex-tester.html",
-   "description": "Test regular expressions online for free. See highlighted matches, indexes and capture groups live as you type, entirely in your browser.",
+   "description": "Free online regex tester (JavaScript engine): test regular expressions and see highlighted matches, indexes and capture groups live as you type, entirely in your browser.",
    "applicationCategory": "UtilitiesApplication",
    "operatingSystem": "Any (web browser)",
    "offers": {
@@ -129,6 +129,30 @@
       "@type": "Answer",
       "text": "Patterns that can match empty strings or very short text could otherwise produce an unbounded number of matches and freeze the page. Matches are capped at 1,000, zero-width matches safely advance the search position, and the tool notes when the cap is reached."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I test a regex with capture groups?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Write your pattern with parentheses around the parts you want to capture — for example, put the digits of an order number in parentheses — and paste sample text. The tester highlights each match and lists what every group captured, so you can check the groups grab exactly the text you expect before you use the pattern in code."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does this tester use the JavaScript regex engine?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Patterns run on the JavaScript RegExp engine, the same one browsers use, so the results match what your web code will do. Patterns written for other regex flavours may behave differently — for example, some Python-only syntax is not supported here."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I test a regex against several lines of text?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — paste as many lines as you like into the test text box. Matches are highlighted across the whole text, and the results list shows each match with its index, so you can check a pattern against a whole log file or a batch of sample inputs at once."
+     }
     }
    ]
   }
@@ -143,6 +167,10 @@
   <h1>Regex Tester</h1>
   <p class="lede">Test regular expressions online for free and see highlighted matches, indexes and capture groups live as you type. Prove a pattern against real text before it reaches your code — private, in your browser, no sign-up.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — nothing is uploaded</p>
+  <section class="tool-section">
+    <h2>How do I test a regular expression?</h2>
+    <p>To test a regular expression, paste your pattern and some sample text: this free online regex tester highlights every match, shows the match indexes and capture groups, and updates live as you type. It runs on the JavaScript RegExp engine — the same engine your browser code uses — so what you see here is what your code will do.</p>
+  </section>
 
   <section class="workspace card">
     <div class="field">
@@ -215,6 +243,11 @@
     <p>Long patterns are rarely written correctly in one go. Start with the simplest piece that matches what you want — a word, a number, a single character class — and confirm it highlights the right text. Then add one element at a time: an anchor, a quantifier, a group. Each addition either keeps the matches you expect or breaks them, and because the preview updates as you type, you can see exactly which change caused the problem. Working this way turns debugging into a short loop instead of a long hunt.</p>
     <p>Try the inputs you hope never arrive: empty strings, stray punctuation, double spaces and text in the wrong order — patterns usually break on the edges, not the middle. Check the capture groups under each match as well: parentheses do more than group a pattern, they capture text, and the match list shows exactly what each group caught. If a group captured something unexpected, the parentheses are in the wrong place. Matches are capped at 1,000, so a pattern that matches empty strings cannot freeze the page.</p>
   </section>
+  <section class="tool-section">
+    <h2>Reading the matches: indexes and capture groups</h2>
+    <p>When you test regular expressions online here, every match is highlighted in your sample text, and the results list shows each match's index — where it starts — and the text it captured. That is what makes this a regex match tester with capture groups: parentheses in your pattern create groups, and each group's captured text is shown separately, so you can check that a date pattern really grabs the year and month you expected.</p>
+    <p>Because this is a JavaScript regex tester, the pattern syntax is the one JavaScript uses — the same RegExp engine that runs in browsers and Node. If you are writing a pattern for a web form, a search box or a validation rule, testing it here proves it against real text before it reaches your code. One honest limit: this is a tester only. It does not edit your text or offer a pattern library, so bring a pattern you want to check — and if you only see one match, check whether the global flag is on.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my text uploaded to a server?</summary><p>No. Patterns are compiled and run entirely in your browser using JavaScript's RegExp. Your text is never uploaded, stored, or sent anywhere.</p></details>
@@ -222,6 +255,9 @@
     <details><summary>Why do I only see one match?</summary><p>Without the g (global) flag, a search stops at the first match — that mirrors how RegExp behaves in JavaScript. Tick the g flag to find every match in the text.</p></details>
     <details><summary>What are capture groups?</summary><p>Parts of the pattern wrapped in parentheses are capture groups. When a match has groups, this tool lists each group's captured text under the match so you can check exactly what was captured.</p></details>
     <details><summary>Why is there a limit of 1,000 matches?</summary><p>Patterns that can match empty strings or very short text could otherwise produce an unbounded number of matches and freeze the page. Matches are capped at 1,000, zero-width matches safely advance the search position, and the tool notes when the cap is reached.</p></details>
+    <details><summary>How do I test a regex with capture groups?</summary><p>Write your pattern with parentheses around the parts you want to capture — for example, put the digits of an order number in parentheses — and paste sample text. The tester highlights each match and lists what every group captured, so you can check the groups grab exactly the text you expect before you use the pattern in code.</p></details>
+    <details><summary>Does this tester use the JavaScript regex engine?</summary><p>Yes. Patterns run on the JavaScript RegExp engine, the same one browsers use, so the results match what your web code will do. Patterns written for other regex flavours may behave differently — for example, some Python-only syntax is not supported here.</p></details>
+    <details><summary>Can I test a regex against several lines of text?</summary><p>Yes — paste as many lines as you like into the test text box. Matches are highlighted across the whole text, and the results list shows each match with its index, so you can check a pattern against a whole log file or a batch of sample inputs at once.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>

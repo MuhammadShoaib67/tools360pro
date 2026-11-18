@@ -17,21 +17,21 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JWT Decoder — Decode JWT headers and payloads | Tools360Pro</title>
-<meta name="description" content="Decode and inspect JSON Web Tokens online for free. View the header, payload, claims and expiry of a JWT — decoding only, never verification, in your browser.">
+<title>JWT Decoder Online Free — Decode JWT Tokens | Tools360Pro</title>
+<meta name="description" content="Free JWT decoder online: paste a token to decode its header, payload, claims and expiry. Decoding only — never verification. Runs in your browser, nothing is uploaded.">
 <link rel="canonical" href="https://tools360pro.com/tools/jwt-decoder.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tools360Pro">
-<meta property="og:title" content="JWT Decoder — Decode JWT headers and payloads | Tools360Pro">
-<meta property="og:description" content="Decode and inspect JSON Web Tokens online for free. View the header, payload, claims and expiry of a JWT — decoding only, never verification, in your browser.">
+<meta property="og:title" content="JWT Decoder Online Free — Decode JWT Tokens | Tools360Pro">
+<meta property="og:description" content="Free JWT decoder online: paste a token to decode its header, payload, claims and expiry. Decoding only — never verification. Runs in your browser, nothing is uploaded.">
 <meta property="og:url" content="https://tools360pro.com/tools/jwt-decoder.html">
 <meta property="og:image" content="https://tools360pro.com/og-image.png">
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <meta property="og:image:alt" content="Tools360Pro logo — free online tools">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JWT Decoder — Decode JWT headers and payloads | Tools360Pro">
-<meta name="twitter:description" content="Decode and inspect JSON Web Tokens online for free. View the header, payload, claims and expiry of a JWT — decoding only, never verification, in your browser.">
+<meta name="twitter:title" content="JWT Decoder Online Free — Decode JWT Tokens | Tools360Pro">
+<meta name="twitter:description" content="Free JWT decoder online: paste a token to decode its header, payload, claims and expiry. Decoding only — never verification. Runs in your browser, nothing is uploaded.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -53,7 +53,7 @@
    "@type": "WebApplication",
    "name": "JWT Decoder",
    "url": "https://tools360pro.com/tools/jwt-decoder.html",
-   "description": "Decode and inspect JSON Web Tokens online for free. View the header, payload, claims and expiry of a JWT — decoding only, never verification, in your browser.",
+   "description": "Free JWT decoder online: paste a token to decode its header, payload, claims and expiry. Decoding only — never verification. Runs in your browser, nothing is uploaded.",
    "applicationCategory": "UtilitiesApplication",
    "operatingSystem": "Any (web browser)",
    "offers": {
@@ -127,6 +127,30 @@
       "@type": "Answer",
       "text": "Common causes are a token that does not have exactly three dot-separated segments, a segment that is not valid Base64URL, or a decoded segment that is not valid JSON — for example, a token that was truncated when copied."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "What does a JWT decoder show me?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The token's header (algorithm and type), its payload claims — issuer, subject, audience, expiry (exp), issued-at (iat) and not-before (nbf) — and a readable date for the expiry. It reads the token only; it does not check the signature, so it cannot tell you whether the token is genuine."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I check whether my JWT has expired?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Paste the token and the decoder shows the exp claim translated into a readable date and time, so you can see at a glance whether the token is still valid or has already expired. If exp is missing, the token has no expiry claim at all."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why doesn't this tool verify the signature?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Verification needs the issuer's secret or public key, and this tool is deliberately decode-only: it never asks for your secret, and your token never leaves your browser. Decoding shows what a token claims; verification is a separate step your server does with the real key."
+     }
     }
    ]
   }
@@ -141,6 +165,10 @@
   <h1>JWT Decoder</h1>
   <p class="lede">Decode and inspect JSON Web Tokens online for free — view the header, payload, claims and expiry of a JWT in seconds. Decoding only, never verification, and the token never leaves your browser.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — nothing is uploaded</p>
+  <section class="tool-section">
+    <h2>What is a JWT decoder?</h2>
+    <p>A JWT decoder reads a JSON Web Token and shows you its header, payload and claims — who issued it, who it is for, and when it expires — without needing the signing key. This free online JWT decoder does exactly that: paste a token and see its header, payload, claims and expiry in seconds. Decoding is not verifying: this tool deliberately does not verify signatures, so it shows what a token says, not whether it is genuine.</p>
+  </section>
 
   <section class="workspace card">
     <div class="field">
@@ -211,6 +239,11 @@
     <p>The usual workflow starts in your browser's developer tools or an API response: copy the token, paste it here, and the header and payload decode live as you type. Comparing the decoded claims with what your server expects usually pinpoints the problem — a clock skew of a few minutes, a missing claim, or a token from the wrong environment. If decoding fails, the token was probably truncated when copied: it must have exactly three dot-separated segments, each valid Base64URL, with JSON in the first two.</p>
     <p>One warning belongs in every debugging session: decoding proves nothing about trust. Anyone can write a payload, encode it and hand you a token that decodes beautifully — only the signature, checked against the issuer's key, says whether it is genuine, and this tool deliberately does not verify signatures. Paste test tokens freely, but keep production tokens off shared machines, even though nothing here is uploaded.</p>
   </section>
+  <section class="tool-section">
+    <h2>Reading a token: header, payload and expiry</h2>
+    <p>A JWT has three parts separated by dots — header, payload and signature — and this decoder splits them apart so you can inspect each one. The header says which algorithm signed the token; the payload carries the claims: iss (issuer), sub (subject), aud (audience) and the time claims exp, iat and nbf. When you decode a JWT token online here, every claim is shown with its value, and the expiry is translated into a readable date so you can check JWT expiry online at a glance.</p>
+    <p>That makes this a handy JWT debugger online free for the everyday checks developers actually do: is this token expired, does it carry the role claim my API expects, did the issuer set the audience I was promised? Because decoding only reads the token, it works on any token — even one whose signature is broken or whose secret you do not have. Just remember the other side of that coin: a token that decodes cleanly is not necessarily a token you should trust, so keep production tokens out of shared screenshots and never paste a live secret where it can be seen.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Does decoding a JWT verify it?</summary><p>No. Decoding is not verifying. Anyone can create or change the header and payload of a token and it will still decode perfectly here. Verification means checking the cryptographic signature with the issuer's key, which this tool does not do — never trust a token just because it decodes.</p></details>
@@ -218,6 +251,9 @@
     <details><summary>What are the three parts of a JWT?</summary><p>A JWT has three Base64URL-encoded segments separated by dots: the header (algorithm and token type), the payload (the claims), and the signature. This tool decodes the first two as JSON and shows the third segment as-is.</p></details>
     <details><summary>What do exp, iat, and nbf mean?</summary><p>exp is the expiry time, iat is the time the token was issued, and nbf is the time before which the token must not be accepted. All three are Unix timestamps in seconds, and this tool also shows them as human-readable UTC and local dates.</p></details>
     <details><summary>Why does my token fail to decode?</summary><p>Common causes are a token that does not have exactly three dot-separated segments, a segment that is not valid Base64URL, or a decoded segment that is not valid JSON — for example, a token that was truncated when copied.</p></details>
+    <details><summary>What does a JWT decoder show me?</summary><p>The token's header (algorithm and type), its payload claims — issuer, subject, audience, expiry (exp), issued-at (iat) and not-before (nbf) — and a readable date for the expiry. It reads the token only; it does not check the signature, so it cannot tell you whether the token is genuine.</p></details>
+    <details><summary>Can I check whether my JWT has expired?</summary><p>Yes. Paste the token and the decoder shows the exp claim translated into a readable date and time, so you can see at a glance whether the token is still valid or has already expired. If exp is missing, the token has no expiry claim at all.</p></details>
+    <details><summary>Why doesn't this tool verify the signature?</summary><p>Verification needs the issuer's secret or public key, and this tool is deliberately decode-only: it never asks for your secret, and your token never leaves your browser. Decoding shows what a token claims; verification is a separate step your server does with the real key.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
