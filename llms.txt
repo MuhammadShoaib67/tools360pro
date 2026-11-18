@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 151 tools for PDF, images, AI, text, converters, calculators, developers, generators and time and date, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 152 tools for PDF, images, AI, text, converters, calculators, developers, generators, time and date and audio, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -201,6 +201,12 @@ Dates, time zones and live clocks. Category page: https://tools360pro.com/time-d
 - [World Clock](https://tools360pro.com/tools/world-clock.html): Live clocks for major cities, updating every second — add or remove zones.
 - [Countdown Timer](https://tools360pro.com/tools/countdown.html): Count down to any date and time, live in your browser tab.
 - [Stopwatch](https://tools360pro.com/tools/stopwatch.html): A free online stopwatch with laps and millisecond display.
+
+## Audio Tools
+
+Trim audio files in your browser. Category page: https://tools360pro.com/audio-tools/
+
+- [Audio Trimmer](https://tools360pro.com/tools/audio-trimmer.html): Trim an audio file to the part you want — export as WAV, in your browser.
 
 ## Guides
 
