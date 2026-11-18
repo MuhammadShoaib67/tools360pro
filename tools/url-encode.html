@@ -17,12 +17,12 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>URL &amp; HTML Encoder — Encode &amp; Decode Online | Tools360Pro</title>
+<title>URL Encoder Online Free — URL &amp; HTML Encoder | Tools360Pro</title>
 <meta name="description" content="Encode and decode URLs and HTML entities online for free. Percent-encode text, decode URLs, and convert special characters to HTML entities in your browser.">
 <link rel="canonical" href="https://tools360pro.com/tools/url-encode.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tools360Pro">
-<meta property="og:title" content="URL &amp; HTML Encoder — Encode &amp; Decode Online | Tools360Pro">
+<meta property="og:title" content="URL Encoder Online Free — URL &amp; HTML Encoder | Tools360Pro">
 <meta property="og:description" content="Encode and decode URLs and HTML entities online for free. Percent-encode text, decode URLs, and convert special characters to HTML entities in your browser.">
 <meta property="og:url" content="https://tools360pro.com/tools/url-encode.html">
 <meta property="og:image" content="https://tools360pro.com/og-image.png">
@@ -30,7 +30,7 @@
 <meta property="og:image:height" content="512">
 <meta property="og:image:alt" content="Tools360Pro logo — free online tools">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="URL &amp; HTML Encoder — Encode &amp; Decode Online | Tools360Pro">
+<meta name="twitter:title" content="URL Encoder Online Free — URL &amp; HTML Encoder | Tools360Pro">
 <meta name="twitter:description" content="Encode and decode URLs and HTML entities online for free. Percent-encode text, decode URLs, and convert special characters to HTML entities in your browser.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -120,6 +120,30 @@
       "@type": "Answer",
       "text": "Encode text before placing it inside HTML markup so characters such as < and & are displayed as text instead of being interpreted as tags or entity references."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "What does %20 mean in a URL?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It is an encoded space. Percent-encoding writes unsafe characters as a % followed by two hex digits — %20 is a space, %3F is a question mark, %26 is an ampersand. Browsers read them back as the original characters."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I decode a URL that is already encoded?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Paste the encoded URL and switch to decode — %20 becomes a space again, and the link reads as plain text. Decoding fails only if the encoded text is malformed, for example a % not followed by two hex digits."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need to encode non-English characters in a URL?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Characters outside the basic Latin set — accented letters, non-Latin scripts and emoji — must be percent-encoded in UTF-8 form to travel safely in a link. This tool handles UTF-8 encoding automatically."
+     }
     }
    ]
   }
@@ -134,6 +158,11 @@
   <h1>URL &amp; HTML Encoder</h1>
   <p class="lede">Encode and decode URLs and HTML entities online for free. Percent-encode text, decode URLs, and convert special characters to HTML entities — all in your browser, with nothing uploaded.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — nothing is uploaded</p>
+
+  <section class="tool-section">
+    <h2>What is a URL encoder?</h2>
+    <p>A URL encoder converts characters that are not safe in a web address — spaces, &amp;, ?, = and non-English letters — into percent-encoded form, so links work instead of breaking. This url encoder online free percent-encodes text in your browser, decodes URLs back again, and also converts special characters to HTML entities.</p>
+  </section>
 
   <section class="workspace card">
     <div class="options-bar">
@@ -198,6 +227,11 @@
     <p>This tool offers two URL modes because a URL has two kinds of characters. The structural characters — colon, slash, question mark, ampersand and equals sign — hold the address together, separating the scheme, the host, the path and the query. When you encode a single value inside a query string, those characters must be encoded too, or the value would be mistaken for structure. When you encode a complete URL, they must stay intact, or the address falls apart. The full-URL option keeps them in place; the normal mode encodes everything that is not a plain letter, digit or safe symbol.</p>
     <p>HTML entities solve a different problem with the same idea. Inside a web page, the characters &lt;, &gt; and &amp; have jobs — they open tags and start entities — so text that contains them must be written as &amp;lt;, &amp;gt; and &amp;amp; to display as text instead of being read as markup. That is why code samples, maths expressions and quoted HTML are entity-encoded before they are pasted into a page. This tool converts the five characters that matter most, and its decoder also understands named entities such as &amp;nbsp; and numeric forms such as &amp;#123;.</p>
   </section>
+  <section class="tool-section">
+    <h2>Encoding links for emails, QR codes and social posts</h2>
+    <p>Links break most often when they are pasted somewhere that does not expect them — an email client that stops at the first space, a chat app that drops everything after an &amp;, a QR code that chokes on a special character. To percent encode url online free, paste the link here and encode it before you share it: spaces become %20, and the link survives the journey intact. If a link arrives already encoded and unreadable, the same tool works as a url decoder online free to turn it back into plain text.</p>
+    <p>The detail that trips people up is the query string. When you encode query parameter online free values — the text after the ? in a link — every special character inside the value must be encoded, or the browser reads it as part of the link itself. Use the URL mode for a single value and tick the full-URL option for a complete link, where : / ? &amp; = stay intact. And when you need to show code on a web page, switch to HTML mode: this page also works as an html entities encoder online free, turning &lt; and &gt; into entities the browser displays instead of reading as tags.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my text uploaded to a server?</summary><p>No. Encoding and decoding run entirely in your browser using JavaScript. Your text is never uploaded, stored, or sent anywhere.</p></details>
@@ -205,6 +239,9 @@
     <details><summary>Why did URL decoding fail?</summary><p>Decoding expects valid percent-encoded text, where every % is followed by two hexadecimal digits and the bytes form valid UTF-8. Plain text with a stray % sign will fail — encode it first, or remove the stray characters.</p></details>
     <details><summary>Which characters does HTML encoding convert?</summary><p>It converts &amp; to &amp;amp;, &lt; to &amp;lt;, &gt; to &amp;gt;, a double quote to &amp;quot;, and a single quote to &amp;#39;. Decoding also understands &amp;apos;, &amp;nbsp;, decimal entities such as &amp;#123;, and hex entities such as &amp;#x1F600;.</p></details>
     <details><summary>When should I encode HTML entities?</summary><p>Encode text before placing it inside HTML markup so characters such as &lt; and &amp; are displayed as text instead of being interpreted as tags or entity references.</p></details>
+    <details><summary>What does %20 mean in a URL?</summary><p>It is an encoded space. Percent-encoding writes unsafe characters as a % followed by two hex digits — %20 is a space, %3F is a question mark, %26 is an ampersand. Browsers read them back as the original characters.</p></details>
+    <details><summary>Can I decode a URL that is already encoded?</summary><p>Yes. Paste the encoded URL and switch to decode — %20 becomes a space again, and the link reads as plain text. Decoding fails only if the encoded text is malformed, for example a % not followed by two hex digits.</p></details>
+    <details><summary>Do I need to encode non-English characters in a URL?</summary><p>Yes. Characters outside the basic Latin set — accented letters, non-Latin scripts and emoji — must be percent-encoded in UTF-8 form to travel safely in a link. This tool handles UTF-8 encoding automatically.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>

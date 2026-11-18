@@ -120,6 +120,30 @@
       "@type": "Answer",
       "text": "UUIDs are commonly used as database primary keys, session IDs, transaction IDs, file names, and distributed-system identifiers where a central counter is not practical."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "How many UUIDs can I generate at once?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Up to 100 in one batch. Set the quantity with the slider or number box, click Generate, then copy all of them at once or download the list as a .txt file."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are the UUIDs random or sequential?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Random. This tool generates version 4 UUIDs, which are built from 122 random bits using your browser's Web Crypto API. They do not sort in creation order and reveal nothing about when they were made."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does uppercase or lowercase change the UUID?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Uppercase only changes how the letters are displayed — the underlying 128-bit value is identical. Most systems accept either form, so pick the one your system expects."
+     }
     }
    ]
   }
@@ -134,6 +158,11 @@
   <h1>UUID Generator</h1>
   <p class="lede">Generate cryptographically random UUID v4 values — one at a time or in bulk up to 100, with uppercase and hyphen options. Built on the Web Crypto API for strong randomness; nothing is uploaded or stored.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your code and data never leave this device</p>
+
+  <section class="tool-section">
+    <h2>What does a UUID generator do?</h2>
+    <p>A UUID generator creates Universally Unique Identifiers — random 128-bit values that work as database keys, session IDs and file names without any central counter. This uuid generator free online makes version 4 UUIDs with your browser's Web Crypto API, one at a time or in bulk up to 100, and nothing is uploaded or stored.</p>
+  </section>
 
   <section class="workspace card">
     <div class="field">
@@ -215,6 +244,11 @@
     <p>The same UUID can be written several ways, and the toggles here switch between them. Uppercase changes only the letters — some systems expect capitals, most accept either. Turning hyphens off strips them for display, leaving a compact 32-character string that some APIs and databases prefer. The underlying value never changes; only the presentation does, so pick the form your system expects and the list updates to match. Need more than one? Set the quantity up to 100, generate the batch, then copy them all at once or download the list as a .txt file.</p>
     <p>Everything is generated with your browser's Web Crypto API, the same secure randomness behind password generation — no server, no log, no account. This uuid generator online creates each value on your device, so the IDs you generate are yours alone from the moment they exist.</p>
   </section>
+  <section class="tool-section">
+    <h2>Generating UUIDs in bulk for test data and seeding</h2>
+    <p>When you need more than one identifier, a bulk uuid generator saves the copy-paste loop: set the quantity up to 100, generate the whole list at once, then copy it or download it as a .txt file. That is the fastest way to seed a test database, create a batch of unique file names, or hand a developer a list of fresh session IDs — every value in the list is a fresh random uuid generator v4 result, so no two entries repeat.</p>
+    <p>Before you generate UUIDs online, free and without signing up, check the format your system expects. Most databases accept the standard lowercase form with hyphens, but some APIs want the compact 32-character form without hyphens, and a few expect uppercase letters. The toggles here switch between those forms without changing the underlying value, so you can match the format first and generate once.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is my data uploaded or stored?</summary><p>No. UUIDs are generated locally in your browser with the Web Crypto API. Nothing is uploaded, logged, or stored on any server.</p></details>
@@ -222,6 +256,9 @@
     <details><summary>Can two generated UUIDs ever be the same?</summary><p>In practice, no. With 122 random bits, the chance of a collision is astronomically small — you would need to generate billions of UUIDs before a duplicate becomes likely.</p></details>
     <details><summary>What happens if I turn Hyphens off?</summary><p>The hyphens are stripped for display, giving a 32-character hex string. The underlying UUID value is the same; some systems prefer the compact form.</p></details>
     <details><summary>Where are UUIDs used?</summary><p>UUIDs are commonly used as database primary keys, session IDs, transaction IDs, file names, and distributed-system identifiers where a central counter is not practical.</p></details>
+    <details><summary>How many UUIDs can I generate at once?</summary><p>Up to 100 in one batch. Set the quantity with the slider or number box, click Generate, then copy all of them at once or download the list as a .txt file.</p></details>
+    <details><summary>Are the UUIDs random or sequential?</summary><p>Random. This tool generates version 4 UUIDs, which are built from 122 random bits using your browser's Web Crypto API. They do not sort in creation order and reveal nothing about when they were made.</p></details>
+    <details><summary>Does uppercase or lowercase change the UUID?</summary><p>No. Uppercase only changes how the letters are displayed — the underlying 128-bit value is identical. Most systems accept either form, so pick the one your system expects.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
