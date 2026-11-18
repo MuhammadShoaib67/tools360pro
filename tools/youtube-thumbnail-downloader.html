@@ -72,7 +72,10 @@
     { "@type": "Question", "name": "Which link formats work?", "acceptedAnswer": { "@type": "Answer", "text": "Any YouTube link: a normal watch link (youtube.com/watch?v=…), a short link (youtu.be/…), a Shorts link, an embed link — or just the 11-character video ID on its own." } },
     { "@type": "Question", "name": "Why is the Full HD thumbnail sometimes missing?", "acceptedAnswer": { "@type": "Answer", "text": "YouTube only creates the 1280×720 \"maxres\" image for videos uploaded in HD. Older or low-resolution videos top out at smaller sizes — the tool then shows the largest that exists." } },
     { "@type": "Question", "name": "Can I use a downloaded thumbnail on my own video?", "acceptedAnswer": { "@type": "Answer", "text": "Thumbnails belong to their creators. Use them for inspiration, reference, commentary or with the owner's permission — re-uploading someone else's thumbnail as your own can breach YouTube's rules and copyright." } },
-    { "@type": "Question", "name": "Does this download the video itself?", "acceptedAnswer": { "@type": "Answer", "text": "No — only the thumbnail image (the picture shown before the video plays). It does not download videos or audio." } }
+    { "@type": "Question", "name": "Does this download the video itself?", "acceptedAnswer": { "@type": "Answer", "text": "No — only the thumbnail image (the picture shown before the video plays). It does not download videos or audio." } },
+    { "@type": "Question", "name": "Can I download a YouTube Shorts thumbnail?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — paste a Shorts link the same way as any video link, or just the 11-character video ID, and the thumbnail is shown in every size YouTube has for it." } },
+    { "@type": "Question", "name": "Can I get a thumbnail from just the video ID?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — paste the 11-character video ID on its own, without a full link, and the thumbnail is fetched the same way. It works for normal videos and Shorts alike." } },
+    { "@type": "Question", "name": "Do I need a YouTube account to download a thumbnail?", "acceptedAnswer": { "@type": "Answer", "text": "No — and no signup here either. Paste the link or video ID, pick a size and download. The thumbnail is fetched from YouTube's public image servers, so no account is involved at any step." } }
    ]
   }
  ]
@@ -86,6 +89,10 @@
   <h1>YouTube Thumbnail Downloader</h1>
   <p class="lede">Paste a video link — get its thumbnail in every size YouTube offers.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+  <section class="tool-section">
+    <h2>How do I download a YouTube thumbnail in HD?</h2>
+    <p>Paste any YouTube video link — or just the 11-character video ID — and this YouTube thumbnail downloader shows the thumbnail in every size YouTube offers, from the small preview up to Full HD 1280×720. It is free, instant and needs no signup, and Shorts links work the same way as normal video links.</p>
+  </section>
 
   <section class="workspace card">
     <div class="field"><label for="url-in">YouTube video link or ID</label><input class="input" id="url-in" placeholder="https://www.youtube.com/watch?v=…"></div>
@@ -136,12 +143,20 @@
     <p>Creators are not the only people who save thumbnails. A teacher putting a video into a lesson can show its thumbnail on a slide so students know exactly which video to watch. A blogger writing about a video can use the thumbnail to identify it at a glance, and a presenter can use one as the visual anchor for a slide about the topic.</p>
     <p>In all of those cases the honest habit is the same: credit the creator, link the video itself, and use the image to point at the work rather than to replace it. Using a thumbnail to send people to the video is normal practice; passing it off as your own design is not.</p>
   </section>
+  <section class="tool-section">
+    <h2>Shorts, video IDs and the sizes that actually exist</h2>
+    <p>Not every link you copy is a watch link, and this tool accepts them all: a normal youtube.com/watch link, a short youtu.be link, an embed link, a live link — or just the 11-character video ID on its own. To get a YouTube thumbnail by video ID, paste the ID alone and the thumbnail is fetched the same way, which is handy when you only have the ID from an embed code or an analytics export. A YouTube Shorts thumbnail downloader is built in too: paste a Shorts link and the thumbnail is shown in every size YouTube has for it.</p>
+    <p>The sizes are the same for every video: a small 120×90 preview, a medium 320×180 version, a standard 640×480 one, and the Full HD image. To download a YouTube thumbnail at 1280×720, pick the Full HD size — but know that YouTube only creates it for videos uploaded in HD, so older or low-resolution videos top out at smaller sizes and the tool shows the largest that exists. That 1280×720 image is the one worth keeping for study: sharp enough to read the thumbnail's text and check its composition at full size.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Which link formats work?</summary><p>Any YouTube link: a normal watch link (youtube.com/watch?v=…), a short link (youtu.be/…), a Shorts link, an embed link — or just the 11-character video ID on its own.</p></details>
     <details><summary>Why is the Full HD thumbnail sometimes missing?</summary><p>YouTube only creates the 1280×720 "maxres" image for videos uploaded in HD. Older or low-resolution videos top out at smaller sizes — the tool then shows the largest that exists.</p></details>
     <details><summary>Can I use a downloaded thumbnail on my own video?</summary><p>Thumbnails belong to their creators. Use them for inspiration, reference, commentary or with the owner's permission — re-uploading someone else's thumbnail as your own can breach YouTube's rules and copyright.</p></details>
     <details><summary>Does this download the video itself?</summary><p>No — only the thumbnail image (the picture shown before the video plays). It does not download videos or audio.</p></details>
+    <details><summary>Can I download a YouTube Shorts thumbnail?</summary><p>Yes — paste a Shorts link the same way as any video link, or just the 11-character video ID, and the thumbnail is shown in every size YouTube has for it.</p></details>
+    <details><summary>Can I get a thumbnail from just the video ID?</summary><p>Yes — paste the 11-character video ID on its own, without a full link, and the thumbnail is fetched the same way. It works for normal videos and Shorts alike.</p></details>
+    <details><summary>Do I need a YouTube account to download a thumbnail?</summary><p>No — and no signup here either. Paste the link or video ID, pick a size and download. The thumbnail is fetched from YouTube's public image servers, so no account is involved at any step.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>

@@ -72,7 +72,10 @@
     { "@type": "Question", "name": "What is compound interest, in plain words?", "acceptedAnswer": { "@type": "Answer", "text": "Interest on top of interest. Each period your balance earns interest, and the next period that bigger balance earns interest too — so growth accelerates over time instead of staying flat." } },
     { "@type": "Question", "name": "How often should interest compound?", "acceptedAnswer": { "@type": "Answer", "text": "Use whatever your account actually does: savings accounts commonly compound monthly or daily, while many investments are shown yearly. More frequent compounding grows slightly faster at the same rate." } },
     { "@type": "Question", "name": "Does this account for tax or inflation?", "acceptedAnswer": { "@type": "Answer", "text": "No — it shows the headline growth before tax, fees and inflation. For a rough \"real\" return, you can lower the interest rate by the inflation rate (for example 8% growth with 3% inflation ≈ use 5%)." } },
-    { "@type": "Question", "name": "Is this financial advice?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a maths illustration using the numbers you type. Real products vary, markets move, and big decisions deserve a qualified adviser." } }
+    { "@type": "Question", "name": "Is this financial advice?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a maths illustration using the numbers you type. Real products vary, markets move, and big decisions deserve a qualified adviser." } },
+    { "@type": "Question", "name": "How do monthly deposits change the result?", "acceptedAnswer": { "@type": "Answer", "text": "A lot over long periods. Each deposit starts earning interest from the month it lands, so steady deposits plus compounding grow the balance far faster than the starting amount alone. Try the same rate with and without a monthly deposit to see the gap." } },
+    { "@type": "Question", "name": "Can I see how my savings grow year by year?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — the year-by-year growth table shows the balance at the end of each year, so you can watch the curve steepen as compounding takes hold." } },
+    { "@type": "Question", "name": "How long will it take my money to double?", "acceptedAnswer": { "@type": "Answer", "text": "A quick estimate is the rule of 72: divide 72 by your annual interest rate to get roughly how many years doubling takes — about 9 years at 8%. For the exact figure with your deposits included, run the numbers in the calculator and watch the year-by-year table." } }
    ]
   }
  ]
@@ -86,6 +89,10 @@
   <h1>Compound Interest Calculator</h1>
   <p class="lede">Watch a starting amount and steady deposits snowball over time.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+  <section class="tool-section">
+    <h2>What is a compound interest calculator?</h2>
+    <p>Compound interest is interest on top of interest: each period your balance earns interest, and the next period that bigger balance earns interest too, so growth accelerates over time instead of staying flat. This free online compound interest calculator shows that growth for your own numbers — starting amount, regular monthly deposits, interest rate and years — with a year-by-year growth table.</p>
+  </section>
 
   <section class="workspace card">
     <div class="ci-grid">
@@ -158,12 +165,20 @@
     <p>The result is a planning sketch, not a promise, because it holds three things steady that real life does not. It assumes the same interest rate every year, deposits arriving on schedule, and no withdrawals along the way. Real accounts vary on all three — rates move, a deposit gets skipped, money comes out for an emergency — and each change moves the final number.</p>
     <p>The honest way to use the calculator is to compare scenarios rather than trust one answer: what if the rate is two points lower, what if deposits stop for a year, what if the horizon is five years instead of ten? The year-by-year table makes those comparisons visible in seconds, and a plan that survives the pessimistic version is a plan worth keeping.</p>
   </section>
+  <section class="tool-section">
+    <h2>Starting early beats starting big</h2>
+    <p>The most powerful input in this calculator is not the amount or the rate — it is the years. Money left to compound for thirty years grows far more than twice as much as the same money left for fifteen, because every year's growth becomes next year's starting point. A compound interest calculator with monthly deposits makes the point concrete: a modest deposit every month, started early, outgrows a much larger deposit started late.</p>
+    <p>That is why this works as a savings growth calculator as well as a maths demo — try your own numbers and watch the year-by-year table steepen. The compounding frequency matters less than the years, but it is still worth matching to your account: the daily, monthly or quarterly setting lets you compare how often interest lands, and more frequent compounding always pays slightly more at the same rate. Doubling the years usually beats doubling the deposit.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>What is compound interest, in plain words?</summary><p>Interest on top of interest. Each period your balance earns interest, and the next period that bigger balance earns interest too — so growth accelerates over time instead of staying flat.</p></details>
     <details><summary>How often should interest compound?</summary><p>Use whatever your account actually does: savings accounts commonly compound monthly or daily, while many investments are shown yearly. More frequent compounding grows slightly faster at the same rate.</p></details>
     <details><summary>Does this account for tax or inflation?</summary><p>No — it shows the headline growth before tax, fees and inflation. For a rough "real" return, you can lower the interest rate by the inflation rate (for example 8% growth with 3% inflation ≈ use 5%).</p></details>
     <details><summary>Is this financial advice?</summary><p>No. It is a maths illustration using the numbers you type. Real products vary, markets move, and big decisions deserve a qualified adviser.</p></details>
+    <details><summary>How do monthly deposits change the result?</summary><p>A lot over long periods. Each deposit starts earning interest from the month it lands, so steady deposits plus compounding grow the balance far faster than the starting amount alone. Try the same rate with and without a monthly deposit to see the gap.</p></details>
+    <details><summary>Can I see how my savings grow year by year?</summary><p>Yes — the year-by-year growth table shows the balance at the end of each year, so you can watch the curve steepen as compounding takes hold.</p></details>
+    <details><summary>How long will it take my money to double?</summary><p>A quick estimate is the rule of 72: divide 72 by your annual interest rate to get roughly how many years doubling takes — about 9 years at 8%. For the exact figure with your deposits included, run the numbers in the calculator and watch the year-by-year table.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>

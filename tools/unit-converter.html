@@ -120,6 +120,30 @@
       "@type": "Answer",
       "text": "Yes. You can enter any number, including decimals and negative values where they make sense (such as temperatures below zero). Results are shown with up to 6 decimal places, with trailing zeros trimmed."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "How many pounds is 1 kg?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "1 kilogram is about 2.205 pounds (2.20462 exactly). So 70 kg is about 154 lbs, and 1 lb is about 0.454 kg. Type either value here and the exact conversion appears live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I convert miles to kilometres?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — pick Length, enter the miles and choose kilometres. One mile is 1.60934 km, so 10 miles is about 16.1 km. Every length unit is shown together, so you can compare several at once."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does the converter show the conversion rate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — the conversion factor is shown with the result, so you can see the maths behind the answer instead of taking it on trust. For example, converting 1 inch shows the exact factor 0.0254 metres."
+     }
     }
    ]
   }
@@ -134,6 +158,10 @@
   <h1>Unit Converter</h1>
   <p class="lede">Convert length, weight, temperature, area, volume, speed, data and time instantly, with accurate formulas and every unit of a kind shown together. Free online unit converter with no sign-up, in your browser.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your inputs never leave this device</p>
+  <section class="tool-section">
+    <h2>What is a unit converter?</h2>
+    <p>A unit converter turns a value in one unit into the same quantity in another — kilograms into pounds, Celsius into Fahrenheit, miles into kilometres — using standard conversion factors. This free online unit converter covers eight kinds of quantity — length, weight, temperature, area, volume, speed, data storage and time — and updates live as you type, with the conversion rate shown so you can see the factor behind the answer.</p>
+  </section>
   <section class="workspace card">
     <div class="field">
       <label for="uc-category">Category</label>
@@ -197,6 +225,11 @@
     <p>Some conversions are not simple multiplication. Temperature is the famous one: the scales start at different points, so converting Fahrenheit to Celsius needs a subtraction as well as a multiplication, which is why this tool converts temperature through its own formulas rather than a single factor. Volume has a quieter trap — the US gallon and the imperial gallon are different sizes, about 3.79 and 4.55 litres, so a recipe or a fuel figure means something different depending on which gallon is meant. Both are in the volume list, so pick the one your source used.</p>
     <p>Rounding is the other source of small errors. A conversion that lands on many decimal places rarely needs them — a room measured to the nearest centimetre does not become more precise because the converter printed six decimals. This tool caps results at six decimal places and trims trailing zeros, so the answer stays readable without losing anything that matters. For the best results, enter the value as precisely as you know it and let the tool do the arithmetic.</p>
   </section>
+  <section class="tool-section">
+    <h2>The pairs people convert most: kg to lbs and Celsius to Fahrenheit</h2>
+    <p>Two pairs account for most everyday conversions. A kg to lbs converter is the one travellers and cooks reach for — a kilogram is about 2.2 pounds, so a 70 kg person weighs about 154 lbs — and a Celsius to Fahrenheit converter is the one that settles weather arguments: 20 °C is 68 °F, a comfortable room, while 30 °C is 86 °F, properly hot. Pick the category, enter the value, and the result updates live; the Swap button reverses the conversion without retyping.</p>
+    <p>Length is the other everyday category, and a length converter online free handles the full set — millimetres to miles, inches to centimetres — in one place, with every unit of the kind shown together so you can compare at a glance. Temperature is the odd one out: it cannot use a simple multiplier because the scales do not share a zero point, so the converter goes via Celsius behind the scenes. For data storage, watch the units — a Kilobyte is 1,000 bytes while a Kibibyte is 1,024, and mixing them up is the usual reason a drive looks smaller than the box promised.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Is this unit converter accurate?</summary><p>Yes. Linear conversions use standard international conversion factors (for example, 1 inch = 0.0254 metres exactly), and temperature uses the standard Celsius, Fahrenheit and Kelvin formulas. Results are rounded sensibly to avoid floating-point noise.</p></details>
@@ -204,6 +237,9 @@
     <details><summary>What is the difference between Kibibyte and Kilobyte?</summary><p>A Kilobyte (KB) is 1,000 bytes using the decimal system, while a Kibibyte (KiB) is 1,024 bytes using the binary system. This converter includes both so you can convert storage sizes either way.</p></details>
     <details><summary>How is temperature converted differently?</summary><p>Temperature scales do not share a common zero point, so they cannot use a simple multiplier. This tool converts via Celsius: Fahrenheit to Celsius is (°F − 32) × 5/9, Celsius to Fahrenheit is °C × 9/5 + 32, and Kelvin is Celsius + 273.15.</p></details>
     <details><summary>Can I convert very large or very small values?</summary><p>Yes. You can enter any number, including decimals and negative values where they make sense (such as temperatures below zero). Results are shown with up to 6 decimal places, with trailing zeros trimmed.</p></details>
+    <details><summary>How many pounds is 1 kg?</summary><p>1 kilogram is about 2.205 pounds (2.20462 exactly). So 70 kg is about 154 lbs, and 1 lb is about 0.454 kg. Type either value here and the exact conversion appears live.</p></details>
+    <details><summary>Can I convert miles to kilometres?</summary><p>Yes — pick Length, enter the miles and choose kilometres. One mile is 1.60934 km, so 10 miles is about 16.1 km. Every length unit is shown together, so you can compare several at once.</p></details>
+    <details><summary>Does the converter show the conversion rate?</summary><p>Yes — the conversion factor is shown with the result, so you can see the maths behind the answer instead of taking it on trust. For example, converting 1 inch shows the exact factor 0.0254 metres.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
