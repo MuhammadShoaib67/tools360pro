@@ -446,7 +446,9 @@
       for (var c = 0; c < 3; c++)
         for (var i = 0; i < npix; i++) imgArr[c * npix + i] = imgData[i * 4 + c];
       var maskArr = new Uint8Array(npix);
-      for (var j = 0; j < npix; j++) maskArr[j] = maskData[j * 4] > 0 ? 255 : 0;
+      // MI-GAN export convention (verified 2026-11-18): 0 = hole to fill,
+      // 255 = keep. Sending the opposite destroyed the unmasked photo.
+      for (var j = 0; j < npix; j++) maskArr[j] = maskData[j * 4] > 0 ? 0 : 255;
       var rd = await runInpaint(imgArr, maskArr, work.w, work.h);
       setProgress(80, "Blending the repair into your photo…");
       var resCanvas = document.createElement("canvas");
@@ -473,7 +475,10 @@
       var maskFull = document.createElement("canvas");
       maskFull.width = W; maskFull.height = H;
       var mfctx = maskFull.getContext("2d");
-      mfctx.fillStyle = "#000"; mfctx.fillRect(0, 0, W, H);
+      // NO opaque fill here: the mask must stay TRANSPARENT where unpainted,
+      // because destination-in below keeps the patch only where the mask is
+      // opaque. (An opaque black fill pasted the whole model output over the
+      // original photo.)
       mfctx.strokeStyle = "#fff"; mfctx.lineCap = "round"; mfctx.lineJoin = "round";
       strokes.forEach(function (st) {
         mfctx.lineWidth = st.size;
