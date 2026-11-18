@@ -120,7 +120,7 @@ Percentages, age, BMI, loans and tips. Category page: https://tools360pro.com/ca
 - [Percentage Calculator](https://tools360pro.com/tools/percentage-calculator.html): Find percentages, ratios and percentage change.
 - [Age Calculator](https://tools360pro.com/tools/age-calculator.html): Calculate exact age in years, months and days.
 - [BMI Calculator](https://tools360pro.com/tools/bmi-calculator.html): Check your body mass index and healthy weight range.
-- [Loan / EMI Calculator](https://tools360pro.com/tools/loan-calculator.html): Monthly payments plus a full amortisation table.
+- [Loan Calculator](https://tools360pro.com/tools/loan-calculator.html): Monthly payments plus a full amortisation table.
 - [Tip & Bill Split Calculator](https://tools360pro.com/tools/tip-calculator.html): Work out the tip and split the bill fairly.
 - [Compound Interest Calculator](https://tools360pro.com/tools/compound-interest-calculator.html): See how savings grow with compound interest over time.
 - [GPA Calculator](https://tools360pro.com/tools/gpa-calculator.html): Work out your GPA from grades and credit hours.

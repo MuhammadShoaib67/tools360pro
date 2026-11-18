@@ -264,7 +264,7 @@
     { slug: "percentage-calculator", name: "Percentage Calculator", cat: "calculators", desc: "Find percentages, ratios and percentage change." },
     { slug: "age-calculator",   name: "Age Calculator",   cat: "calculators", desc: "Calculate exact age in years, months and days." },
     { slug: "bmi-calculator",   name: "BMI Calculator",   cat: "calculators", desc: "Check your body mass index and healthy weight range." },
-    { slug: "loan-calculator",  name: "Loan / EMI Calculator", cat: "calculators", desc: "Monthly payments plus a full amortisation table." },
+    { slug: "loan-calculator",  name: "Loan Calculator", cat: "calculators", desc: "Monthly payments plus a full amortisation table." },
     { slug: "tip-calculator",   name: "Tip & Bill Split Calculator", cat: "calculators", desc: "Work out the tip and split the bill fairly." },
     /* Developer */
     { slug: "json-formatter",   name: "JSON Formatter & Validator", cat: "developer", desc: "Format, minify and validate JSON with clear errors." },
