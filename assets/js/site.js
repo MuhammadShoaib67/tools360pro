@@ -83,6 +83,7 @@
     "compress-pdf":     ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 17.5v-5"/><path d="M9.6 14.6 12 17l2.4-2.4"/>'),
     "crop-image":       ic('<path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/>'),
     "watermark-image":  ic('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8.2s3.2 3.4 3.2 5.6a3.2 3.2 0 1 1-6.4 0C8.8 11.6 12 8.2 12 8.2z"/>'),
+    "watermark-remover": ic('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8.2s3.2 3.4 3.2 5.6a3.2 3.2 0 1 1-6.4 0C8.8 11.6 12 8.2 12 8.2z"/><path d="M5 5l14 14"/>'),
     "favicon-generator": ic('<rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 7.2l1.5 3.1 3.4.5-2.5 2.4.6 3.4-3-1.6-3 1.6.6-3.4L7.1 10.8l3.4-.5z"/>'),
     "keyword-density":  ic('<path d="M5 20v-6"/><path d="M11 20V6"/><path d="M17 20v-9"/><path d="M3 20h18"/>'),
     "meta-tag-generator": ic('<path d="M12.6 2.9 21 11.3a2 2 0 0 1 0 2.8l-7.2 7.2a2 2 0 0 1-2.8 0L2.6 13A2 2 0 0 1 2 11.6V4a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.9z"/><circle cx="7.5" cy="7.5" r="1.3"/>'),
@@ -227,6 +228,7 @@
     { slug: "ai-image-upscaler", name: "AI Image Upscaler", cat: "ai", desc: "Upscale images 2x or 4x with AI, right in your browser." },
     { slug: "crop-image",       name: "Crop Image",       cat: "image", desc: "Crop images with a visual box and aspect presets." },
     { slug: "watermark-image",  name: "Watermark Image",  cat: "image", desc: "Stamp text watermarks onto your images." },
+    { slug: "watermark-remover", name: "Watermark Remover", cat: "image", desc: "Remove watermarks from photos with AI — paint over the mark, in your browser." },
     { slug: "favicon-generator", name: "Favicon Generator", cat: "image", desc: "Generate favicon sizes and an ICO from one image." },
     /* Text */
     { slug: "word-counter",     name: "Word Counter",     cat: "text", desc: "Count words, characters, sentences and reading time." },

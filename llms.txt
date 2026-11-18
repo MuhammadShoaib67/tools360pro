@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 152 tools for PDF, images, AI, text, converters, calculators, developers, generators, time and date and audio, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 153 tools for PDF, images, AI, text, converters, calculators, developers, generators, time and date and audio, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -61,6 +61,7 @@ Compress, resize and convert images. Category page: https://tools360pro.com/imag
 - [Aspect Ratio Calculator](https://tools360pro.com/tools/aspect-ratio.html): Find an aspect ratio from width and height, or compute a missing dimension.
 - [Crop Image](https://tools360pro.com/tools/crop-image.html): Crop images with a visual box and aspect presets.
 - [Watermark Image](https://tools360pro.com/tools/watermark-image.html): Stamp text watermarks onto your images.
+- [Watermark Remover](https://tools360pro.com/tools/watermark-remover.html): Remove watermarks from photos with AI — paint over the mark, in your browser.
 - [Favicon Generator](https://tools360pro.com/tools/favicon-generator.html): Generate favicon sizes and an ICO from one image.
 - [Meme Generator](https://tools360pro.com/tools/meme-generator.html): Add top and bottom text to any image and download the meme.
 
