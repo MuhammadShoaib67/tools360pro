@@ -12,10 +12,11 @@
     { id: "image",       name: "Image Tools",  tagline: "Compress, resize and convert images" },
     { id: "ai",          name: "AI Tools",     tagline: "Backgrounds, upscaling, OCR and more" },
     { id: "text",        name: "Text Tools",   tagline: "Count, convert and clean up text" },
-    { id: "converters",  name: "Converters",   tagline: "Units, bases, time zones and more" },
+    { id: "converters",  name: "Converters",   tagline: "Units, bases, currencies and more" },
     { id: "calculators", name: "Calculators",  tagline: "Percentages, age, BMI, loans and tips" },
     { id: "developer",   name: "Developer Tools", tagline: "JSON, Base64, JWT, CSS and regex" },
-    { id: "generators",  name: "Generators",   tagline: "QR codes, passwords and palettes" }
+    { id: "generators",  name: "Generators",   tagline: "QR codes, passwords and palettes" },
+    { id: "time-date",   name: "Time & Date Tools", tagline: "Dates, time zones and live clocks" }
   ];
 
   function ic(p) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + "</svg>"; }
@@ -161,6 +162,7 @@
     "emi-calculator":        ic('<circle cx="12" cy="12" r="9"/><path d="M12 6.5v11M15 8.5c-.6-1-1.7-1.5-3-1.5-1.7 0-3 .9-3 2.2 0 3.1 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.4 0-2.5-.6-3-1.6"/>'),
     "countdown":             ic('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/>'),
     "stopwatch":             ic('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M10 2h4"/><path d="M12 2v3"/>'),
+    "world-clock":           ic('<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 7v5l3 2"/>'),
     "password-strength-checker": ic('<path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/>'),
     "qr-code-scanner":       ic('<path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M3 12h18"/>'),
     "username-generator":    ic('<circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.8-3.2 3.4-5 6.5-5s5.7 1.8 6.5 5"/>'),
@@ -254,7 +256,6 @@
     { slug: "text-to-speech",            name: "Text to Speech",                cat: "text", desc: "Hear any text read aloud in your browser, with voice, rate and pitch controls." },
     /* Converters */
     { slug: "unit-converter",   name: "Unit Converter",   cat: "converters", desc: "Convert length, weight, temperature, area, speed and more." },
-    { slug: "time-zone-converter", name: "Time Zone Converter", cat: "converters", desc: "Convert times between world time zones." },
     { slug: "number-base-converter", name: "Number Base Converter", cat: "converters", desc: "Convert between binary, decimal, octal and hex." },
     { slug: "currency-converter", name: "Currency Converter", cat: "converters", desc: "Convert currencies with daily exchange rates." },
     /* Calculators */
@@ -310,7 +311,6 @@
     { slug: "typing-test", name: "Typing Speed Test", cat: "generators", desc: "Measure typing speed: net and gross WPM, accuracy, CPM and a speed graph." },
     { slug: "meme-generator",    name: "Meme Generator",    cat: "image",     desc: "Add top and bottom text to any image and download the meme." },
     { slug: "text-to-handwriting", name: "Text to Handwriting Converter", cat: "text", desc: "Turn typed text into handwritten notebook pages." },
-    { slug: "date-calculator",   name: "Date Calculator",   cat: "calculators", desc: "Count days between dates, or add days to a date." },
     { slug: "compound-interest-calculator", name: "Compound Interest Calculator", cat: "calculators", desc: "See how savings grow with compound interest over time." },
     { slug: "gpa-calculator",    name: "GPA Calculator",    cat: "calculators", desc: "Work out your GPA from grades and credit hours." },
     { slug: "final-grade-calculator", name: "Final Grade Calculator", cat: "calculators", desc: "Find out what score you need on the final to reach your target grade." },
@@ -321,8 +321,6 @@
     { slug: "subscription-cost-calculator", name: "Subscription Cost Calculator",  cat: "calculators", desc: "Add up what your subscriptions cost per month, per year and over 5 years." },
     { slug: "sleep-cycle-calculator",    name: "Sleep Cycle Calculator",        cat: "calculators", desc: "Find the best times to wake up or go to bed, in 90-minute sleep cycles." },
     { slug: "emi-calculator",            name: "EMI Calculator",                cat: "calculators", desc: "Work out your monthly EMI, total interest and a full amortisation schedule." },
-    { slug: "countdown",                 name: "Countdown Timer",               cat: "calculators", desc: "Count down to any date and time, live in your browser tab." },
-    { slug: "stopwatch",                 name: "Stopwatch",                     cat: "calculators", desc: "A free online stopwatch with laps and millisecond display." },
     { slug: "password-strength-checker", name: "Password Strength Checker",     cat: "generators", desc: "Check how strong a password is, with a score, crack-time estimate and fixes." },
     { slug: "qr-code-scanner",           name: "QR Code Scanner",               cat: "generators", desc: "Read a QR code from any image — upload it and see the link or text inside." },
     { slug: "username-generator",        name: "Username Generator",            cat: "generators", desc: "Generate username ideas from a name or keyword, in styles that fit any platform." },
@@ -331,7 +329,13 @@
     { slug: "hashtag-generator",         name: "Hashtag Generator",             cat: "generators", desc: "Generate hashtag ideas for any topic, tuned for Instagram, TikTok, X and LinkedIn." },
     { slug: "wheel-spinner",             name: "Wheel Spinner",                 cat: "generators", desc: "Spin a wheel of names to pick a random winner — for giveaways, classes and teams." },
     { slug: "dice-roller",               name: "Dice Roller",                   cat: "generators", desc: "Roll 1–6 dice with 4 to 20 sides — totals and roll history included." },
-    { slug: "coin-flip",                 name: "Coin Flip",                     cat: "generators", desc: "Flip a virtual coin — heads or tails, with a running count of every flip." }
+    { slug: "coin-flip",                 name: "Coin Flip",                     cat: "generators", desc: "Flip a virtual coin — heads or tails, with a running count of every flip." },
+    /* Time & Date */
+    { slug: "date-calculator",   name: "Date Calculator",   cat: "time-date", desc: "Count days between dates, or add days to a date." },
+    { slug: "time-zone-converter", name: "Time Zone Converter", cat: "time-date", desc: "Convert times between world time zones." },
+    { slug: "world-clock",       name: "World Clock",       cat: "time-date", desc: "Live clocks for major cities, updating every second — add or remove zones." },
+    { slug: "countdown",         name: "Countdown Timer",   cat: "time-date", desc: "Count down to any date and time, live in your browser tab." },
+    { slug: "stopwatch",         name: "Stopwatch",         cat: "time-date", desc: "A free online stopwatch with laps and millisecond display." }
   ];
   var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator", "sign-pdf", "barcode-generator", "jpg-to-pdf"];
 
@@ -484,6 +488,7 @@
             '<a data-cat="calculators" href="' + BASE + 'calculators/">Calculators</a>' +
             '<a data-cat="developer" href="' + BASE + 'developer-tools/">Developer Tools</a>' +
             '<a data-cat="generators" href="' + BASE + 'generators/">Generators</a>' +
+            '<a data-cat="time-date" href="' + BASE + 'time-date-tools/">Time &amp; Date Tools</a>' +
             '<a href="' + BASE + 'about.html">About Us</a>' +
             '<a href="' + BASE + 'contact.html">Contact Us</a>' +
             '<a href="' + BASE + 'privacy-policy.html">Privacy Policy</a>' +
