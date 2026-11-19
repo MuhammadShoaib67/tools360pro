@@ -17,21 +17,21 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Robots.txt Generator — Free Online Tool | Tools360Pro</title>
-<meta name="description" content="Generate a robots.txt file free: set the user-agent, add allow and disallow rules, include your sitemap — copy or download the file, 100% private in your browser.">
+<title>Robots.txt Generator Free Online — Allow, Disallow, Sitemap | Tools360Pro</title>
+<meta name="description" content="Robots.txt generator free online: set a user-agent, add Allow and Disallow rules, include your sitemap URL and set a crawl-delay — then copy or download the file. Free, no sign-up.">
 <link rel="canonical" href="https://tools360pro.com/tools/robots-txt-generator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tools360Pro">
-<meta property="og:title" content="Robots.txt Generator — Free Online Tool | Tools360Pro">
-<meta property="og:description" content="Generate a robots.txt file free: set the user-agent, add allow and disallow rules, include your sitemap — copy or download the file, 100% private in your browser.">
+<meta property="og:title" content="Robots.txt Generator Free Online — Allow, Disallow, Sitemap | Tools360Pro">
+<meta property="og:description" content="Robots.txt generator free online: set a user-agent, add Allow and Disallow rules, include your sitemap URL and set a crawl-delay — then copy or download the file. Free, no sign-up.">
 <meta property="og:url" content="https://tools360pro.com/tools/robots-txt-generator.html">
 <meta property="og:image" content="https://tools360pro.com/og-image.png">
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <meta property="og:image:alt" content="Tools360Pro logo — free online tools">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Robots.txt Generator — Free Online Tool | Tools360Pro">
-<meta name="twitter:description" content="Generate a robots.txt file free: set the user-agent, add allow and disallow rules, include your sitemap — copy or download the file, 100% private in your browser.">
+<meta name="twitter:title" content="Robots.txt Generator Free Online — Allow, Disallow, Sitemap | Tools360Pro">
+<meta name="twitter:description" content="Robots.txt generator free online: set a user-agent, add Allow and Disallow rules, include your sitemap URL and set a crawl-delay — then copy or download the file. Free, no sign-up.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -46,7 +46,7 @@
    "@type": "WebApplication",
    "name": "Robots.txt Generator",
    "url": "https://tools360pro.com/tools/robots-txt-generator.html",
-   "description": "Generate a robots.txt file free: set the user-agent, add allow and disallow rules, include your sitemap — copy or download the file, 100% private in your browser.",
+   "description": "Robots.txt generator free online: set a user-agent, add Allow and Disallow rules, include your sitemap URL and set a crawl-delay — then copy or download the file. Free, no sign-up.",
    "applicationCategory": "UtilitiesApplication",
    "operatingSystem": "Any (web browser)",
    "offers": {
@@ -120,6 +120,30 @@
    "@type": "Answer",
    "text": "No. This tool runs entirely in your browser using JavaScript. Nothing you type is uploaded, stored or sent anywhere."
   }
+ },
+ {
+  "@type": "Question",
+  "name": "What is a robots.txt file?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "A small text file that sits at the root of a website and tells search-engine crawlers which pages they may visit and which they should skip. It uses Allow and Disallow rules, grouped by user-agent, and usually ends with a link to the site's sitemap."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "What does crawl-delay do?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "It asks crawlers to wait a set number of seconds between requests, which can ease the load on a small server. Bing and Yandex respect it, but Google ignores crawl-delay — for Google, request rate is managed in Search Console instead."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "Where do I put the robots.txt file?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "At the root of your domain, so it is reachable at yoursite.com/robots.txt. A copy in a subfolder does not work — crawlers only look at the root. Upload the file there after downloading it from this generator."
+  }
  }
 ]
   }
@@ -134,6 +158,10 @@
   <h1>Robots.txt Generator</h1>
   <p class="lede">Build a correct robots.txt file in a minute: pick the user-agent, add allow and disallow rules, include your sitemap URL, then copy the file or download it. It runs entirely in your browser.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your code and data never leave this device</p>
+  <section class="tool-section">
+    <h2>How do I create a robots.txt file?</h2>
+    <p>Set a user-agent, add your Allow and Disallow rules, include your sitemap URL, and copy or download the finished file. This free online robots.txt generator builds the file in your browser — no sign-up, no upload — and you can add a crawl-delay too, which Bing and Yandex respect (Google ignores it).</p>
+  </section>
   <section class="workspace card">
     <div class="grid-2">
       <div class="field">
@@ -199,6 +227,11 @@
     <p>The most damaging mistake is a single wrong slash: Disallow: / blocks the entire site, and it has taken down more than one launch when a staging file was copied to production by accident. Always read the generated file once before uploading it, and check in Search Console that your important pages are still reachable. The second mistake is blocking CSS and JavaScript files: Google needs those to render a page, and blocking them can make a good page look broken to the crawler.</p>
     <p>The third mistake is treating robots.txt as a privacy tool. A disallowed admin page, staging site or private document is still public if someone knows the address, and the robots.txt file itself advertises the paths you blocked, since anyone can read it. Keep sensitive content behind a login, and use a noindex meta tag on pages you want crawled but not shown in search results.</p>
   </section>
+  <section class="tool-section">
+    <h2>Allow, Disallow and a sitemap line: what goes in the file</h2>
+    <p>To create a robots.txt file online free, start with the user-agent the rules apply to — a star means every crawler — then add Disallow lines for the paths search engines should skip, such as admin pages or internal search results, and Allow lines for the exceptions. The sitemap line at the end points crawlers to your sitemap, so they find your pages faster; it is the one line almost every robots.txt file should have.</p>
+    <p>One rule of thumb before you publish: a robots.txt file tells well-behaved crawlers where not to go, but it is not access control — anyone can read the file and visit a disallowed path anyway, so never use it to hide private content. Keep the file simple, test it after uploading (this tool builds the file; it does not check a live one), and remember that a single wrong Disallow can hide your whole site from search, so read the file once before it goes live.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Where does robots.txt go?</summary><p>At the root of your domain, so it is reachable at example.com/robots.txt. A copy in a subfolder does nothing: crawlers only check the root.</p></details>
@@ -206,6 +239,9 @@
     <details><summary>What does Disallow: / do?</summary><p>It blocks the whole site from the named crawler. It is useful on a staging site you never want indexed, and a disaster on a live site, so check the file before uploading.</p></details>
     <details><summary>Does Google follow crawl-delay?</summary><p>No, Google ignores the crawl-delay directive. Bing and Yandex respect it. If Googlebot is crawling too aggressively, adjust the crawl rate in Google Search Console instead.</p></details>
     <details><summary>Is my data uploaded anywhere?</summary><p>No. This tool runs entirely in your browser using JavaScript. Nothing you type is uploaded, stored or sent anywhere.</p></details>
+    <details><summary>What is a robots.txt file?</summary><p>A small text file that sits at the root of a website and tells search-engine crawlers which pages they may visit and which they should skip. It uses Allow and Disallow rules, grouped by user-agent, and usually ends with a link to the site's sitemap.</p></details>
+    <details><summary>What does crawl-delay do?</summary><p>It asks crawlers to wait a set number of seconds between requests, which can ease the load on a small server. Bing and Yandex respect it, but Google ignores crawl-delay — for Google, request rate is managed in Search Console instead.</p></details>
+    <details><summary>Where do I put the robots.txt file?</summary><p>At the root of your domain, so it is reachable at yoursite.com/robots.txt. A copy in a subfolder does not work — crawlers only look at the root. Upload the file there after downloading it from this generator.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
