@@ -30,20 +30,54 @@
 //     patch's boundary must yield valid inside/outside samples (a solid
 //     object such as a white pot has almost no texture inside, so only
 //     ~2% of its boundary qualifies, and it is rejected).
+//  4. ML TEXT REGIONS (DBNet, optional — Signal 3): when the page supplies
+//     a DBNet text-probability map (opts.ml), its connected components are
+//     gated HARD, because a text detector finds ALL text, including real
+//     photo text. A component is accepted only when ALL of these hold:
+//       - size between 0.1% and 4% of the image,
+//       - shift consistency >= 0.12: the component's brightness shift
+//         from its local background points one way (an overlay shifts one
+//         way; photo texture scatters — the flower that DBNet falsely
+//         detects scores 0.00-0.05),
+//       - PCA elongation >= 2.0 (text lines/words are elongated; a round
+//         flower blob is ~1.1),
+//       - the INK TEST: the ink pixels (extreme decile of brightness
+//         inside the component) must look semi-transparent, not opaque —
+//         the estimated overlay alpha (from robust medians against the
+//         surrounding ring) must sit in (0.12, 0.85), and the ink must
+//         be near-achromatic (saturation < 0.5). Opaque black text
+//         scores alpha ~1.0 and is rejected; opaque coloured text is
+//         caught by the saturation test (dark blue scores 0.83).
+//     Rejected gates (measured 2026-11-19, do not re-add without new
+//     evidence): fill ratio (kills corner/tiled entirely), gradient
+//     continuity across text boundaries (text strokes flip gradients),
+//     SWT-stroke intersection (SWT strokes are nearly absent on diagonal
+//     text over texture), blob-wide alpha fraction (background pixels
+//     inside a solid text blob dilute it), ink-texture ratio (the most
+//     shifted pixels are stroke edges, which are high-contrast in both
+//     cases).
 //
-// HONEST LIMITS (measured on synthetic tests, 2026-11-18): text on clear
-// or smooth backgrounds is found well (corner logo 80% recall, 79%
-// precision); text overlapping dense, busy texture (a flower, foliage)
-// merges with the texture's own strokes and is only partly found
-// (diagonal stock text 18% recall, tiled text 23%). A clean photo with
-// no watermark yields no regions at all (0.00% coverage). White text on
-// a white background is physically invisible and cannot be found by any
-// detector. Anything the auto-detector misses, the user paints over
-// manually — the manual brush stays as the fallback, and the page says
-// so plainly.
+// HONEST LIMITS (measured on synthetic tests, 2026-11-19, union of all
+// signals with the DBNet prob map at 736x960 input): corner logo 80%
+// recall, 79% precision (unchanged — SWT already finds it); diagonal
+// stock text 58% recall, 94% precision (was 18% without ML); tiled text
+// 76% recall, 89% precision (was 23% without ML). A clean photo with no
+// watermark yields no regions at all (0.00% coverage), and real opaque
+// text — a book page, or "SALE 50% OFF" painted on a photo — is rejected
+// by the ink test and yields no regions either. White text on a white
+// background is physically invisible and cannot be found by any detector
+// (about a third of the diagonal ground truth is white-on-white, which
+// caps diagonal recall). A nearly-opaque watermark (alpha > 0.85) is
+// indistinguishable from real text and is rejected on purpose —
+// precision over recall. Anything the auto-detector misses, the user
+// paints over manually — the manual brush stays as the fallback, and the
+// page says so plainly.
 //
 // API: T360WatermarkDetect.detect(rgba, w, h, opts)
 //   rgba: Uint8Array/Uint8ClampedArray, length w*h*4 (RGB, alpha ignored)
+//   opts.ml: optional { prob: Float32Array, w, h } DBNet probability map at
+//     detection resolution (w/h must match the image) — enables Signal 3.
+//     Without it, only the pure-JS signals (SWT + overlay) run.
 //   returns { mask, w, h, coverage, regions, found }
 //   mask: Uint8Array w*h, 1 = watermark, 0 = keep
 //   coverage: fraction of pixels masked (0..1)
@@ -87,7 +121,19 @@
     swMaxComponent: 0.04, // text components larger than 4% are photo content
     maxCoverage: 0.30,    // safety cap: never mask more than 30% of the photo
     closeRadius: 2,       // morphological close radius (joins letters of a word)
-    dilate: 2             // final dilation (covers anti-aliased watermark edges)
+    dilate: 2,            // final dilation (covers anti-aliased watermark edges)
+    // Signal 3 (DBNet) gates — measured 2026-11-19, see the header comment.
+    mlThresh: 0.3,        // DBNet probability threshold
+    mlShiftCons: 0.12,    // min |mean shift| / std shift (texture scatters: ~0.05)
+    mlMinElong: 2.0,      // min PCA elongation (round false positives: ~1.1)
+    mlAlphaLo: 0.12,      // ink-test overlay-alpha range (opaque ink: ~1.0)
+    mlAlphaHi: 0.85,
+    mlMaxSat: 0.5,        // ink-test max median saturation of ink pixels
+                          // (coloured opaque text: 0.83; watermarks: <= 0.33)
+    mlDilate: 2           // pre-dilation of accepted ML components; the final
+                          // dilate(2) below brings ML regions to 4 px total —
+                          // the measured sweet spot (diagonal 52-54% recall,
+                          // tiled 76%, precision ~91-95%)
   };
 
   function boxIntegral(src, w, h) {
@@ -150,6 +196,32 @@
     return out;
   }
 
+  // Median of a plain JS array (sorts in place).
+  function medianOf(arr) {
+    arr.sort(function (a, b) { return a - b; });
+    var m = arr.length >> 1;
+    return arr.length % 2 ? arr[m] : (arr[m - 1] + arr[m]) / 2;
+  }
+
+  // PCA elongation of a pixel set: sqrt(lambda1 / lambda2) of the 2x2
+  // covariance of the coordinates. A text line scores 5-25; a round blob
+  // scores ~1.
+  function pcaElongation(pixels, w) {
+    var n = pixels.length, sx = 0, sy = 0, i, px, py;
+    for (i = 0; i < n; i++) { sx += pixels[i] % w; sy += (pixels[i] / w) | 0; }
+    var mx = sx / n, my = sy / n;
+    var cxx = 0, cyy = 0, cxy = 0, dx, dy;
+    for (i = 0; i < n; i++) {
+      dx = pixels[i] % w - mx; dy = ((pixels[i] / w) | 0) - my;
+      cxx += dx * dx; cyy += dy * dy; cxy += dx * dy;
+    }
+    cxx /= n; cyy /= n; cxy /= n;
+    var tr = cxx + cyy, det = cxx * cyy - cxy * cxy;
+    var disc = Math.sqrt(Math.max(0, tr * tr / 4 - det));
+    var l1 = tr / 2 + disc, l2 = Math.max(1e-9, tr / 2 - disc);
+    return Math.sqrt(l1 / l2);
+  }
+
   // Connected components (8-connectivity) of a binary mask.
   function components(mask, w, h) {
     var n = w * h;
@@ -192,7 +264,7 @@
     var k;
     for (k in DEFAULTS) o[k] = DEFAULTS[k];
     if (opts) for (k in opts) if (opts[k] !== undefined) o[k] = opts[k];
-    var debug = o.debug ? { sw: [], ov: [] } : null;
+    var debug = o.debug ? { sw: [], ov: [], ml: [] } : null;
 
     var n = w * h;
     var L = new Float32Array(n);
@@ -227,11 +299,14 @@
     // overlay brightens toward white; a black overlay darkens toward black.
     var IL = boxIntegral(L, w, h);
     var alphaCand = new Uint8Array(n);
+    var shift = new Float32Array(n); // L minus local background — Signal 3's
+                                     // shift-consistency gate reads this
     var bg, aWhite, aBlack;
     for (y = 0; y < h; y++) {
       for (x = 0; x < w; x++) {
         p = y * w + x;
         bg = boxMean(IL, w, h, x, y, o.alphaRadius);
+        shift[p] = L[p] - bg;
         aWhite = (L[p] - bg) / Math.max(0.05, 1 - bg);
         aBlack = (bg - L[p]) / Math.max(0.05, bg);
         if ((aWhite > o.alphaLo && aWhite < o.alphaHi) ||
@@ -401,6 +476,93 @@
         area: c.area, score: meanCos, kind: 'overlay'
       });
       if (odbg) { odbg.accept = true; debug.ov.push(odbg); }
+    }
+
+    // ---- Signal 3: DBNet text regions (ML), heavily gated ----
+    // Only runs when the page supplies a probability map (opts.ml). DBNet
+    // finds ALL text, so every component must pass the precision gate in
+    // the header comment before it is added to the mask.
+    if (o.ml && o.ml.prob && o.ml.w === w && o.ml.h === h) {
+      var mlMask = new Uint8Array(n);
+      for (i = 0; i < n; i++) if (o.ml.prob[i] > o.mlThresh) mlMask[i] = 1;
+      var mlComps = components(mlMask, w, h);
+      for (ci = 0; ci < mlComps.length; ci++) {
+        c = mlComps[ci];
+        var mdbg = debug ? { x: c.minX, y: c.minY, w: c.maxX - c.minX + 1, h: c.maxY - c.minY + 1, area: c.area } : null;
+        if (c.area < minArea || c.area > swMaxArea) { if (mdbg) { mdbg.reject = 'size'; debug.ml.push(mdbg); } continue; }
+        // Shift consistency: an overlay shifts brightness one way; photo
+        // texture scatters (the flower scores 0.00-0.05).
+        var sSum = 0, sSq = 0, sv;
+        for (i = 0; i < c.pixels.length; i++) {
+          sv = shift[c.pixels[i]]; sSum += sv; sSq += sv * sv;
+        }
+        var sMean = sSum / c.pixels.length;
+        var sSd = Math.sqrt(Math.max(0, sSq / c.pixels.length - sMean * sMean));
+        var shiftCons = Math.abs(sMean) / (sSd + 1e-6);
+        if (mdbg) mdbg.shiftcons = +shiftCons.toFixed(2);
+        if (shiftCons < o.mlShiftCons) { if (mdbg) { mdbg.reject = 'shiftcons'; debug.ml.push(mdbg); } continue; }
+        // Elongation: text lines/words are long and thin; round texture
+        // blobs are not.
+        var elong = pcaElongation(c.pixels, w);
+        if (mdbg) mdbg.elong = +elong.toFixed(1);
+        if (elong < o.mlMinElong) { if (mdbg) { mdbg.reject = 'elong'; debug.ml.push(mdbg); } continue; }
+        // Ink test: the ink pixels (extreme decile of brightness inside
+        // the component) must look semi-transparent against the ring
+        // around the component — opaque ink scores alpha ~1.0.
+        // Local window (bbox + 6) keeps the ring computation cheap.
+        var pad = 6;
+        var lx0 = Math.max(0, c.minX - pad), ly0 = Math.max(0, c.minY - pad);
+        var lx1 = Math.min(w - 1, c.maxX + pad), ly1 = Math.min(h - 1, c.maxY + pad);
+        var lw = lx1 - lx0 + 1, lh = ly1 - ly0 + 1;
+        var lm = new Uint8Array(lw * lh);
+        for (i = 0; i < c.pixels.length; i++) {
+          lm[(((c.pixels[i] / w) | 0) - ly0) * lw + (c.pixels[i] % w - lx0)] = 1;
+        }
+        var d6 = dilate(lm, lw, lh, 6), d2 = dilate(lm, lw, lh, 2);
+        var ringL = [];
+        for (i = 0; i < lw * lh; i++) {
+          if (d6[i] && !d2[i]) ringL.push(L[(ly0 + ((i / lw) | 0)) * w + (lx0 + i % lw)]);
+        }
+        if (ringL.length < 10) { if (mdbg) { mdbg.reject = 'noring'; debug.ml.push(mdbg); } continue; }
+        var bgL = medianOf(ringL);
+        // Component pixels sorted by brightness: the extreme decile is the ink.
+        var idx = c.pixels.slice();
+        idx.sort(function (a, b) { return L[a] - L[b]; });
+        var compL = [];
+        for (i = 0; i < c.pixels.length; i++) compL.push(L[c.pixels[i]]);
+        var blobL = medianOf(compL);
+        var k10 = Math.max(1, Math.floor(idx.length * 0.1));
+        var inkIdx, inkL, alphaEst;
+        if (blobL >= bgL) {
+          inkIdx = idx.slice(idx.length - k10);
+          inkL = medianOf(inkIdx.map(function (q) { return L[q]; }));
+          alphaEst = (inkL - bgL) / Math.max(0.05, 1 - bgL);
+        } else {
+          inkIdx = idx.slice(0, k10);
+          inkL = medianOf(inkIdx.map(function (q) { return L[q]; }));
+          alphaEst = (bgL - inkL) / Math.max(0.05, bgL);
+        }
+        var inkS = medianOf(inkIdx.map(function (q) { return S[q]; }));
+        if (mdbg) { mdbg.alpha = +alphaEst.toFixed(2); mdbg.sat = +inkS.toFixed(2); }
+        if (alphaEst <= o.mlAlphaLo || alphaEst >= o.mlAlphaHi) { if (mdbg) { mdbg.reject = 'alpha'; debug.ml.push(mdbg); } continue; }
+        if (inkS >= o.mlMaxSat) { if (mdbg) { mdbg.reject = 'sat'; debug.ml.push(mdbg); } continue; }
+        // Accept: dilate this component by mlDilate (the final dilate
+        // below brings ML regions to 4 px total) and add to the union.
+        var dml = dilate(lm, lw, lh, o.mlDilate);
+        var added = 0;
+        for (i = 0; i < lw * lh; i++) {
+          if (!dml[i]) continue;
+          var gp = (ly0 + ((i / lw) | 0)) * w + (lx0 + i % lw);
+          if (!accepted[gp]) { accepted[gp] = 1; added++; }
+        }
+        if (added > 0) {
+          regions.push({
+            x: c.minX, y: c.minY, w: c.maxX - c.minX + 1, h: c.maxY - c.minY + 1,
+            area: c.area, score: shiftCons, kind: 'ml-text'
+          });
+        }
+        if (mdbg) { mdbg.accept = true; debug.ml.push(mdbg); }
+      }
     }
 
     // Close + dilate the union mask, then enforce the coverage cap.

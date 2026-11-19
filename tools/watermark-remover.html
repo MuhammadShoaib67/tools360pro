@@ -102,7 +102,7 @@
      "name": "Why does the first removal take longer?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "On first use the AI model (about 28 MB) and its engine download to your device. Your browser caches them afterwards, so the next removals start much faster."
+      "text": "On first use the AI models (about 28 MB for removal plus about 5 MB for text detection) and their engine download to your device. Your browser caches them afterwards, so the next removals start much faster."
      }
     },
     {
@@ -224,7 +224,7 @@
     <h2>How to remove a watermark from a photo</h2>
     <ol class="steps">
       <li>Choose a photo. Drop a JPG, PNG or WebP image onto the box above, or click to browse. The photo stays on your device — nothing is uploaded.</li>
-      <li>Press <b>Auto-detect &amp; remove</b>. The tool finds the watermarks itself — all of them, in one run — highlights what it found in blue, and removes them. The first time, the AI model (about 28 MB) downloads and is cached in your browser, so the first run takes a little longer — later runs are faster.</li>
+      <li>Press <b>Auto-detect &amp; remove</b>. The tool finds the watermarks itself — all of them, in one run — highlights what it found in blue, and removes them. The first time, the AI models (about 28 MB plus about 5 MB) download and are cached in your browser, so the first run takes a little longer — later runs are faster.</li>
       <li>Check the result. If a watermark was missed — a faint mark over busy detail is the usual case — paint over just that spot with the brush and press <b>Remove watermark</b>. Repeat passes are the normal way to a clean result.</li>
       <li>Download the clean photo. When it looks right, download it as a PNG or JPG.</li>
     </ol>
@@ -247,7 +247,7 @@
     <h2>Frequently asked questions</h2>
     <details><summary>How does the watermark remover work?</summary><p>Press Auto-detect and remove and the tool finds the watermark itself — however many there are — then an AI inpainting model (MI-GAN) studies the pixels around each mark and rebuilds the background underneath it, blending the repair into your original photo at full resolution. Anything it misses, you paint over with the brush.</p></details>
     <details><summary>Is my photo uploaded to a server?</summary><p>No. The AI model is served with this website and runs entirely in your browser, on your own device. Your photo is never uploaded anywhere.</p></details>
-    <details><summary>Why does the first removal take longer?</summary><p>On first use the AI model (about 28 MB) and its engine download to your device. Your browser caches them afterwards, so the next removals start much faster.</p></details>
+    <details><summary>Why does the first removal take longer?</summary><p>On first use the AI models (about 28 MB for removal plus about 5 MB for text detection) and their engine download to your device. Your browser caches them afterwards, so the next removals start much faster.</p></details>
     <details><summary>What kinds of watermarks can it remove?</summary><p>Visible watermarks the auto-detection can find, or that you can paint over: text, logos, date stamps, corner marks and faint overlays. Small and medium watermarks on simple backgrounds come out cleanest; a large watermark over busy detail is the hardest case. It cannot remove invisible watermarks or marks embedded in a file's metadata.</p></details>
     <details><summary>Is it legal to remove a watermark?</summary><p>Only remove watermarks from images you own or have permission to edit. Removing someone else's watermark may infringe copyright — a watermark is often there precisely to show who owns the image. When in doubt, ask the owner first.</p></details>
     <details><summary>Can I remove a watermark from a video?</summary><p>No. This tool works on photos (JPG, PNG and WebP) only. Removing a watermark from a video needs a different kind of tool.</p></details>
@@ -426,6 +426,43 @@
       inpaintWorker.postMessage({ type: "run", img: imgBuf, mask: maskBuf, w: w, h: h }, [imgBuf, maskBuf]);
     });
   }
+  // DBNet text detection in the worker (lazy model load, ~5 MB, first use
+  // only). Resolves with { prob: Float32Array, w, h } — the probability
+  // map at the same resolution as the input. Rejects on any failure; the
+  // caller falls back to the pure-JS detector, so a detection failure
+  // never blocks the tool.
+  function runDetect(rgbArr, w, h) {
+    return new Promise(function (resolve, reject) {
+      function onMsg(e) {
+        var d = e.data || {};
+        if (d.type === "detected") { cleanup(); resolve({ prob: new Float32Array(d.data), w: d.w, h: d.h }); }
+        else if (d.type === "detect-error") { cleanup(); reject(new Error(d.message || "detect-failed")); }
+      }
+      function onErr() { cleanup(); reject(new Error("worker-crash")); }
+      function cleanup() {
+        inpaintWorker.removeEventListener("message", onMsg);
+        inpaintWorker.removeEventListener("error", onErr);
+      }
+      inpaintWorker.addEventListener("message", onMsg);
+      inpaintWorker.addEventListener("error", onErr);
+      var buf = rgbArr.buffer.slice(rgbArr.byteOffset, rgbArr.byteOffset + rgbArr.byteLength);
+      inpaintWorker.postMessage({ type: "detect", img: buf, w: w, h: h }, [buf]);
+    });
+  }
+  // Bilinear resize of a float32 probability map.
+  function resizeProb(src, sw, sh, dw, dh) {
+    var out = new Float32Array(dw * dh);
+    var sx = sw / dw, sy = sh / dh;
+    for (var y = 0; y < dh; y++) {
+      var fy = (y + 0.5) * sy - 0.5, y0 = Math.max(0, Math.floor(fy)), y1 = Math.min(sh - 1, y0 + 1), ty = Math.min(1, Math.max(0, fy - y0));
+      for (var x = 0; x < dw; x++) {
+        var fx = (x + 0.5) * sx - 0.5, x0 = Math.max(0, Math.floor(fx)), x1 = Math.min(sw - 1, x0 + 1), tx = Math.min(1, Math.max(0, fx - x0));
+        var a = src[y0 * sw + x0], b = src[y0 * sw + x1], c = src[y1 * sw + x0], d = src[y1 * sw + x1];
+        out[y * dw + x] = (a * (1 - tx) + b * tx) * (1 - ty) + (c * (1 - tx) + d * tx) * ty;
+      }
+    }
+    return out;
+  }
 
   // Union of auto-detected regions + painted strokes, at full resolution.
   // The canvas stays TRANSPARENT where unmarked: only the marked regions
@@ -465,8 +502,13 @@
 
   // Auto-detect: run the watermark detector on a downscaled copy (max 512px),
   // then build the full-resolution auto mask + its cyan highlight tint.
-  // Returns { found, regions }.
-  function runAutoDetect() {
+  // The detector gets an optional DBNet text-probability map (run in the
+  // worker at up to 960px — small tiled text needs the extra resolution;
+  // the map is resized to detection resolution before use). If the ML
+  // model cannot load, detection silently falls back to the pure-JS
+  // signals (SWT strokes + validated overlay).
+  // Returns a promise of { found, regions }.
+  async function runAutoDetect() {
     var W = image.naturalWidth, H = image.naturalHeight;
     var scale = Math.min(1, 512 / Math.max(W, H));
     var dw = Math.max(8, Math.round(W * scale)), dh = Math.max(8, Math.round(H * scale));
@@ -475,7 +517,31 @@
     var dctx = dc.getContext("2d");
     dctx.drawImage(image, 0, 0, dw, dh);
     var data = dctx.getImageData(0, 0, dw, dh).data;
-    var res = T360WatermarkDetect.detect(data, dw, dh);
+    var ml = null;
+    try {
+      setProgress(10, "Loading the text-detection model… (about 5 MB, first use only)");
+      await loadWorker();
+      var bscale = Math.min(1, 960 / Math.max(W, H));
+      var bw = Math.max(32, Math.round(W * bscale / 32) * 32);
+      var bh = Math.max(32, Math.round(H * bscale / 32) * 32);
+      var bc = document.createElement("canvas");
+      bc.width = bw; bc.height = bh;
+      var bctx = bc.getContext("2d");
+      bctx.drawImage(image, 0, 0, bw, bh);
+      var bdata = bctx.getImageData(0, 0, bw, bh).data;
+      var rgb = new Uint8Array(bw * bh * 3);
+      for (var i = 0; i < bw * bh; i++) {
+        rgb[i * 3] = bdata[i * 4]; rgb[i * 3 + 1] = bdata[i * 4 + 1]; rgb[i * 3 + 2] = bdata[i * 4 + 2];
+      }
+      var det = await runDetect(rgb, bw, bh);
+      ml = { prob: resizeProb(det.prob, det.w, det.h, dw, dh), w: dw, h: dh };
+    } catch (e) {
+      // Text detection is an enhancement: if its model cannot load, the
+      // pure-JS detector below still runs.
+      if (window.console) console.warn("DBNet text detection unavailable, using built-in detector only:", e);
+    }
+    setProgress(15, "Looking for watermarks…");
+    var res = T360WatermarkDetect.detect(data, dw, dh, ml ? { ml: ml } : undefined);
     clearAutoMask();
     if (!res.found) return { found: false, regions: 0 };
     var small = document.createElement("canvas");
@@ -592,7 +658,7 @@
     await new Promise(function (r) { setTimeout(r, 30); });
     var det;
     try {
-      det = runAutoDetect();
+      det = await runAutoDetect();
     } catch (e) {
       hideProgress();
       showErr("Auto-detection could not run on this photo. Paint over the watermark with the brush instead.");
