@@ -18,12 +18,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Final Grade Calculator — What Do I Need? | Tools360Pro</title>
-<meta name="description" content="Find out what score you need on your final exam to reach your target grade — percentages, points or weighted categories. Free, live as you type.">
+<meta name="description" content="Final grade calculator: work out what score you need on your final exam to reach your target grade — percentages, points or weighted categories. Free, live as you type.">
 <link rel="canonical" href="https://tools360pro.com/tools/final-grade-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tools360Pro">
 <meta property="og:title" content="Final Grade Calculator — What Do I Need? | Tools360Pro">
-<meta property="og:description" content="Find out what score you need on your final exam to reach your target grade — percentages, points or weighted categories. Free, live as you type.">
+<meta property="og:description" content="Final grade calculator: work out what score you need on your final exam to reach your target grade — percentages, points or weighted categories. Free, live as you type.">
 <meta property="og:url" content="https://tools360pro.com/tools/final-grade-calculator.html">
 <meta property="og:image" content="https://tools360pro.com/og-image.png">
 <meta property="og:image:width" content="512">
@@ -31,7 +31,7 @@
 <meta property="og:image:alt" content="Tools360Pro logo — free online tools">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Final Grade Calculator — What Do I Need? | Tools360Pro">
-<meta name="twitter:description" content="Find out what score you need on your final exam to reach your target grade — percentages, points or weighted categories. Free, live as you type.">
+<meta name="twitter:description" content="Final grade calculator: work out what score you need on your final exam to reach your target grade — percentages, points or weighted categories. Free, live as you type.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -62,7 +62,7 @@
    "@type": "WebApplication",
    "name": "Final Grade Calculator",
    "url": "https://tools360pro.com/tools/final-grade-calculator.html",
-   "description": "Find out what score you need on your final exam to reach your target grade — percentages, points or weighted categories. Free, live as you type.",
+   "description": "Final grade calculator: work out what score you need on your final exam to reach your target grade — percentages, points or weighted categories. Free, live as you type.",
    "applicationCategory": "UtilitiesApplication",
    "operatingSystem": "Any (web browser)",
    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -82,7 +82,10 @@
     { "@type": "Question", "name": "What does “Not reachable” mean?", "acceptedAnswer": { "@type": "Answer", "text": "It means even a perfect 100% on the final cannot lift you to your target grade, because your current grade and the final's weight do not leave enough room. The calculator also shows the highest final grade you can still reach." } },
     { "@type": "Question", "name": "What does “Already secured” mean?", "acceptedAnswer": { "@type": "Answer", "text": "It means your current grade is already high enough that you would reach your target even with 0% on the final. You still need to sit the exam if your school requires it — but the grade itself is safe." } },
     { "@type": "Question", "name": "Which grade scale does the letter table use?", "acceptedAnswer": { "@type": "Answer", "text": "The common US cut-offs: A 90%, B 80%, C 70%, D 60%, and Pass 50% (the pass mark used in many systems outside the US). Scales vary by school and course, so your syllabus is the one that counts." } },
-    { "@type": "Question", "name": "Can I use points instead of percentages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — switch to Points mode and enter the points you have earned, the points possible so far, and the final exam's points. The calculator works out exactly how many points you need on the final." } }
+    { "@type": "Question", "name": "Can I use points instead of percentages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — switch to Points mode and enter the points you have earned, the points possible so far, and the final exam's points. The calculator works out exactly how many points you need on the final." } },
+    { "@type": "Question", "name": "How do I use the weighted categories mode?", "acceptedAnswer": { "@type": "Answer", "text": "Switch to the weighted mode and enter each graded part of your course — homework, quizzes, a midterm — with its weight and the score you earned. The calculator works out your current grade from those parts, then tells you the final score you need for your target grade." } },
+    { "@type": "Question", "name": "What score do I need on my final for an A?", "acceptedAnswer": { "@type": "Answer", "text": "Set your target grade to A and the calculator shows the exact final score you need. The letter table under the answer shows the score for every grade at once, so you can compare what an A takes against a B or a C before you decide how hard to revise." } },
+    { "@type": "Question", "name": "Can the calculator tell me if my target grade is impossible?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. If even a perfect 100% on the final cannot lift you to your target, it shows “Not reachable” — and it also shows the highest final grade you can still reach, so you can set a realistic target instead." } }
    ]
   }
  ]
@@ -96,6 +99,10 @@
   <h1>Final Grade Calculator</h1>
   <p class="lede">Your final exam is worth part of your grade — this calculator works out exactly what score you need on it to reach the grade you want. Enter your current grade, your target and the final's weight, and the answer updates live as you type.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files and text never leave this device</p>
+  <section class="tool-section">
+    <h2>What do I need on my final exam?</h2>
+    <p>A final grade calculator works out the score you need on your final exam to reach the grade you want. Enter your current grade, your target grade and the final's weight — or switch to points or weighted categories — and the score you need appears live, with a table showing what each letter grade needs. If the target is out of reach even with a perfect final, the calculator says so plainly.</p>
+  </section>
 
   <section class="workspace card">
     <div class="options-bar" style="margin-top:0">
@@ -177,6 +184,11 @@
     <p>A final worth 20% and a final worth 50% are different exams, even with the same questions. At 20%, a student sitting on 82% needs 122% for an A — impossible — but only 72% for a B, which is comfortable. At 50%, that same student needs 98% for the A: hard, but possible. The weight decides how much of your grade is still in play, and students who ignore it either panic over nothing or relax into a grade they cannot actually reach.</p>
     <p>Weighted categories make the picture more honest still. A midterm worth 30% moves your grade three times as much as quizzes worth 10%, so a weak midterm hurts more than a weak quiz — and a strong one protects you more. Build your current grade from the real categories in your syllabus and the calculator shows the true starting point, not the average of a few remembered marks. As always, your syllabus is the authority: it states the weights, the cut-offs and whether the final can be skipped, and no calculator can overrule it.</p>
   </section>
+  <section class="tool-section">
+    <h2>Percentages, points or weighted categories — pick your mode</h2>
+    <p>The percentages mode is the quickest: current grade, target grade and the final's weight, and the answer appears as you type. The points mode works the same way with points earned and points possible, plus the points the final is worth. The weighted categories mode is for courses graded by parts — enter your homework, quizzes and midterm with their weights and the calculator works out your current grade first, then the final score you need.</p>
+    <p>Under the answer, a letter-grade table shows the final score each grade needs, so you can see at a glance what an A, a B or a pass takes. The scale is the common one — A 90, B 80, C 70, D 60, Pass 50 — though your syllabus is the one that counts if your school differs. Two edge cases are handled honestly: “Not reachable” means even 100% on the final cannot lift you to your target, and “Already secured” means your current grade is high enough that you would reach your target even with 0% on the final.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>How is the required final score calculated?</summary><p>With the formula: needed score = (target grade − current grade × (1 − final weight)) ÷ final weight. For example, a current grade of 82% with a target of 90% and a final worth 30% needs (90 − 82 × 0.7) ÷ 0.3 = 108.7% — which is not reachable, so the calculator tells you that too.</p></details>
@@ -184,6 +196,9 @@
     <details><summary>What does “Already secured” mean?</summary><p>It means your current grade is already high enough that you would reach your target even with 0% on the final. You still need to sit the exam if your school requires it — but the grade itself is safe.</p></details>
     <details><summary>Which grade scale does the letter table use?</summary><p>The common US cut-offs: A 90%, B 80%, C 70%, D 60%, and Pass 50% (the pass mark used in many systems outside the US). Scales vary by school and course, so your syllabus is the one that counts.</p></details>
     <details><summary>Can I use points instead of percentages?</summary><p>Yes — switch to Points mode and enter the points you have earned, the points possible so far, and the final exam's points. The calculator works out exactly how many points you need on the final.</p></details>
+    <details><summary>How do I use the weighted categories mode?</summary><p>Switch to the weighted mode and enter each graded part of your course — homework, quizzes, a midterm — with its weight and the score you earned. The calculator works out your current grade from those parts, then tells you the final score you need for your target grade.</p></details>
+    <details><summary>What score do I need on my final for an A?</summary><p>Set your target grade to A and the calculator shows the exact final score you need. The letter table under the answer shows the score for every grade at once, so you can compare what an A takes against a B or a C before you decide how hard to revise.</p></details>
+    <details><summary>Can the calculator tell me if my target grade is impossible?</summary><p>Yes. If even a perfect 100% on the final cannot lift you to your target, it shows “Not reachable” — and it also shows the highest final grade you can still reach, so you can set a realistic target instead.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>

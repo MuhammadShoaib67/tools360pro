@@ -17,21 +17,21 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSS Minifier — Free Online Tool | Tools360Pro</title>
-<meta name="description" content="Minify CSS online free: strip comments and whitespace to shrink your stylesheet, with before and after sizes — 100% private in your browser.">
+<title>CSS Minifier Online Free — Minify CSS, No Sign-Up | Tools360Pro</title>
+<meta name="description" content="CSS minifier online free: strip comments and whitespace to shrink your stylesheet, with before and after sizes — quoted strings, calc() and media queries protected. 100% private in your browser.">
 <link rel="canonical" href="https://tools360pro.com/tools/css-minifier.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tools360Pro">
-<meta property="og:title" content="CSS Minifier — Free Online Tool | Tools360Pro">
-<meta property="og:description" content="Minify CSS online free: strip comments and whitespace to shrink your stylesheet, with before and after sizes — 100% private in your browser.">
+<meta property="og:title" content="CSS Minifier Online Free — Minify CSS, No Sign-Up | Tools360Pro">
+<meta property="og:description" content="CSS minifier online free: strip comments and whitespace to shrink your stylesheet, with before and after sizes — quoted strings, calc() and media queries protected. 100% private in your browser.">
 <meta property="og:url" content="https://tools360pro.com/tools/css-minifier.html">
 <meta property="og:image" content="https://tools360pro.com/og-image.png">
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <meta property="og:image:alt" content="Tools360Pro logo — free online tools">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS Minifier — Free Online Tool | Tools360Pro">
-<meta name="twitter:description" content="Minify CSS online free: strip comments and whitespace to shrink your stylesheet, with before and after sizes — 100% private in your browser.">
+<meta name="twitter:title" content="CSS Minifier Online Free — Minify CSS, No Sign-Up | Tools360Pro">
+<meta name="twitter:description" content="CSS minifier online free: strip comments and whitespace to shrink your stylesheet, with before and after sizes — quoted strings, calc() and media queries protected. 100% private in your browser.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -46,7 +46,7 @@
    "@type": "WebApplication",
    "name": "CSS Minifier",
    "url": "https://tools360pro.com/tools/css-minifier.html",
-   "description": "Minify CSS online free: strip comments and whitespace to shrink your stylesheet, with before and after sizes — 100% private in your browser.",
+   "description": "CSS minifier online free: strip comments and whitespace to shrink your stylesheet, with before and after sizes — quoted strings, calc() and media queries protected. 100% private in your browser.",
    "applicationCategory": "UtilitiesApplication",
    "operatingSystem": "Any (web browser)",
    "offers": {
@@ -120,6 +120,30 @@
    "@type": "Answer",
    "text": "No. This tool runs entirely in your browser using JavaScript. Your code is never uploaded, stored or sent anywhere — everything stays on this device."
   }
+ },
+ {
+  "@type": "Question",
+  "name": "How much smaller will my CSS get?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "A typical hand-written stylesheet shrinks by 20 to 40 percent when minified, depending on how generously it was commented and spaced. The tool shows the exact before and after sizes for your file, so you see the real saving, not a guess."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "Can I minify more than one stylesheet at once?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "One at a time: paste a stylesheet, copy the minified result, then paste the next. Each run shows its own before and after sizes, so you can track the saving file by file."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "Can I get my original CSS back after minifying?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "No — minifying is one-way: the comments and formatting are removed, not hidden. Keep the original file for editing and minify a copy for production, so you always have a readable version to work from."
+  }
  }
 ]
   }
@@ -134,6 +158,10 @@
   <h1>CSS Minifier</h1>
   <p class="lede">Paste a stylesheet and get a minified version in one click — comments and unneeded whitespace removed, strings left untouched. See exactly how many bytes you saved, then copy or download the result.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your code and data never leave this device</p>
+  <section class="tool-section">
+    <h2>How do I minify CSS online for free?</h2>
+    <p>Paste your stylesheet here: this free online CSS minifier strips comments and unneeded whitespace, drops the last semicolon of each rule, and shows the before and after sizes so you can see exactly how much smaller the file got. Quoted strings, calc() spacing and media queries are protected, so the minified CSS means exactly what the original meant.</p>
+  </section>
   <section class="workspace card">
     <div class="options-bar">
 
@@ -197,6 +225,11 @@
     <p>For large projects, a build step is the better long-term answer: tools like cssnano, Lightning CSS or your bundler minify automatically on every deploy, and can also generate source maps so browser developer tools still show the original file while debugging. Use this page for quick one-off jobs — a snippet for a CMS, a theme file, a stylesheet you inherited — and a build tool for anything you ship every day.</p>
     <p>Source maps deserve a mention, because they solve the one real drawback of minifying. A source map is a small sidecar file that tells the browser how the minified output maps back to your original stylesheet, so when you inspect an element, developer tools show the rule as you wrote it — file name, line number and all — even though the browser downloaded the minified version. If you minify by hand, you give that up; if a build tool minifies for you, turn source maps on and you get both the small file and the readable debugging.</p>
   </section>
+  <section class="tool-section">
+    <h2>What minifying removes — and what it leaves alone</h2>
+    <p>Minifying removes only what the browser does not need: comments, unneeded whitespace, and the last semicolon before a closing brace. Everything else stays — selectors, values and the order of the rules — so the stylesheet behaves identically, just smaller. The before and after sizes show the saving in bytes, and you can copy the result or download it as a file.</p>
+    <p>What it does not do is just as important: it never renames selectors, never merges rules and never shortens colour values, so the minified file is a safe drop-in replacement for the original. Minify a copy for production and keep the original for editing — minifying is one-way, and an unreadable single line is no way to work. Pair it with gzip compression on your server and the two savings stack.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Will minifying break my CSS?</summary><p>No, as long as the CSS is valid to begin with. This tool only removes comments and whitespace, and it protects quoted strings, calc spacing and media queries, so the minified output means exactly what the original meant.</p></details>
@@ -204,6 +237,9 @@
     <details><summary>How is minifying different from gzip compression?</summary><p>Minifying shrinks the file itself by removing characters. Gzip compresses the file while it travels from the server to the browser. They work together: a minified file compresses even smaller, so production sites use both.</p></details>
     <details><summary>Can I minify CSS that uses variables and calc?</summary><p>Yes. Custom properties, var references and calc expressions are left intact, including the spaces inside calc that the syntax requires.</p></details>
     <details><summary>Is my stylesheet uploaded anywhere?</summary><p>No. This tool runs entirely in your browser using JavaScript. Your code is never uploaded, stored or sent anywhere — everything stays on this device.</p></details>
+    <details><summary>How much smaller will my CSS get?</summary><p>A typical hand-written stylesheet shrinks by 20 to 40 percent when minified, depending on how generously it was commented and spaced. The tool shows the exact before and after sizes for your file, so you see the real saving, not a guess.</p></details>
+    <details><summary>Can I minify more than one stylesheet at once?</summary><p>One at a time: paste a stylesheet, copy the minified result, then paste the next. Each run shows its own before and after sizes, so you can track the saving file by file.</p></details>
+    <details><summary>Can I get my original CSS back after minifying?</summary><p>No — minifying is one-way: the comments and formatting are removed, not hidden. Keep the original file for editing and minify a copy for production, so you always have a readable version to work from.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
