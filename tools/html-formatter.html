@@ -17,21 +17,21 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTML Formatter — Free Online Tool | Tools360Pro</title>
-<meta name="description" content="Format HTML online free: beautify messy markup with clean indentation, one element per line — 100% private in your browser.">
+<title>HTML Formatter Online Free — Beautify HTML, No Sign-Up | Tools360Pro</title>
+<meta name="description" content="HTML formatter online free: beautify messy markup with clean indentation, one element per line — 2 or 4 spaces, script and style blocks left untouched. 100% private in your browser.">
 <link rel="canonical" href="https://tools360pro.com/tools/html-formatter.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tools360Pro">
-<meta property="og:title" content="HTML Formatter — Free Online Tool | Tools360Pro">
-<meta property="og:description" content="Format HTML online free: beautify messy markup with clean indentation, one element per line — 100% private in your browser.">
+<meta property="og:title" content="HTML Formatter Online Free — Beautify HTML, No Sign-Up | Tools360Pro">
+<meta property="og:description" content="HTML formatter online free: beautify messy markup with clean indentation, one element per line — 2 or 4 spaces, script and style blocks left untouched. 100% private in your browser.">
 <meta property="og:url" content="https://tools360pro.com/tools/html-formatter.html">
 <meta property="og:image" content="https://tools360pro.com/og-image.png">
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <meta property="og:image:alt" content="Tools360Pro logo — free online tools">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML Formatter — Free Online Tool | Tools360Pro">
-<meta name="twitter:description" content="Format HTML online free: beautify messy markup with clean indentation, one element per line — 100% private in your browser.">
+<meta name="twitter:title" content="HTML Formatter Online Free — Beautify HTML, No Sign-Up | Tools360Pro">
+<meta name="twitter:description" content="HTML formatter online free: beautify messy markup with clean indentation, one element per line — 2 or 4 spaces, script and style blocks left untouched. 100% private in your browser.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -46,7 +46,7 @@
    "@type": "WebApplication",
    "name": "HTML Formatter",
    "url": "https://tools360pro.com/tools/html-formatter.html",
-   "description": "Format HTML online free: beautify messy markup with clean indentation, one element per line — 100% private in your browser.",
+   "description": "HTML formatter online free: beautify messy markup with clean indentation, one element per line — 2 or 4 spaces, script and style blocks left untouched. 100% private in your browser.",
    "applicationCategory": "UtilitiesApplication",
    "operatingSystem": "Any (web browser)",
    "offers": {
@@ -120,6 +120,30 @@
    "@type": "Answer",
    "text": "No. This tool runs entirely in your browser using JavaScript. Your code is never uploaded, stored or sent anywhere — everything stays on this device."
   }
+ },
+ {
+  "@type": "Question",
+  "name": "Can I beautify minified HTML here?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "Yes — paste the minified HTML and the formatter spreads it out with clean indentation, one element per line, so you can read and edit it again. The formatting changes only whitespace, so the page looks and behaves exactly as it did."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "What indent size should I use — 2 or 4 spaces?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "Either works: 2 spaces keeps deeply nested markup compact, while 4 spaces makes the structure easier to scan. Pick the one your project already uses, so the formatted code matches the rest of your files."
+  }
+ },
+ {
+  "@type": "Question",
+  "name": "What is the difference between formatting and minifying HTML?",
+  "acceptedAnswer": {
+   "@type": "Answer",
+   "text": "Formatting adds indentation so code is easy to read; minifying strips whitespace so the file is as small as possible for production. They are opposites: format when you want to read or edit code, minify when you want to ship it."
+  }
  }
 ]
   }
@@ -134,6 +158,10 @@
   <h1>HTML Formatter</h1>
   <p class="lede">Paste messy or minified HTML and get clean, indented markup back — one element per line, nested tags lined up, void elements handled. Code inside script, style and pre blocks is left exactly as it is.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your code and data never leave this device</p>
+  <section class="tool-section">
+    <h2>How do I format HTML online for free?</h2>
+    <p>Paste your HTML here: this free online HTML formatter adds clean indentation, one element per line, so nested markup is easy to read — with 2 or 4 spaces of indent, your choice. Script, style, pre and textarea blocks are copied through unchanged, and nothing is uploaded: the formatting runs in your browser.</p>
+  </section>
   <section class="workspace card">
     <div class="options-bar">
       <div class="field">
@@ -203,6 +231,11 @@
     <p>This formatter works on well-formed HTML. Badly broken markup — a missing closing tag, a tag closed in the wrong order — will still be indented, but the indentation follows the tags as written, so the result can look odd. That is often useful in itself: a section indented one level too deep is a clue that a tag was never closed.</p>
     <p>Two things to check before you publish formatted markup. First, formatting puts a line break between tags, and browsers read a line break between inline elements as a space — so <code>&lt;b&gt;x&lt;/b&gt;&lt;i&gt;y&lt;/i&gt;</code> on separate lines gains a space that was not there. For block layout this never matters; for tight inline content, check the result. Second, the content of <code>script</code>, <code>style</code> and <code>pre</code> blocks is copied through untouched, which is deliberate — reflowing code would risk breaking it.</p>
   </section>
+  <section class="tool-section">
+    <h2>Clean indentation, untouched code blocks: what formatting does</h2>
+    <p>To format HTML code online free, paste it and the formatter indents every element by its depth in the document: children sit one step in from their parents, so the structure is visible at a glance. Void elements such as img, br, input and meta do not add depth, because they have no closing tag and no children — so the indentation always matches the real structure of the page.</p>
+    <p>What it leaves alone matters as much as what it changes: the contents of script, style, pre and textarea blocks are copied through exactly as they are, because re-indenting code or preformatted text would change its meaning. One honest limit: this is a beautifier, not a repair tool — it does not fix broken HTML, though a missing closing tag usually shows up as indentation that suddenly runs too deep, which is a useful clue when you are hunting for it.</p>
+  </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>Does formatting change how my page looks?</summary><p>For block layout, no. But a line break between two inline elements renders as a space, so formatting can add a small gap inside tight inline content such as icon and label pairs. Check the result in a browser before publishing.</p></details>
@@ -210,6 +243,9 @@
     <details><summary>Can it fix broken HTML?</summary><p>No. It indents the tags as written, so a missing closing tag shows up as a section indented one level too deep. That makes the problem easier to spot, but you still have to fix the markup yourself.</p></details>
     <details><summary>Why are some elements not indented further?</summary><p>Void elements such as img, br, input and meta never have children, so they do not increase the depth. Comments and the doctype stay at the depth where they appear.</p></details>
     <details><summary>Is my HTML uploaded anywhere?</summary><p>No. This tool runs entirely in your browser using JavaScript. Your code is never uploaded, stored or sent anywhere — everything stays on this device.</p></details>
+    <details><summary>Can I beautify minified HTML here?</summary><p>Yes — paste the minified HTML and the formatter spreads it out with clean indentation, one element per line, so you can read and edit it again. The formatting changes only whitespace, so the page looks and behaves exactly as it did.</p></details>
+    <details><summary>What indent size should I use — 2 or 4 spaces?</summary><p>Either works: 2 spaces keeps deeply nested markup compact, while 4 spaces makes the structure easier to scan. Pick the one your project already uses, so the formatted code matches the rest of your files.</p></details>
+    <details><summary>What is the difference between formatting and minifying HTML?</summary><p>Formatting adds indentation so code is easy to read; minifying strips whitespace so the file is as small as possible for production. They are opposites: format when you want to read or edit code, minify when you want to ship it.</p></details>
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
