@@ -52,6 +52,7 @@
   --cat-generators:#4B5563;
   --cat-time-date:#333333;
   --cat-audio:#2B2B2B;
+  --cat-video:#2E2E2E;
   --glass-blur:blur(16px) saturate(160%);
   --radius:18px;
   --radius-sm:11px;
@@ -70,6 +71,7 @@
   --hov-generators:#65A30D;
   --hov-time-date:#DB2777;
   --hov-audio:#16A34A;
+  --hov-video:#DC2626;
   --hov-popular:#2563EB;
   /* Section accents: Why heading (fuchsia) + CTA heading and
      buttons (indigo). Dark theme below restores brighter shades. */
@@ -129,6 +131,7 @@
   --cat-generators:#D4D4D4;
   --cat-time-date:#E0E0E0;
   --cat-audio:#DADADA;
+  --cat-video:#D6D6D6;
   /* Hover colours: brighter shades on dark backgrounds. */
   --hov-popular:#3B82F6;
   --hov-developer:#14B8A6;
@@ -139,6 +142,7 @@
   --hov-calculators:#EAB308;
   --hov-time-date:#EC4899;
   --hov-audio:#22C55E;
+  --hov-video:#EF4444;
   --why:#E879F9;
   --cta:#6366F1;
 }
@@ -152,6 +156,7 @@
 [data-cat="generators"]{--acc:var(--cat-generators)}
 [data-cat="time-date"]{--acc:var(--cat-time-date)}
 [data-cat="audio"]{--acc:var(--cat-audio)}
+[data-cat="video"]{--acc:var(--cat-video)}
 [data-cat="popular"]{--acc:var(--text)}
 /* ---------- Colourful hover (mono base, vivid on hover) ---------- */
 /* Hovering a category chip or tool card flips its --acc to that
@@ -167,6 +172,7 @@
 .p7-chip[data-cat="generators"]:hover,.p7-chip[data-cat="generators"]:focus-visible,a.tool-card[data-cat="generators"]:hover,.cat-card[data-cat="generators"]:hover{--acc:var(--hov-generators)}
 .p7-chip[data-cat="time-date"]:hover,.p7-chip[data-cat="time-date"]:focus-visible,a.tool-card[data-cat="time-date"]:hover,.cat-card[data-cat="time-date"]:hover{--acc:var(--hov-time-date)}
 .p7-chip[data-cat="audio"]:hover,.p7-chip[data-cat="audio"]:focus-visible,a.tool-card[data-cat="audio"]:hover,.cat-card[data-cat="audio"]:hover{--acc:var(--hov-audio)}
+.p7-chip[data-cat="video"]:hover,.p7-chip[data-cat="video"]:focus-visible,a.tool-card[data-cat="video"]:hover,.cat-card[data-cat="video"]:hover{--acc:var(--hov-video)}
 /* ---------- Per-tool hover cycle ---------- */
 /* Inside every tool grid, each card hovers in its own colour,
    cycling 12 vivid shades by position, so no two neighbouring
@@ -197,6 +203,7 @@
 .p7-world[data-cat="popular"] a.tool-card[data-cat="generators"]:hover{--acc:var(--hov-generators)}
 .p7-world[data-cat="popular"] a.tool-card[data-cat="time-date"]:hover{--acc:var(--hov-time-date)}
 .p7-world[data-cat="popular"] a.tool-card[data-cat="audio"]:hover{--acc:var(--hov-audio)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="video"]:hover{--acc:var(--hov-video)}
 /* ---------- Permanent icon colours ---------- */
 /* Each tool card's icon permanently wears its hover-cycle colour
    (icon colour = hover colour). Only the icon is coloured: the
@@ -224,6 +231,7 @@
 .p7-world[data-cat="popular"] a.tool-card[data-cat="generators"] .tool-icon{--acc:var(--hov-generators)}
 .p7-world[data-cat="popular"] a.tool-card[data-cat="time-date"] .tool-icon{--acc:var(--hov-time-date)}
 .p7-world[data-cat="popular"] a.tool-card[data-cat="audio"] .tool-icon{--acc:var(--hov-audio)}
+.p7-world[data-cat="popular"] a.tool-card[data-cat="video"] .tool-icon{--acc:var(--hov-video)}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -286,6 +294,7 @@ img,svg{display:block}
 .main-nav a[href$="#generators"]:hover,.main-nav a[href$="#generators"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-generators) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-generators),inset 0 0 0 1px color-mix(in srgb,var(--hov-generators) 45%,transparent)}
 .main-nav a[href$="#time-date"]:hover,.main-nav a[href$="#time-date"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-time-date) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-time-date),inset 0 0 0 1px color-mix(in srgb,var(--hov-time-date) 45%,transparent)}
 .main-nav a[href$="#audio"]:hover,.main-nav a[href$="#audio"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-audio) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-audio),inset 0 0 0 1px color-mix(in srgb,var(--hov-audio) 45%,transparent)}
+.main-nav a[href$="#video"]:hover,.main-nav a[href$="#video"]:focus-visible{color:var(--text);background:color-mix(in srgb,var(--hov-video) 14%,transparent);box-shadow:0 8px 20px -8px var(--hov-video),inset 0 0 0 1px color-mix(in srgb,var(--hov-video) 45%,transparent)}
 .header-actions{display:flex;align-items:center;gap:8px;flex:none}
 .search-btn{
   display:flex;align-items:center;gap:9px;background:var(--surface-2);border:1px solid var(--border);
@@ -633,6 +642,7 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 .footer-grid ul a[data-cat="generators"]:hover,.footer-links a[data-cat="generators"]:hover{color:var(--hov-generators)}
 .footer-grid ul a[data-cat="time-date"]:hover,.footer-links a[data-cat="time-date"]:hover{color:var(--hov-time-date)}
 .footer-grid ul a[data-cat="audio"]:hover,.footer-links a[data-cat="audio"]:hover{color:var(--hov-audio)}
+.footer-grid ul a[data-cat="video"]:hover,.footer-links a[data-cat="video"]:hover{color:var(--hov-video)}
 .footer-brand p{color:var(--muted);font-size:.92rem;max-width:300px}
 .footer-brand .logo > span{background:linear-gradient(94deg,#2DAFF0 5%,#FA782D 52%,#FAC328 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .footer-brand .logo .logo-num{background:none}
@@ -957,6 +967,7 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 .p7-chip[data-cat="generators"] .tool-icon{--acc:var(--hov-generators)}
 .p7-chip[data-cat="time-date"] .tool-icon{--acc:var(--hov-time-date)}
 .p7-chip[data-cat="audio"] .tool-icon{--acc:var(--hov-audio)}
+.p7-chip[data-cat="video"] .tool-icon{--acc:var(--hov-video)}
 .p7-chip:hover,.p7-chip:focus-visible{border-color:var(--acc);box-shadow:var(--shadow-lg),0 10px 26px -10px var(--acc)}
 .p7-chip-tool{width:46px;height:46px;padding:0;justify-content:center;border-radius:50%}
 .p7-chip-tool .tool-icon{width:32px;height:32px;border-radius:10px}
@@ -1009,6 +1020,7 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 .p7-world[data-cat="generators"] .p7-world-head{--acc:var(--hov-generators)}
 .p7-world[data-cat="time-date"] .p7-world-head{--acc:var(--hov-time-date)}
 .p7-world[data-cat="audio"] .p7-world-head{--acc:var(--hov-audio)}
+.p7-world[data-cat="video"] .p7-world-head{--acc:var(--hov-video)}
 .p7-world-head .p7-world-titles h2{color:var(--acc)}
 .p7-world-head .p7-world-titles h2::after{background:var(--acc)}
 /* Hub pages: the same permanent colour on the page h1 and on the
@@ -1024,6 +1036,7 @@ body[data-cat="developer"] main.tool-page > h1,body[data-cat="developer"] .tool-
 body[data-cat="generators"] main.tool-page > h1,body[data-cat="generators"] .tool-section:has(.tool-grid) > h2{color:var(--hov-generators)}
 body[data-cat="time-date"] main.tool-page > h1,body[data-cat="time-date"] .tool-section:has(.tool-grid) > h2{color:var(--hov-time-date)}
 body[data-cat="audio"] main.tool-page > h1,body[data-cat="audio"] .tool-section:has(.tool-grid) > h2{color:var(--hov-audio)}
+body[data-cat="video"] main.tool-page > h1,body[data-cat="video"] .tool-section:has(.tool-grid) > h2{color:var(--hov-video)}
 .p7-world-titles p{margin:10px 0 0;color:var(--muted);font-size:.97rem}
 .p7-world-count{
   margin-left:0;flex:none;font-size:.76rem;font-weight:850;letter-spacing:.05em;text-transform:uppercase;

@@ -1,6 +1,6 @@
 # Tools360Pro
 
-> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 153 tools for PDF, images, AI, text, converters, calculators, developers, generators, time and date and audio, plus step-by-step guides.
+> Free online tools that run 100% in your browser — no sign-up, no uploads, no watermarks. 154 tools for PDF, images, AI, text, converters, calculators, developers, generators, time and date, audio and video, plus step-by-step guides.
 
 Tools360Pro is a free toolbox at https://tools360pro.com/. Every tool processes files locally in the visitor's browser, so documents, photos and text never leave their device. There are no accounts and no usage limits — the tools run locally, so nothing is counted or capped.
 
@@ -209,8 +209,15 @@ Trim audio files in your browser. Category page: https://tools360pro.com/audio-t
 
 - [Audio Trimmer](https://tools360pro.com/tools/audio-trimmer.html): Trim an audio file to the part you want — export as WAV, in your browser.
 
+## Video Tools
+
+Compress videos in your browser. Category page: https://tools360pro.com/video-tools/
+
+- [Video Compressor](https://tools360pro.com/tools/video-compressor.html): Shrink MP4, WebM and MOV videos in your browser — downloads as WebM, with sound.
+
 ## Guides
 
+- [How to Compress a Video (Free, No Signup)](https://tools360pro.com/guides/how-to-compress-a-video.html)
 - [How to Remove a Watermark from a Photo for Free (No Signup)](https://tools360pro.com/guides/how-to-remove-watermark-from-photo-free.html)
 - [How to Trim an Audio File Online Free (No Signup)](https://tools360pro.com/guides/how-to-trim-audio-online-free.html)
 - [How to Calculate Days Between Dates (Free, No Signup)](https://tools360pro.com/guides/how-to-calculate-days-between-dates.html)

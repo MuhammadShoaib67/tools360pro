@@ -17,7 +17,8 @@
     { id: "developer",   name: "Developer Tools", tagline: "JSON, Base64, JWT, CSS and regex" },
     { id: "generators",  name: "Generators",   tagline: "QR codes, passwords and palettes" },
     { id: "time-date",   name: "Time & Date Tools", tagline: "Dates, time zones and live clocks" },
-    { id: "audio",       name: "Audio Tools", tagline: "Trim audio files in your browser" }
+    { id: "audio",       name: "Audio Tools", tagline: "Trim audio files in your browser" },
+    { id: "video",       name: "Video Tools", tagline: "Compress videos in your browser" }
   ];
 
   function ic(p) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + "</svg>"; }
@@ -166,6 +167,7 @@
     "stopwatch":             ic('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M10 2h4"/><path d="M12 2v3"/>'),
     "world-clock":           ic('<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 7v5l3 2"/>'),
     "audio-trimmer":         ic('<path d="M4 10v4"/><path d="M8 7v10"/><path d="M12 4v16"/><path d="M16 7v10"/><path d="M20 10v4"/>'),
+    "video-compressor":      ic('<rect x="2" y="6" width="13" height="12" rx="2"/><path d="M15 10l7-3.5v11L15 14"/>'),
     "password-strength-checker": ic('<path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/>'),
     "qr-code-scanner":       ic('<path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M3 12h18"/>'),
     "username-generator":    ic('<circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.8-3.2 3.4-5 6.5-5s5.7 1.8 6.5 5"/>'),
@@ -341,7 +343,9 @@
     { slug: "countdown",         name: "Countdown Timer",   cat: "time-date", desc: "Count down to any date and time, live in your browser tab." },
     { slug: "stopwatch",         name: "Stopwatch",         cat: "time-date", desc: "A free online stopwatch with laps and millisecond display." },
     /* Audio */
-    { slug: "audio-trimmer",     name: "Audio Trimmer",     cat: "audio", desc: "Trim an audio file to the part you want — export as WAV, in your browser." }
+    { slug: "audio-trimmer",     name: "Audio Trimmer",     cat: "audio", desc: "Trim an audio file to the part you want — export as WAV, in your browser." },
+    /* Video */
+    { slug: "video-compressor",  name: "Video Compressor",  cat: "video", desc: "Shrink MP4, WebM and MOV videos in your browser — downloads as WebM, with sound." }
   ];
   var POPULAR = ["merge-pdf", "compress-image", "background-remover", "heic-to-jpg", "compress-pdf", "word-counter", "qr-code-generator", "image-to-text", "age-calculator", "password-generator", "json-formatter", "invoice-generator", "sign-pdf", "barcode-generator", "jpg-to-pdf"];
 
@@ -496,6 +500,7 @@
             '<a data-cat="generators" href="' + BASE + 'generators/">Generators</a>' +
             '<a data-cat="time-date" href="' + BASE + 'time-date-tools/">Time &amp; Date Tools</a>' +
             '<a data-cat="audio" href="' + BASE + 'audio-tools/">Audio Tools</a>' +
+            '<a data-cat="video" href="' + BASE + 'video-tools/">Video Tools</a>' +
             '<a href="' + BASE + 'about.html">About Us</a>' +
             '<a href="' + BASE + 'contact.html">Contact Us</a>' +
             '<a href="' + BASE + 'privacy-policy.html">Privacy Policy</a>' +

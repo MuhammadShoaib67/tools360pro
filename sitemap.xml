@@ -19,6 +19,7 @@
   <url><loc>https://tools360pro.com/generators/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://tools360pro.com/time-date-tools/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://tools360pro.com/audio-tools/</loc><lastmod>2026-11-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://tools360pro.com/video-tools/</loc><lastmod>2026-11-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://tools360pro.com/tools/age-calculator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/aspect-ratio.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/audio-trimmer.html</loc><lastmod>2026-11-18</lastmod><priority>0.8</priority></url>
@@ -132,6 +133,7 @@
   <url><loc>https://tools360pro.com/tools/username-generator.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/url-encode.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/uuid-generator.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://tools360pro.com/tools/video-compressor.html</loc><lastmod>2026-11-20</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/watermark-image.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/watermark-remover.html</loc><lastmod>2026-11-18</lastmod><priority>0.8</priority></url>
   <url><loc>https://tools360pro.com/tools/webp-to-jpg.html</loc><lastmod>2026-11-17</lastmod><priority>0.8</priority></url>
@@ -808,6 +810,12 @@
  </url>
  <url>
   <loc>https://tools360pro.com/guides/how-to-create-a-strong-password-you-can-remember.html</loc>
+  <lastmod>2026-11-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+ </url>
+ <url>
+  <loc>https://tools360pro.com/guides/how-to-compress-a-video.html</loc>
   <lastmod>2026-11-20</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
