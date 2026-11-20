@@ -113,7 +113,7 @@
   "name": "How much smaller will my video get?",
   "acceptedAnswer": {
    "@type": "Answer",
-   "text": "It depends on the original: a phone recording at a high bitrate shrinks a lot, while a video that is already heavily compressed shrinks little and can even grow slightly at the Best quality or High preset. The tool shows the original and compressed sizes before you download, so you see the exact saving."
+   "text": "It depends on the original: a phone recording at a high bitrate shrinks a lot, while a video that is already heavily compressed shrinks little and can even grow slightly at the Best quality or High preset. The Compression slider shows a rough size estimate as you move it, so you can see about how small the file will get before you press Compress. The tool shows the original and compressed sizes before you download, so you see the exact saving."
   }
  },
  {
@@ -175,11 +175,11 @@
 <main class="container tool-page">
   <nav class="breadcrumb"><a href="../">Home</a> <span class="sep">›</span> <a href="../video-tools/">Video Tools</a> <span class="sep">›</span> <span aria-current="page">Video Compressor</span></nav>
   <h1>Video Compressor</h1>
-  <p class="lede">Shrink a video so it is easier to share, upload or store — without installing an app or sending your file to a server. Drop in an MP4, WebM or MOV file, pick a quality preset or set a target size, and download a smaller video. The compressed file downloads as a WebM video (.webm), because browsers record WebM, not MP4. Everything happens in your browser, so your video never leaves your device.</p>
+  <p class="lede">Shrink a video so it is easier to share, upload or store — without installing an app or sending your file to a server. Drop in an MP4, WebM or MOV file, slide the compression level to whatever you want — or pick a quality preset, or set a target size — and download a smaller video. The compressed file downloads as a WebM video (.webm), because browsers record WebM, not MP4. Everything happens in your browser, so your video never leaves your device.</p>
   <p class="privacy-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Runs in your browser — your files never leave this device</p>
   <section class="tool-section">
     <h2>How do I compress a video online?</h2>
-    <p>Drop your video file here, pick a quality preset — Best quality, High, Medium or Low — or set a target size in MB, then press Compress: this free online video compressor re-encodes your video in your browser and downloads a smaller WebM file, with the sound carried over. No sign-up, no upload, and the original and compressed sizes are shown side by side before you download.</p>
+    <p>Drop your video file here, slide the compression level to whatever you want — or pick a quality preset (Best quality, High, Medium or Low) or set a target size in MB — then press Compress: this free online video compressor re-encodes your video in your browser and downloads a smaller WebM file, with the sound carried over. No sign-up, no upload, and the original and compressed sizes are shown side by side before you download.</p>
   </section>
   <section class="workspace card">
     <p class="error-text hidden" id="unsupported"></p>
@@ -197,14 +197,19 @@
       <div class="options-bar">
         <div class="field"><label for="mode">How to compress</label>
           <select class="select" id="mode">
-            <option value="preset" selected>Quality preset</option>
+            <option value="slider" selected>Compression</option>
+            <option value="preset">Quality preset</option>
             <option value="target">Target size</option>
           </select>
+        </div>
+        <div class="field" id="slider-field"><label for="compression-slider">Compression level: <span id="slider-value">50%</span></label>
+          <input type="range" id="compression-slider" min="10" max="100" step="5" value="50">
         </div>
         <div class="field hidden" id="target-field"><label for="target-mb">Target size (MB)</label>
           <input class="input" id="target-mb" type="number" min="1" step="1" value="95">
         </div>
       </div>
+      <p class="note hidden" id="slider-estimate"></p>
       <p class="note hidden" id="source-info"></p>
       <p class="note hidden" id="target-warn"></p>
       <div class="options-bar">
@@ -225,7 +230,8 @@
           </select>
         </div>
       </div>
-      <p class="note">Bitrates scale with the output resolution, so a 720p video is encoded at a lower bitrate than a 1080p one at the same preset. Resolutions larger than your video are ignored — the tool never upscales. If you pick a smaller resolution, the video is recorded at up to 30 frames per second. In Target size mode the resolution always stays original, because shrinking the picture is the most visible kind of quality loss.</p>
+      <p class="note">Bitrates scale with the output resolution, so a 720p video is encoded at a lower bitrate than a 1080p one at the same preset. Resolutions larger than your video are ignored — the tool never upscales. If you pick a smaller resolution, the video is recorded at up to 30 frames per second. The resolution starts at Original in every mode; picking a smaller one in Target size mode shrinks the file further, on top of the bitrate the target works out.</p>
+      <p class="note">Compression runs in real time — a 2-minute video takes about 2 minutes. Keep this tab open and in front while it runs; switching away can pause the video and stall compression.</p>
       <div class="options-bar">
         <button type="button" id="compress-btn" class="btn btn-primary">Compress Video</button>
         <button type="button" id="reset-btn" class="btn btn-ghost">Choose a Different File</button>
@@ -254,7 +260,7 @@
     <h2>How to use the Video Compressor</h2>
     <ol class="steps">
       <li><strong>Drop in your video file.</strong> Drag an MP4, WebM or MOV file onto the dropzone, or click it to browse. The file is decoded in your browser — it is never uploaded.</li>
-      <li><strong>Pick a quality preset or set a target size.</strong> Medium at the original resolution is the everyday choice. Pick 720p or 480p when the video is only going to be watched on a phone or in a chat, and Low when the smallest file matters more than the detail. If you have a size limit, switch to Target size mode and type the size in MB — the tool works out the bitrate for you.</li>
+      <li><strong>Choose how much to compress.</strong> The Compression slider is the free control: drag it to any level from 10% to 100% of the original bitrate and watch the estimated size. Or pick a quality preset — Medium at the original resolution is the everyday choice — or switch to Target size mode and type the size in MB. Pick 720p or 480p when the video is only going to be watched on a phone or in a chat, and Low when the smallest file matters more than the detail.</li>
       <li><strong>Press Compress Video and wait.</strong> The tool plays your video once through and records it again at the lower bitrate, so compression takes about as long as the video itself. The progress bar shows exactly where it is. The video plays silently while it compresses.</li>
       <li><strong>Check the sizes, then download.</strong> The tool shows the original size, the compressed size and the percentage saved. Preview the compressed video, and if it looks right, click Download Compressed WebM.</li>
     </ol>
@@ -264,7 +270,7 @@
   <section class="tool-section">
     <h2>How the compressor works</h2>
     <p>When you drop a file in, your browser decodes it with the same video decoder that plays videos on every website — that is why the compressor accepts whatever your browser can play: MP4 (H.264), WebM and MOV in most browsers, with small differences between browsers and devices. A file your browser cannot play cannot be compressed here, and the tool will say so plainly instead of failing silently.</p>
-    <p>Compression is a re-encode. The tool plays your video once through and records it again with the browser's built-in recorder (MediaRecorder) at a lower bitrate: about 12 Mbps at the Best quality preset, 5 Mbps at High, 2.5 Mbps at Medium and 1 Mbps at Low, measured at 1080p and scaled down for smaller resolutions. The audio track is carried over at 128 kbps. Target size mode works the other way round: you name the size you want — 95 MB, say — and the tool works out the bitrate that should land the video under it, aiming at 90% of your target to leave room for the recorder's bitrate being approximate, and keeping the resolution original. Because the video is played in real time, compression takes about as long as the video itself — a two-minute video takes about two minutes, and the progress bar shows exactly where it is.</p>
+    <p>Compression is a re-encode. The tool plays your video once through and records it again with the browser's built-in recorder (MediaRecorder) at a lower bitrate: about 12 Mbps at the Best quality preset, 5 Mbps at High, 2.5 Mbps at Medium and 1 Mbps at Low, measured at 1080p and scaled down for smaller resolutions. The audio track is carried over at 128 kbps. The Compression slider works as a percentage of the source bitrate: 50% records at about half the original bitrate, so the file comes out roughly half the size. Target size mode works the other way round: you name the size you want — 95 MB, say — and the tool works out the bitrate that should land the video under it, aiming at 90% of your target to leave room for the recorder's bitrate being approximate. In Target size mode the resolution is yours to change too — it starts at Original, but picking 720p shrinks the file further. Because the video is played in real time, compression takes about as long as the video itself — a two-minute video takes about two minutes, and the progress bar shows exactly where it is.</p>
     <p>If you pick a smaller resolution, each frame is drawn onto a canvas at the new size before it is recorded — that is what makes the file smaller still, and it is also why a downscaled video is recorded at up to 30 frames per second. At the original resolution the frames go straight from the player to the recorder, so the frame rate is untouched.</p>
   </section>
 
@@ -277,14 +283,15 @@
   <section class="tool-section">
     <h2>Choosing a quality preset</h2>
     <p>Start with Medium at the original resolution. It suits most jobs: a phone recording, a screen capture, a clip for a chat or an upload form. The file shrinks a lot and the picture still looks clean on a phone or laptop screen, because phone cameras and screen recorders usually record at a much higher bitrate than the screen can show.</p>
+    <p>If you want free control instead of a preset, use the Compression slider: it records at a percentage of your video's own bitrate, from 10% to 100%, with a live estimate of the output size. 50% is a good starting point — roughly half the size, and for most phone footage the picture still looks clean. Slide it lower for a smaller file, higher when the detail matters.</p>
     <p>Pick Best quality when the picture must stay as close to the original as possible: it re-encodes at about 12 Mbps at 1080p, which for most phone and camera footage looks the same to the eye while still shrinking the file — those recordings are usually encoded at far higher bitrates than the screen can show. Pick High when the detail matters — a video you will watch on a big screen, or one with fast movement and fine text, where a low bitrate shows as blocky patches. Pick Low when the file has to be as small as possible: an attachment with a size limit, a slow connection, a video that will only ever be watched small. And remember the honest limit: a video that is already heavily compressed — a clip downloaded from a messaging app, for example — has little left to squeeze out, and at the Best quality or High preset the compressed file can even come out slightly larger than the original. The tool shows both sizes before you download, so you can always try a lower preset instead.</p>
-    <p>If you have a size limit in mind — an upload form that caps files at 100 MB, say — use Target size mode instead of a preset: type the size in MB and the tool aims for it, keeping the resolution original. The result is not guaranteed to land exactly on your target, because the browser's recorder only aims at the bitrate it is given, so the tool aims at 90% of your target and tells you plainly whether the result made it under.</p>
+    <p>If you have a size limit in mind — an upload form that caps files at 100 MB, say — use Target size mode instead of a preset: type the size in MB and the tool aims for it. The resolution starts at Original in Target size mode, but you can still pick a smaller one — it shrinks the file further. The result is not guaranteed to land exactly on your target, because the browser's recorder only aims at the bitrate it is given, so the tool aims at 90% of your target and tells you plainly whether the result made it under.</p>
   </section>
   <section class="tool-section faq">
     <h2>Frequently asked questions</h2>
     <details><summary>What video formats can I compress?</summary><p>Any format your browser can play and decode: MP4 (H.264), WebM and MOV in most browsers. If a file will not load, the browser cannot decode that format or codec — try an MP4 file, or open the tool in another browser.</p></details>
     <details><summary>Does the compressed video stay an MP4?</summary><p>No — the compressed file downloads as a WebM video (.webm). Browsers record WebM, not MP4, so WebM is the format this tool can honestly produce. WebM plays in Chrome, Edge, Firefox and VLC; if you need an MP4 afterwards, convert the WebM in any video app.</p></details>
-    <details><summary>How much smaller will my video get?</summary><p>It depends on the original: a phone recording at a high bitrate shrinks a lot, while a video that is already heavily compressed shrinks little and can even grow slightly at the Best quality or High preset. The tool shows the original and compressed sizes before you download, so you see the exact saving.</p></details>
+    <details><summary>How much smaller will my video get?</summary><p>It depends on the original: a phone recording at a high bitrate shrinks a lot, while a video that is already heavily compressed shrinks little and can even grow slightly at the Best quality or High preset. The Compression slider shows a rough size estimate as you move it, so you can see about how small the file will get before you press Compress. The tool shows the original and compressed sizes before you download, so you see the exact saving.</p></details>
     <details><summary>Does compression reduce the quality?</summary><p>Yes — re-encoding at a lower bitrate loses some detail, and a smaller resolution loses more. Best quality keeps the most, High is close behind, Medium is the balance most people want, and Low gives the smallest file. Picking a smaller resolution also caps the frame rate at up to 30 frames per second.</p></details>
     <details><summary>Can I compress a video without losing quality?</summary><p>Not bit-for-bit — any re-encode changes some pixels. But for typical phone and camera footage the result can look identical to the eye: those videos are usually recorded at a much higher bitrate than the screen can show, and the VP9 codec this tool records with typically needs 30–50% fewer bits than H.264 for the same picture. Use the Best quality preset, or Target size mode with a target near the original size, and preview the result before downloading. A video that is already efficiently encoded will lose a little visible detail when it shrinks — there is nothing left to spare.</p></details>
     <details><summary>How long does compression take?</summary><p>About as long as the video itself, plus a few seconds. The tool re-encodes your video in real time, so a two-minute video takes about two minutes. The progress bar shows exactly where it is.</p></details>
@@ -305,6 +312,8 @@
       modeSel = qs('#mode'), targetField = qs('#target-field'),
       targetInput = qs('#target-mb'), sourceInfo = qs('#source-info'),
       targetWarn = qs('#target-warn'), qualityField = qs('#quality-field'),
+      sliderField = qs('#slider-field'), slider = qs('#compression-slider'),
+      sliderValue = qs('#slider-value'), sliderEstimate = qs('#slider-estimate'),
       qualitySel = qs('#quality'), resSel = qs('#resolution'),
       compressBtn = qs('#compress-btn'), resetBtn = qs('#reset-btn'),
       progressWrap = qs('#progress-wrap'), progressBar = qs('#progress-bar'),
@@ -324,6 +333,15 @@
   var actx = null, audioSrc = null, audioDest = null;
   var recorder = null, chunks = [], recording = false;
   var canvas = null, cctx = null, drawRAF = null, failTimer = null;
+  /* The target input starts untouched (value 95 in the markup). On file
+     load it is pre-filled with 70% of the source size — but only while
+     untouched; once the user types a target, it is never overwritten.
+     Resetting the file restores the untouched state. */
+  var targetUntouched = true;
+  /* Stall watch: while recording, check every 5s whether the video's
+     playhead has advanced. Two checks with no advance (10s) means the
+     tab was probably backgrounded — warn, never stop. */
+  var stallTimer = null, stallLastTime = 0, stallCount = 0, stallWarned = false;
 
   function fmtTime(s){
     s = Math.max(0, s || 0);
@@ -402,16 +420,52 @@
   }
   function fmtMbps(bps){ return (bps / 1000000).toFixed(1) + ' Mbps'; }
 
+  /* Compression slider: a percentage of the source bitrate — the free
+     control, no target required. 50% records at about half the original
+     bitrate, so the file comes out roughly half the size. If the source
+     bitrate is somehow unavailable, fall back to the Medium preset. */
+  function sliderPct(){
+    var v = parseInt(slider.value, 10);
+    return (isFinite(v) && v >= 10 && v <= 100) ? v : 50;
+  }
+  function sliderBitrate(){
+    var src = sourceBitrate();
+    if (!src || !duration) return targetBitrate('medium', srcW || 1920, srcH || 1080);
+    var b = Math.round(src * sliderPct() / 100);
+    if (b < 200000) b = 200000;
+    if (b > 25000000) b = 25000000;
+    return b;
+  }
+  function updateSliderUI(){
+    var pct = sliderPct();
+    sliderValue.textContent = pct + '%';
+    if (!duration || !fileSize) {
+      sliderEstimate.classList.add('hidden');
+      return;
+    }
+    var estMB = fileSize * pct / 100 / MB;
+    sliderEstimate.textContent = 'About ' + estMB.toFixed(1) + ' MB at ' + pct + '% (source is ' + T360.formatBytes(fileSize) + ' at about ' + fmtMbps(sourceBitrate()) + ').';
+    sliderEstimate.classList.remove('hidden');
+  }
+
+  /* Mode switching. The Compress button is NEVER disabled here: with a
+     file loaded it stays usable in every mode, including a target bigger
+     than the source (the user may still want a WebM re-encode) and an
+     empty target (clicking shows a message instead). The only times the
+     button is disabled are while a recording is in progress, and when
+     the browser cannot record WebM at all. Warnings are text only. */
   function updateTargetUI(){
-    var isTarget = modeSel.value === 'target';
-    targetField.classList.toggle('hidden', !isTarget);
-    qualityField.classList.toggle('hidden', isTarget);
-    resSel.disabled = isTarget;
-    if (isTarget) resSel.value = 'original';
-    if (!isTarget || !duration || !fileSize) {
+    var mode = modeSel.value;
+    targetField.classList.toggle('hidden', mode !== 'target');
+    qualityField.classList.toggle('hidden', mode !== 'preset');
+    sliderField.classList.toggle('hidden', mode !== 'slider');
+    sliderEstimate.classList.toggle('hidden', mode !== 'slider');
+    if (mode === 'slider') updateSliderUI();
+    /* The resolution dropdown is always user-controlled now — target
+       mode no longer locks it to Original. */
+    if (mode !== 'target' || !duration || !fileSize) {
       sourceInfo.classList.add('hidden');
       targetWarn.classList.add('hidden');
-      if (!recording) compressBtn.disabled = false;
       return;
     }
     var mb = targetMBValue();
@@ -421,17 +475,15 @@
       sourceInfo.textContent = srcLine + ' Enter a target size in MB.';
       sourceInfo.classList.remove('hidden');
       targetWarn.classList.add('hidden');
-      compressBtn.disabled = true;
       return;
     }
     var targetBytes = mb * MB;
     if (targetBytes >= fileSize) {
       sourceInfo.textContent = srcLine;
       sourceInfo.classList.remove('hidden');
-      targetWarn.textContent = 'This video is already smaller than your target — no compression needed.';
+      targetWarn.textContent = 'This video is already smaller than your target — pressing Compress will still re-encode it, and the result may come out larger than the original.';
       targetWarn.classList.remove('warn');
       targetWarn.classList.remove('hidden');
-      compressBtn.disabled = true;
       return;
     }
     var vBps = targetVideoBitrate();
@@ -451,7 +503,6 @@
     } else {
       targetWarn.classList.add('hidden');
     }
-    compressBtn.disabled = false;
   }
 
   /* Route the video's audio through Web Audio into a stream destination,
@@ -481,9 +532,41 @@
     }
   }
 
+  /* Stall detection: while recording, check every 5s whether the
+     playhead has advanced. If it has not advanced for 10s (two checks),
+     the tab was probably backgrounded — show a warning in the status
+     line, never stop the recording. The warning clears itself: the
+     timeupdate handler overwrites the status as soon as the video
+     moves again. */
+  function startStallWatch(){
+    stopStallWatch();
+    stallLastTime = video.currentTime;
+    stallCount = 0;
+    stallWarned = false;
+    stallTimer = setInterval(function () {
+      if (!recording) return;
+      var now = video.currentTime;
+      if (now > stallLastTime + 0.05) {
+        stallLastTime = now;
+        stallCount = 0;
+        stallWarned = false;
+        return;
+      }
+      stallCount++;
+      if (stallCount >= 2 && !stallWarned) {
+        stallWarned = true;
+        statusEl.textContent = 'Playback seems paused — keep this tab in the foreground while compressing. If you switched tabs, come back here and it should resume.';
+      }
+    }, 5000);
+  }
+  function stopStallWatch(){
+    if (stallTimer) { clearInterval(stallTimer); stallTimer = null; }
+  }
+
   function finish(){
     recording = false;
     clearTimeout(failTimer);
+    stopStallWatch();
     if (drawRAF) { cancelAnimationFrame(drawRAF); drawRAF = null; }
     try { video.pause(); } catch (e) {}
     video.controls = true;
@@ -534,13 +617,16 @@
         showErr('Enter a target size in MB first.');
         return;
       }
-      if (lastTargetMB * MB >= fileSize) {
-        showErr('This video is already smaller than your target — no compression needed.');
-        return;
-      }
-      size = targetSize('original'); /* resolution always stays original in target mode */
-      scaled = false;
+      /* No early return when the target is bigger than the source: the
+         user may still want a WebM re-encode, and the result screen
+         reports "Larger by X%" honestly. */
+      size = targetSize(resSel.value);
+      scaled = (size.w !== srcW || size.h !== srcH);
       bitrate = targetVideoBitrate();
+    } else if (lastMode === 'slider') {
+      size = targetSize(resSel.value);
+      scaled = (size.w !== srcW || size.h !== srcH);
+      bitrate = sliderBitrate();
     } else {
       size = targetSize(resSel.value);
       scaled = (size.w !== srcW || size.h !== srcH);
@@ -626,22 +712,43 @@
       cctx.drawImage(video, 0, 0, size.w, size.h);
       drawRAF = requestAnimationFrame(draw);
     };
-    video.currentTime = 0;
-    /* A timeslice keeps long recordings out of memory trouble: chunks
-       arrive every second instead of one giant blob at the end. */
-    recorder.start(1000);
-    if (scaled) drawRAF = requestAnimationFrame(draw);
-    recStartAt = Date.now();
-    var played = video.play();
-    if (played && played.catch) {
-      played.catch(function () {
-        stopRecording();
-        showErr('Playback could not start — please press Compress Video again.');
-      });
+    /* Seek race fix: setting currentTime = 0 and calling play() at once
+       can interrupt the play ("play() request was interrupted"). Pause
+       first if playing, seek, and only start the recorder and playback
+       after the seek lands — with a 1500ms timeout in case the seeked
+       event never fires (e.g. the playhead was already at 0). */
+    var seekDone = false;
+    var begin = function () {
+      if (seekDone) return;
+      seekDone = true;
+      /* A timeslice keeps long recordings out of memory trouble: chunks
+         arrive every second instead of one giant blob at the end. */
+      recorder.start(1000);
+      if (scaled) drawRAF = requestAnimationFrame(draw);
+      recStartAt = Date.now();
+      startStallWatch();
+      var played = video.play();
+      if (played && played.catch) {
+        played.catch(function () {
+          stopRecording();
+          showErr('Playback could not start — please press Compress Video again.');
+        });
+      }
+      /* Failsafe: if the ended event never fires, stop a little after
+         the video should have finished. */
+      failTimer = setTimeout(function () { if (recording) stopRecording(); }, (duration + 15) * 1000);
+    };
+    if (!video.paused) { try { video.pause(); } catch (e) {} }
+    /* Fresh load: the playhead is already at 0, so there is no seek to
+       wait for — start at once. Otherwise seek to 0 and wait for the
+       seek to land (1500ms timeout if seeked never fires). */
+    if (video.currentTime === 0 && video.paused) {
+      begin();
+    } else {
+      video.addEventListener('seeked', begin, { once: true });
+      setTimeout(begin, 1500);
+      video.currentTime = 0;
     }
-    /* Failsafe: if the ended event never fires, stop a little after
-       the video should have finished. */
-    failTimer = setTimeout(function () { if (recording) stopRecording(); }, (duration + 15) * 1000);
   }
 
   function showEditor(){
@@ -651,6 +758,13 @@
     dz.classList.add('hidden');
     compressBtn.disabled = false;
     compressBtn.textContent = 'Compress Video';
+    /* Smarter target default: while the target input is untouched, offer
+       70% of this video's own size instead of the flat 95 MB — so the
+       default is always a real target for the file in front of you. A
+       user-typed target is never overwritten. */
+    if (targetUntouched && fileSize > 0) {
+      targetInput.value = Math.max(1, Math.round(fileSize / MB * 0.7));
+    }
     updateTargetUI();
   }
 
@@ -721,7 +835,17 @@
 
   compressBtn.addEventListener('click', compress);
   modeSel.addEventListener('change', updateTargetUI);
-  targetInput.addEventListener('input', updateTargetUI);
+  slider.addEventListener('input', updateSliderUI);
+  targetInput.addEventListener('input', function () { targetUntouched = false; updateTargetUI(); });
+  /* Auto-resume: if the tab was backgrounded and the video paused, play
+     again as soon as the tab is visible — compression resumes instead
+     of stalling for the rest of the failsafe window. */
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden && recording && video.paused) {
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+  });
   downloadBtn.addEventListener('click', function(){
     if (!blob) return;
     var base = (fileName.replace(/\.[^.]+$/, '') || 'video');
@@ -731,6 +855,7 @@
     if (recording) stopRecording();
     recording = false;
     clearTimeout(failTimer);
+    stopStallWatch();
     if (drawRAF) { cancelAnimationFrame(drawRAF); drawRAF = null; }
     try { video.pause(); } catch (e) {}
     video.controls = true;
@@ -741,6 +866,7 @@
     if (srcUrl) { URL.revokeObjectURL(srcUrl); srcUrl = null; }
     blob = null;
     duration = 0;
+    targetUntouched = true;
     editor.classList.add('hidden');
     resultEl.classList.add('hidden');
     progressWrap.classList.add('hidden');
