@@ -113,7 +113,7 @@
   "name": "How much smaller will my video get?",
   "acceptedAnswer": {
    "@type": "Answer",
-   "text": "It depends on the original: a phone recording at a high bitrate shrinks a lot, while a video that is already heavily compressed shrinks little and can even grow slightly at the High preset. The compressor shows the original and compressed sizes before you download, so you see the exact saving."
+   "text": "It depends on the original: a phone recording at a high bitrate shrinks a lot, while a video that is already heavily compressed shrinks little and can even grow slightly at the Best quality or High preset. The compressor shows the original and compressed sizes before you download, so you see the exact saving."
   }
  },
  {
@@ -149,7 +149,7 @@
   <h2>How to compress a video in four steps</h2>
   <ol class="steps">
     <li><strong>Open the Video Compressor and drop in your file.</strong> Open the <a href="../tools/video-compressor.html">Video Compressor</a> and drag an MP4, WebM or MOV file onto the dropzone, or click it to browse. The file is decoded in your browser — it is never uploaded anywhere.</li>
-    <li><strong>Pick a quality preset.</strong> High is about 5 Mbps at 1080p, Medium about 2.5 Mbps and Low about 1 Mbps, with the bitrate scaled down for smaller resolutions. Medium is the everyday choice; High keeps the most detail, Low gives the smallest file.</li>
+    <li><strong>Pick a quality preset — or set a target size.</strong> Best quality is about 12 Mbps at 1080p, High about 5 Mbps, Medium about 2.5 Mbps and Low about 1 Mbps, with the bitrate scaled down for smaller resolutions. Medium is the everyday choice; Best quality keeps the most detail, Low gives the smallest file. If you have a size limit, switch to Target size mode and type the size in MB instead — the tool works out the bitrate for you.</li>
     <li><strong>Pick a resolution, then press Compress Video.</strong> Keep the original resolution when the video will be watched on a big screen; pick 720p or 480p when it will only be watched on a phone or in a chat. Compression takes about as long as the video itself, because the video is re-encoded in real time, and the progress bar shows exactly where it is.</li>
     <li><strong>Check the sizes, then download.</strong> The tool shows the original size, the compressed size and the percentage saved. Preview the compressed video, and if it looks right, click Download Compressed WebM — the file downloads with &ldquo;-compressed&rdquo; added to its name.</li>
   </ol>
@@ -159,6 +159,13 @@
   <h2>Choosing a quality preset and resolution</h2>
   <p>Start with Medium at the original resolution. It suits most jobs: a phone recording, a screen capture, a clip for a chat or an upload form. The file shrinks a lot and the picture still looks clean on a phone or laptop screen, because phone cameras and screen recorders usually record at a much higher bitrate than the screen can show.</p>
   <p>Resolution is the bigger lever. Dropping from 1080p to 720p cuts the number of pixels by more than half, so the same preset produces a much smaller file — and on a phone screen the difference is hard to spot. Dropping to 480p shrinks it further, for videos that will only ever be watched small. Two things to know: the tool never upscales, so picking a resolution larger than your video simply keeps the original; and picking a smaller resolution caps the frame rate at up to 30 frames per second, because each frame is drawn onto a canvas at the new size before it is recorded.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Compressing a large video to a target size</h2>
+  <p>If you have a size limit — an upload form that caps files at 100 MB, a chat app that refuses anything bigger — start from the size, not the preset. Switch the compressor to Target size mode, type the size in MB, and the tool works out the bitrate that should land the video under it: it takes your target, aims at 90% of it to leave room for the recorder's bitrate being approximate, and keeps the resolution original, because shrinking the picture is the most visible kind of quality loss. A 144 MB recording aimed at 95 MB, for example, comes out re-encoded at roughly three-fifths of its original bitrate.</p>
+  <p>That usually looks identical to the eye. Most phone and camera recordings are encoded at far higher bitrates than the screen can show — the camera plays it safe — and the VP9 codec the tool records with typically needs 30–50% fewer bits than H.264 for the same picture. So re-encoding at around two-thirds of the original bitrate mostly throws away detail nobody could see. The honest limit is the other direction: a video that is already efficiently encoded has nothing spare, and shrinking it further will show. The tool warns you when your target asks for a bitrate too low for the resolution, and it always shows the result against your target before you download — if the file still came out above it, try a lower target.</p>
+  <p>If there is no size limit and the picture must stay as close to the original as possible, use the Best quality preset instead: about 12 Mbps at 1080p, which for typical phone and camera footage looks the same to the eye while still shrinking the file. Either way, preview the compressed video before downloading — your eyes are the final check, and the original file is never touched, so you can always compress it again differently.</p>
 </section>
 
 <section class="tool-section">
@@ -199,7 +206,7 @@
   <h2>Questions people ask</h2>
     <details><summary>What video formats can I compress online?</summary><p>Any format your browser can play and decode: MP4 (H.264), WebM and MOV in most browsers. If a file will not load, the browser cannot decode that format or codec — try an MP4 file, or open the tool in another browser.</p></details>
     <details><summary>Why does the compressor download a WebM file?</summary><p>Browsers record WebM, not MP4 — there is no MP4 recorder in Chrome, Edge or Firefox. The compressor downloads a WebM file, which plays in Chrome, Edge, Firefox and VLC. If you need an MP4, convert the WebM afterwards in any video app.</p></details>
-    <details><summary>How much smaller will my video get?</summary><p>It depends on the original: a phone recording at a high bitrate shrinks a lot, while a video that is already heavily compressed shrinks little and can even grow slightly at the High preset. The compressor shows the original and compressed sizes before you download, so you see the exact saving.</p></details>
+    <details><summary>How much smaller will my video get?</summary><p>It depends on the original: a phone recording at a high bitrate shrinks a lot, while a video that is already heavily compressed shrinks little and can even grow slightly at the Best quality or High preset. The compressor shows the original and compressed sizes before you download, so you see the exact saving.</p></details>
     <details><summary>Is my video uploaded when I compress it online?</summary><p>Not with this compressor. Your file is decoded, re-encoded and downloaded entirely in your browser — it never leaves your device, and nothing about it is stored or sent anywhere.</p></details>
 </section>
 
