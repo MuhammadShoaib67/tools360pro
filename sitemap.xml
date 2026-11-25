@@ -886,4 +886,10 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
  </url>
+ <url>
+  <loc>https://tools360pro.com/tools/edit-pdf.html</loc>
+  <lastmod>2026-11-25</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+ </url>
 </urlset>

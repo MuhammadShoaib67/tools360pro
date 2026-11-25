@@ -25,6 +25,7 @@
   var ICONS = {
     "merge-pdf":        ic('<path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M16 3h3a2 2 0 0 1 2 2v3"/><path d="M8 21H5a2 2 0 0 1-2-2v-3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/><path d="M12 8v8"/><path d="M8.5 12h7"/>'),
     "sign-pdf": ic('<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>'),
+    "edit-pdf":      ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/>'),
     "split-pdf":        ic('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16" stroke-dasharray="3.5 3.5"/>'),
     "images-to-pdf":    ic('<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15.5 16 10.5 5 21"/>'),
     "jpg-to-pdf":       ic('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><circle cx="12" cy="13.5" r="1.8"/><path d="M9.8 20.5 12 16.8l2.2 3.7"/>'),
@@ -192,6 +193,7 @@
     { slug: "rotate-pdf",       name: "Rotate & Organize PDF", cat: "pdf", desc: "Rotate, reorder and delete PDF pages." },
     { slug: "compress-pdf",     name: "Compress PDF",     cat: "pdf", desc: "Shrink a PDF by re-encoding its images." },
     { slug: "sign-pdf",     name: "Sign PDF",     cat: "pdf", desc: "Draw or type your signature and place it on any PDF page — no upload." },
+    { slug: "edit-pdf",     name: "Edit PDF",     cat: "pdf", desc: "Add text to any PDF page, delete pages and rotate pages 90° — free, in your browser." },
     /* Image */
     { slug: "compress-image",   name: "Compress Image",   cat: "image", desc: "Reduce JPG, PNG and WebP file size with a quality slider." },
     { slug: "resize-image",     name: "Resize Image",     cat: "image", desc: "Change image dimensions by pixels or percentage." },
