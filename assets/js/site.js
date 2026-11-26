@@ -1,6 +1,7 @@
 /* ============================================================
    Tools360Pro — shared site script
-   Header/footer injection · Ctrl+K palette · favourites/recent
+   Header/footer: header is static in HTML, site.js only wires behaviour
+   (footer still injected) · Ctrl+K palette · favourites/recent
    (localStorage) · related tools · theme · T360 helpers
    ============================================================ */
 (function () {
@@ -444,29 +445,57 @@
   var searchSVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20.5 20.5 16.7 16.7"/></svg>';
 
   function currentTheme() { return document.documentElement.getAttribute("data-theme") || "light"; }
+  /* Header is rendered statically in every HTML file (logo + nav + theme
+     toggle, built from the same CATEGORIES registry and BASE prefix).
+     injectChrome() only wires up behaviour — and keeps a fallback build for
+     any page that still ships an empty #site-header. */
   function injectChrome() {
     var header = document.getElementById("site-header");
     if (header) {
-      var nav = '<a href="' + BASE + '#popular">Popular</a>' + CATEGORIES.map(function (c) {
-        return '<a href="' + BASE + "#" + c.id + '">' + c.name.replace(" Tools", "") + "</a>";
-      }).join("") + '<a href="' + BASE + 'guides/">Guides</a>';
       header.className = "site-header";
-      header.innerHTML =
-        '<div class="container header-inner">' +
-          '<a class="logo" href="' + BASE + '" aria-label="Tools360Pro home">' + LOGO_SVG + '<span>Tools<span class="logo-num">360</span>Pro</span></a>' +
-          '<nav class="main-nav" aria-label="Main navigation">' + nav + "</nav>" +
-          '<div class="header-actions">' +
-            '<button class="search-btn" id="hdr-search" type="button" aria-label="Search tools">' + searchSVG + '<span class="sb-label">Search tools…</span><span class="spacer"></span><span class="kbd">Ctrl K</span></button>' +
-            '<button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">' + (currentTheme() === "dark" ? sunSVG : moonSVG) + "</button>" +
-          "</div>" +
-        "</div>";
-      document.getElementById("hdr-search").addEventListener("click", function () { openPalette(""); });
-      document.getElementById("theme-toggle").addEventListener("click", function () {
-        var next = currentTheme() === "dark" ? "light" : "dark";
-        document.documentElement.setAttribute("data-theme", next);
-        lsSet("t360:theme", next);
-        this.innerHTML = next === "dark" ? sunSVG : moonSVG;
-      });
+      if (!header.querySelector(".header-inner")) {
+        var nav = '<a href="' + BASE + '#popular">Popular</a>' + CATEGORIES.map(function (c) {
+          return '<a href="' + BASE + "#" + c.id + '">' + c.name.replace(" Tools", "") + "</a>";
+        }).join("") + '<a href="' + BASE + 'guides/">Guides</a>';
+        header.innerHTML =
+          '<div class="container header-inner">' +
+            '<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">' +
+            '<a class="logo" href="' + BASE + '" aria-label="Tools360Pro home">' + LOGO_SVG + '<span>Tools<span class="logo-num">360</span>Pro</span></a>' +
+            '<label class="nav-toggle-btn" for="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></label>' +
+            '<nav class="main-nav" id="main-nav" aria-label="Main navigation">' + nav + "</nav>" +
+            '<div class="header-actions">' +
+              '<button class="search-btn" id="hdr-search" type="button" aria-label="Search tools">' + searchSVG + '<span class="sb-label">Search tools…</span><span class="spacer"></span><span class="kbd">Ctrl K</span></button>' +
+              '<button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">' + (currentTheme() === "dark" ? sunSVG : moonSVG) + "</button>" +
+            "</div>" +
+          "</div>";
+      }
+      var searchBtn = document.getElementById("hdr-search");
+      if (searchBtn) searchBtn.addEventListener("click", function () { openPalette(""); });
+      var themeBtn = document.getElementById("theme-toggle");
+      if (themeBtn) {
+        /* Static markup ships the dark-theme (sun) icon; sync it to the
+           saved theme in case the user chose light. */
+        themeBtn.innerHTML = currentTheme() === "dark" ? sunSVG : moonSVG;
+        themeBtn.addEventListener("click", function () {
+          var next = currentTheme() === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", next);
+          lsSet("t360:theme", next);
+          this.innerHTML = next === "dark" ? sunSVG : moonSVG;
+        });
+      }
+      /* Mobile hamburger (CSS checkbox toggle): keep aria-expanded in sync
+         and close the menu after a nav link is chosen. */
+      var navToggle = document.getElementById("nav-toggle");
+      var navBtn = header.querySelector(".nav-toggle-btn");
+      if (navToggle && navBtn) {
+        var syncNav = function () { navBtn.setAttribute("aria-expanded", navToggle.checked ? "true" : "false"); };
+        navToggle.addEventListener("change", syncNav);
+        syncNav();
+        var navLinks = header.querySelectorAll(".main-nav a");
+        for (var i = 0; i < navLinks.length; i++) {
+          navLinks[i].addEventListener("click", function () { navToggle.checked = false; syncNav(); });
+        }
+      }
     }
     var footer = document.getElementById("site-footer");
     if (footer) {

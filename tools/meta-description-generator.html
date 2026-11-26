@@ -39,7 +39,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
-<link rel="stylesheet" href="../assets/css/style.css?v=72.0">
+<link rel="stylesheet" href="../assets/css/style.css?v=73.0">
 <style>
 .mt-row{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;cursor:pointer}.mt-row.sel{outline:2px solid var(--acc)}.mt-row .mt-text{flex:1}.mt-row .mt-meta{font-size:.85rem;color:var(--muted);white-space:nowrap}.mt-ok{color:#22c55e;font-weight:700}.mt-warn{color:#f59e0b;font-weight:700}.serp{border:1px solid var(--border);border-radius:12px;padding:16px 18px;background:var(--surface)}.serp .serp-url{font-size:.85rem;color:var(--muted)}.serp .serp-title{font-size:1.15rem;color:#1558d6;margin:2px 0 4px;cursor:pointer}[data-theme="dark"] .serp .serp-title{color:#8ab4f8}.serp .serp-title:hover{text-decoration:underline}.serp .serp-desc{color:var(--muted);font-size:.92rem;line-height:1.5}
 </style>
@@ -158,7 +158,32 @@
 </script>
 </head>
 <body data-tool="meta-description-generator" data-category="developer">
-<div id="site-header"></div>
+<div id="site-header" class="site-header">
+  <div class="container header-inner">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+    <a class="logo" href="../" aria-label="Tools360Pro home"><img class="logo-svg" src="../assets/img/logo.svg" alt="" aria-hidden="true"><span>Tools<span class="logo-num">360</span>Pro</span></a>
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></label>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="../#popular">Popular</a>
+        <a href="../#pdf">PDF</a>
+        <a href="../#image">Image</a>
+        <a href="../#ai">AI</a>
+        <a href="../#text">Text</a>
+        <a href="../#converters">Converters</a>
+        <a href="../#calculators">Calculators</a>
+        <a href="../#developer">Developer</a>
+        <a href="../#generators">Generators</a>
+        <a href="../#time-date">Time &amp; Date</a>
+        <a href="../#audio">Audio</a>
+        <a href="../#video">Video</a>
+        <a href="../guides/">Guides</a>
+      </nav>
+    <div class="header-actions">
+      <button class="search-btn" id="hdr-search" type="button" aria-label="Search tools"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20.5 20.5 16.7 16.7"/></svg><span class="sb-label">Search tools…</span><span class="spacer"></span><span class="kbd">Ctrl K</span></button>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    </div>
+  </div>
+</div>
 <main class="container tool-page">
   <nav class="breadcrumb"><a href="../">Home</a> <span class="sep">›</span> <a href="../developer-tools/">Developer Tools</a> <span class="sep">›</span> <span aria-current="page">Meta Description Generator</span></nav>
   <h1>Meta Description Generator</h1>
@@ -257,7 +282,7 @@
   </section>
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../video-tools/">Video Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
-<script src="../assets/js/site.js?v=92.0"></script>
+<script src="../assets/js/site.js?v=93.0"></script>
 <script>
 (function () {
   var topicEl = T360.qs('#md-topic');
