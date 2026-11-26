@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-format-xml.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -158,13 +158,13 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to format XML</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">XML is strict: one unclosed tag breaks the whole document. Formatting it means laying the structure out with indentation — and checking, in the same pass, that the document is actually valid.</p>
 </section>
 
 <section class="tool-section">
   <h2>Formatting and validation go together</h2>
-  <p>XML is stricter than HTML: every tag must close, attributes must be quoted, and there must be exactly one root element. A formatter for XML therefore does two jobs. First it checks the document with a real XML parser, which is the same strict parser a server or an importer would use. If the document fails, you get the parser's error message instead of a guess. Only if it passes does the formatting step run.</p>
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction" target="_blank" rel="noopener">XML is stricter than HTML</a>: <a href="https://www.w3.org/TR/xml/" target="_blank" rel="noopener">every tag must close, attributes must be quoted, and there must be exactly one root element</a>. A formatter for XML therefore does two jobs. First it checks the document with a real XML parser, which is the same strict parser a server or an importer would use. If the document fails, you get the parser's error message instead of a guess. Only if it passes does the formatting step run.</p>
   <p>The formatting itself is straightforward: one element per line, children indented under their parent, and elements that hold only text kept on a single line so the output stays compact. Attributes stay on the opening tag, in their original order. Comments and CDATA sections are preserved, and the XML declaration at the top of the file is kept.</p>
 </section>
 

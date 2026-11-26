@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-minify-html.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -158,13 +158,13 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to minify HTML</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">Minifying HTML removes the comments and formatting whitespace a browser ignores, shrinking the first file it downloads. Here is what gets removed, what is protected, and the inline-spacing trap worth checking before you publish.</p>
 </section>
 
 <section class="tool-section">
   <h2>What minifying removes from a page</h2>
-  <p>A page written for humans is full of formatting: indentation showing the nesting, blank lines between sections, comments marking where a block starts and ends. A browser ignores all of it. Minifying strips it out — comments are deleted, the line breaks and indentation between tags are collapsed, and runs of several spaces become one. A page written with generous formatting can lose a third of its size without changing a single visible thing.</p>
+  <p>A page written for humans is full of formatting: indentation showing the nesting, blank lines between sections, comments marking where a block starts and ends. A browser ignores all of it. <a href="https://developers.google.com/speed/docs/insights/MinifyResources" target="_blank" rel="noopener">Minifying strips it out</a> — comments are deleted, the line breaks and indentation between tags are collapsed, and runs of several spaces become one. A page written with generous formatting can lose a third of its size without changing a single visible thing.</p>
   <p>Four kinds of content are protected and copied through unchanged: <code>pre</code> blocks, where spacing is the content; <code>script</code> blocks, where a removed line break can change JavaScript; <code>style</code> blocks, where the same is true for CSS; and <code>textarea</code> blocks, where the text is user-facing. Everything else is fair game.</p>
 </section>
 
@@ -199,7 +199,7 @@
 
 <section class="tool-section">
   <h2>Minifying versus compressing</h2>
-  <p>Minifying and compressing solve different parts of the same problem. Minifying removes characters from the file; compression (gzip or Brotli) squeezes the file while it travels. They stack, and production sites use both — but compression alone gets you most of the saving on HTML, because HTML compresses very well. Minifying is the extra step that squeezes out the rest.</p>
+  <p>Minifying and compressing solve different parts of the same problem. Minifying removes characters from the file; <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Compression" target="_blank" rel="noopener">compression (gzip or Brotli) squeezes the file while it travels</a>. They stack, and production sites use both — but compression alone gets you most of the saving on HTML, because HTML compresses very well. Minifying is the extra step that squeezes out the rest.</p>
   <p>That is why HTML minification is usually the lowest priority of the three minifications. Minify CSS and JavaScript first, where the savings are bigger; enable compression at the server; then minify HTML if you want the last few percent. For a page served millions of times, even a few percent is real bandwidth.</p>
 </section>
 

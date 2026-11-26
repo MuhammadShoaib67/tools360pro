@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-convert-json-to-csv.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -158,19 +158,19 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to convert JSON to CSV</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">A JSON array of objects is already a table — each object is a row, its keys are the columns. Converting to CSV makes that table readable in any spreadsheet, and here is how it works, including the quoting rules and the nested-data problem.</p>
 </section>
 
 <section class="tool-section">
   <h2>JSON is a table in disguise</h2>
-  <p>A JSON array of objects is already a table: each object is a row, and its keys are the columns. Converting to CSV makes that structure visible to tools that never learned JSON — spreadsheets, databases, data-analysis tools, and colleagues who work in Excel. The conversion itself is mechanical: collect every key into a header row, then write one CSV row per object.</p>
+  <p><a href="https://www.rfc-editor.org/rfc/rfc8259" target="_blank" rel="noopener">A JSON array of objects is already a table</a>: each object is a row, and its keys are the columns. Converting to CSV makes that structure visible to tools that never learned JSON — spreadsheets, databases, data-analysis tools, and colleagues who work in Excel. The conversion itself is mechanical: collect every key into a header row, then write one CSV row per object.</p>
   <p>Headers are collected in the order they first appear, and every object contributes its keys — so if the third object has a key the first two lack, it still gets a column. Rows that do not have a value for a column get an empty cell. The result is a rectangular table, which is what spreadsheets expect. A single object on its own becomes a one-row table.</p>
 </section>
 
 <section class="tool-section">
   <h2>The quoting rules that matter</h2>
-  <p>CSV looks simple until a value contains a comma. The standard rules handle it: any field containing a comma, a quote or a line break is wrapped in double quotes, and a quote inside a field is doubled. A product named <code>Chair, wooden</code> therefore arrives in one cell, not split across two — and a spreadsheet reading the file will put it back together correctly.</p>
+  <p>CSV looks simple until a value contains a comma. The standard rules handle it: <a href="https://www.rfc-editor.org/rfc/rfc4180" target="_blank" rel="noopener">any field containing a comma, a quote or a line break is wrapped in double quotes, and a quote inside a field is doubled</a>. A product named <code>Chair, wooden</code> therefore arrives in one cell, not split across two — and a spreadsheet reading the file will put it back together correctly.</p>
   <p>These rules are why you should never convert by hand with find-and-replace. A naive join with commas breaks the moment a value contains one, and the break is silent — the file looks fine until someone sorts it and finds half a product name in the wrong column. A converter that quotes properly is the difference between data and a mess.</p>
 </section>
 

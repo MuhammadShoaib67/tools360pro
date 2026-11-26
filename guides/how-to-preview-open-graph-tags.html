@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-preview-open-graph-tags.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -166,20 +166,20 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to Preview Open Graph Tags Before You Share</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">You share a link on Facebook or X and the preview card shows the wrong image, a cut-off title, or no image at all. That is an Open Graph problem — and it is embarrassing, because the fix takes two minutes. This guide shows you how to preview your OG tags as a real social card before you share, and what to do when the preview is wrong.</p>
 </section>
 
 <section class="tool-section">
   <h2>What Open Graph tags do</h2>
-  <p>Open Graph tags are meta tags that tell social platforms what to show when your link is shared: the title, the description, the image, and the URL. They live in the head of your page, and platforms read them the moment someone pastes your link. Without them, Facebook and X guess — and they usually guess badly, picking a random image or showing no image at all.</p>
+  <p><a href="https://ogp.me/" target="_blank" rel="noopener">Open Graph tags are meta tags that tell social platforms what to show when your link is shared</a>: the title, the description, the image, and the URL. They live in the head of your page, and platforms read them the moment someone pastes your link. Without them, Facebook and X guess — and they usually guess badly, picking a random image or showing no image at all.</p>
   <p>X, formerly Twitter, also reads its own twitter:card tags, but it falls back to Open Graph tags when they are missing. In practice, a solid set of OG tags plus one twitter:card tag covers every major platform.</p>
 </section>
 
 <section class="tool-section">
   <h2>The tags every page needs</h2>
   <p>Five tags cover it. og:title is the card headline — keep it near 60 characters so it does not truncate. og:description is the short paragraph under it, around 150 to 200 characters. og:image is the preview image: 1200 by 630 pixels is the standard, and anything under 200 by 200 is ignored. og:url is the canonical URL of the page. og:type is usually website for a homepage or tool, and article for a blog post.</p>
-  <p>One rule matters more than the rest: the image URL must be absolute, starting with https://. A relative path like /images/card.png works on your own site but breaks when a platform tries to fetch it from somewhere else. Add twitter:card with the value summary_large_image to get the large image card on X.</p>
+  <p>One rule matters more than the rest: the image URL must be absolute, starting with https://. A relative path like /images/card.png works on your own site but breaks when a platform tries to fetch it from somewhere else. <a href="https://developer.x.com/en/docs/x-for-websites/cards/overview/summary-card-with-large-image" target="_blank" rel="noopener">Add twitter:card with the value summary_large_image to get the large image card on X</a>.</p>
 </section>
 
 <section class="tool-section">

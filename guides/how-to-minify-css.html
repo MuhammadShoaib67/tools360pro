@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-minify-css.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -158,7 +158,7 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to minify CSS</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">Minifying CSS means stripping out everything a browser does not need — comments, line breaks and extra spaces — so the file downloads faster. Here is what minification removes, three honest ways to do it, and when to leave your stylesheet alone.</p>
 </section>
 
@@ -176,8 +176,8 @@
 
 <section class="tool-section">
   <h2>How much smaller, and does it matter?</h2>
-  <p>A typical hand-written stylesheet shrinks by 20 to 40 percent when minified. A 50 KB file often comes out near 30 KB. That sounds small, but stylesheets block rendering: a browser waits for the CSS before it paints the page, so every kilobyte saved is time saved on first paint, especially on a slow mobile connection where the difference is visible.</p>
-  <p>Minifying also stacks with compression. A server that serves gzip or Brotli compresses the minified file further, and the two savings add up rather than overlap. Minify first, then let the server compress — the combination is the standard way production CSS is shipped, and it costs nothing once it is set up.</p>
+  <p>A typical hand-written stylesheet shrinks by 20 to 40 percent when minified. A 50 KB file often comes out near 30 KB. That sounds small, but <a href="https://web.dev/articles/critical-rendering-path/render-blocking-css" target="_blank" rel="noopener">stylesheets block rendering: a browser waits for the CSS before it paints the page</a>, so every kilobyte saved is time saved on first paint, especially on a slow mobile connection where the difference is visible.</p>
+  <p>Minifying also stacks with compression. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Compression" target="_blank" rel="noopener">A server that serves gzip or Brotli compresses the minified file further</a>, and the two savings add up rather than overlap. Minify first, then let the server compress — the combination is the standard way production CSS is shipped, and it costs nothing once it is set up.</p>
 </section>
 
 <section class="tool-section">

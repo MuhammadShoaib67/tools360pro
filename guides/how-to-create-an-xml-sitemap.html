@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-create-an-xml-sitemap.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -166,14 +166,14 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to Create an XML Sitemap</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
-  <p class="lede">An XML sitemap is a file that lists every page on your website you want search engines to find, with the date each page was last changed. It does not guarantee indexing, but it helps Google discover new and updated pages faster — especially on new sites with few backlinks. This guide shows you how to build one and submit it to Google Search Console.</p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
+  <p class="lede">An XML sitemap is a file that lists every page on your website you want search engines to find, with the date each page was last changed. <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap" target="_blank" rel="noopener">It does not guarantee indexing, but it helps Google discover new and updated pages faster</a> — especially on new sites with few backlinks. This guide shows you how to build one and submit it to Google Search Console.</p>
 </section>
 
 <section class="tool-section">
   <h2>What goes inside an XML sitemap</h2>
   <p>A sitemap is a plain XML file. It opens with a &lt;urlset&gt; wrapper that names the sitemap namespace, and inside it sits one &lt;url&gt; entry per page. Each entry must contain a &lt;loc&gt; element with the full page URL — that is the only required field. Optional fields are &lt;lastmod&gt; (the date the page last changed), &lt;changefreq&gt; (how often it changes) and &lt;priority&gt; (how important it is relative to your other pages). Google largely ignores changefreq and priority today, but it accepts them, and lastmod is genuinely useful.</p>
-  <p>Two hard limits apply. A single sitemap file may hold at most 50,000 URLs and 50 MB uncompressed. Sites bigger than that split their sitemaps into several files and list them all in a sitemap index file. For most small sites, one file is plenty.</p>
+  <p>Two hard limits apply. <a href="https://www.sitemaps.org/protocol.html" target="_blank" rel="noopener">A single sitemap file may hold at most 50,000 URLs and 50 MB uncompressed</a>. Sites bigger than that split their sitemaps into several files and list them all in a sitemap index file. For most small sites, one file is plenty.</p>
 </section>
 
 <section class="tool-section">

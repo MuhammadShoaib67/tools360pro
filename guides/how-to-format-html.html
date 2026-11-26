@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-format-html.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -158,13 +158,13 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to format HTML</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">Formatting HTML means laying markup out so a human can read it: one element per line, nested tags indented to match their depth. Here is what formatting does, why it makes debugging easier, and the two honest limits to know.</p>
 </section>
 
 <section class="tool-section">
   <h2>What formatting does</h2>
-  <p>A formatter takes markup that a machine produced — one long line, or indentation that drifted over years of edits — and lays it out so a human can read it. Each element goes on its own line, nested elements are indented one step deeper than their parent, and the structure of the page becomes visible at a glance. Void elements like <code>img</code>, <code>br</code> and <code>input</code>, which never have a closing tag, are recognised and do not increase the depth.</p>
+  <p>A formatter takes markup that a machine produced — one long line, or indentation that drifted over years of edits — and lays it out so a human can read it. Each element goes on its own line, nested elements are indented one step deeper than their parent, and the structure of the page becomes visible at a glance. <a href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element" target="_blank" rel="noopener">Void elements like <code>img</code>, <code>br</code> and <code>input</code></a>, which never have a closing tag, are recognised and do not increase the depth.</p>
   <p>Comments and the doctype are kept at the depth where they appear, and text between tags is trimmed and placed on its own line. The result is not a prettier page for visitors — browsers do not care about indentation — it is a prettier page for the next person who has to read the code, which is usually you, six months later.</p>
 </section>
 
@@ -199,7 +199,7 @@
 
 <section class="tool-section">
   <h2>Picking an indent style and sticking to it</h2>
-  <p>Two spaces is the common default for HTML, and four spaces suits deeply nested documents. Tabs are a third option, used by teams that already use them everywhere. The choice itself matters far less than consistency: a file that mixes two-space and four-space indentation is harder to read than either style on its own.</p>
+  <p><a href="https://prettier.io/docs/options" target="_blank" rel="noopener">Two spaces is the common default for HTML</a>, and four spaces suits deeply nested documents. Tabs are a third option, used by teams that already use them everywhere. The choice itself matters far less than consistency: a file that mixes two-space and four-space indentation is harder to read than either style on its own.</p>
   <p>If you work in a team, agree on one style and let the editor enforce it — most editors can format on save, which ends the debate permanently. For one-off files, pick the style the file already mostly uses, and keep it.</p>
 </section>
 
