@@ -17,6 +17,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0A0A">
 <title>PDF to JPG Converter — Free Online | Tools360Pro</title>
 <meta name="description" content="Free PDF to JPG converter online: turn your PDF’s pages into JPG or PNG images in your browser. Pick a resolution, preview every page, download what you need">
 <link rel="canonical" href="https://tools360pro.com/tools/pdf-to-image.html">
@@ -34,9 +35,11 @@
 <meta name="twitter:description" content="Free PDF to JPG converter online: turn your PDF’s pages into JPG or PNG images in your browser. Pick a resolution, preview every page, download what you need">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+<link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
-<link rel="stylesheet" href="../assets/css/style.css?v=71.0">
+<link rel="stylesheet" href="../assets/css/style.css?v=72.0">
 <style>
   #results{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:16px}
   .img-card{background:var(--surface-2);border:1px solid var(--border);border-radius:13px;padding:12px;display:flex;flex-direction:column;gap:9px}
@@ -338,7 +341,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/vendor/pdf.worker.min.js";
         var idx = results.length - 1;
         var card = document.createElement("div");
         card.className = "img-card";
-        card.innerHTML = '<img alt="Page ' + n + ' preview" src="' + item.url + '">' +
+        card.innerHTML = '<img alt="Page ' + n + ' preview" src="' + item.url + '" width="' + item.w + '" height="' + item.h + '">' +
           '<div class="img-meta">Page ' + n + " — " + item.w + "×" + item.h + " px — " + T360.formatBytes(blob.size) + "</div>" +
           '<button class="btn btn-primary btn-sm" data-dl="' + idx + '">Download page ' + n + "</button>";
         resultsEl.appendChild(card);

@@ -17,6 +17,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0A0A">
 <title>YouTube Thumbnail Downloader — HD Thumbnails | Tools360Pro</title>
 <meta name="description" content="Paste any YouTube video link and download its thumbnail in every size — Full HD (1280×720), HD, SD and more. Free, instant, no sign-up.">
 <link rel="canonical" href="https://tools360pro.com/tools/youtube-thumbnail-downloader.html">
@@ -34,9 +35,11 @@
 <meta name="twitter:description" content="Paste any YouTube video link and download its thumbnail in every size — Full HD (1280×720), HD, SD and more. Free, instant, no sign-up.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+<link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
-<link rel="stylesheet" href="../assets/css/style.css?v=71.0">
+<link rel="stylesheet" href="../assets/css/style.css?v=72.0">
 <style>
   .thumb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 14px; }
   .thumb-card { border: 1px solid var(--border, #e5e7eb); border-radius: 12px; overflow: hidden; }
@@ -167,11 +170,11 @@
   var err = $("err"), grid = $("grid");
   function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
   var SIZES = [
-    ["maxresdefault", "Full HD", "1280 × 720"],
-    ["sddefault", "SD", "640 × 480"],
-    ["hqdefault", "HQ", "480 × 360"],
-    ["mqdefault", "Medium", "320 × 180"],
-    ["default", "Small", "120 × 90"]
+    ["maxresdefault", "Full HD", "1280 × 720", 1280, 720],
+    ["sddefault", "SD", "640 × 480", 640, 480],
+    ["hqdefault", "HQ", "480 × 360", 480, 360],
+    ["mqdefault", "Medium", "320 × 180", 320, 180],
+    ["default", "Small", "120 × 90", 120, 90]
   ];
   function videoId(raw) {
     raw = String(raw || "").trim();
@@ -200,7 +203,7 @@
       var url = "https://i.ytimg.com/vi/" + id + "/" + sz[0] + ".jpg";
       var card = document.createElement("div");
       card.className = "thumb-card";
-      card.innerHTML = "<img alt=''><div class='tc-body'><span><span class='tc-name'></span><br><span class='tc-size'></span></span><button class='btn btn-primary' type='button'>Download</button></div>";
+      card.innerHTML = "<img alt='' width='" + sz[3] + "' height='" + sz[4] + "'><div class='tc-body'><span><span class='tc-name'></span><br><span class='tc-size'></span></span><button class='btn btn-primary' type='button'>Download</button></div>";
       var img = card.querySelector("img");
       img.alt = sz[1] + " thumbnail";
       card.querySelector(".tc-name").textContent = sz[1];

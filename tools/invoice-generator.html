@@ -17,6 +17,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0A0A">
 <title>Invoice Generator — Create Free PDF Invoices | Tools360Pro</title>
 <meta name="description" content="Create professional invoices and download them as PDF, free in your browser. Add your logo, items, tax and discount. No sign-up, nothing uploaded.">
 <link rel="canonical" href="https://tools360pro.com/tools/invoice-generator.html">
@@ -34,9 +35,11 @@
 <meta name="twitter:description" content="Create professional invoices and download them as PDF, free in your browser. Add your logo, items, tax and discount. No sign-up, nothing uploaded.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+<link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
-<link rel="stylesheet" href="../assets/css/style.css?v=71.0">
+<link rel="stylesheet" href="../assets/css/style.css?v=72.0">
 <style>
   .inv-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
   @media (max-width:640px){ .inv-grid{ grid-template-columns:1fr; } }
@@ -323,7 +326,7 @@
     var rows = items.map(function (i) {
       return "<tr><td>" + esc(i.desc || "—") + "</td><td class='r'>" + i.qty + "</td><td class='r'>" + money(i.rate) + "</td><td class='r'>" + money(i.amount) + "</td></tr>";
     }).join("");
-    var logoHtml = logoData ? '<img class="inv-logo" src="' + logoData.dataUrl + '" alt="">' : "";
+    var logoHtml = logoData ? '<img class="inv-logo" src="' + logoData.dataUrl + '" alt=""' + (logoData.w ? ' width="' + logoData.w + '" height="' + logoData.h + '"' : '') + '>' : "";
     preview.innerHTML =
       '<div class="inv-flex"><div>' + logoHtml +
       '<div style="font-size:19px;font-weight:800;margin-top:4px">' + esc($("biz-name").value || "Your Business") + "</div>" +
@@ -392,8 +395,17 @@
       var dataUrl = String(reader.result);
       var r2 = new FileReader();
       r2.onload = function () {
-        logoData = { dataUrl: dataUrl, bytes: new Uint8Array(r2.result), kind: f.type === "image/png" ? "png" : "jpg" };
-        update();
+        var bytes = new Uint8Array(r2.result);
+        var im = new Image();
+        im.onload = function () {
+          logoData = { dataUrl: dataUrl, bytes: bytes, kind: f.type === "image/png" ? "png" : "jpg", w: im.naturalWidth, h: im.naturalHeight };
+          update();
+        };
+        im.onerror = function () {
+          logoData = { dataUrl: dataUrl, bytes: bytes, kind: f.type === "image/png" ? "png" : "jpg" };
+          update();
+        };
+        im.src = dataUrl;
       };
       r2.readAsArrayBuffer(f);
     };

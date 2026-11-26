@@ -17,6 +17,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7164526722138620" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0A0A">
 <title>Rotate PDF Pages Online Free | Tools360Pro</title>
 <meta name="description" content="Rotate PDF pages online free: fix sideways pages, reorder and delete pages in a PDF, free in your browser. Nothing is uploaded, no sign-up.">
 <link rel="canonical" href="https://tools360pro.com/tools/rotate-pdf.html">
@@ -34,9 +35,11 @@
 <meta name="twitter:description" content="Rotate PDF pages online free: fix sideways pages, reorder and delete pages in a PDF, free in your browser. Nothing is uploaded, no sign-up.">
 <meta name="twitter:image" content="https://tools360pro.com/og-image.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+<link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
-<link rel="stylesheet" href="../assets/css/style.css?v=71.0">
+<link rel="stylesheet" href="../assets/css/style.css?v=72.0">
 <style>
   #thumb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin-top:16px}
   .page-card{background:var(--surface-2);border:1px solid var(--border);border-radius:13px;padding:12px;display:flex;flex-direction:column;gap:9px}
@@ -268,7 +271,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/vendor/pdf.worker.min.js";
     list.innerHTML = fileName ? '<div class="file-chip"><div class="fc-main"><div class="fc-name">' + esc(fileName) + '</div><div class="fc-meta">' + originalCount + (originalCount === 1 ? " page" : " pages") + "</div></div></div>" : "";
     grid.innerHTML = pages.map(function (p, i) {
       return '<div class="page-card" draggable="true" data-i="' + i + '">' +
-        '<div class="thumb-wrap"><img alt="Page ' + (p.orig + 1) + ' preview" src="' + p.thumb + '" style="transform:rotate(' + p.rot + 'deg)"></div>' +
+        '<div class="thumb-wrap"><img alt="Page ' + (p.orig + 1) + ' preview" src="' + p.thumb + '" width="' + p.w + '" height="' + p.h + '" style="transform:rotate(' + p.rot + 'deg)"></div>' +
         '<div class="page-label">Page ' + (p.orig + 1) + "</div>" +
         '<div class="page-rot">' + (p.rot ? "Rotated " + p.rot + "°" : "") + "</div>" +
         '<div class="page-actions">' +
@@ -305,7 +308,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/vendor/pdf.worker.min.js";
         var canvas = document.createElement("canvas");
         canvas.width = Math.ceil(vp.width); canvas.height = Math.ceil(vp.height);
         await page.render({ canvasContext: canvas.getContext("2d"), viewport: vp }).promise;
-        built.push({ orig: n - 1, rot: 0, thumb: canvas.toDataURL("image/png") });
+        built.push({ orig: n - 1, rot: 0, thumb: canvas.toDataURL("image/png"), w: canvas.width, h: canvas.height });
         bar.style.width = Math.round((n / pdf.numPages) * 100) + "%";
       }
       pages = built;
@@ -377,7 +380,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = "../assets/vendor/pdf.worker.min.js";
         var canvas = document.createElement("canvas");
         canvas.width = Math.ceil(vp.width); canvas.height = Math.ceil(vp.height);
         await page.render({ canvasContext: canvas.getContext("2d"), viewport: vp }).promise;
-        built.push({ orig: n - 1, rot: 0, thumb: canvas.toDataURL("image/png") });
+        built.push({ orig: n - 1, rot: 0, thumb: canvas.toDataURL("image/png"), w: canvas.width, h: canvas.height });
         bar.style.width = Math.round((n / pdf.numPages) * 100) + "%";
       }
       pages = built;

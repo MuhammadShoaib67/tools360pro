@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
 /* ============================================================
    Tools360Pro — design system
    Palette: "Unified Mono" — monochrome black & white base
@@ -271,7 +270,7 @@ img,svg{display:block}
   box-shadow:var(--shadow-lg),inset 0 1px 0 rgba(255,255,255,.08);
   padding:0 10px 0 20px;
 }
-.logo{display:flex;align-items:center;gap:11px;font-family:'Montserrat',var(--font);font-weight:800;font-size:1.32rem;letter-spacing:-.015em;flex:none;color:var(--text)}
+.logo{display:flex;align-items:center;gap:11px;font-family:var(--font);font-weight:800;font-size:1.32rem;letter-spacing:-.015em;flex:none;color:var(--text)}
 .logo-svg{width:63px;height:36px;flex:none}
 .logo .logo-num{background:linear-gradient(94deg,#2DAFF0 5%,#FA782D 52%,#FAC328 95%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 8px rgba(250,140,50,.28))}
 .main-nav{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
@@ -668,7 +667,7 @@ input[type="checkbox"]{width:17px;height:17px;accent-color:var(--acc)}
 @keyframes pal-in{from{opacity:0;transform:translateY(-8px) scale(.99)}to{opacity:1;transform:none}}
 .palette-brand{display:flex;align-items:center;gap:10px;padding:13px 18px 9px}
 .palette-brand .logo-svg{width:52px;height:30px}
-.palette-brand-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.06rem;letter-spacing:-.015em}
+.palette-brand-name{font-family:var(--font);font-weight:800;font-size:1.06rem;letter-spacing:-.015em}
 .palette-brand-name .logo-num{background:linear-gradient(94deg,#2DAFF0 5%,#FA782D 52%,#FAC328 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .palette input{
   width:100%;border:none;outline:none;background:transparent;color:var(--text);
