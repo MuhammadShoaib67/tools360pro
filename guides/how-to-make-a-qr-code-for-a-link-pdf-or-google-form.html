@@ -164,7 +164,9 @@
 
 <section class="tool-section">
   <h2>What a QR code actually stores</h2>
+  <h3>Text drawn as squares</h3>
   <p><a href="https://en.wikipedia.org/wiki/QR_code" target="_blank" rel="noopener">A QR code is just text drawn as a pattern of black and white squares</a>. When you make a code for a link, the link itself is written into the pattern — the phone reads the squares, finds the address, and opens it. Nothing is stored on a server, and nothing expires, because there is nothing to expire: the code is a picture of your link.</p>
+  <h3>Static codes store the destination directly</h3>
   <p>That is the honest difference between the two kinds of QR code you will meet online. A <strong>static</strong> code stores the destination directly, works forever, and cannot track who scanned it — that is what our <a href="../tools/qr-code-generator.html">QR Code Generator</a> makes. A <strong>dynamic</strong> code stores a short redirect link owned by a service, so the destination can be changed later and scans can be counted — but it stops working if you stop paying for that service. For a menu, a poster, a business card or an invoice, static is the right choice: it never breaks, and nobody is watching your scans.</p>
 </section>
 
@@ -198,7 +200,9 @@
 
 <section class="tool-section">
   <h2>Print it so it scans: size, contrast and the quiet zone</h2>
+  <h3>Contrast, size and the quiet zone</h3>
   <p>Most QR codes that fail were made correctly and printed badly. Three rules prevent nearly every failure. <strong>Contrast first:</strong> dark modules on a light background scan most reliably — light-on-dark, coloured modules on a coloured background, and codes printed over photographs all fail more often than plain black on white. <strong>Size second:</strong> a code for a short link should be at least 2 cm across on paper; longer links make denser codes, so print them larger. A business card code should be small but never tiny — if you have to hold the phone close and steady, it is too small. <strong>Quiet zone third:</strong> leave a clear white margin around the code, about four squares wide, with nothing inside it — no text, no logo, no border. Scanners use that empty border to find the code, and crowding it is the single most common print mistake.</p>
+  <h3>Scan the finished file before you print a hundred</h3>
   <p>One last check before you print a hundred copies: scan the finished file — the actual PDF or image you are about to send to the printer — with two different phones, one iPhone and one Android if you can. If either struggles, enlarge the code or shorten the link. Fixing it now costs a minute; fixing it after printing costs the whole batch.</p>
 </section>
 

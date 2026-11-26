@@ -164,13 +164,17 @@
 
 <section class="tool-section">
   <h2>Why PDFs get big in the first place</h2>
+  <h3>Images: a scanned page is a photograph</h3>
   <p>Almost every oversized PDF is big for one reason: images. A scanned page is a photograph, and a phone photograph of a document can be several megabytes on its own. A 30-page scanned report can easily pass 50 MB, while a 30-page report typed in Word and exported to PDF might be 200 KB. <a href="https://en.wikipedia.org/wiki/PDF" target="_blank" rel="noopener">The text in a typed PDF is stored as characters</a> — a few bytes per letter — but a scan stores every pixel of the page. That single difference decides which compression method will work and which will disappoint you — and it is the first thing to check when you want to reduce PDF file size.</p>
+  <h3>Fonts and leftover editing data</h3>
   <p>Other, smaller causes exist too: embedded fonts, leftover editing data and uncompressed graphics inside files produced by design software. Those can be removed with no visible change at all, which is the only truly lossless compression there is.</p>
 </section>
 
 <section class="tool-section">
   <h2>The two kinds of compression</h2>
+  <h3>Lossless: the same document, repacked</h3>
   <p><strong>Lossless</strong> compression repacks the file without discarding anything: duplicate fonts are merged, streams are compressed, unused objects are dropped. The document looks identical because it is identical — the savings are real but modest, usually 5–20%.</p>
+  <h3>Lossy: smaller images, big wins</h3>
   <p><strong>Lossy</strong> compression shrinks the images inside the PDF — lowering their resolution and re-encoding them as compact JPEGs. This is where the big wins are (often 70–90% on scans), and it is also where quality can be lost if the settings are pushed too far. <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">A scan captured at 300 DPI can usually be shown at 150 DPI</a> and remain perfectly readable on screens and in printouts of normal documents; faces in photographs and fine print are what suffer first when you go lower.</p>
 </section>
 

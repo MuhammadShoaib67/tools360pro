@@ -172,13 +172,16 @@
 
 <section class="tool-section">
   <h2>Why formatting gets lost</h2>
+  <h3>Word remembers meaning; a PDF records positions</h3>
   <p><a href="https://en.wikipedia.org/wiki/Office_Open_XML" target="_blank" rel="noopener">A Word document remembers meaning</a>. It knows which line is a heading, where a paragraph ends, that a block of numbers is a table, and that a picture belongs beside a caption. <a href="https://en.wikipedia.org/wiki/PDF" target="_blank" rel="noopener">A PDF remembers none of that</a>. It remembers only where every letter sits on a page — this character at these coordinates, in this font, at this size. It is a printed page frozen in digital form, and it was designed that way on purpose: a PDF should look identical everywhere, on every device, forever.</p>
+  <h3>Conversion means guessing the structure back</h3>
   <p>That design goal is exactly what makes conversion hard. Turning a PDF back into Word means reversing the process — guessing the original structure from the positions of letters. Which lines were a heading and which were just large body text? Is that gap a column break, a margin, or a table? Is this block of text a footnote or a caption? A converter can make good guesses, and modern ones make very good guesses, but they are guesses. The more complex the original layout, the more guessing is involved, and the more there is to tidy up afterwards.</p>
   <p>This is also why two people can convert the same PDF and get different results: different converters guess differently, and fonts installed on one computer but not another will reflow the text. The honest promise of any PDF to Word tool is not "identical" — it is "your words back, ready to edit, with most of the structure intact". That is still far better than retyping a forty-page report by hand.</p>
 </section>
 
 <section class="tool-section">
   <h2>What converts well — and what does not</h2>
+  <h3>Check which kind of PDF you have</h3>
   <p>Before converting, check which kind of PDF you have. It decides everything about the result.</p>
   <ul>
     <li><strong>Converts well:</strong> a text PDF exported from Word, Google Docs or a publishing tool. Paragraphs come back in order, larger lines are recognised as headings, bold and italics survive, and simple tables usually hold together.</li>
@@ -186,6 +189,7 @@
     <li><strong>Converts poorly:</strong> forms built from positioned text boxes, documents in unusual fonts your computer does not have, and files where the text was converted to outlines or curves (common in design software exports).</li>
     <li><strong>Cannot convert as text at all:</strong> scanned PDFs. A scan is a photograph of a page — there is no text inside it to extract. It needs OCR first, covered below.</li>
   </ul>
+  <h3>The quick test: can you select the text?</h3>
   <p>A quick test tells you which kind you have: open the PDF, try to select a sentence with your mouse, and copy it. If you can select and copy real text, it is a text PDF. If the whole page selects as one big image, or nothing selects at all, it is a scan.</p>
 </section>
 
