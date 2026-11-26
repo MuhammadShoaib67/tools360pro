@@ -447,13 +447,13 @@
   function injectChrome() {
     var header = document.getElementById("site-header");
     if (header) {
-      var nav = '<a href="' + BASE + 'index.html#popular">Popular</a>' + CATEGORIES.map(function (c) {
-        return '<a href="' + BASE + "index.html#" + c.id + '">' + c.name.replace(" Tools", "") + "</a>";
+      var nav = '<a href="' + BASE + '#popular">Popular</a>' + CATEGORIES.map(function (c) {
+        return '<a href="' + BASE + "#" + c.id + '">' + c.name.replace(" Tools", "") + "</a>";
       }).join("") + '<a href="' + BASE + 'guides/">Guides</a>';
       header.className = "site-header";
       header.innerHTML =
         '<div class="container header-inner">' +
-          '<a class="logo" href="' + BASE + 'index.html" aria-label="Tools360Pro home">' + LOGO_SVG + '<span>Tools<span class="logo-num">360</span>Pro</span></a>' +
+          '<a class="logo" href="' + BASE + '" aria-label="Tools360Pro home">' + LOGO_SVG + '<span>Tools<span class="logo-num">360</span>Pro</span></a>' +
           '<nav class="main-nav" aria-label="Main navigation">' + nav + "</nav>" +
           '<div class="header-actions">' +
             '<button class="search-btn" id="hdr-search" type="button" aria-label="Search tools">' + searchSVG + '<span class="sb-label">Search tools…</span><span class="spacer"></span><span class="kbd">Ctrl K</span></button>' +
@@ -471,7 +471,7 @@
     var footer = document.getElementById("site-footer");
     if (footer) {
       var catLinks = CATEGORIES.map(function (c) {
-        return '<li><a data-cat="' + c.id + '" href="' + BASE + "index.html#" + c.id + '">' + c.name + "</a></li>";
+        return '<li><a data-cat="' + c.id + '" href="' + BASE + "#" + c.id + '">' + c.name + "</a></li>";
       }).join("");
       function toolLinks(catIds) {
         return TOOLS.filter(function (t) { return !t.soon && catIds.indexOf(t.cat) >= 0; })
@@ -482,7 +482,7 @@
         '<div class="container">' +
           '<div class="footer-grid">' +
             '<div class="footer-brand">' +
-              '<a class="logo" href="' + BASE + 'index.html">' + LOGO_SVG + '<span>Tools<span class="logo-num">360</span>Pro</span></a>' +
+              '<a class="logo" href="' + BASE + '">' + LOGO_SVG + '<span>Tools<span class="logo-num">360</span>Pro</span></a>' +
               "<p>Free online tools for PDFs, images, text, conversions and code. Everything runs locally in your browser — your files are never uploaded to a server.</p>" +
             "</div>" +
             "<div><h4>Categories</h4><ul>" + catLinks + "</ul></div>" +
