@@ -282,7 +282,6 @@
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../video-tools/">Video Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=93.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js"></script>
 <script>
 (function () {
   var dz = T360.qs("#dz"), input = T360.qs("#file-input"), err = T360.qs("#err"),
@@ -292,6 +291,36 @@
       result = T360.qs("#result"), outText = T360.qs("#out-text"), outStats = T360.qs("#out-stats"),
       copyBtn = T360.qs("#copy-btn"), downloadBtn = T360.qs("#download-btn");
   var file = null, fileName = "image", worker = null, workerLang = null, busy = false;
+  var TESSERACT_URL = "https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js";
+  var tesseractPromise = null, tesseractReady = false;
+
+  /* Lazy-load the OCR engine; resolves to Tesseract. Retries on failure. */
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement("script");
+      s.src = src; s.onload = resolve; s.onerror = reject;
+      document.head.appendChild(s);
+    });
+  }
+  function loadTesseract() {
+    if (tesseractPromise) return tesseractPromise;
+    progLabel.textContent = "Loading OCR engine… (first-time download)";
+    progBar.style.width = "12%";
+    progWrap.classList.remove("hidden");
+    tesseractPromise = loadScript(TESSERACT_URL)
+      .then(function () {
+        if (typeof Tesseract === "undefined") throw new Error("tesseract-missing");
+        tesseractReady = true;
+        if (!busy) progWrap.classList.add("hidden");
+        return Tesseract;
+      })
+      .catch(function (e) {
+        tesseractPromise = null;
+        if (!busy) progWrap.classList.add("hidden");
+        throw e;
+      });
+    return tesseractPromise;
+  }
 
   function showErr(m) { err.textContent = m; err.classList.toggle("hidden", !m); }
   function setBusy(b) {
@@ -309,6 +338,9 @@
     origWrap.classList.remove("hidden");
     result.classList.add("hidden");
     runBtn.disabled = false; clearBtn.disabled = false;
+    loadTesseract().catch(function () {
+      showErr("Could not load the OCR engine. Check your internet connection, then choose your image again.");
+    });
   }
   dz.addEventListener("click", function () { input.click(); });
   dz.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); input.click(); } });
@@ -349,10 +381,17 @@
   }
   runBtn.addEventListener("click", async function () {
     if (!file || busy) return;
-    if (typeof Tesseract === "undefined") { showErr("The OCR engine could not be loaded. Check your connection and refresh the page."); return; }
     showErr(""); progBar.style.width = "0%"; progLabel.textContent = "Starting…";
     setBusy(true);
     try {
+      if (!tesseractReady) progLabel.textContent = "Loading OCR engine… (first-time download)";
+      try {
+        await loadTesseract();
+      } catch (e1) {
+        progLabel.textContent = "Engine download hiccup — retrying once…";
+        tesseractPromise = null;
+        await loadTesseract();
+      }
       var w = await getWorker(langSel.value);
       var out = await w.recognize(file);
       var text = (out.data.text || "").trim();
@@ -363,7 +402,8 @@
       if (!text) showErr("No text was found in this image. A clearer, sharper image usually works better.");
       else T360.toast("Text extracted");
     } catch (e) {
-      showErr("Text extraction failed on this image. Please try again with a clearer image.");
+      if (!tesseractReady) showErr("The OCR engine could not be loaded. Check your internet connection and try again.");
+      else showErr("Text extraction failed on this image. Please try again with a clearer image.");
     }
     setBusy(false);
   });
