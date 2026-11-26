@@ -39,7 +39,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
-<link rel="stylesheet" href="../assets/css/style.css?v=73.0">
+<link rel="stylesheet" href="../assets/css/style.css?v=74.0">
 <style>
   .hw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
   .hw-page { margin-top: 16px; }
@@ -211,9 +211,17 @@
 </main>
 <div id="site-footer"><nav class="footer-fallback" aria-label="About Tools360Pro"><a href="../guides/">Guides</a><a href="../pdf-tools/">PDF Tools</a><a href="../image-tools/">Image Tools</a><a href="../ai-tools/">AI Tools</a><a href="../text-tools/">Text Tools</a><a href="../converters/">Converters</a><a href="../calculators/">Calculators</a><a href="../developer-tools/">Developer Tools</a><a href="../generators/">Generators</a><a href="../time-date-tools/">Time &amp; Date Tools</a><a href="../audio-tools/">Audio Tools</a><a href="../video-tools/">Video Tools</a><a href="../about.html">About Us</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav></div>
 <script src="../assets/js/site.js?v=93.0"></script>
-<script src="../assets/vendor/pdf-lib.min.js"></script>
 <script>
 (function () {
+// The heavy PDF library loads lazily via dynamic import() — only when first needed, never on page load.
+var t360PdfLibsPromise = null;
+function t360LoadPdfLibs() {
+  if (!t360PdfLibsPromise) {
+    t360PdfLibsPromise = import("../assets/vendor/pdf-lib.min.js");
+    t360PdfLibsPromise.catch(function () { t360PdfLibsPromise = null; });
+  }
+  return t360PdfLibsPromise;
+}
   var $ = function (id) { return document.getElementById(id); };
   var err = $("err"), pagesEl = $("pages"), pdfAllBtn = $("pdf-all");
   var style = "caveat", ink = "#2244bb", pageBlobs = [];
@@ -336,7 +344,8 @@
     btn.disabled = false; btn.textContent = "Make handwritten pages";
   });
   pdfAllBtn.addEventListener("click", async function () {
-    if (!pageBlobs.length || !window.PDFLib) return;
+    if (!pageBlobs.length) return;
+    try { await t360LoadPdfLibs(); } catch (e) { showErr("The PDF library could not be loaded. Check your connection and try again."); return; }
     try {
       var doc = await PDFLib.PDFDocument.create();
       for (var i = 0; i < pageBlobs.length; i++) {
