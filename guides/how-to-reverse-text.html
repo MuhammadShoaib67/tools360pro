@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-reverse-text.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -166,7 +166,7 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to Reverse Text</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">Reversing text is a one-click job: paste your text, pick whether to flip the characters, the words or the lines, and the reversed result is ready to copy. It is mostly for fun — a backwards message, a puzzle, a palindrome check — but it is also a handy way to look at a list with fresh eyes.</p>
 </section>
 
@@ -178,7 +178,7 @@
 
 <section class="tool-section">
   <h2>Why emoji break in bad reversers</h2>
-  <p>Reversing text sounds trivial until emoji and accented characters enter the picture. Many tools reverse text one 16-bit unit at a time, which splits emoji and some accented letters into broken pieces — the two halves of a smiley face swap places and render as garbage. It is a common bug, and it is invisible until someone pastes an emoji.</p>
+  <p>Reversing text sounds trivial until emoji and accented characters enter the picture. Many tools <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" rel="noopener">reverse text one 16-bit unit at a time</a>, which splits emoji and some accented letters into broken pieces — the two halves of a smiley face swap places and render as garbage. It is a common bug, and it is invisible until someone pastes an emoji.</p>
   <p>The fix is to reverse by Unicode code point instead of by 16-bit unit, so each character — emoji, accented letter, or a character from another script — stays whole. That is how this tool works. One honest limit remains: a few emoji are made of several code points joined together, like flags, and reversing those can separate the parts. Single emoji reverse cleanly.</p>
 </section>
 
@@ -194,7 +194,7 @@
 
 <section class="tool-section">
   <h2>Palindromes and wordplay</h2>
-  <p>Reversal is the heart of the palindrome: racecar, level, madam, and the famous sentence about a man, a plan and a canal. Checking one by hand is fiddly, but reversing the text makes it instant — if the reversed version matches the original, you have a palindrome. Word games, puzzles and coding challenges all use reversal the same way, as a quick test that is easy to run and impossible to get wrong.</p>
+  <p>Reversal is the heart of the palindrome: <a href="https://en.wikipedia.org/wiki/Palindrome" target="_blank" rel="noopener">racecar, level, madam</a>, and the famous sentence about a man, a plan and a canal. Checking one by hand is fiddly, but reversing the text makes it instant — if the reversed version matches the original, you have a palindrome. Word games, puzzles and coding challenges all use reversal the same way, as a quick test that is easy to run and impossible to get wrong.</p>
   <p>Programmers reverse strings constantly, too. It is a classic first exercise when learning a language, a standard interview question, and a real step in some algorithms. Whether the reason is play or practice, the operation is the same — and it is its own inverse, so nothing is ever lost.</p>
   <p>Reversing a list of lines has a practical use as well. The last item in a list is often the most recent — the newest log entry, the latest note, the most recent task — and flipping the order puts the newest first, which is usually the order you want to read it in.</p>
 </section>
