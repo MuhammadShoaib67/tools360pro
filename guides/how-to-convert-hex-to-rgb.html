@@ -172,13 +172,17 @@
 
 <section class="tool-section">
   <h2>HEX and RGB: the same colour, two notations</h2>
+  <h3>Two digits per channel</h3>
   <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value" target="_blank" rel="noopener">A HEX code is a colour written in base 16: two digits for red, two for green, two for blue</a>. In #FF5733, the red channel is FF, the green channel is 57 and the blue channel is 33. <a href="https://www.w3.org/TR/css-color-4/" target="_blank" rel="noopener">RGB writes the same three channels in base 10, each from 0 to 255</a>: rgb(255, 87, 51). Both notations describe the same 16.7 million colours, and every HEX code has exactly one RGB equivalent.</p>
+  <h3>Different tools prefer different forms</h3>
   <p>The two notations exist because different tools prefer different forms. Design tools and brand guidelines use HEX because it is compact — six characters, easy to copy. Code often needs RGB, because CSS functions like rgba() take RGB numbers plus an alpha value, and canvas and image processing work in RGB natively.</p>
 </section>
 
 <section class="tool-section">
   <h2>Converting by hand</h2>
+  <h3>Split into pairs, convert each one</h3>
   <p>Split the HEX code into three pairs, one per channel, and convert each pair from base 16 to decimal. Each pair is the first digit times 16 plus the second digit, where A is 10, B is 11, C is 12, D is 13, E is 14 and F is 15. So 57 becomes 5 times 16 plus 7, which is 87. And 33 becomes 3 times 16 plus 3, which is 51. FF is 15 times 16 plus 15, which is 255.</p>
+  <h3>Three-digit HEX: double each digit</h3>
   <p>Three-digit HEX is a shorthand: double each digit. #F53 expands to #FF5533 — red FF, green 55, blue 33. It only works when each pair has two identical digits. To go the other way, divide each RGB number by 16: the quotient is the first hex digit and the remainder is the second. For 87: 87 divided by 16 is 5 remainder 7, so the pair is 57.</p>
 </section>
 

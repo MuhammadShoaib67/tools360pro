@@ -172,13 +172,17 @@
 
 <section class="tool-section">
   <h2>Why HTML needs escaping</h2>
+  <h3>Angle brackets are tags to a browser</h3>
   <p>A browser reads angle brackets as the start of a tag, so if you want to show the text &lt;div&gt; on a web page, you cannot write it as-is — the browser will treat it as a real div and show nothing. Escaping replaces the five characters that have special meaning in HTML — the ampersand, less-than, greater-than, double quote and single quote — with <a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity" target="_blank" rel="noopener">entities</a> the browser displays as text instead of interpreting as code.</p>
+  <h3>Code examples vanish without escaping</h3>
   <p>The classic case is a tutorial page that shows code examples. Every tag in the example must be escaped, or the example vanishes into the page and may even break the layout around it. The same applies to user comments, forum posts and any place where text typed by a person is shown on a page: escaping is what keeps a typed &lt;script&gt; tag harmless.</p>
 </section>
 
 <section class="tool-section">
   <h2>The five entities</h2>
+  <h3>The five entities to know</h3>
   <p>The ampersand becomes &amp;amp;, the less-than sign becomes &amp;lt;, the greater-than sign becomes &amp;gt;, the double quote becomes &amp;quot;, and the single quote becomes &amp;#39;. The ampersand is always escaped first, because the other entities contain ampersands themselves — escape it last and you would double-escape everything into &amp;amp;lt; and similar nonsense.</p>
+  <h3>Unescaping: the browser decodes them all</h3>
   <p>Unescaping works the other way: the browser itself decodes the entities, so every named entity and numeric character reference is handled, not just the five this tool writes. That means &amp;copy; becomes the copyright sign and &amp;#169; does too. If your text contains an entity the browser does not recognise, it is left as-is rather than guessed.</p>
 </section>
 

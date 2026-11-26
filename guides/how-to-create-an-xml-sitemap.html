@@ -172,13 +172,17 @@
 
 <section class="tool-section">
   <h2>What goes inside an XML sitemap</h2>
+  <h3>A urlset wrapper, one entry per page</h3>
   <p>A sitemap is a plain XML file. It opens with a &lt;urlset&gt; wrapper that names the sitemap namespace, and inside it sits one &lt;url&gt; entry per page. Each entry must contain a &lt;loc&gt; element with the full page URL — that is the only required field. Optional fields are &lt;lastmod&gt; (the date the page last changed), &lt;changefreq&gt; (how often it changes) and &lt;priority&gt; (how important it is relative to your other pages). Google largely ignores changefreq and priority today, but it accepts them, and lastmod is genuinely useful.</p>
+  <h3>The 50,000 URL and 50 MB limits</h3>
   <p>Two hard limits apply. <a href="https://www.sitemaps.org/protocol.html" target="_blank" rel="noopener">A single sitemap file may hold at most 50,000 URLs and 50 MB uncompressed</a>. Sites bigger than that split their sitemaps into several files and list them all in a sitemap index file. For most small sites, one file is plenty.</p>
 </section>
 
 <section class="tool-section">
   <h2>Which pages belong in a sitemap</h2>
+  <h3>Include what you want indexed</h3>
   <p>Include every public page you want indexed: your homepage, your main pages, your blog posts, your product or tool pages. Exclude anything you do not want in search results — admin and login pages, carts and checkout, thank-you pages, and any page carrying a noindex tag. Also exclude duplicate URLs and pages that redirect: every URL in the sitemap should return a 200 status and be the canonical version of the page.</p>
+  <h3>Junk URLs waste crawl budget</h3>
   <p>A sitemap full of junk URLs is worse than a short, clean one. It wastes crawl budget on pages that should never be indexed and can slow down the discovery of the pages that matter. Quality beats quantity here, as it does everywhere in SEO.</p>
 </section>
 

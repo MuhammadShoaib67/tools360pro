@@ -172,13 +172,17 @@
 
 <section class="tool-section">
   <h2>What hexadecimal is</h2>
+  <h3>Base 16: 0–9 then A–F</h3>
   <p>Hexadecimal, or hex, is base 16: <a href="https://en.wikipedia.org/wiki/Hexadecimal" target="_blank" rel="noopener">it counts with sixteen digits, 0 to 9 followed by A to F, where A means 10 and F means 15</a>. It exists because it is the perfect shorthand for binary. One hex digit holds exactly four bits, so one byte — eight bits — is exactly two hex digits. The letter A, binary 01000001, is hex 41. The letter H is hex 48. Two characters instead of eight.</p>
+  <h3>Why hex is everywhere in computing</h3>
   <p>That compactness is why hex is everywhere in computing. Colours on the web are hex — #FF5733 is a red-orange. Memory addresses, file signatures, cryptographic hashes and network data are all shown in hex, because it is short enough for a human to read and exact enough for a machine to trust.</p>
 </section>
 
 <section class="tool-section">
   <h2>How text becomes hex</h2>
+  <h3>Two steps: number first, then hex</h3>
   <p>The conversion has two steps. First, each character is turned into its number in the UTF-8 encoding: A is 65, a is 97, a space is 32. Then each number is written in hexadecimal, padded to two digits, so 65 becomes 41 and 97 becomes 61. Characters outside English take two to four bytes in UTF-8, so an accented letter becomes two hex pairs and an emoji becomes four.</p>
+  <h3>Decoding: pairs back to bytes</h3>
   <p>Decoding reverses the process: the hex digits are read in pairs, each pair becomes a byte, and the bytes are read back as UTF-8 text. If the hex has an odd number of digits, or the bytes do not form valid UTF-8, the converter says so plainly instead of guessing — a wrong guess would silently corrupt the text.</p>
 </section>
 

@@ -172,13 +172,17 @@
 
 <section class="tool-section">
   <h2>What a robots.txt file actually does</h2>
+  <h3>Crawlers check it before they start</h3>
   <p>Search engines send crawlers to visit your pages, and before a crawler starts work it checks for a file called robots.txt at the root of your domain. The file is a set of plain-text instructions: which parts of the site the crawler may visit, which parts it should skip, and where your sitemap lives. It is a polite request, not a lock — well-behaved crawlers like Googlebot follow it, but nothing forces a bad bot to obey.</p>
+  <h3>What it does not do</h3>
   <p>Two things robots.txt does not do are worth knowing before you write one. First, it does not hide a page from search results: <a href="https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt" target="_blank" rel="noopener">if other pages link to a blocked URL, Google may still list it, usually without a description</a>. To remove a page from results you need a noindex tag, not a robots.txt rule. Second, <a href="https://www.rfc-editor.org/rfc/rfc9309" target="_blank" rel="noopener">it does not protect private content</a> — anyone can open your robots.txt file and read it, so never use it to hide sensitive URLs. Passwords protect private pages; robots.txt only manages crawling.</p>
 </section>
 
 <section class="tool-section">
   <h2>The rules most websites need</h2>
+  <h3>Allow all, block a few, point to the sitemap</h3>
   <p>Most sites need only three things in robots.txt: allow everything by default, block the handful of areas that waste crawl time, and point to the sitemap. A typical file looks like this: User-agent: * on the first line, then Disallow lines for the admin area, the login page, the cart and internal search results, and finally a Sitemap line with the full sitemap URL. That is the whole file for most small sites.</p>
+  <h3>Wildcards work — with two details to get right</h3>
   <p>Two details are easy to get wrong. Wildcards work in Google's reading of robots.txt — an asterisk matches any sequence of characters, and a dollar sign marks the end of a URL — but not every crawler supports them, so keep your rules simple enough that a basic crawler still reads them correctly. And crawl-delay, a line that asks crawlers to wait between requests, is ignored by Google entirely, so do not rely on it to protect a slow server.</p>
 </section>
 

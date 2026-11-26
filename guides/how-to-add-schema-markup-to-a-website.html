@@ -172,13 +172,17 @@
 
 <section class="tool-section">
   <h2>What schema markup is (and what it is not)</h2>
+  <h3>Structured data in a shared vocabulary</h3>
   <p>Schema markup is structured data: extra information about your page, written in <a href="https://schema.org/" target="_blank" rel="noopener">a shared vocabulary from schema.org that search engines understand</a>. The most common way to add it is JSON-LD, a block of code inside a script tag that sits in your page but is invisible to visitors. Your readers never see it; Google reads it every time it crawls the page.</p>
+  <h3>Not a ranking factor — rich results instead</h3>
   <p>It is worth being clear about what schema does not do. It is not a ranking factor — Google has said so plainly. Its value is rich results: when your markup is valid, Google may show your listing with stars, prices, FAQ dropdowns or other extras that take up more space and earn more clicks. Valid markup is a requirement for rich results, not a guarantee: Google decides when to show them, and it can take days or weeks after crawling.</p>
 </section>
 
 <section class="tool-section">
   <h2>The five schema types most sites should know</h2>
+  <h3>Article, FAQPage and the rest</h3>
   <p>Article covers blog posts and news pages, with a headline, author and publish date. FAQPage covers a visible list of questions and answers — and the answers in the markup must match the text on the page exactly, or Google can treat it as a violation. LocalBusiness carries a business name, address, opening hours and phone number. Product carries a price, availability and review summary. BreadcrumbList describes the navigation trail, which Google may show in place of the plain URL.</p>
+  <h3>Several types on one page at once</h3>
   <p>One page can carry several types at once. A product page might have Product, BreadcrumbList and FAQPage together. Keep each block accurate to what the page actually contains, and either use a single script tag with a @graph array or separate script tags — both are valid.</p>
 </section>
 

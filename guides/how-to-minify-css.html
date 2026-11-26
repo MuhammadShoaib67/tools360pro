@@ -164,13 +164,17 @@
 
 <section class="tool-section">
   <h2>What minifying does to a stylesheet</h2>
+  <h3>Comments and whitespace, gone</h3>
   <p>A stylesheet written for humans is full of things a browser ignores: comments explaining why a rule exists, blank lines grouping related rules, indentation showing the structure, and spaces around every brace and colon. Minifying removes all of that. A rule like <code>.button { background: #2563eb; color: white; }</code> becomes <code>.button{background:#2563eb;color:#fff}</code> — the same rule, fewer bytes, no change in behaviour.</p>
+  <h3>What it never does: rename a class</h3>
   <p>A careful minifier also removes the final semicolon before a closing brace, because the brace already ends the declaration. What it never does is rename a class, reorder a rule, merge selectors or change a value. The output is the same stylesheet with the air taken out, and a browser parses it exactly as it parsed the original.</p>
 </section>
 
 <section class="tool-section">
   <h2>Three ways to minify CSS</h2>
+  <h3>A browser tool for one-off jobs</h3>
   <p>The quickest way is a browser tool: paste the stylesheet, click a button, copy the result. That is the right call for a one-off job — a theme file, a snippet for a CMS, a stylesheet you inherited and want to ship smaller. Our <a href="../tools/css-minifier.html">CSS Minifier</a> does exactly that, in your browser, with the before-and-after size shown so you can see what was saved.</p>
+  <h3>A build tool for regular shipping</h3>
   <p>For a project you ship regularly, a build tool is better. cssnano, Lightning CSS and esbuild minify automatically on every deploy, and they can also do the advanced optimisations a simple minifier skips — merging duplicate rules, shortening colour values, removing unused declarations. The third route is your editor: most code editors have extensions that minify the open file on demand, which suits a quick check without leaving your workflow.</p>
 </section>
 

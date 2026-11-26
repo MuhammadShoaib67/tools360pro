@@ -172,13 +172,17 @@
 
 <section class="tool-section">
   <h2>How text becomes binary</h2>
+  <h3>Every character is a number in binary</h3>
   <p>Computers store everything as bits — ones and zeros — and text is no exception. Each character is stored as a number, and that number is written in binary. <a href="https://en.wikipedia.org/wiki/ASCII" target="_blank" rel="noopener">The letter A is the number 65</a>, which in binary is 01000001. The letter a is 97, or 01100001. A space is 32, or 00100000. String those bytes together and you have the binary form of a whole sentence.</p>
+  <h3>ASCII and UTF-8: the mappings</h3>
   <p>This mapping comes from character encodings. The oldest common one, ASCII, covers English letters, digits and basic punctuation in a single byte each. <a href="https://en.wikipedia.org/wiki/UTF-8" target="_blank" rel="noopener">The modern standard, UTF-8, keeps ASCII for English text and uses two to four bytes for everything else</a> — accented letters, Arabic script, Chinese characters, emoji. A good converter uses UTF-8, so it handles any language, not just English.</p>
 </section>
 
 <section class="tool-section">
   <h2>Why binary output is so long</h2>
+  <h3>Eight digits per character</h3>
   <p>Binary is verbose by nature: every character takes eight digits, so a ten-character word becomes eighty digits. That is why programmers rarely read binary directly and use hexadecimal instead, where each byte takes only two characters. Binary is the language of the machine; hexadecimal is the shorthand humans use to talk about it.</p>
+  <h3>The spaces are only for readability</h3>
   <p>The spaces between bytes are there for your eyes only. They make the output readable — you can see where each character starts — but they carry no information, and the decoder ignores them. Turn the spacing off and you get one long stream of digits, which is how binary actually looks inside a computer.</p>
 </section>
 
