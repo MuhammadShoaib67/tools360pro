@@ -172,6 +172,7 @@
 
 <section class="tool-section">
   <h2>Method 1: Safari — free, no app, nothing uploaded</h2>
+  <h3>No upload, no account, no watermark</h3>
   <p>The browser method uses our <a href="../tools/background-remover.html">Background Remover</a>, which runs a small AI model on your iPhone itself. The first time you use it, the model — about 40 MB — downloads to your device and is cached, so do that first run on Wi-Fi. After that, every photo is processed right there in Safari: the picture is never sent to a server, which matters for private family photos and unreleased product pictures, and there is no account, no watermark and no limit on full-size downloads. The same in-browser approach is used by open-source libraries such as <a href="https://github.com/imgly/background-removal-js" target="_blank" rel="noopener">img.ly’s background-removal-js</a>, which removes backgrounds directly in the browser without sending the image to a server.</p>
   <ol class="steps">
     <li><strong>Open Safari and go to the <a href="../tools/background-remover.html">Background Remover</a>.</strong> Any recent iPhone works — the tool runs in the browser, so there is nothing to install. If you will use it often, tap Share and then Add to Home Screen, so it behaves like an app icon.</li>
@@ -189,7 +190,7 @@
 
 <section class="tool-section">
   <h2>Which method should you use?</h2>
-  <p>Use the Photos trick when the cutout is going straight into a chat: sending a product photo to a buyer, making a quick sticker, sharing a pet photo with the background gone. Use the browser method when the result has to look professional — product photos for a shop, portraits for documents, images for a design — because you get the full-size PNG, the transparent option, and a plain colour background when the listing asks for one.</p>
+  <p>Use the Photos trick when the cutout is going straight into a chat: sending a product photo to a buyer, making a quick sticker, sharing a pet photo with the background gone. Use the browser method when the result has to look professional — product photos for a shop, portraits for documents, images for a design — because you get the full-size PNG, the transparent option, and a plain colour background when the listing asks for one. If you need a saved transparent PNG without opening a browser, the Files app gives you one in a tap, and if you do this every day, a shortcut in the share sheet is the fastest route of all.</p>
   <p>One honest warning about both methods: neither can rescue a bad starting photo. A cutout is only as clean as the edge it has to find, and that edge is found by contrast — a subject that stands out from what is behind it. A white shirt against a white wall, dark hair against a dark sofa, or a blurry photo taken in dim light will give soft, guessy edges in any tool, free or paid. The fix is at the taking stage: good light, a plain background behind the subject, and the subject filling the frame. Our full guide on <a href="how-to-remove-background-from-a-photo-for-free.html">removing a background from a photo for free</a> works through the same steps on desktop, with more detail on the photos that cut out cleanly and the ones that fight back.</p>
 </section>
 
@@ -197,6 +198,32 @@
   <h2>Photos that cut out cleanly — and ones that fight back</h2>
   <p>The model does its best work when the subject is in focus and clearly separated from the background: a person against a plain wall, a product on a table, a dog on grass. Fill the frame with the subject rather than cropping a tiny figure out of a wide shot, and keep the whole subject in the picture — a cut-off hand or ear cannot be restored. If the edges come out slightly soft, place the result on a background colour instead of transparency: the fringe disappears against a solid colour, while on transparency it shows as a faint halo.</p>
   <p>After the download, the PNG is yours to use anywhere. Drop it onto a listing template, a poster, a social post or a document — and if the listing needs an exact size, resize it with our image tools rather than stretching it. One more iPhone habit worth building: check the downloaded PNG in the Files app before you upload it anywhere, because Safari saves downloads there, not in Photos. Open Files, tap Downloads, and the cutout is waiting — share it from there to any app you like.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Method 3: the Files app — a real transparent PNG, and batches</h2>
+  <p>The Photos trick has one weak point: it hands you a clipboard cutout, not a file. If you need an actual image with a transparent background — for a listing, a design, or a document — the Files app does it in one tap. Since iOS 16, Files has a Remove Background Quick Action that saves a new PNG with the background removed in the same folder, leaving your original untouched, as <a href="https://howtogeek.com/how-to-quickly-remove-the-background-from-images-on-iphone-or-mac/" target="_blank" rel="noopener">How-To Geek's walkthrough of the feature</a> shows.</p>
+  <ol class="steps">
+    <li><strong>Move the photo into Files.</strong> In Photos, tap Select, mark the photo, tap Share and choose Save to Files, then pick a folder. If the photo is already in Files — a download, an attachment, a scan — skip this step.</li>
+    <li><strong>Long-press the thumbnail and choose Quick Actions, then Remove Background.</strong> Press on the file itself, not an open preview. The iPhone cuts the subject out and saves a new PNG in the same folder.</li>
+    <li><strong>Use the new PNG anywhere.</strong> Share it straight from Files to any app, or long-press it and choose Share, then Save Image to put it back in your Photos library.</li>
+  </ol>
+  <h3>One photo, or a whole folder at once</h3>
+  <p>For a whole product shoot, do them in one pass: inside the folder, tap the three-dot menu, tap Select, mark every photo, then tap the three-dot menu again and choose Remove Background. Each photo gets its own transparent PNG. If Remove Background does not appear in the menu at all, the phone is probably too old for the feature — it needs iOS 16 or later — and the Safari method above is the fallback.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Method 4: Shortcuts — one tap in the share sheet</h2>
+  <h3>Build it once, then it lives in the share sheet</h3>
+  <p>If you remove backgrounds often, stop opening a website or an app every time and build a shortcut instead. The Shortcuts app, which comes pre-installed on iPhone, has a built-in Remove Background action: open Shortcuts, tap the plus button, tap Add Action and search for "Remove Background", then add a "Save to Photo Album" action after it. Name the shortcut something plain like "Remove BG" and tap Done.</p>
+  <p>From then on, the shortcut lives in every share sheet on the phone: open a photo, tap Share, scroll to your "Remove BG" shortcut, and the cutout saves straight to your library — no paste-then-save step, no upload, nothing to install. It uses the same Apple subject-isolation as the Photos trick, so expect the same edges: quick and clean on plain backgrounds, softer on hair, fur and busy scenes. The win is repetition — ten product photos, ten taps, done.</p>
+</section>
+
+<section class="tool-section">
+  <h2>Saving and sharing the cutout — keeping the transparency</h2>
+  <h3>PNG keeps the transparency — JPG does not</h3>
+  <p>A cutout is only useful if the transparency survives the save. Save it as a PNG, not a JPG: <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types" target="_blank" rel="noopener">MDN's image format guide</a> puts it plainly — PNG is the format to use when transparency is needed, while JPEG has no transparency at all, so a cutout saved as JPG gets its background filled in, usually white. When you paste a copied subject into Messages, Mail or Notes, the transparency travels with it; when you save through Share and Save Image, check the file is a PNG before you send it on.</p>
+  <p>On iOS 17 and later, the Photos lift menu also offers Add Sticker, which saves the cutout to your sticker drawer for use in Messages. And remember where Safari puts downloads: Files, in the Downloads folder — open Files, tap Downloads, and share the PNG from there, because it never lands in Photos on its own. If a marketplace or a form rejects the PNG, do not re-save it as a JPG: put it on a white background first with the browser tool's colour option and download that version instead. The file stays a PNG, but now has the solid background the uploader accepts.</p>
 </section>
 
   <section class="tool-section">
