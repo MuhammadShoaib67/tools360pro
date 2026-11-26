@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-change-image-resolution.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -158,13 +158,13 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to change image resolution</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">“Change the resolution” usually means one of two things: give the image more pixels for print, or fewer for screen. Here is what resolution actually means, why DPI is not what you think, and how to change it properly.</p>
 </section>
 
 <section class="tool-section">
   <h2>Resolution is pixels; DPI is a note</h2>
-  <p>An image's resolution is its pixel dimensions: a 2400 × 3000 image has 7.2 million pixels, whatever any other number says. DPI — dots per inch — is not a property of the image at all. It is a small note inside the file telling a printer how large to make those pixels on paper.</p>
+  <p>An image's resolution is its pixel dimensions: a 2400 × 3000 image has 7.2 million pixels, whatever any other number says. <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">DPI — dots per inch — is not a property of the image at all</a>. It is a small note inside the file telling a printer how large to make those pixels on paper.</p>
   <p>That note changes nothing about the picture. A 1200 × 1800 image marked 72 dpi and the same image marked 300 dpi are the same image — the same pixels, the same quality. The 300 dpi note only tells the printer to make it 4 × 6 inches instead of 16 × 25. So when a form asks for “300 dpi”, what it really needs is enough pixels: 300 pixels for every inch of the printed size. Change the pixels, and the DPI takes care of itself.</p>
 </section>
 
@@ -192,7 +192,7 @@
 
 <section class="tool-section">
   <h2>Why enlarging cannot add detail</h2>
-  <p>Resizing down is safe: the software averages pixels together, and the result stays sharp. Resizing up is the opposite: the software must invent pixels it has never seen, and the usual methods — bilinear, bicubic — can only smooth and interpolate. The result is bigger, but softer: edges blur, textures wash out, and fine detail turns to mush.</p>
+  <p>Resizing down is safe: the software averages pixels together, and the result stays sharp. Resizing up is the opposite: the software must invent pixels it has never seen, and the usual methods — <a href="https://en.wikipedia.org/wiki/Image_scaling" target="_blank" rel="noopener">bilinear, bicubic — can only smooth and interpolate</a>. The result is bigger, but softer: edges blur, textures wash out, and fine detail turns to mush.</p>
   <p>AI upscaling is the exception, because it does not interpolate — it reconstructs, using patterns learned from millions of images to guess what the missing detail should look like. It is still a guess, and it can invent the wrong texture, but for photos it usually beats plain enlargement by a wide margin. The <a href="../tools/ai-image-upscaler.html">AI Image Upscaler</a> on this site does exactly that, in your browser.</p>
 </section>
 

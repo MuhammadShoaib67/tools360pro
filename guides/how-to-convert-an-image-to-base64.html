@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-convert-an-image-to-base64.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -158,19 +158,19 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to convert an image to Base64</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">Base64 turns a picture into text — a long string of letters, numbers and symbols that carries the image's bytes. Here is how to convert an image to Base64, what a data URI is, and when embedding an image as text is a good idea.</p>
 </section>
 
 <section class="tool-section">
   <h2>What Base64 is</h2>
   <p>Base64 is an encoding, not a format. It takes any bytes — an image, a PDF, a sound — and represents them using 64 characters: A–Z, a–z, 0–9, plus and slash. The result is plain text, which means it can travel through any place text can go: an HTML file, a JSON message, an email, a database field.</p>
-  <p>The cost is size: Base64 text is about 33% larger than the original file, because every three bytes become four characters. A 100 KB image becomes about 133 KB of text. That is the trade-off you accept every time you encode an image — size for portability. It also means Base64 is a bad way to store large images; its strength is small ones, where the overhead hardly matters.</p>
+  <p>The cost is size: Base64 text is about 33% larger than the original file, because <a href="https://www.rfc-editor.org/rfc/rfc4648" target="_blank" rel="noopener">every three bytes become four characters</a>. A 100 KB image becomes about 133 KB of text. That is the trade-off you accept every time you encode an image — size for portability. It also means Base64 is a bad way to store large images; its strength is small ones, where the overhead hardly matters.</p>
 </section>
 
 <section class="tool-section">
   <h2>Data URIs: images as text</h2>
-  <p>A data URI wraps Base64 in a prefix that tells the browser what it is: <code>data:image/png;base64,iVBORw0KGgo…</code>. Pasted into an <code>&lt;img src&gt;</code> or a CSS <code>background</code>, it shows the image without any separate file — the page is self-contained. That is why data URIs appear in single-file HTML demos, email templates and icon systems.</p>
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs" target="_blank" rel="noopener">A data URI wraps Base64 in a prefix that tells the browser what it is</a>: <code>data:image/png;base64,iVBORw0KGgo…</code>. Pasted into an <code>&lt;img src&gt;</code> or a CSS <code>background</code>, it shows the image without any separate file — the page is self-contained. That is why data URIs appear in single-file HTML demos, email templates and icon systems.</p>
   <p>The prefix matters: it must name the right format. A PNG encoded as <code>data:image/jpeg</code> will not display, and a browser gives no useful error — just a broken image. The converter on this site builds the prefix from the file you upload, so it is always correct; if you encode by hand, make sure the MIME type matches the image.</p>
 </section>
 

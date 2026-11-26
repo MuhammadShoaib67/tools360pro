@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-convert-csv-to-json.html",
    "datePublished": "2026-11-17",
-   "dateModified": "2026-11-17"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -158,19 +158,19 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to convert CSV to JSON</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-17">17 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-17">17 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">CSV is the format spreadsheets speak, JSON is the format code speaks. Converting means turning rows into objects — and handling the quoting quirks that break naive converters.</p>
 </section>
 
 <section class="tool-section">
   <h2>From spreadsheet to structured data</h2>
-  <p>A CSV file is a table, and a JSON array of objects is the same table in a different shape. Converting means reading the first row as the field names, then turning every following row into one object whose keys are those names. Three data rows become three objects, each with the same keys — the shape APIs and JavaScript code expect.</p>
+  <p>A CSV file is a table, and a JSON array of objects is the same table in a different shape. Converting means reading the first row as the field names, then turning every following row into one object whose keys are those names. Three data rows become three objects, each with the same keys — <a href="https://www.rfc-editor.org/rfc/rfc8259" target="_blank" rel="noopener">the shape APIs and JavaScript code expect</a>.</p>
   <p>The output is immediately usable: paste it into a JavaScript file, send it to an API that accepts JSON, load it into a database that imports JSON documents, or use it as test data. It is also easy to reshape from here — filter the array, pick out one field, or nest it under another object, all with a few lines of code.</p>
 </section>
 
 <section class="tool-section">
   <h2>The CSV quirks that break naive converters</h2>
-  <p>Real-world CSV is messier than the textbook version. Fields that contain commas are wrapped in quotes, and a converter must honour those quotes: <code>&quot;Laptop, 15 inch&quot;</code> is one field, not two. A quote inside a quoted field is written doubled, and the parser must turn it back into a single quote. Line breaks inside quoted fields are kept as part of the field, not treated as row breaks.</p>
+  <p>Real-world CSV is messier than the textbook version. <a href="https://www.rfc-editor.org/rfc/rfc4180" target="_blank" rel="noopener">Fields that contain commas are wrapped in quotes</a>, and a converter must honour those quotes: <code>&quot;Laptop, 15 inch&quot;</code> is one field, not two. A quote inside a quoted field is written doubled, and the parser must turn it back into a single quote. Line breaks inside quoted fields are kept as part of the field, not treated as row breaks.</p>
   <p>Files saved on Windows end their lines with a carriage return plus a newline, and files from other systems use a newline alone — a good converter accepts both. Trailing blank lines at the end of the file are ignored, and empty fields become empty strings rather than errors. A converter that splits on commas and newlines without understanding quotes will mangle all of this, silently.</p>
 </section>
 
