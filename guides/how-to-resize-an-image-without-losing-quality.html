@@ -164,13 +164,17 @@
 
 <section class="tool-section">
   <h2>What resizing actually does to an image</h2>
+  <h3>Resizing changes the grid of pixels</h3>
   <p><a href="https://en.wikipedia.org/wiki/Raster_graphics" target="_blank" rel="noopener">An image is a grid of pixels</a>. A photo from a modern phone might be 4000 by 3000 pixels — twelve million tiny squares of colour. Resizing changes the size of that grid. Making it smaller means the software must merge neighbouring pixels into fewer ones; making it bigger means it must invent new pixels between the existing ones. The two directions behave very differently, and that difference is the whole story of quality.</p>
+  <h3>Shrinking averages, enlarging guesses</h3>
   <p>When you shrink an image, the software averages groups of pixels together. A 4000-pixel-wide photo reduced to 1000 pixels still has every part of the scene in it — just described with fewer squares. At the size it will actually be shown, the result usually looks identical to the original, because a screen cannot show more detail than its own pixels allow. When you enlarge an image, there is nothing to average: the software must guess what the missing pixels should be. That guessing is why enlargements go soft, no matter which tool you use.</p>
 </section>
 
 <section class="tool-section">
   <h2>Downscaling: why smaller usually stays sharp</h2>
+  <h3>Downscaling is the safe direction</h3>
   <p>Downscaling is the safe direction. A photograph shown at 1080 pixels wide needs only 1080 pixels of information, so a 4000-pixel original reduced to 1080 loses nothing the viewer could have seen. This is why professional websites resize every uploaded photo: the full-size original is wasted weight on a page that displays it at a fraction of its size.</p>
+  <h3>Always start from the largest original</h3>
   <p>There is one condition, and it matters more than any setting: always resize from the largest original you have. Every resize throws away information, so resizing a file that was already resized compounds the loss. Keep the original untouched on your device, make each resized version from it, and the result stays as sharp as the source allows. A second condition is the aspect ratio — the width-to-height proportion. Keep it locked while you resize, or the picture stretches and faces and circles distort. Stretching is the most visible quality mistake of all, and it is entirely avoidable.</p>
 </section>
 

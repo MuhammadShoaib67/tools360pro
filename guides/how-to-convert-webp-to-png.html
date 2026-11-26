@@ -171,7 +171,9 @@
 
 <section class="tool-section">
   <h2>What changes in the conversion</h2>
+  <h3>The file gets bigger</h3>
   <p>The file gets bigger — often several times larger than the WebP. That is the whole trade: WebP's clever compression is what made the file small, and PNG's lossless storage is what makes it universal. A 100 KB WebP photo commonly becomes a PNG of several hundred kilobytes, and a detailed image can grow past a megabyte. Expect it, and do not mistake the bigger file for a better picture.</p>
+  <h3>The picture itself does not change</h3>
   <p>What does not change is the picture itself. <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types" target="_blank" rel="noopener">The pixels are preserved exactly as decoded, and transparency carries over</a>: a WebP with a see-through background becomes a PNG with a see-through background. One honest limit — if the WebP was lossy, its compression artefacts are part of the pixels now, and converting to PNG preserves them faithfully. The conversion never improves quality; it only stops further loss.</p>
 </section>
 
@@ -187,7 +189,9 @@
 
 <section class="tool-section">
   <h2>When JPG would be the better target</h2>
+  <h3>No transparency — choose JPG</h3>
   <p>If the picture has no transparency and the destination accepts JPG, convert to JPG instead — <a href="../tools/webp-to-jpg.html">WebP to JPG</a> produces a much smaller file than WebP to PNG, and JPG is accepted everywhere PNG is. PNG is the right choice only when you need transparency or a lossless file for editing.</p>
+  <h3>Sometimes the best move is no conversion</h3>
   <p>And if the destination is a website or a modern app, consider not converting at all. WebP is the smallest file of the three formats, and every modern browser displays it. The conversion is worth doing when compatibility demands it — not as a reflex.</p>
 </section>
 

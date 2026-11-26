@@ -164,13 +164,17 @@
 
 <section class="tool-section">
   <h2>Vector versus raster, in one paragraph</h2>
+  <h3>An SVG is instructions, not a picture</h3>
   <p><a href="https://en.wikipedia.org/wiki/SVG" target="_blank" rel="noopener">An SVG file is not a picture, it is a set of instructions</a>: draw a circle here, a curve there, fill this shape red. Because it is instructions, it can be drawn at any size — a postage stamp or a billboard — and stay perfectly sharp. <a href="https://en.wikipedia.org/wiki/PNG" target="_blank" rel="noopener">A PNG is a grid of coloured squares</a>: it looks perfect at the size it was made, and blurry the moment it is stretched larger. Converting SVG to PNG means following the instructions once, at one chosen size, and freezing the result into pixels.</p>
+  <h3>Export at the largest size you will need</h3>
   <p>That is why the export size is the only decision that really matters. Export at the largest size you will ever need — a PNG can always be shrunk cleanly, but it can never be enlarged cleanly. A logo exported at 4000 pixels wide can serve a website, a document and a printout; a logo exported at 400 pixels wide can only ever serve small screens.</p>
 </section>
 
 <section class="tool-section">
   <h2>What our converter does — and its honest limits</h2>
+  <h3>Rasterized at its own size</h3>
   <p>The <a href="../tools/svg-to-png.html">SVG to PNG Converter</a> rasterizes your SVG at its own size — the width and height written in the file, or its viewBox if no size is given — up to a 4096-pixel cap. Transparency is preserved: a logo on a transparent background stays transparent in the PNG. The conversion runs in your browser, so the file never leaves your device.</p>
+  <h3>External fonts and images will not load</h3>
   <p>One limit is worth knowing before you convert. Browsers refuse to load external resources from a local SVG file — images and fonts the SVG references by web address — for security reasons. So an SVG that depends on an external font will render with a fallback font, and an SVG that embeds a linked image will show a gap where the image should be. Most SVGs are self-contained and convert exactly; if yours depends on outside files, Inkscape below handles them properly.</p>
 </section>
 
