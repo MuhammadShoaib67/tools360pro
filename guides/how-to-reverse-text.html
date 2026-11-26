@@ -172,13 +172,17 @@
 
 <section class="tool-section">
   <h2>The three ways to reverse text</h2>
+  <h3>By characters: hello becomes olleh</h3>
   <p>Reversing by characters turns hello into olleh: every letter, space and punctuation mark flips position, so the last character becomes the first. It is the classic reversal, the one people mean when they say a string is backwards, and it is how palindromes are checked — a palindrome reads the same forwards and backwards, so reversing it should change nothing.</p>
+  <h3>By words and by lines</h3>
   <p>Reversing by words keeps each word intact and flips their order, so the quick brown fox becomes fox brown quick the. The spaces stay where they belong, which makes this the mode for playful messages and for rearranging a sentence without breaking the words. Reversing by lines does the same for a list or a poem: the last line becomes the first, and each line keeps its own text.</p>
 </section>
 
 <section class="tool-section">
   <h2>Why emoji break in bad reversers</h2>
+  <h3>One 16-bit unit at a time splits emoji</h3>
   <p>Reversing text sounds trivial until emoji and accented characters enter the picture. Many tools <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" rel="noopener">reverse text one 16-bit unit at a time</a>, which splits emoji and some accented letters into broken pieces — the two halves of a smiley face swap places and render as garbage. It is a common bug, and it is invisible until someone pastes an emoji.</p>
+  <h3>Reverse by Unicode code point instead</h3>
   <p>The fix is to reverse by Unicode code point instead of by 16-bit unit, so each character — emoji, accented letter, or a character from another script — stays whole. That is how this tool works. One honest limit remains: a few emoji are made of several code points joined together, like flags, and reversing those can separate the parts. Single emoji reverse cleanly.</p>
 </section>
 
