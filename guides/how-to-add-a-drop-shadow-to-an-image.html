@@ -164,13 +164,17 @@
 
 <section class="tool-section">
   <h2>What makes a shadow look real</h2>
+  <h3>Soft, grey, below and to one side</h3>
   <p>Real shadows are soft, grey and offset in the direction light does not come from. Sunlight and ceiling lights usually fall from above, so our eyes expect a shadow slightly below and to one side of the object. A shadow that matches that expectation reads as depth; one that does not — a shadow above the object, or a perfectly centred halo — reads as a mistake, even if the viewer cannot say why.</p>
+  <h3>Blur grows with distance: 15 to 30 pixels</h3>
   <p>Softness matters as much as direction. A hard-edged shadow looks like a second copy of the object, not a shadow. Real shadows blur with distance: the further the object floats from the surface, the softer its shadow. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow" target="_blank" rel="noopener">A blur of 15 to 30 pixels gives the soft edge of a genuine shadow</a>; opacity of 30% to 50% gives the grey of one. The most common beginner error is a shadow that is too dark, too sharp and too large — when in doubt, make it softer and lighter than you think.</p>
 </section>
 
 <section class="tool-section">
   <h2>Why cut-outs shadow best</h2>
+  <h3>The shadow follows the opaque shape</h3>
   <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow" target="_blank" rel="noopener">A drop shadow follows the opaque shape of the image</a>. On a logo with a transparent background, the shadow hugs the letters or the icon — exactly the floating effect people want. On a full rectangular photo, there is no shape to follow, so the shadow appears only around the edges: a subtle lift, but not the dramatic float of a cut-out.</p>
+  <h3>Remove the background first, then shadow</h3>
   <p>That is why the usual workflow has two steps: remove the background first, then add the shadow. A product photo with its background removed and a soft shadow added looks like a professional studio shot — the product floats on white, grounded by its shadow. Do it in that order, and keep the original photo: a shadow baked into a file cannot be removed, so always work on a copy.</p>
 </section>
 

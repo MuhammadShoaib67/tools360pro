@@ -164,7 +164,9 @@
 
 <section class="tool-section">
   <h2>What formatting does</h2>
+  <h3>One element per line, nested deeper</h3>
   <p>A formatter takes markup that a machine produced — one long line, or indentation that drifted over years of edits — and lays it out so a human can read it. Each element goes on its own line, nested elements are indented one step deeper than their parent, and the structure of the page becomes visible at a glance. <a href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element" target="_blank" rel="noopener">Void elements like <code>img</code>, <code>br</code> and <code>input</code></a>, which never have a closing tag, are recognised and do not increase the depth.</p>
+  <h3>Comments and the doctype stay where they are</h3>
   <p>Comments and the doctype are kept at the depth where they appear, and text between tags is trimmed and placed on its own line. The result is not a prettier page for visitors — browsers do not care about indentation — it is a prettier page for the next person who has to read the code, which is usually you, six months later.</p>
 </section>
 
@@ -193,7 +195,9 @@
 
 <section class="tool-section">
   <h2>Finding unclosed tags with indentation</h2>
+  <h3>A missing closing tag shows as too-deep indent</h3>
   <p>A formatter does not fix broken HTML, but it makes the break visible. A missing closing tag shows up as a section indented one level too deep, because the formatter believes the unclosed element is still open. Scan for the point where the indentation stops making sense, and the missing tag is usually just above it.</p>
+  <h3>Wrong-order closing tags jump out too</h3>
   <p>The same trick works for a tag closed in the wrong order. When the indentation jumps unexpectedly, read the tags around the jump — one of them is the culprit. It is faster than counting tags by hand, and it works on files of any size.</p>
 </section>
 

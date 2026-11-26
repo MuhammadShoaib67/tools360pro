@@ -164,13 +164,17 @@
 
 <section class="tool-section">
   <h2>JSON is a table in disguise</h2>
+  <h3>Each object is a row, each key a column</h3>
   <p><a href="https://www.rfc-editor.org/rfc/rfc8259" target="_blank" rel="noopener">A JSON array of objects is already a table</a>: each object is a row, and its keys are the columns. Converting to CSV makes that structure visible to tools that never learned JSON — spreadsheets, databases, data-analysis tools, and colleagues who work in Excel. The conversion itself is mechanical: collect every key into a header row, then write one CSV row per object.</p>
+  <h3>Headers in first-appearance order, empty cells</h3>
   <p>Headers are collected in the order they first appear, and every object contributes its keys — so if the third object has a key the first two lack, it still gets a column. Rows that do not have a value for a column get an empty cell. The result is a rectangular table, which is what spreadsheets expect. A single object on its own becomes a one-row table.</p>
 </section>
 
 <section class="tool-section">
   <h2>The quoting rules that matter</h2>
+  <h3>Commas, quotes and line breaks get wrapped</h3>
   <p>CSV looks simple until a value contains a comma. The standard rules handle it: <a href="https://www.rfc-editor.org/rfc/rfc4180" target="_blank" rel="noopener">any field containing a comma, a quote or a line break is wrapped in double quotes, and a quote inside a field is doubled</a>. A product named <code>Chair, wooden</code> therefore arrives in one cell, not split across two — and a spreadsheet reading the file will put it back together correctly.</p>
+  <h3>Never convert by hand with find-and-replace</h3>
   <p>These rules are why you should never convert by hand with find-and-replace. A naive join with commas breaks the moment a value contains one, and the break is silent — the file looks fine until someone sorts it and finds half a product name in the wrong column. A converter that quotes properly is the difference between data and a mess.</p>
 </section>
 

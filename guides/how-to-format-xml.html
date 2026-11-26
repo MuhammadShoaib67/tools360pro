@@ -164,13 +164,17 @@
 
 <section class="tool-section">
   <h2>Formatting and validation go together</h2>
+  <h3>XML is stricter: every tag must close</h3>
   <p><a href="https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction" target="_blank" rel="noopener">XML is stricter than HTML</a>: <a href="https://www.w3.org/TR/xml/" target="_blank" rel="noopener">every tag must close, attributes must be quoted, and there must be exactly one root element</a>. A formatter for XML therefore does two jobs. First it checks the document with a real XML parser, which is the same strict parser a server or an importer would use. If the document fails, you get the parser's error message instead of a guess. Only if it passes does the formatting step run.</p>
+  <h3>One element per line, text kept compact</h3>
   <p>The formatting itself is straightforward: one element per line, children indented under their parent, and elements that hold only text kept on a single line so the output stays compact. Attributes stay on the opening tag, in their original order. Comments and CDATA sections are preserved, and the XML declaration at the top of the file is kept.</p>
 </section>
 
 <section class="tool-section">
   <h2>The errors that break XML most often</h2>
+  <h3>Unclosed tags and mismatched case</h3>
   <p>Most invalid XML fails for a small handful of reasons. An unclosed tag is the classic one — XML has no void elements, so every opening tag needs its close. Mismatched case is another: <code>&lt;Title&gt;</code> closed by <code>&lt;/title&gt;</code> is an error, because XML tag names are case-sensitive. Unescaped ampersands and angle brackets inside text are a third — a bare <code>&amp;</code> in a product name must be written as <code>&amp;amp;</code>, and a <code>&lt;</code> in a comparison as <code>&amp;lt;</code>.</p>
+  <h3>Two roots, or markup outside the root</h3>
   <p>Two structural errors round out the list: more than one root element, and text or markup sitting outside the root. The parser stops at the first problem it meets, so a large file often hides two or three errors — fix the reported one, format again, and repeat until the document passes cleanly.</p>
 </section>
 

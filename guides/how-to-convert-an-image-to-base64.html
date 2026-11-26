@@ -164,7 +164,9 @@
 
 <section class="tool-section">
   <h2>What Base64 is</h2>
+  <h3>64 characters carry any bytes as text</h3>
   <p>Base64 is an encoding, not a format. It takes any bytes — an image, a PDF, a sound — and represents them using 64 characters: A–Z, a–z, 0–9, plus and slash. The result is plain text, which means it can travel through any place text can go: an HTML file, a JSON message, an email, a database field.</p>
+  <h3>The cost: about 33% larger</h3>
   <p>The cost is size: Base64 text is about 33% larger than the original file, because <a href="https://www.rfc-editor.org/rfc/rfc4648" target="_blank" rel="noopener">every three bytes become four characters</a>. A 100 KB image becomes about 133 KB of text. That is the trade-off you accept every time you encode an image — size for portability. It also means Base64 is a bad way to store large images; its strength is small ones, where the overhead hardly matters.</p>
 </section>
 
@@ -176,7 +178,9 @@
 
 <section class="tool-section">
   <h2>When to embed, when to link</h2>
+  <h3>Embed under about 10 KB, when self-contained</h3>
   <p>Embed small images as Base64 when the page must be self-contained: a single-file HTML report, an email that must display without external requests, a tiny icon repeated on every page. Under about 10 KB, embedding usually wins — it saves a network request, and the 33% overhead is a few kilobytes at most.</p>
+  <h3>Link large images: cacheable and faster</h3>
   <p>Link large images as files. A 500 KB photo embedded as Base64 becomes 670 KB of text inside your HTML — the page downloads slower, the browser cannot cache the image separately, and every page load re-downloads it. The rule of thumb: if the image is bigger than a few kilobytes and appears on more than one page, keep it as a file and link it.</p>
 </section>
 

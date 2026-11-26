@@ -164,7 +164,9 @@
 
 <section class="tool-section">
   <h2>Why the conversion is needed</h2>
+  <h3>Markdown for writing, HTML for publishing</h3>
   <p>Markdown is a writing format: plain text with a few marks for headings, emphasis and links, designed to be readable as it stands. HTML is a publishing format: tags a browser renders, understood by every CMS, email client and web page on earth. The conversion is needed whenever the destination only accepts HTML — a CMS with no Markdown editor, an email newsletter, an old website template, or a page builder that takes raw HTML blocks.</p>
+  <h3>The Markdown file is the source, HTML the product</h3>
   <p>Writing in Markdown and converting at the end keeps the source readable while the output stays compatible. The Markdown file is the document you edit and version-control; the HTML is the disposable product you paste where it needs to go. That split is why Markdown won for documentation and blogging, and why converters exist at all.</p>
 </section>
 
@@ -176,7 +178,9 @@
 
 <section class="tool-section">
   <h2>What converters disagree on</h2>
+  <h3>Nested lists, tables and emphasis</h3>
   <p>Markdown has dialects. The original spec left details undefined, so different tools handle edge cases differently — most famously nested lists, tables and emphasis inside words. <a href="https://spec.commonmark.org/" target="_blank" rel="noopener">CommonMark fixed the core specification</a>, and <a href="https://github.github.com/gfm/" target="_blank" rel="noopener">GitHub Flavoured Markdown added tables, task lists and strikethrough on top of it</a>. A converter built on one dialect will render some documents slightly differently from a converter built on another.</p>
+  <h3>Everyday documents agree; long ones diverge</h3>
   <p>For everyday documents the dialects agree, and a simple converter is enough. The differences show up in long documents with tables, footnotes or deeply nested lists — exactly the documents where a full converter earns its keep. Know which side of that line your document falls on before you choose a tool.</p>
 </section>
 

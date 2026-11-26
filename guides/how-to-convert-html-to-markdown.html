@@ -164,13 +164,17 @@
 
 <section class="tool-section">
   <h2>Why move content to Markdown</h2>
+  <h3>A move to docs, a wiki or a static site</h3>
   <p>The usual reason is a move: content written for a website has to live in a documentation system, a wiki, a static site generator or a CMS that speaks Markdown. Copying the rendered text loses the links and the structure; copying the HTML keeps the structure but in the wrong format. Converting gives you the content in the format the new home expects, with links and headings intact.</p>
+  <h3>Plain text diffs cleanly and edits anywhere</h3>
   <p>Markdown is also a better source format for content that changes. It is plain text, so it works in version control, diffs cleanly, and can be edited in any text editor. HTML produced by a visual editor is none of those things. Converting is often the first step in taking content back under control.</p>
 </section>
 
 <section class="tool-section">
   <h2>What survives the conversion</h2>
+  <h3>Headings, links, lists and code carry over</h3>
   <p>Headings become <code>#</code> markers, paragraphs stay paragraphs, bold and italic become <code>**</code> and <code>*</code>, links become <code>[text](url)</code>, images become <code>![alt](src)</code>, and lists become <code>-</code> or numbered items. Code becomes backticks, a <code>pre</code> block becomes a fenced code block, and a <code>blockquote</code> gains its <code>&gt;</code> markers. The result is Markdown you can paste straight into a docs site or a CMS.</p>
+  <h3>Scripts and styles are dropped on purpose</h3>
   <p>Two things are dropped on purpose. Scripts and styles are removed entirely — Markdown has no place for them, and carrying them over would be a security risk in most destinations. Tables, <code>div</code> wrappers and <code>span</code> elements are not dropped, but their structure is: their text passes through as plain paragraphs, so a table becomes its cell text in reading order.</p>
 </section>
 
