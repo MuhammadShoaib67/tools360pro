@@ -172,7 +172,7 @@
 
 <section class="tool-section">
   <h2>Why your iPhone saves photos as HEIC</h2>
-  <p>Since iOS 11, iPhones save photos in the HEIC format by default because it stores the same picture in about half the space of a JPG. That saves storage on your phone and keeps more photos in iCloud for the same space. Inside the Apple world it works perfectly: the Photos app, AirDrop and iMessage all understand HEIC without you ever noticing.</p>
+  <p>Since iOS 11, iPhones save photos in the HEIC format by default because it stores the same picture in about half the space of a JPG. <a href="https://support.apple.com/en-us/116944" target="_blank" rel="noopener">Apple's support page on HEIF and HEVC</a> says the same: HEIF offers better compression than JPEG while preserving the same visual quality, so it uses less storage on your device and in iCloud Photos. That saves storage on your phone and keeps more photos in iCloud for the same space. Inside the Apple world it works perfectly: the Photos app, AirDrop and iMessage all understand HEIC without you ever noticing.</p>
   <p>The trouble starts the moment a photo leaves that world. Windows PCs, many application forms, older Android phones, marketplace listings and plenty of websites either refuse HEIC files outright or show them as blank. JPG, by contrast, opens on every device and every website built in the last thirty years. That is why the same photo often needs to be a JPG the moment it is going somewhere other than another Apple device — and why this is one of the most searched iPhone questions there is.</p>
 </section>
 
@@ -193,6 +193,7 @@
   <h2>Method 2: use the Files app for one or two photos</h2>
   <p>For a single photo, the built-in Files app can do the job with no website at all. Open the photo in the Photos app, tap Share, then Save to Files and pick a folder. On recent iOS versions this saves a JPG copy of the photo — the iPhone converts it as part of the share.</p>
   <p>Try it with one photo first and check the result: in the Files app, long-press the saved file and look at its name. If it ends in .jpg, the method works on your iOS version and you can use it for the rest. If it still ends in .heic, your iOS version kept the original format, and the browser method above is the reliable route instead. Either way, do not delete the original until you have confirmed the JPG opens where you need it.</p>
+  <p>One more built-in route: when you share a photo from the Photos app, the iPhone can convert it on the way out — <a href="https://support.apple.com/guide/iphone/share-photos-and-videos-iphf28f17237/ios" target="_blank" rel="noopener">Apple's guide to sharing photos</a> explains the Automatic option, which picks the best format for the destination and converts to JPEG when needed.</p>
 </section>
 
 <section class="tool-section">
@@ -202,9 +203,22 @@
 </section>
 
 <section class="tool-section">
+  <h2>Batch, quality and storage: getting the best from the converter</h2>
+  <h3>Convert a whole album at once</h3>
+  <p>Add as many photos as you like and convert them together, then download everything at once as a ZIP — far quicker than converting one photo at a time when a whole holiday album needs converting. If one photo in the batch refuses to convert, usually a 10-bit or HDR variant the browser cannot decode, the rest still convert normally, so a single stubborn file never blocks the others.</p>
+  <h3>Pick the right quality</h3>
+  <p>The converter has a quality slider from 50% to 100%, set to 92% by default. Leave it there for anything you will look at or print: at 92% the picture looks identical in normal viewing. Slide it lower only when a form or upload caps the file size and the photo has to shrink to fit — and pick PNG instead of JPG only when you plan to keep editing the picture afterwards, since PNG skips the extra compression step entirely.</p>
+  <h3>Mind the storage trade-off</h3>
+  <p>Converted JPGs are usually a little larger than the HEIC files they came from, because HEIC compresses more efficiently — so converting a whole album makes your phone hold more bytes than it did before. Keep the HEIC originals as your archive and delete the JPG copies once they have done their job, and if you would rather stop the problem at the source, switch the camera to Most Compatible in Settings, under Camera and Formats, so new photos are JPG from the start.</p>
+</section>
+
+<section class="tool-section">
   <h2>What about quality, Live Photos and originals?</h2>
+  <h3>Quality: what 92% means</h3>
   <p>On paper a JPG is a step down: HEIC packs the same image into a smaller file, so the JPG that comes out is normally larger, and JPG throws away a little data every time it saves. In everyday viewing, though, you will not spot the difference — the tool's default of 92% quality keeps the picture looking identical on a phone screen or a print, because only the way the pixels are stored has changed. The one habit to avoid is round-tripping: converting a JPG back to HEIC and then to JPG again, since each fresh save shaves off a little more detail.</p>
+  <h3>Live Photos lose their movement</h3>
   <p>Live Photos deserve a pause before you convert. A Live Photo is really two things joined together — the still frame and a few seconds of video around it — and a JPG can only carry the still frame, so the movement is left behind. When the motion is the point of the picture, hold on to the original in the Photos app and send the JPG only to places that asked for a still image. More generally, treat conversion as making a second copy: leave the original HEIC in your library until you have opened the JPG where it is needed and seen it work.</p>
+  <h3>When the JPG is still too big</h3>
   <p>A fresh JPG can still be too heavy for a form that demands, say, a file under 200KB. That is a size problem, not a format problem any more, and our <a href="../tools/compress-image.html">Compress Image</a> tool handles it — the guide <a href="compress-image-to-exact-size.html">How to Compress an Image to Exactly 20KB, 200KB or 1MB</a> shows how to land on an exact target size.</p>
 </section>
 

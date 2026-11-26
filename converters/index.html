@@ -40,6 +40,14 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <script>/* Default theme: dark (a saved choice always wins) */try{var __th=JSON.parse(localStorage.getItem("t360:theme")||"null");__th=(__th==="light")?"light":"dark";document.documentElement.setAttribute("data-theme",__th);var __m=document.querySelector('meta[name="theme-color"]');if(__m)__m.setAttribute("content",__th==="dark"?"#0A0A0A":"#FAFAFA")}catch(e){document.documentElement.setAttribute("data-theme","dark")}</script>
 <link rel="stylesheet" href="../assets/css/style.css?v=73.0">
+<style>
+.chooser-table{width:100%;border-collapse:collapse;font-size:.94rem}
+.chooser-table th,.chooser-table td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border)}
+.chooser-table th{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+.chooser-table tr:last-child td{border-bottom:none}
+.chooser-table td{color:var(--muted)}
+.chooser-table a{font-weight:600}
+</style>
 
 <script type="application/ld+json">
 {
@@ -192,17 +200,24 @@
 
   <section class="tool-section">
     <h2>What these converters cover</h2>
-    <p>Conversions come up constantly: a recipe in cups, a price in another currency, a number in binary, or the audio inside a video file. These converters cover the everyday cases — length, weight, temperature, area and speed; currencies with daily rates; binary, decimal, octal and hex; and MP4 to MP3 audio extraction.</p>
-    <p>All of it happens in your browser. The MP4 to MP3 converter extracts audio from your video file on your own device, so a long video never has to be uploaded to a server to get its audio track.</p>
+    <h3>Measurements, money and numbers</h3>
+    <p>Conversions come up constantly: a recipe in cups, a price in another currency, a number in binary, or the audio inside a video file. These converters cover the everyday cases — length, weight, temperature, area, volume, speed, data storage and time; currencies with live rates; binary, decimal, octal and hex; and MP4 to MP3 audio extraction.</p>
+    <h3>Audio pulled from video, without uploading</h3>
+    <p>All of it happens in your browser. The MP4 to MP3 converter extracts audio from your video file on your own device, so a long video never has to be uploaded to a server to get its audio track. You can pick the MP3 bitrate — 128 kbps for speech, 192 for most videos, 320 for music — and preview the result before you download it.</p>
   </section>
 
   <section class="tool-section">
     <h2>Which converter do you need?</h2>
     <p>Pick the job, then the tool:</p>
-    <p><b><a href="../tools/unit-converter.html">Unit Converter</a></b> — convert length, weight, temperature, area, speed and more.</p>
-    <p><b><a href="../tools/number-base-converter.html">Number Base Converter</a></b> — convert between binary, decimal, octal and hexadecimal.</p>
-    <p><b><a href="../tools/currency-converter.html">Currency Converter</a></b> — convert money between currencies with daily exchange rates.</p>
-    <p><b><a href="../tools/mp4-to-mp3.html">MP4 to MP3 Converter</a></b> — extract the MP3 audio from an MP4 or other video file.</p>
+    <table class="chooser-table">
+      <thead><tr><th>Your job</th><th>Use this converter</th><th>What to know</th></tr></thead>
+      <tbody>
+        <tr><td>Convert a measurement — a recipe in cups, a distance in miles, a temperature in Fahrenheit</td><td><a href="../tools/unit-converter.html">Unit Converter</a></td><td>Covers length, weight, temperature, area, volume, speed, data storage and time. Pick the category first, then the two units.</td></tr>
+        <tr><td>Work out what money is worth in another currency</td><td><a href="../tools/currency-converter.html">Currency Converter</a></td><td>Uses live exchange rates from ExchangeRate-API, refreshed each time you convert. For a bank transfer or a large payment, confirm the rate with your bank first.</td></tr>
+        <tr><td>Switch a number between binary, decimal, octal and hexadecimal</td><td><a href="../tools/number-base-converter.html">Number Base Converter</a></td><td>Type a number in any one base and see it in the other three instantly, even for very large integers.</td></tr>
+        <tr><td>Keep just the sound from a video file</td><td><a href="../tools/mp4-to-mp3.html">MP4 to MP3 Converter</a></td><td>Extracts the audio track in your browser and downloads it as an MP3 — 128 kbps for speech, 192 for most videos, 320 for music. WebM videos and M4A, MP3, WAV and OGG audio files work too.</td></tr>
+      </tbody>
+    </table>
   </section>
 
   <section class="tool-section faq">
