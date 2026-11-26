@@ -69,7 +69,7 @@
    },
    "mainEntityOfPage": "https://tools360pro.com/guides/how-to-compress-a-video.html",
    "datePublished": "2026-11-20",
-   "dateModified": "2026-11-20"
+   "dateModified": "2026-11-26"
   },
   {
    "@type": "BreadcrumbList",
@@ -166,7 +166,7 @@
 <section class="page-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> <span aria-hidden="true">/</span> <a href="../guides/">Guides</a></nav>
   <h1>How to Compress a Video</h1>
-  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-20">20 November 2026</time> · Updated <time datetime="2026-11-20">20 November 2026</time></p>
+  <p class="byline">By <a href="../about.html">Muhammad Shoaib</a> · Published <time datetime="2026-11-20">20 November 2026</time> · Updated <time datetime="2026-11-26">26 November 2026</time></p>
   <p class="lede">Compressing a video means making the same video take up less space: the same length, the same picture, a smaller file. This guide shows you how to do it free in your browser with the <a href="../tools/video-compressor.html">Video Compressor</a> — no sign-up, no app to install, and your file never leaves your device.</p>
 </section>
 
@@ -189,13 +189,13 @@
 <section class="tool-section">
   <h2>Choosing a quality preset and resolution</h2>
   <p>Start with Medium at the original resolution. It suits most jobs: a phone recording, a screen capture, a clip for a chat or an upload form. The file shrinks a lot and the picture still looks clean on a phone or laptop screen, because phone cameras and screen recorders usually record at a much higher bitrate than the screen can show.</p>
-  <p>Resolution is the bigger lever. Dropping from 1080p to 720p cuts the number of pixels by more than half, so the same preset produces a much smaller file — and on a phone screen the difference is hard to spot. Dropping to 480p shrinks it further, for videos that will only ever be watched small. Two things to know: the tool never upscales, so picking a resolution larger than your video simply keeps the original; and picking a smaller resolution caps the frame rate at up to 30 frames per second, because each frame is drawn onto a canvas at the new size before it is recorded.</p>
+  <p>Resolution is the bigger lever. Dropping from 1080p to 720p cuts the number of pixels by more than half, so the same preset produces a much smaller file — and on a phone screen the difference is hard to spot. Dropping to 480p shrinks it further, for videos that will only ever be watched small. Two things to know: the tool never upscales, so picking a resolution larger than your video simply keeps the original; and picking a smaller resolution caps the frame rate at up to 30 frames per second, because each frame is drawn onto a canvas at the new size before it is recorded. The recording uses the browser’s <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder" target="_blank" rel="noopener">MediaRecorder API</a>, which is why the download is a WebM file.</p>
 </section>
 
 <section class="tool-section">
   <h2>Compressing a large video to a target size</h2>
   <p>If you have a size limit — an upload form that caps files at 100 MB, a chat app that refuses anything bigger — start from the size, not the preset. Switch the compressor to Target size mode, type the size in MB, and the tool works out the bitrate that should land the video under it: it takes your target, aims at 90% of it to leave room for the recorder's bitrate being approximate, and starts at the original resolution — though you can still pick a smaller one, which shrinks the file further. A 144 MB recording aimed at 95 MB, for example, comes out re-encoded at roughly three-fifths of its original bitrate.</p>
-  <p>That usually looks identical to the eye. Most phone and camera recordings are encoded at far higher bitrates than the screen can show — the camera plays it safe — and the VP9 codec the tool records with typically needs 30–50% fewer bits than H.264 for the same picture. So re-encoding at around two-thirds of the original bitrate mostly throws away detail nobody could see. The honest limit is the other direction: a video that is already efficiently encoded has nothing spare, and shrinking it further will show. The tool warns you when your target asks for a bitrate too low for the resolution, and it always shows the result against your target before you download — if the file still came out above it, try a lower target.</p>
+  <p>That usually looks identical to the eye. Most phone and camera recordings are encoded at far higher bitrates than the screen can show — the camera plays it safe — and <a href="https://en.wikipedia.org/wiki/VP9" target="_blank" rel="noopener">the VP9 codec the tool records with typically needs 30–50% fewer bits than H.264 for the same picture</a>. So re-encoding at around two-thirds of the original bitrate mostly throws away detail nobody could see. The honest limit is the other direction: a video that is already efficiently encoded has nothing spare, and shrinking it further will show. The tool warns you when your target asks for a bitrate too low for the resolution, and it always shows the result against your target before you download — if the file still came out above it, try a lower target.</p>
   <p>If there is no size limit and the picture must stay as close to the original as possible, use the Best quality preset instead: about 12 Mbps at 1080p, which for typical phone and camera footage looks the same to the eye while still shrinking the file. Either way, preview the compressed video before downloading — your eyes are the final check, and the original file is never touched, so you can always compress it again differently.</p>
 </section>
 
