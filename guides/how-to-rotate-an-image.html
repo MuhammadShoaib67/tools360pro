@@ -164,13 +164,17 @@
 
 <section class="tool-section">
   <h2>Why photos end up sideways</h2>
+  <h3>The orientation flag, not the photo</h3>
   <p>The usual culprit is not the photo — it is the orientation flag inside it. When you hold your phone sideways, the camera saves the picture unrotated and <a href="https://en.wikipedia.org/wiki/Exif" target="_blank" rel="noopener">adds a small note in the file saying “display this turned 90°”</a>. Most apps read the note; some do not. Upload the photo to a form, open it in an old viewer, or send it to a printer, and the flag is ignored — the picture appears on its side.</p>
+  <h3>Scans went in crooked</h3>
   <p>Scans have a simpler cause: the paper went in crooked, or upside down, and the scanner faithfully recorded exactly that. Either way the fix is the same — rewrite the pixels themselves, not the flag. Once the pixels are turned, every app, form and printer shows the picture the right way up, because there is nothing left to misread.</p>
 </section>
 
 <section class="tool-section">
   <h2>Rotating by 90° vs a custom angle</h2>
+  <h3>Quarter turns lose nothing</h3>
   <p>Quarter turns — 90° and 180° — are the cleanest rotations there are. Every pixel keeps its place in the grid, just in a new position, so nothing is resampled and nothing is lost. A photo rotated 90° is pixel-for-pixel the same photo, turned.</p>
+  <h3>Custom angles need a bigger canvas</h3>
   <p>Custom angles are different. Turning a picture by 3° or 27° means its corners swing outside the original frame, so the canvas has to grow to hold the whole image — and the new corners need filling, with transparency or white. The pixels are also resampled onto the new grid, which softens hard edges very slightly. For straightening a scan the trade is worth it; for a simple sideways photo, stick to the 90° button.</p>
 </section>
 

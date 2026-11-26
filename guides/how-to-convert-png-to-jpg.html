@@ -164,13 +164,17 @@
 
 <section class="tool-section">
   <h2>Why JPG files are so much smaller</h2>
+  <h3>Lossless stores every pixel</h3>
   <p><a href="https://en.wikipedia.org/wiki/PNG" target="_blank" rel="noopener">PNG is a lossless format: it stores every pixel exactly as it is</a>, which is wonderful for quality and terrible for file size. <a href="https://en.wikipedia.org/wiki/JPEG" target="_blank" rel="noopener">JPG is a lossy format: it looks at the picture, works out which tiny colour changes the human eye barely notices, and throws that information away</a>. A photograph has thousands of near-identical shades, so JPG can discard a large share of the data and still produce a picture that looks the same at normal viewing size. That single difference is why a PNG screenshot that weighs 2 MB often becomes a JPG of a few hundred kilobytes — the same picture, a fraction of the weight.</p>
+  <h3>Photographs compress dramatically</h3>
   <p>The saving depends on what the picture contains. Photographs compress dramatically because their colours blend smoothly. Screenshots with flat colours, sharp edges and small text compress less well — JPG was designed for photos, not for crisp lines — but they still shrink to a fraction of the PNG. Either way, the converted file travels faster, uploads where the PNG was refused, and costs less storage everywhere it lands.</p>
 </section>
 
 <section class="tool-section">
   <h2>What you lose: transparency and a little quality</h2>
+  <h3>Transparency becomes white</h3>
   <p>JPG cannot store transparency, so any see-through areas in your PNG are placed on a white background during conversion. For photos and ordinary screenshots this makes no difference at all, because they have no transparent pixels to begin with. For logos, icons and graphics with see-through backgrounds, the white fill changes how the image looks when placed on a coloured page — the logo will sit inside a white box instead of blending in. If transparency matters, convert to WebP instead, which keeps it, or keep the PNG.</p>
+  <h3>Small but real quality loss</h3>
   <p>The other loss is quality, and it is small but real. At a high quality setting (around 90% and above) the difference from the original is invisible in normal viewing — you would have to zoom in and compare pixels to find it. The damage comes from converting again and again: every JPG save discards a little more, so a file converted from a JPG, then converted again, slowly goes soft. Always convert from the original PNG, never from an already-converted JPG, and keep the PNG as your high-quality master.</p>
 </section>
 
